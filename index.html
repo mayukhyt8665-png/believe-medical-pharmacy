@@ -1,0 +1,417 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Sushila Clinic Mobile App</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            teal: '#0d9488',
+                            dark: '#115e59',
+                            highlight: '#f59e0b'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Hide scrollbar for a native app feel */
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .pb-safe {
+            padding-bottom: env(safe-area-inset-bottom, 1rem);
+        }
+        /* Smooth transitions */
+        .tab-view {
+            animation: fadeIn 0.3s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-gray-200 min-h-screen flex justify-center items-center">
+
+    <!-- Mobile App Container -->
+    <div class="w-full max-w-md h-[100dvh] sm:h-[90vh] bg-gray-50 relative flex flex-col shadow-2xl overflow-hidden sm:rounded-[2rem] sm:border-[8px] sm:border-gray-900 mx-auto">
+        
+        <!-- 1. Top Header (Fixed) -->
+        <div class="bg-white px-4 py-3 flex justify-between items-center sticky top-0 z-20 border-b border-gray-100 shadow-sm">
+            <div class="flex flex-col">
+                <h1 class="text-[15px] font-bold text-gray-800 leading-tight">Sushila Clinic &</h1>
+                <h2 class="text-[12px] font-semibold text-brand-teal">Believe Medical Pharmacy</h2>
+            </div>
+            <div class="flex gap-3 items-center">
+                <a href="tel:8777691532" class="h-8 w-8 bg-green-50 rounded-full border border-green-200 flex items-center justify-center cursor-pointer text-green-600">
+                    <i class="fa-solid fa-phone text-sm"></i>
+                </a>
+                <div class="h-8 w-8 bg-gray-100 rounded-full border border-gray-200 flex items-center justify-center cursor-pointer">
+                    <i class="fa-regular fa-user text-gray-600 text-sm"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scrollable Content Area -->
+        <div class="flex-1 overflow-y-auto hide-scrollbar pb-32">
+            
+            <!-- ================= HOME VIEW ================= -->
+            <div id="view-home" class="tab-view block">
+                
+                <!-- Hero Banner (Blood Collection) -->
+                <div class="px-4 mt-5 mb-5">
+                    <div class="bg-gradient-to-r from-teal-600 to-emerald-500 rounded-2xl p-5 text-white relative overflow-hidden shadow-md">
+                        <div class="relative z-10 w-4/5">
+                            <span class="bg-white/20 text-[10px] uppercase tracking-wider font-bold px-2 py-1 rounded mb-2 inline-block backdrop-blur-sm border border-white/20">
+                                Home Service
+                            </span>
+                            <h2 class="font-bold text-[19px] leading-tight mb-2">Home Blood Collection</h2>
+                            <div class="flex items-center gap-2 mb-2">
+                                <div class="bg-white text-teal-700 text-xs font-bold px-2.5 py-1 rounded-md shadow-sm flex items-center gap-1.5">
+                                    <i class="fa-regular fa-clock"></i> 7:00 AM - 12:00 PM
+                                </div>
+                            </div>
+                            <p class="text-[11px] text-teal-50 font-medium leading-snug mt-2">Accurate testing from our trusted partners. Book a home visit today.</p>
+                        </div>
+                        <i class="fa-solid fa-droplet absolute -right-4 -bottom-6 text-8xl text-white opacity-20 -rotate-12"></i>
+                    </div>
+                </div>
+
+                <!-- Quick Actions (Pastel Cards) -->
+                <div class="px-4 pb-2">
+                    <div class="flex justify-between items-center mb-3 px-1">
+                        <h3 class="text-[15px] font-bold text-gray-800">Quick Booking</h3>
+                    </div>
+                    <div class="grid grid-cols-2 gap-3">
+                        
+                        <!-- Book via Call 1 -->
+                        <a href="tel:8777691532" class="bg-[#eff6ff] border border-[#bfdbfe] rounded-[1.25rem] p-3 flex flex-col items-center text-center shadow-sm cursor-pointer active:scale-95 transition-transform">
+                            <div class="bg-white p-2.5 rounded-full mb-2 shadow-sm text-blue-500">
+                                <i class="fa-solid fa-phone-volume text-xl"></i>
+                            </div>
+                            <span class="text-[12px] font-bold text-gray-800 leading-tight">Call Desk 1<br>8777691532</span>
+                        </a>
+
+                        <!-- Book via Call 2 -->
+                        <a href="tel:9051809036" class="bg-[#eefcf2] border border-[#d3f5df] rounded-[1.25rem] p-3 flex flex-col items-center text-center shadow-sm cursor-pointer active:scale-95 transition-transform">
+                            <div class="bg-white p-2.5 rounded-full mb-2 shadow-sm text-green-500">
+                                <i class="fa-solid fa-phone-volume text-xl"></i>
+                            </div>
+                            <span class="text-[12px] font-bold text-gray-800 leading-tight">Call Desk 2<br>9051809036</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Trusted Lab Partners -->
+                <div class="px-0 py-5 mt-4 bg-white border-y border-gray-200">
+                    <div class="flex justify-between items-center px-5 mb-4">
+                        <h3 class="text-[15px] font-bold text-gray-800">Trusted Lab Partners</h3>
+                        <span class="text-[11px] font-bold text-brand-teal cursor-pointer">View All</span>
+                    </div>
+                    
+                    <div class="flex gap-4 overflow-x-auto pb-2 px-5 hide-scrollbar snap-x">
+                        <!-- Ashok -->
+                        <div class="snap-start min-w-[140px] bg-gray-50 border border-gray-200 rounded-xl p-3 shadow-sm flex flex-col items-center justify-center h-20">
+                            <div class="flex items-center gap-1.5">
+                                <div class="text-blue-600 font-extrabold text-2xl italic leading-none" style="font-family: Arial, sans-serif;">A</div>
+                                <div class="flex flex-col justify-center mt-1">
+                                    <span class="text-[12px] font-black text-red-600 uppercase leading-none tracking-tight mb-0.5">Ashok</span>
+                                    <span class="text-[9px] font-bold text-red-600 leading-none tracking-wide">LABORATORY</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Apollo -->
+                        <div class="snap-start min-w-[140px] bg-gray-50 border border-gray-200 rounded-xl p-3 shadow-sm flex flex-col items-center justify-center h-20">
+                            <div class="flex items-center gap-1.5 text-teal-600 mb-1">
+                                <i class="fa-solid fa-briefcase-medical text-xs"></i>
+                                <span class="text-[16px] font-bold leading-none tracking-tight">Apollo</span>
+                            </div>
+                            <span class="text-[9px] font-semibold text-[#8b1856] uppercase tracking-widest">Diagnostics</span>
+                        </div>
+                        <!-- Healthplus -->
+                        <div class="snap-start min-w-[140px] bg-gray-50 border border-gray-200 rounded-xl p-3 shadow-sm flex flex-col items-center justify-center h-20">
+                            <span class="text-[20px] font-medium text-[#c8102e] leading-none tracking-tight" style="font-family: Georgia, serif;">
+                                Health<span class="text-[#005eb8] font-sans font-bold ml-0.5 text-[22px] leading-none inline-block transform translate-y-1">+</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ================= LAB TESTS VIEW ================= -->
+            <div id="view-lab-tests" class="tab-view hidden px-4 pt-5">
+                
+                <div class="flex items-center justify-between mb-4">
+                    <h2 class="text-lg font-bold text-gray-900">Lab Tests & Packages</h2>
+                    <i class="fa-solid fa-filter text-gray-500 text-sm bg-gray-200 p-2 rounded-full"></i>
+                </div>
+
+                <div class="relative mb-5">
+                    <i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                    <input type="text" placeholder="Search for 'Thyroid', 'CBC'..." class="w-full bg-white border border-gray-200 rounded-xl py-3 pl-10 pr-4 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-teal-500 shadow-sm">
+                </div>
+
+                <!-- Highlighted / Featured Tests -->
+                <h3 class="text-[13px] font-bold text-gray-500 uppercase tracking-wider mb-3">Recommended</h3>
+                <div class="flex flex-col gap-3 mb-6">
+                    
+                    <!-- Highlighted 1: Allergy Profile -->
+                    <div class="bg-amber-50 border border-amber-300 rounded-xl p-4 relative shadow-sm">
+                        <div class="absolute top-0 right-0 bg-amber-500 text-white text-[10px] font-bold px-2.5 py-1 rounded-bl-lg rounded-tr-xl tracking-wide">
+                            FEATURED
+                        </div>
+                        <h4 class="font-bold text-gray-900 text-[15px] mb-1 pr-16">Comprehensive Allergy Profile</h4>
+                        <p class="text-[12px] text-gray-600 mb-3 line-clamp-2">Complete screening for food, dust, pollen, and environmental allergens.</p>
+                        <div class="flex justify-between items-center mt-2 border-t border-amber-200/50 pt-3">
+                            <span class="text-xs font-semibold text-gray-500"><i class="fa-regular fa-clock mr-1"></i>Report in 24 Hrs</span>
+                            <a href="tel:8777691532" class="bg-brand-teal text-white text-[12px] font-bold px-3 py-1.5 rounded-lg active:scale-95 transition-transform inline-flex items-center"><i class="fa-solid fa-phone text-[10px] mr-1.5"></i>Call to Book</a>
+                        </div>
+                    </div>
+
+                    <!-- Highlighted 2: CBC & ESR -->
+                    <div class="bg-amber-50 border border-amber-300 rounded-xl p-4 relative shadow-sm">
+                        <div class="absolute top-0 right-0 bg-amber-500 text-white text-[10px] font-bold px-2.5 py-1 rounded-bl-lg rounded-tr-xl tracking-wide">
+                            MOST BOOKED
+                        </div>
+                        <h4 class="font-bold text-gray-900 text-[15px] mb-1 pr-20">Complete Blood Count (CBC) & ESR</h4>
+                        <p class="text-[12px] text-gray-600 mb-3">Evaluates overall health and detects a wide range of disorders, including anemia and infection.</p>
+                        <div class="flex justify-between items-center mt-2 border-t border-amber-200/50 pt-3">
+                            <span class="text-xs font-semibold text-gray-500"><i class="fa-regular fa-clock mr-1"></i>Report in 12 Hrs</span>
+                            <a href="tel:8777691532" class="bg-brand-teal text-white text-[12px] font-bold px-3 py-1.5 rounded-lg active:scale-95 transition-transform inline-flex items-center"><i class="fa-solid fa-phone text-[10px] mr-1.5"></i>Call to Book</a>
+                        </div>
+                    </div>
+
+                    <!-- Highlighted 3: Thyroid Profile -->
+                    <div class="bg-amber-50 border border-amber-300 rounded-xl p-4 relative shadow-sm">
+                        <div class="absolute top-0 right-0 bg-amber-500 text-white text-[10px] font-bold px-2.5 py-1 rounded-bl-lg rounded-tr-xl tracking-wide">
+                            FASTING REQ.
+                        </div>
+                        <h4 class="font-bold text-gray-900 text-[15px] mb-1 pr-20">Thyroid Profile (T3, T4, TSH)</h4>
+                        <p class="text-[12px] text-gray-600 mb-3">Checks thyroid gland function. Vital for metabolism and energy levels.</p>
+                        <div class="flex justify-between items-center mt-2 border-t border-amber-200/50 pt-3">
+                            <span class="text-xs font-semibold text-gray-500"><i class="fa-regular fa-clock mr-1"></i>Report same day</span>
+                            <a href="tel:8777691532" class="bg-brand-teal text-white text-[12px] font-bold px-3 py-1.5 rounded-lg active:scale-95 transition-transform inline-flex items-center"><i class="fa-solid fa-phone text-[10px] mr-1.5"></i>Call to Book</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Standard Tests -->
+                <h3 class="text-[13px] font-bold text-gray-500 uppercase tracking-wider mb-3">Standard Tests</h3>
+                <div class="flex flex-col gap-3">
+                    
+                    <!-- LFT -->
+                    <div class="bg-white border border-gray-200 rounded-xl p-4 shadow-sm">
+                        <h4 class="font-bold text-gray-900 text-[14px] mb-1">Liver Function Test (LFT)</h4>
+                        <p class="text-[11px] text-gray-500 mb-3">Measures proteins, liver enzymes, and bilirubin in blood.</p>
+                        <div class="flex justify-end">
+                            <a href="tel:8777691532" class="text-brand-teal border border-brand-teal bg-teal-50 text-[12px] font-bold px-4 py-1.5 rounded-lg active:scale-95 transition-transform inline-flex items-center"><i class="fa-solid fa-phone text-[10px] mr-1.5"></i>Call to Book</a>
+                        </div>
+                    </div>
+
+                    <!-- Lipid Profile -->
+                    <div class="bg-white border border-gray-200 rounded-xl p-4 shadow-sm">
+                        <h4 class="font-bold text-gray-900 text-[14px] mb-1">Lipid Profile</h4>
+                        <p class="text-[11px] text-gray-500 mb-3">Measures total cholesterol, HDL, LDL, and triglycerides. (10-12 hr fasting needed)</p>
+                        <div class="flex justify-end">
+                            <a href="tel:8777691532" class="text-brand-teal border border-brand-teal bg-teal-50 text-[12px] font-bold px-4 py-1.5 rounded-lg active:scale-95 transition-transform inline-flex items-center"><i class="fa-solid fa-phone text-[10px] mr-1.5"></i>Call to Book</a>
+                        </div>
+                    </div>
+
+                    <!-- HbA1c -->
+                    <div class="bg-white border border-gray-200 rounded-xl p-4 shadow-sm">
+                        <h4 class="font-bold text-gray-900 text-[14px] mb-1">HbA1c (Glycosylated Hemoglobin)</h4>
+                        <p class="text-[11px] text-gray-500 mb-3">Evaluates your average blood sugar level over the past 2 to 3 months.</p>
+                        <div class="flex justify-end">
+                            <a href="tel:8777691532" class="text-brand-teal border border-brand-teal bg-teal-50 text-[12px] font-bold px-4 py-1.5 rounded-lg active:scale-95 transition-transform inline-flex items-center"><i class="fa-solid fa-phone text-[10px] mr-1.5"></i>Call to Book</a>
+                        </div>
+                    </div>
+
+                    <!-- KFT -->
+                    <div class="bg-white border border-gray-200 rounded-xl p-4 shadow-sm">
+                        <h4 class="font-bold text-gray-900 text-[14px] mb-1">Kidney Function Test (KFT)</h4>
+                        <p class="text-[11px] text-gray-500 mb-3">Includes tests for urea, creatinine, uric acid, and minerals to check kidney health.</p>
+                        <div class="flex justify-end">
+                            <a href="tel:8777691532" class="text-brand-teal border border-brand-teal bg-teal-50 text-[12px] font-bold px-4 py-1.5 rounded-lg active:scale-95 transition-transform inline-flex items-center"><i class="fa-solid fa-phone text-[10px] mr-1.5"></i>Call to Book</a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="h-6"></div>
+            </div>
+
+            <!-- ================= ECG VIEW ================= -->
+            <div id="view-ecg" class="tab-view hidden px-4 pt-5">
+                <h2 class="text-lg font-bold text-gray-900 mb-4">ECG Services</h2>
+                <div class="bg-white rounded-xl p-6 text-center border border-gray-200 shadow-sm mt-4">
+                    <div class="h-16 w-16 bg-red-50 text-red-500 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <i class="fa-solid fa-heart-pulse text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-800 text-[15px] mb-2">Electrocardiogram (ECG)</h3>
+                    <p class="text-[12px] text-gray-500 mb-4">We offer professional ECG services at our clinic facility and at home. Please call us to schedule an appointment.</p>
+                    <a href="tel:8777691532" class="inline-block bg-brand-teal text-white font-bold text-sm px-6 py-2.5 rounded-xl shadow-md"><i class="fa-solid fa-phone text-[12px] mr-1.5"></i>Call to Schedule</a>
+                </div>
+            </div>
+
+            <!-- ================= PROFILE VIEW ================= -->
+            <div id="view-profile" class="tab-view hidden px-4 pt-5">
+                <h2 class="text-lg font-bold text-gray-900 mb-4">My Profile</h2>
+                
+                <div class="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden mb-4">
+                    <div class="p-4 border-b border-gray-100 flex items-center gap-4">
+                        <div class="h-14 w-14 bg-teal-100 text-teal-600 rounded-full flex items-center justify-center text-xl font-bold">
+                            U
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-gray-800">User Account</h3>
+                            <p class="text-[12px] text-gray-500">Sign in to manage your tests</p>
+                        </div>
+                    </div>
+                    <div class="p-0">
+                        <div class="flex items-center justify-between p-4 border-b border-gray-50 cursor-pointer hover:bg-gray-50">
+                            <div class="flex items-center gap-3 text-gray-700">
+                                <i class="fa-solid fa-file-waveform w-5 text-center"></i>
+                                <span class="text-[14px] font-medium">My Test Reports</span>
+                            </div>
+                            <i class="fa-solid fa-chevron-right text-gray-400 text-xs"></i>
+                        </div>
+                        <div class="flex items-center justify-between p-4 border-b border-gray-50 cursor-pointer hover:bg-gray-50">
+                            <div class="flex items-center gap-3 text-gray-700">
+                                <i class="fa-regular fa-calendar-check w-5 text-center"></i>
+                                <span class="text-[14px] font-medium">My Appointments</span>
+                            </div>
+                            <i class="fa-solid fa-chevron-right text-gray-400 text-xs"></i>
+                        </div>
+                        <div class="flex items-center justify-between p-4 cursor-pointer hover:bg-gray-50">
+                            <div class="flex items-center gap-3 text-gray-700">
+                                <i class="fa-solid fa-gear w-5 text-center"></i>
+                                <span class="text-[14px] font-medium">Settings</span>
+                            </div>
+                            <i class="fa-solid fa-chevron-right text-gray-400 text-xs"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom spacing buffer -->
+            <div class="h-24"></div>
+
+        </div>
+
+        <!-- Floating Call Button -->
+        <a href="tel:8777691532" class="absolute bottom-20 right-4 z-40 bg-brand-highlight text-white rounded-full h-[3.5rem] w-[3.5rem] shadow-xl flex items-center justify-center cursor-pointer active:scale-95 transition-transform border-[3px] border-white flex-col">
+            <i class="fa-solid fa-phone-volume text-lg mb-0.5"></i>
+            <span class="text-[8px] font-bold leading-none tracking-wide">BOOK</span>
+        </a>
+
+        <!-- 6. Bottom Navigation Bar -->
+        <div class="absolute bottom-0 w-full bg-white border-t border-gray-200 flex justify-between items-center px-2 py-2 pb-safe z-50">
+            
+            <!-- Nav Item: Home -->
+            <div id="nav-home" onclick="switchTab('home')" class="nav-item flex flex-col items-center justify-center gap-1 text-brand-teal cursor-pointer flex-1">
+                <div class="nav-icon-bg bg-teal-50 w-12 h-7 rounded-full flex items-center justify-center transition-colors">
+                    <i class="fa-solid fa-house text-[16px]"></i>
+                </div>
+                <span class="text-[10px] font-bold mt-0.5">Home</span>
+            </div>
+            
+            <!-- Nav Item: Lab Tests -->
+            <div id="nav-lab-tests" onclick="switchTab('lab-tests')" class="nav-item flex flex-col items-center justify-center gap-1 text-gray-400 cursor-pointer flex-1">
+                <div class="nav-icon-bg w-12 h-7 rounded-full flex items-center justify-center transition-colors">
+                    <i class="fa-solid fa-flask-vial text-[16px]"></i>
+                </div>
+                <span class="text-[10px] font-semibold mt-0.5">Lab Tests</span>
+            </div>
+            
+            <!-- Nav Item: ECG -->
+            <div id="nav-ecg" onclick="switchTab('ecg')" class="nav-item flex flex-col items-center justify-center gap-1 text-gray-400 cursor-pointer flex-1">
+                <div class="nav-icon-bg w-12 h-7 rounded-full flex items-center justify-center transition-colors">
+                    <i class="fa-solid fa-heart-pulse text-[16px]"></i>
+                </div>
+                <span class="text-[10px] font-semibold mt-0.5">ECG</span>
+            </div>
+
+            <!-- Nav Item: Profile -->
+            <div id="nav-profile" onclick="switchTab('profile')" class="nav-item flex flex-col items-center justify-center gap-1 text-gray-400 cursor-pointer flex-1">
+                <div class="nav-icon-bg w-12 h-7 rounded-full flex items-center justify-center transition-colors">
+                    <i class="fa-regular fa-user text-[16px]"></i>
+                </div>
+                <span class="text-[10px] font-semibold mt-0.5">Profile</span>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- JavaScript for Navigation -->
+    <script>
+        function switchTab(targetId) {
+            // 1. Hide all tab views
+            const views = document.querySelectorAll('.tab-view');
+            views.forEach(view => {
+                view.classList.add('hidden');
+                view.classList.remove('block');
+            });
+
+            // 2. Show the target view
+            const targetView = document.getElementById('view-' + targetId);
+            if(targetView) {
+                targetView.classList.remove('hidden');
+                targetView.classList.add('block');
+            }
+
+            // 3. Reset all nav items to inactive state (gray)
+            const navItems = document.querySelectorAll('.nav-item');
+            navItems.forEach(item => {
+                item.classList.remove('text-brand-teal');
+                item.classList.add('text-gray-400');
+                
+                // Reset font weight
+                const label = item.querySelector('span');
+                label.classList.remove('font-bold');
+                label.classList.add('font-semibold');
+
+                // Remove highlight background
+                const iconBg = item.querySelector('.nav-icon-bg');
+                iconBg.classList.remove('bg-teal-50');
+            });
+
+            // 4. Set the clicked nav item to active state (brand color)
+            const activeNav = document.getElementById('nav-' + targetId);
+            if(activeNav) {
+                activeNav.classList.remove('text-gray-400');
+                activeNav.classList.add('text-brand-teal');
+                
+                // Make font bold
+                const activeLabel = activeNav.querySelector('span');
+                activeLabel.classList.remove('font-semibold');
+                activeLabel.classList.add('font-bold');
+
+                // Add highlight background
+                const activeIconBg = activeNav.querySelector('.nav-icon-bg');
+                activeIconBg.classList.add('bg-teal-50');
+            }
+        }
+    </script>
+</body>
+</html>
+```
