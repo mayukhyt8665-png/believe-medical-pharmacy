@@ -3,7 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Sushila Clinic & Believe Medical Pharmacy</title>
+    <title>Sushila Clinic & Believe Medical Pharmacy | Sonarpur, Kolkata</title>
+    <meta name="description" content="Home Blood Collection (7:00 AM - 12:00 PM), 12-Lead ECG, NABL Partner Lab Tests & Medicines at Sushila Clinic & Believe Medical Pharmacy, Khurigachi Fularhat Road, Sonarpur, Kolkata.">
+    <meta name="keywords" content="Sushila Clinic Sonarpur, Believe Medical Pharmacy, Home Blood Collection Sonarpur, ECG near me Sonarpur, Blood Test Khurigachi, Dr Bishnu Pada Mandal">
+    <meta property="og:title" content="Sushila Clinic & Believe Medical Pharmacy - Sonarpur">
+    <meta property="og:description" content="Home Blood Collection (7 AM - 12 PM) | Clinic & Pharmacy (8:30 AM - 2 PM, 5:30 PM - 10 PM). Call 8777691532 / 8100177365.">
+    <meta property="og:type" content="website">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
@@ -35,7 +40,7 @@
         }
         .header h1 { font-size: 16px; font-weight: 800; color: #111827; line-height: 1.2; }
         .header .sub { font-size: 12px; font-weight: 600; color: #0d9488; }
-        .header .loc { font-size: 10px; color: #9ca3af; margin-top: 2px; display: flex; align-items: center; gap: 4px; }
+        .header .loc { font-size: 10px; color: #6b7280; margin-top: 2px; display: flex; align-items: center; gap: 4px; }
         .call-circle {
             width: 36px; height: 36px; border-radius: 50%;
             background: #f0fdfa; color: #0d9488;
@@ -55,7 +60,7 @@
             box-shadow: 0 4px 12px rgba(13, 148, 136, 0.2);
             position: relative;
             overflow: hidden;
-            margin-bottom: 20px;
+            margin-bottom: 18px;
         }
         .badge-glass {
             display: inline-block; background: rgba(255,255,255,0.2);
@@ -68,7 +73,7 @@
             background: #ffffff; color: #115e59; font-size: 12px; font-weight: 700;
             padding: 5px 12px; border-radius: 20px; margin-top: 10px;
         }
-        .hero p { font-size: 12px; color: #f0fdfa; margin-top: 10px; line-height: 1.5; max-width: 260px; }
+        .hero p { font-size: 12px; color: #f0fdfa; margin-top: 10px; line-height: 1.5; max-width: 280px; }
         .hero-btns { display: flex; gap: 8px; margin-top: 14px; flex-wrap: wrap; }
         .btn-white {
             display: inline-block; background: #ffffff; color: #0f766e;
@@ -86,7 +91,7 @@
         .sec-sub { font-size: 11px; color: #6b7280; }
         .link-teal { font-size: 12px; font-weight: 600; color: #0d9488; }
         
-        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 20px; }
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 18px; }
         .desk-card {
             border-radius: 16px; padding: 14px; text-align: center;
             display: flex; flex-direction: column; align-items: center;
@@ -101,6 +106,48 @@
         .desk-title { font-size: 12px; font-weight: 700; color: #1f2937; }
         .desk-num-blue { font-size: 12px; font-weight: 600; color: #2563eb; margin-top: 2px; }
         .desk-num-green { font-size: 12px; font-weight: 600; color: #059669; margin-top: 2px; }
+
+        /* Timings & Clinic Info Card */
+        .info-card {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            padding: 14px;
+            margin-bottom: 20px;
+        }
+        .timing-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px dashed #e2e8f0;
+            font-size: 12px;
+        }
+        .timing-row:last-child { border-bottom: none; padding-bottom: 0; }
+        .timing-badge {
+            background: #ffffff;
+            border: 1px solid #cbd5e1;
+            color: #0f172a;
+            font-size: 11px;
+            font-weight: 700;
+            padding: 4px 8px;
+            border-radius: 8px;
+            text-align: right;
+        }
+        .map-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            width: 100%;
+            background: #1e293b;
+            color: #ffffff;
+            font-size: 12px;
+            font-weight: 700;
+            padding: 10px;
+            border-radius: 10px;
+            margin-top: 12px;
+        }
         
         .carousel {
             display: flex; gap: 12px; overflow-x: auto; padding-bottom: 6px; margin-bottom: 20px;
@@ -162,6 +209,40 @@
         }
         .gal-img { width: 100%; height: 200px; object-fit: cover; display: block; background: #f9fafb; }
         .gal-foot { padding: 14px; display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+
+        /* Prescription Upload Banner */
+        .rx-banner {
+            background: #f0fdf4;
+            border: 1px solid #bbf7d0;
+            border-radius: 14px;
+            padding: 12px;
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+        }
+        .rx-btn {
+            background: #16a34a;
+            color: #ffffff;
+            font-size: 11px;
+            font-weight: 700;
+            padding: 8px 11px;
+            border-radius: 10px;
+            white-space: nowrap;
+        }
+
+        /* Prep Guide Box */
+        .prep-box {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 11px 13px;
+            font-size: 11px;
+            color: #334155;
+            line-height: 1.5;
+            margin-bottom: 14px;
+        }
 
         /* Search Bar & Test Selector */
         .search-wrap { position: relative; margin-bottom: 8px; }
@@ -298,7 +379,7 @@
         <div>
             <h1>Sushila Clinic &</h1>
             <div class="sub">Believe Medical Pharmacy</div>
-            <div class="loc"><span>📍</span> Sonarpur, Kolkata</div>
+            <div class="loc"><span>📍</span> Khurigachi Fularhat Road, Sonarpur</div>
         </div>
         <a href="tel:8777691532" class="call-circle" aria-label="Call Clinic">
             <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
@@ -308,16 +389,17 @@
     <!-- HOME TAB -->
     <main id="tab-home" class="tab-content active">
         <div class="hero">
-            <span class="badge-glass">Home Service</span>
-            <h2>Home Blood<br>Collection</h2>
-            <div class="time-pill"><span>🕒</span> 7:00 AM - 12:00 PM</div>
-            <p>440+ diagnostic tests from trusted NABL partner labs. Book online with GPS location or call directly.</p>
+            <span class="badge-glass">Home Blood Collection</span>
+            <h2>Doorstep Sample<br>Collection</h2>
+            <div class="time-pill"><span>🩸</span> 7:00 AM – 12:00 PM</div>
+            <p>440+ diagnostic tests from trusted NABL partner labs. Pin your phone GPS & book online or call directly.</p>
             <div class="hero-btns">
                 <button onclick="switchTab('book')" class="btn-white">📝 Book Home Visit</button>
                 <a href="tel:8777691532" class="btn-outline-white">📞 Call Now</a>
             </div>
         </div>
 
+        <!-- Quick Call Booking -->
         <div class="sec-head"><h3 class="sec-title">Quick Call Booking</h3></div>
         <div class="grid-2">
             <a href="tel:8777691532" class="desk-card desk-blue">
@@ -336,11 +418,43 @@
             </a>
         </div>
 
+        <!-- Clinic, Pharmacy & Blood Timings Card -->
+        <div class="sec-head"><h3 class="sec-title">Service Timings & Location</h3></div>
+        <div class="info-card">
+            <div class="timing-row">
+                <div>
+                    <div style="font-weight:700;color:#0f172a;">🩸 Home Blood Collection</div>
+                    <div style="font-size:10px;color:#64748b;">Morning Doorstep Sample Visit</div>
+                </div>
+                <div class="timing-badge" style="color:#0d9488;border-color:#99f6e4;background:#f0fdfa;">7:00 AM – 12:00 PM</div>
+            </div>
+            <div class="timing-row">
+                <div>
+                    <div style="font-weight:700;color:#0f172a;">🏥 Sushila Clinic</div>
+                    <div style="font-size:10px;color:#64748b;">Dr. Bishnu Pada Mandal & Consultation</div>
+                </div>
+                <div class="timing-badge">8:30 AM – 2:00 PM<br>5:30 PM – 10:00 PM</div>
+            </div>
+            <div class="timing-row">
+                <div>
+                    <div style="font-weight:700;color:#0f172a;">💊 Believe Medical Pharmacy</div>
+                    <div style="font-size:10px;color:#64748b;">Medicines & Health Essentials</div>
+                </div>
+                <div class="timing-badge">8:30 AM – 2:00 PM<br>5:30 PM – 10:00 PM</div>
+            </div>
+            <div style="margin-top:10px;padding-top:10px;border-top:1px solid #e2e8f0;font-size:11px;color:#475569;">
+                <strong>📍 Address:</strong> Khurigachi Fularhat Road, Sonarpur, Kolkata – 700150
+            </div>
+            <a href="https://www.google.com/maps/search/?api=1&query=Sushila+Clinic+Believe+Medical+Pharmacy+Khurigachi+Fularhat+Road+Sonarpur+Kolkata" target="_blank" class="map-btn">
+                🗺️ Open Clinic Location in Google Maps ↗
+            </a>
+        </div>
+
         <!-- Pharmacy Showcase -->
         <div class="sec-head">
             <div>
                 <h3 class="sec-title">Pharmacy & Wellness</h3>
-                <p class="sec-sub">Available at Believe Medical Pharmacy</p>
+                <p class="sec-sub">Open: 8:30 AM – 2:00 PM & 5:30 PM – 10:00 PM</p>
             </div>
             <button onclick="switchTab('pharmacy')" class="link-teal">View Store →</button>
         </div>
@@ -413,7 +527,7 @@
             <div onclick="switchTab('book')" class="srv-amber">
                 <div style="font-size:20px;">🩸</div>
                 <div style="font-size:12px;font-weight:700;margin-top:6px;">Book Home Blood Test</div>
-                <div style="font-size:10px;color:#4b5563;margin-top:2px;">Search 440+ Tests & Pin GPS</div>
+                <div style="font-size:10px;color:#4b5563;margin-top:2px;">7:00 AM – 12:00 PM Daily</div>
             </div>
             <div onclick="switchTab('ecg')" class="srv-rose">
                 <div style="font-size:20px;">💓</div>
@@ -425,9 +539,20 @@
 
     <!-- BOOK TEST TAB -->
     <main id="tab-book" class="tab-content">
-        <div style="margin-bottom:14px;">
+        <div style="margin-bottom:12px;">
             <h2 style="font-size:16px;font-weight:800;">Book Lab Test / Home Visit</h2>
-            <p style="font-size:12px;color:#6b7280;">Select from popular tests below or search any test by name.</p>
+            <p style="font-size:12px;color:#6b7280;">Blood Collection Timing: <strong>7:00 AM – 12:00 PM</strong></p>
+        </div>
+
+        <!-- Prescription Photo Shortcut -->
+        <div class="rx-banner">
+            <div>
+                <div style="font-size:12px;font-weight:700;color:#14532d;">Have a Doctor's Prescription?</div>
+                <div style="font-size:10px;color:#166534;">Send photo directly if test names are hard to read</div>
+            </div>
+            <a href="https://wa.me/918777691532?text=Hello%20Sushila%20Clinic,%20I%20am%20sending%20my%20prescription%20photo%20for%20lab%20test%20booking." target="_blank" class="rx-btn">
+                📸 Send Rx
+            </a>
         </div>
 
         <form id="bookingForm" class="form-card" onsubmit="submitBooking(event)">
@@ -497,7 +622,8 @@
                         <option value="9:00 AM - 10:00 AM" selected>9:00 AM - 10:00 AM</option>
                         <option value="10:00 AM - 11:00 AM">10:00 AM - 11:00 AM</option>
                         <option value="11:00 AM - 12:00 PM">11:00 AM - 12:00 PM</option>
-                        <option value="Clinic Visit (Anytime)">Clinic Visit</option>
+                        <option value="Clinic Visit (8:30 AM - 2 PM)">Clinic (8:30 AM - 2 PM)</option>
+                        <option value="Clinic Visit (5:30 PM - 10 PM)">Clinic (5:30 PM - 10 PM)</option>
                     </select>
                 </div>
             </div>
@@ -531,7 +657,12 @@
     <main id="tab-tests" class="tab-content">
         <div style="margin-bottom:12px;">
             <h2 style="font-size:16px;font-weight:800;">Diagnostic Test Directory</h2>
-            <p style="font-size:12px;color:#6b7280;">Home collection: 7:00 AM - 12:00 PM (Mon–Sat)</p>
+            <p style="font-size:12px;color:#6b7280;">Home Blood Collection: <strong>7:00 AM – 12:00 PM</strong></p>
+        </div>
+
+        <!-- Fasting & Prep Guide -->
+        <div class="prep-box">
+            <strong>💡 Sample Preparation Note:</strong> For <strong>Fasting Blood Sugar (FBS)</strong> or <strong>Lipid Profile</strong>, please maintain 10–12 hours overnight fasting (plain water is allowed).
         </div>
 
         <!-- Search Bar in Lab Tests Tab -->
@@ -574,7 +705,7 @@
                 <h3 style="font-size:14px;font-weight:800;">Thyroid Profile (T3, T4, TSH)</h3>
                 <p style="font-size:12px;color:#4b5563;margin-top:4px;">Complete thyroid hormone evaluation.</p>
                 <div style="margin-top:12px;display:flex;align-items:center;justify-content:space-between;gap:8px;">
-                    <span style="font-size:11px;font-weight:600;color:#4b5563;">Morning Collection</span>
+                    <span style="font-size:11px;font-weight:600;color:#4b5563;">7:00 AM – 12:00 PM</span>
                     <div style="display:flex;gap:6px;">
                         <button onclick="bookSpecificTest('Thyroid Profile (T3, T4, TSH)')" class="btn-teal">Book Online</button>
                         <a href="tel:8777691532" class="btn-teal-light">Call</a>
@@ -594,7 +725,7 @@
         <div class="hero" style="background:linear-gradient(135deg,#e11d48,#db2777);">
             <span class="badge-glass">Heart Care</span>
             <h2>12-Lead Digital ECG</h2>
-            <p>Fast, accurate Electrocardiogram available at Sushila Clinic & via Home Visit in Sonarpur.</p>
+            <p>Fast, accurate Electrocardiogram available at Sushila Clinic (8:30 AM – 2 PM & 5:30 PM – 10 PM) & via Home Visit.</p>
         </div>
 
         <div style="background:#ffffff;border:1px solid #f3f4f6;border-radius:16px;padding:16px;box-shadow:0 1px 4px rgba(0,0,0,0.04);">
@@ -616,11 +747,11 @@
     <main id="tab-pharmacy" class="tab-content">
         <div style="margin-bottom:12px;">
             <h2 style="font-size:16px;font-weight:800;">Believe Medical Pharmacy</h2>
-            <p style="font-size:12px;color:#6b7280;">Allopathic, Ayurvedic & Daily Health Essentials (In-Store Only)</p>
+            <p style="font-size:12px;color:#0d9488;font-weight:600;">Open: 8:30 AM – 2:00 PM & 5:30 PM – 10:00 PM</p>
         </div>
 
         <div style="background:#fffbeb;border:1px solid #fde68a;border-radius:12px;padding:10px 12px;font-size:12px;color:#78350f;margin-bottom:16px;">
-            <strong>Note:</strong> Medicines & wellness products are available directly at our pharmacy counter. Call us to check stock before visiting.
+            <strong>Note:</strong> Medicines & wellness products are available directly at our pharmacy counter (Khurigachi Fularhat Road, Sonarpur). Call us to check stock before visiting.
         </div>
 
         <div class="gal-card">
