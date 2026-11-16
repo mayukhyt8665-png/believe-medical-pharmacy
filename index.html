@@ -16,6 +16,8 @@
             font-family: 'Inter', 'Noto Sans Bengali', -apple-system, BlinkMacSystemFont, sans-serif;
             background: #eef2f6;
             color: #0f172a;
+            font-size: 14px;
+            line-height: 1.5;
         }
         a { text-decoration: none; color: inherit; }
         button { border: none; background: none; font-family: inherit; cursor: pointer; }
@@ -27,7 +29,7 @@
             min-height: 100vh;
             position: relative;
             box-shadow: 0 0 30px rgba(15, 23, 42, 0.08);
-            padding-bottom: 88px;
+            padding-bottom: 92px;
         }
         
         /* Top Sticky Medical Header */
@@ -35,47 +37,47 @@
             position: sticky;
             top: 0;
             z-index: 30;
-            background: rgba(255, 255, 255, 0.96);
+            background: rgba(255, 255, 255, 0.97);
             backdrop-filter: blur(10px);
             border-bottom: 1px solid #e2e8f0;
-            padding: 11px 14px;
+            padding: 12px 14px;
             display: flex;
             align-items: center;
             justify-content: space-between;
             gap: 8px;
         }
-        .brand-wrap { display: flex; align-items: center; gap: 9px; }
+        .brand-wrap { display: flex; align-items: center; gap: 10px; }
         .med-cross {
-            width: 36px; height: 36px; border-radius: 10px;
+            width: 38px; height: 38px; border-radius: 10px;
             background: linear-gradient(135deg, #0f766e, #0d9488);
-            color: #ffffff; font-size: 18px; font-weight: 800;
+            color: #ffffff; font-size: 20px; font-weight: 800;
             display: flex; align-items: center; justify-content: center;
             box-shadow: 0 2px 6px rgba(13, 148, 136, 0.25);
             flex-shrink: 0;
         }
-        .header h1 { font-size: 15px; font-weight: 800; color: #0f172a; line-height: 1.15; letter-spacing: -0.2px; }
-        .header .sub { font-size: 11px; font-weight: 700; color: #0d9488; }
+        .header h1 { font-size: 17px; font-weight: 800; color: #0f172a; line-height: 1.2; letter-spacing: -0.2px; }
+        .header .sub { font-size: 13px; font-weight: 700; color: #0d9488; }
         .live-status {
-            display: inline-flex; align-items: center; gap: 4px;
-            font-size: 9.5px; font-weight: 700; color: #047857;
+            display: inline-flex; align-items: center; gap: 5px;
+            font-size: 11px; font-weight: 700; color: #047857;
             margin-top: 2px;
         }
         .pulse-dot {
-            width: 6px; height: 6px; border-radius: 50%; background: #10b981;
+            width: 7px; height: 7px; border-radius: 50%; background: #10b981;
             box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.25);
         }
         .header-actions { display: flex; align-items: center; gap: 6px; }
         .lang-btn {
             background: #f1f5f9; color: #0f172a; border: 1px solid #cbd5e1;
-            font-size: 11px; font-weight: 800; padding: 6px 9px; border-radius: 9px;
+            font-size: 12.5px; font-weight: 800; padding: 7px 10px; border-radius: 10px;
         }
         .icon-btn {
-            width: 34px; height: 34px; border-radius: 9px;
+            width: 36px; height: 36px; border-radius: 10px;
             background: #f0fdfa; color: #0f766e; border: 1px solid #ccfbf1;
             display: flex; align-items: center; justify-content: center;
         }
         
-        .tab-content { display: none; padding: 15px; }
+        .tab-content { display: none; padding: 16px; }
         .tab-content.active { display: block; animation: fadeIn 0.2s ease; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
 
@@ -83,16 +85,14 @@
         .doc-card {
             background: linear-gradient(145deg, #0f172a, #1e293b);
             border-radius: 18px;
-            padding: 16px;
+            padding: 18px;
             color: #ffffff;
-            margin-bottom: 16px;
+            margin-bottom: 18px;
             box-shadow: 0 8px 20px rgba(15, 23, 42, 0.14);
-            position: relative;
-            overflow: hidden;
         }
-        .doc-top { display: flex; align-items: center; gap: 12px; }
+        .doc-top { display: flex; align-items: center; gap: 13px; }
         .doc-avatar {
-            width: 52px; height: 52px; border-radius: 14px;
+            width: 54px; height: 54px; border-radius: 14px;
             background: linear-gradient(135deg, #14b8a6, #0d9488);
             color: #ffffff; font-size: 22px; font-weight: 800;
             display: flex; align-items: center; justify-content: center;
@@ -102,123 +102,125 @@
         .doc-badge {
             display: inline-block; background: rgba(20, 184, 166, 0.22);
             color: #5eead4; border: 1px solid rgba(94, 234, 212, 0.3);
-            font-size: 9px; font-weight: 700; text-transform: uppercase;
-            letter-spacing: 0.5px; padding: 2px 7px; border-radius: 5px; margin-bottom: 4px;
+            font-size: 10.5px; font-weight: 700; text-transform: uppercase;
+            letter-spacing: 0.4px; padding: 3px 8px; border-radius: 6px; margin-bottom: 5px;
         }
-        .doc-name { font-size: 16px; font-weight: 800; color: #ffffff; line-height: 1.2; }
-        .doc-qual { font-size: 11px; font-weight: 600; color: #cbd5e1; margin-top: 2px; }
+        .doc-name { font-size: 18px; font-weight: 800; color: #ffffff; line-height: 1.25; }
+        .doc-qual { font-size: 12.5px; font-weight: 600; color: #cbd5e1; margin-top: 3px; }
         .doc-tags {
-            display: flex; flex-wrap: wrap; gap: 5px; margin-top: 12px;
-            padding-top: 10px; border-top: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex; flex-wrap: wrap; gap: 6px; margin-top: 13px;
+            padding-top: 11px; border-top: 1px solid rgba(255, 255, 255, 0.12);
         }
         .doc-tag {
-            background: rgba(255, 255, 255, 0.08); color: #e2e8f0;
-            font-size: 10px; font-weight: 500; padding: 3px 8px; border-radius: 6px;
+            background: rgba(255, 255, 255, 0.1); color: #f1f5f9;
+            font-size: 11.5px; font-weight: 600; padding: 4px 9px; border-radius: 7px;
         }
         .doc-foot {
             display: flex; align-items: center; justify-content: space-between;
-            margin-top: 12px; gap: 8px;
+            margin-top: 14px; gap: 10px;
         }
-        .doc-time { font-size: 10.5px; color: #94a3b8; line-height: 1.35; }
-        .doc-time strong { color: #f8fafc; }
+        .doc-time { font-size: 12px; color: #cbd5e1; line-height: 1.45; }
+        .doc-time strong { color: #ffffff; font-size: 12.5px; }
         .btn-doc-call {
-            background: #14b8a6; color: #042f2e; font-size: 11px; font-weight: 800;
-            padding: 8px 12px; border-radius: 10px; white-space: nowrap;
+            background: #14b8a6; color: #042f2e; font-size: 12.5px; font-weight: 800;
+            padding: 10px 14px; border-radius: 11px; white-space: nowrap;
         }
 
         /* Trust Badges Strip */
         .trust-strip {
             display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px;
-            margin-bottom: 16px;
+            margin-bottom: 18px;
         }
         .trust-item {
             background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px;
-            padding: 9px 6px; text-align: center;
+            padding: 10px 7px; text-align: center;
         }
-        .trust-item .t-ico { font-size: 16px; margin-bottom: 3px; }
-        .trust-item .t-txt { font-size: 10px; font-weight: 700; color: #1e293b; line-height: 1.25; }
+        .trust-item .t-ico { font-size: 18px; margin-bottom: 4px; }
+        .trust-item .t-txt { font-size: 11.5px; font-weight: 700; color: #1e293b; line-height: 1.3; }
         
         /* Hero Banner */
         .hero {
             border-radius: 18px;
             background: linear-gradient(135deg, #0f766e, #0d9488);
-            padding: 18px;
+            padding: 20px;
             color: #ffffff;
             box-shadow: 0 4px 14px rgba(13, 148, 136, 0.22);
-            margin-bottom: 18px;
+            margin-bottom: 20px;
         }
         .badge-glass {
-            display: inline-block; background: rgba(255,255,255,0.18);
-            font-size: 10px; font-weight: 700; letter-spacing: 0.4px;
-            text-transform: uppercase; padding: 3px 9px; border-radius: 6px; margin-bottom: 8px;
+            display: inline-block; background: rgba(255,255,255,0.2);
+            font-size: 11px; font-weight: 700; letter-spacing: 0.4px;
+            text-transform: uppercase; padding: 4px 10px; border-radius: 6px; margin-bottom: 9px;
         }
-        .hero h2 { font-size: 19px; font-weight: 800; line-height: 1.25; }
+        .hero h2 { font-size: 22px; font-weight: 800; line-height: 1.25; }
         .time-pill {
             display: inline-flex; align-items: center; gap: 6px;
-            background: #ffffff; color: #115e59; font-size: 11.5px; font-weight: 800;
-            padding: 4px 11px; border-radius: 20px; margin-top: 8px;
+            background: #ffffff; color: #115e59; font-size: 13px; font-weight: 800;
+            padding: 6px 13px; border-radius: 20px; margin-top: 10px;
         }
-        .hero p { font-size: 12px; color: #f0fdfa; margin-top: 8px; line-height: 1.45; }
-        .hero-btns { display: flex; gap: 8px; margin-top: 13px; flex-wrap: wrap; }
+        .hero p { font-size: 13.5px; color: #f0fdfa; margin-top: 10px; line-height: 1.5; }
+        .hero-btns { display: flex; gap: 10px; margin-top: 15px; flex-wrap: wrap; }
         .btn-white {
             display: inline-block; background: #ffffff; color: #0f766e;
-            font-size: 12px; font-weight: 800; padding: 9px 14px; border-radius: 11px;
+            font-size: 13.5px; font-weight: 800; padding: 10px 16px; border-radius: 12px;
             box-shadow: 0 2px 6px rgba(0,0,0,0.1);
         }
         .btn-outline-white {
-            display: inline-block; background: rgba(255,255,255,0.15); color: #ffffff;
-            border: 1px solid rgba(255,255,255,0.45);
-            font-size: 12px; font-weight: 700; padding: 9px 14px; border-radius: 11px;
+            display: inline-block; background: rgba(255,255,255,0.16); color: #ffffff;
+            border: 1.5px solid rgba(255,255,255,0.5);
+            font-size: 13.5px; font-weight: 700; padding: 10px 16px; border-radius: 12px;
         }
         
-        .sec-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; }
-        .sec-title { font-size: 14px; font-weight: 800; color: #0f172a; }
-        .sec-sub { font-size: 11px; color: #64748b; }
-        .link-teal { font-size: 12px; font-weight: 700; color: #0d9488; }
+        .sec-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 11px; }
+        .sec-title { font-size: 16px; font-weight: 800; color: #0f172a; }
+        .sec-sub { font-size: 12.5px; color: #475569; margin-top: 2px; }
+        .link-teal { font-size: 13.5px; font-weight: 700; color: #0d9488; }
         
-        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 18px; }
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 20px; }
         .desk-card {
-            border-radius: 14px; padding: 13px; text-align: center;
+            border-radius: 16px; padding: 15px; text-align: center;
             display: flex; flex-direction: column; align-items: center;
         }
         .desk-blue { background: #eff6ff; border: 1px solid #bfdbfe; }
         .desk-green { background: #ecfdf5; border: 1px solid #a7f3d0; }
         .desk-icon {
-            width: 36px; height: 36px; border-radius: 50%; background: #ffffff;
+            width: 40px; height: 40px; border-radius: 50%; background: #ffffff;
             display: flex; align-items: center; justify-content: center;
-            margin-bottom: 7px; box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+            margin-bottom: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.06);
         }
-        .desk-title { font-size: 12px; font-weight: 700; color: #1e293b; }
-        .desk-num-blue { font-size: 12.5px; font-weight: 800; color: #1d4ed8; margin-top: 2px; }
-        .desk-num-green { font-size: 12.5px; font-weight: 800; color: #047857; margin-top: 2px; }
+        .desk-title { font-size: 13.5px; font-weight: 700; color: #1e293b; }
+        .desk-num-blue { font-size: 14.5px; font-weight: 800; color: #1d4ed8; margin-top: 3px; }
+        .desk-num-green { font-size: 14.5px; font-weight: 800; color: #047857; margin-top: 3px; }
 
         /* Timings & Clinic Info Card */
         .info-card {
             background: #f8fafc;
-            border: 1px solid #e2e8f0;
+            border: 1px solid #cbd5e1;
             border-radius: 16px;
-            padding: 14px;
-            margin-bottom: 18px;
+            padding: 15px;
+            margin-bottom: 20px;
         }
         .timing-row {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 8px 0;
+            padding: 10px 0;
             border-bottom: 1px dashed #cbd5e1;
-            font-size: 12px;
+            font-size: 13.5px;
+            gap: 8px;
         }
         .timing-row:last-child { border-bottom: none; padding-bottom: 0; }
         .timing-badge {
             background: #ffffff;
             border: 1px solid #cbd5e1;
             color: #0f172a;
-            font-size: 10.5px;
-            font-weight: 700;
-            padding: 4px 8px;
+            font-size: 12px;
+            font-weight: 800;
+            padding: 5px 9px;
             border-radius: 8px;
             text-align: right;
-            line-height: 1.35;
+            line-height: 1.4;
+            white-space: nowrap;
         }
         .map-btn {
             display: flex;
@@ -228,76 +230,76 @@
             width: 100%;
             background: #0f172a;
             color: #ffffff;
-            font-size: 12px;
+            font-size: 13.5px;
             font-weight: 700;
-            padding: 10px;
-            border-radius: 10px;
-            margin-top: 12px;
+            padding: 12px;
+            border-radius: 11px;
+            margin-top: 14px;
         }
         
         .carousel {
-            display: flex; gap: 12px; overflow-x: auto; padding-bottom: 6px; margin-bottom: 18px;
+            display: flex; gap: 12px; overflow-x: auto; padding-bottom: 6px; margin-bottom: 20px;
             scrollbar-width: none;
         }
         .carousel::-webkit-scrollbar { display: none; }
         .prod-card {
-            min-width: 170px; background: #ffffff; border: 1px solid #e2e8f0;
-            border-radius: 14px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+            min-width: 185px; background: #ffffff; border: 1px solid #e2e8f0;
+            border-radius: 15px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,0.04);
             display: flex; flex-direction: column;
         }
-        .prod-img { width: 100%; height: 110px; object-fit: cover; background: #f8fafc; display: block; }
-        .prod-body { padding: 10px; flex: 1; display: flex; flex-direction: column; justify-content: space-between; }
+        .prod-img { width: 100%; height: 118px; object-fit: cover; background: #f8fafc; display: block; }
+        .prod-body { padding: 11px; flex: 1; display: flex; flex-direction: column; justify-content: space-between; }
         .tag-pill {
-            display: inline-block; font-size: 9px; font-weight: 700; text-transform: uppercase;
-            padding: 2px 6px; border-radius: 4px; background: #ecfdf5; color: #047857;
+            display: inline-block; font-size: 10px; font-weight: 700; text-transform: uppercase;
+            padding: 3px 7px; border-radius: 5px; background: #ecfdf5; color: #047857;
         }
-        .prod-title { font-size: 12px; font-weight: 700; color: #0f172a; margin-top: 5px; }
+        .prod-title { font-size: 13.5px; font-weight: 700; color: #0f172a; margin-top: 6px; line-height: 1.3; }
         .btn-dark {
             display: block; text-align: center; background: #0f172a; color: #ffffff;
-            font-size: 11px; font-weight: 600; padding: 7px; border-radius: 8px; margin-top: 8px;
+            font-size: 12.5px; font-weight: 700; padding: 8px; border-radius: 9px; margin-top: 9px;
         }
         
-        .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 18px; }
+        .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 20px; }
         .lab-box {
-            background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px;
-            padding: 10px 6px; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+            background: #ffffff; border: 1px solid #cbd5e1; border-radius: 12px;
+            padding: 12px 6px; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.03);
         }
 
         /* Patient Reviews */
         .rev-card {
-            min-width: 245px; background: #f8fafc; border: 1px solid #e2e8f0;
-            border-radius: 14px; padding: 13px; display: flex; flex-direction: column;
+            min-width: 260px; background: #f8fafc; border: 1px solid #e2e8f0;
+            border-radius: 15px; padding: 15px; display: flex; flex-direction: column;
             justify-content: space-between;
         }
-        .rev-stars { color: #f59e0b; font-size: 12px; letter-spacing: 1px; margin-bottom: 5px; }
-        .rev-text { font-size: 11.5px; color: #334155; line-height: 1.45; font-style: italic; }
-        .rev-author { font-size: 11px; font-weight: 700; color: #0f172a; margin-top: 8px; }
+        .rev-stars { color: #f59e0b; font-size: 14px; letter-spacing: 1px; margin-bottom: 6px; }
+        .rev-text { font-size: 13px; color: #334155; line-height: 1.5; font-style: italic; }
+        .rev-author { font-size: 12.5px; font-weight: 800; color: #0f172a; margin-top: 10px; }
 
         /* FAQ Accordion */
         .faq-item {
-            background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px;
-            margin-bottom: 8px; overflow: hidden;
+            background: #ffffff; border: 1px solid #cbd5e1; border-radius: 12px;
+            margin-bottom: 9px; overflow: hidden;
         }
         .faq-q {
-            width: 100%; text-align: left; padding: 11px 13px;
-            font-size: 12px; font-weight: 700; color: #0f172a;
+            width: 100%; text-align: left; padding: 13px 14px;
+            font-size: 13.5px; font-weight: 700; color: #0f172a;
             display: flex; align-items: center; justify-content: space-between; gap: 8px;
         }
         .faq-a {
-            display: none; padding: 0 13px 11px; font-size: 11.5px; color: #475569; line-height: 1.5;
-            border-top: 1px solid #f1f5f9; padding-top: 8px;
+            display: none; padding: 0 14px 13px; font-size: 13px; color: #334155; line-height: 1.55;
+            border-top: 1px solid #f1f5f9; padding-top: 9px;
         }
         .faq-item.open .faq-a { display: block; }
         
         /* Category Filter Chips */
         .cat-scroll {
-            display: flex; gap: 7px; overflow-x: auto; padding-bottom: 8px; margin-bottom: 12px;
+            display: flex; gap: 8px; overflow-x: auto; padding-bottom: 8px; margin-bottom: 14px;
             scrollbar-width: none;
         }
         .cat-scroll::-webkit-scrollbar { display: none; }
         .cat-chip {
-            padding: 6px 12px; border-radius: 20px; font-size: 11px; font-weight: 700;
-            background: #f1f5f9; color: #475569; border: 1px solid #e2e8f0; white-space: nowrap;
+            padding: 8px 14px; border-radius: 20px; font-size: 12.5px; font-weight: 700;
+            background: #f1f5f9; color: #334155; border: 1px solid #cbd5e1; white-space: nowrap;
         }
         .cat-chip.active {
             background: #0f766e; color: #ffffff; border-color: #0f766e;
@@ -305,41 +307,41 @@
 
         .highlight-card {
             background: linear-gradient(to right, #fffbeb, #fff7ed);
-            border: 1px solid #fde68a; border-radius: 14px; padding: 14px;
-            position: relative; margin-bottom: 10px;
+            border: 1px solid #fde68a; border-radius: 15px; padding: 16px;
+            position: relative; margin-bottom: 12px;
         }
         .badge-top {
-            position: absolute; top: 12px; right: 12px; background: #f59e0b; color: #ffffff;
-            font-size: 9px; font-weight: 700; text-transform: uppercase; padding: 3px 8px; border-radius: 12px;
+            position: absolute; top: 13px; right: 13px; background: #f59e0b; color: #ffffff;
+            font-size: 10px; font-weight: 800; text-transform: uppercase; padding: 3px 9px; border-radius: 12px;
         }
         .test-row {
-            background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px;
-            padding: 11px 13px; display: flex; align-items: center; justify-content: space-between;
-            margin-bottom: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.02); gap: 10px;
+            background: #ffffff; border: 1px solid #cbd5e1; border-radius: 12px;
+            padding: 13px 14px; display: flex; align-items: center; justify-content: space-between;
+            margin-bottom: 9px; box-shadow: 0 1px 2px rgba(0,0,0,0.02); gap: 10px;
         }
         .btn-teal {
-            background: #0d9488; color: #ffffff; font-size: 12px; font-weight: 700;
-            padding: 7px 13px; border-radius: 10px; display: inline-block; white-space: nowrap;
+            background: #0d9488; color: #ffffff; font-size: 13px; font-weight: 700;
+            padding: 8px 14px; border-radius: 10px; display: inline-block; white-space: nowrap;
         }
         .btn-teal-light {
-            background: #f0fdfa; color: #0f766e; border: 1px solid #99f6e4;
-            font-size: 11px; font-weight: 700; padding: 6px 11px; border-radius: 8px; white-space: nowrap;
+            background: #f0fdfa; color: #0f766e; border: 1px solid #5eead4;
+            font-size: 12.5px; font-weight: 800; padding: 7px 13px; border-radius: 9px; white-space: nowrap;
         }
         
         .gal-card {
             background: #ffffff; border: 1px solid #e2e8f0; border-radius: 16px;
-            overflow: hidden; margin-bottom: 14px; box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+            overflow: hidden; margin-bottom: 16px; box-shadow: 0 1px 4px rgba(0,0,0,0.04);
         }
-        .gal-img { width: 100%; height: 200px; object-fit: cover; display: block; background: #f8fafc; }
-        .gal-foot { padding: 13px; display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+        .gal-img { width: 100%; height: 210px; object-fit: cover; display: block; background: #f8fafc; }
+        .gal-foot { padding: 14px; display: flex; align-items: center; justify-content: space-between; gap: 10px; }
 
         /* Prescription Upload Banner */
         .rx-banner {
             background: #f0fdf4;
-            border: 1px solid #bbf7d0;
+            border: 1px solid #86efac;
             border-radius: 14px;
-            padding: 12px;
-            margin-bottom: 14px;
+            padding: 13px;
+            margin-bottom: 15px;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -348,9 +350,9 @@
         .rx-btn {
             background: #16a34a;
             color: #ffffff;
-            font-size: 11px;
-            font-weight: 700;
-            padding: 8px 11px;
+            font-size: 12.5px;
+            font-weight: 800;
+            padding: 9px 13px;
             border-radius: 10px;
             white-space: nowrap;
         }
@@ -358,90 +360,90 @@
         /* Prep Guide Box */
         .prep-box {
             background: #f8fafc;
-            border: 1px solid #e2e8f0;
+            border: 1px solid #cbd5e1;
             border-radius: 12px;
-            padding: 10px 12px;
-            font-size: 11px;
-            color: #334155;
-            line-height: 1.45;
-            margin-bottom: 12px;
+            padding: 12px 14px;
+            font-size: 12.5px;
+            color: #1e293b;
+            line-height: 1.5;
+            margin-bottom: 14px;
         }
 
         /* Search Bar & Test Selector */
-        .search-wrap { position: relative; margin-bottom: 8px; }
+        .search-wrap { position: relative; margin-bottom: 9px; }
         .search-input {
-            width: 100%; padding: 10px 36px 10px 34px; border: 1.5px solid #0d9488; border-radius: 12px;
-            font-size: 13px; font-family: inherit; color: #0f172a; background: #ffffff; outline: none;
+            width: 100%; padding: 12px 38px 12px 36px; border: 1.5px solid #0d9488; border-radius: 12px;
+            font-size: 14.5px; font-family: inherit; color: #0f172a; background: #ffffff; outline: none;
         }
         .search-icon {
-            position: absolute; left: 11px; top: 50%; transform: translateY(-50%);
-            font-size: 14px; color: #0d9488; pointer-events: none;
+            position: absolute; left: 12px; top: 50%; transform: translateY(-50%);
+            font-size: 15px; color: #0d9488; pointer-events: none;
         }
         .clear-search {
             position: absolute; right: 10px; top: 50%; transform: translateY(-50%);
-            font-size: 14px; color: #94a3b8; font-weight: 700; padding: 2px 6px; display: none;
+            font-size: 15px; color: #64748b; font-weight: 700; padding: 3px 7px; display: none;
         }
         .selected-tags {
-            display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px;
+            display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 9px;
         }
         .sel-chip {
-            display: inline-flex; align-items: center; gap: 5px;
-            background: #ccfbf1; color: #115e59; font-size: 11px; font-weight: 700;
-            padding: 4px 9px; border-radius: 16px;
+            display: inline-flex; align-items: center; gap: 6px;
+            background: #ccfbf1; color: #115e59; font-size: 12.5px; font-weight: 700;
+            padding: 5px 11px; border-radius: 16px;
         }
-        .sel-chip span { cursor: pointer; font-weight: 900; font-size: 13px; color: #0f766e; }
+        .sel-chip span { cursor: pointer; font-weight: 900; font-size: 15px; color: #0f766e; }
 
         /* Booking Form Styles */
         .form-card {
             background: #ffffff;
-            border: 1px solid #e2e8f0;
+            border: 1px solid #cbd5e1;
             border-radius: 18px;
             padding: 16px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.03);
         }
-        .form-group { margin-bottom: 14px; }
+        .form-group { margin-bottom: 16px; }
         .form-label {
-            display: block; font-size: 12px; font-weight: 700; color: #1e293b; margin-bottom: 6px;
+            display: block; font-size: 13.5px; font-weight: 700; color: #0f172a; margin-bottom: 7px;
         }
         .form-input, .form-select, .form-textarea {
-            width: 100%; padding: 10px 12px; border: 1px solid #cbd5e1; border-radius: 10px;
-            font-size: 13px; font-family: inherit; color: #0f172a; background: #f8fafc;
+            width: 100%; padding: 11px 13px; border: 1px solid #cbd5e1; border-radius: 11px;
+            font-size: 14.5px; font-family: inherit; color: #0f172a; background: #f8fafc;
             outline: none; transition: border-color 0.2s, background 0.2s;
         }
         .form-input:focus, .form-select:focus, .form-textarea:focus {
             border-color: #0d9488; background: #ffffff;
         }
         .test-checklist {
-            display: flex; flex-direction: column; gap: 6px;
-            background: #f8fafc; padding: 10px; border-radius: 12px; border: 1px solid #e2e8f0;
-            max-height: 230px; overflow-y: auto;
+            display: flex; flex-direction: column; gap: 7px;
+            background: #f8fafc; padding: 10px; border-radius: 12px; border: 1px solid #cbd5e1;
+            max-height: 250px; overflow-y: auto;
         }
         .chk-item {
-            display: flex; align-items: center; gap: 8px;
-            font-size: 12px; font-weight: 600; color: #1e293b; background: #ffffff;
-            padding: 8px 10px; border-radius: 8px; border: 1px solid #e2e8f0; cursor: pointer;
+            display: flex; align-items: center; gap: 10px;
+            font-size: 13.5px; font-weight: 600; color: #0f172a; background: #ffffff;
+            padding: 10px 11px; border-radius: 9px; border: 1px solid #e2e8f0; cursor: pointer;
         }
         .chk-item.checked { border-color: #0d9488; background: #f0fdfa; }
-        .chk-item input { accent-color: #0d9488; width: 16px; height: 16px; flex-shrink: 0; }
+        .chk-item input { accent-color: #0d9488; width: 18px; height: 18px; flex-shrink: 0; }
         .btn-gps {
-            width: 100%; background: #eff6ff; color: #1d4ed8; border: 1px solid #bfdbfe;
-            font-size: 12px; font-weight: 700; padding: 10px 12px; border-radius: 10px;
-            display: flex; align-items: center; justify-content: center; gap: 6px;
+            width: 100%; background: #eff6ff; color: #1d4ed8; border: 1.5px solid #93c5fd;
+            font-size: 13.5px; font-weight: 800; padding: 12px; border-radius: 11px;
+            display: flex; align-items: center; justify-content: center; gap: 7px;
         }
         .gps-status {
-            font-size: 11px; margin-top: 6px; padding: 8px 10px; border-radius: 8px;
-            display: none; line-height: 1.4;
+            font-size: 12.5px; margin-top: 7px; padding: 9px 11px; border-radius: 9px;
+            display: none; line-height: 1.45;
         }
-        .gps-status.success { display: block; background: #ecfdf5; color: #065f46; border: 1px solid #a7f3d0; }
-        .gps-status.error { display: block; background: #fef2f2; color: #991b1b; border: 1px solid #fecaca; }
+        .gps-status.success { display: block; background: #ecfdf5; color: #065f46; border: 1px solid #6ee7b7; }
+        .gps-status.error { display: block; background: #fef2f2; color: #991b1b; border: 1px solid #fca5a5; }
         .call-hint-box {
-            background: #fffbeb; border: 1px solid #fde68a; border-radius: 10px;
-            padding: 9px 11px; font-size: 11px; color: #92400e; margin-bottom: 10px;
-            line-height: 1.4;
+            background: #fffbeb; border: 1px solid #fcd34d; border-radius: 11px;
+            padding: 11px 12px; font-size: 12.5px; color: #78350f; margin-bottom: 12px;
+            line-height: 1.45;
         }
         .btn-submit {
             width: 100%; background: linear-gradient(135deg, #0f766e, #059669); color: #ffffff;
-            font-size: 14px; font-weight: 800; padding: 13px; border-radius: 12px;
+            font-size: 15px; font-weight: 800; padding: 14px; border-radius: 12px;
             box-shadow: 0 4px 12px rgba(13, 148, 136, 0.25);
         }
         .btn-submit:disabled { opacity: 0.65; cursor: not-allowed; }
@@ -454,44 +456,44 @@
         }
         .modal-overlay.show { display: flex; animation: fadeIn 0.2s ease; }
         .modal-box {
-            background: #ffffff; border-radius: 22px; max-width: 380px; width: 100%;
-            padding: 22px; text-align: center; box-shadow: 0 20px 35px rgba(0,0,0,0.25);
+            background: #ffffff; border-radius: 22px; max-width: 390px; width: 100%;
+            padding: 24px; text-align: center; box-shadow: 0 20px 35px rgba(0,0,0,0.25);
         }
         .modal-icon {
-            width: 56px; height: 56px; border-radius: 50%; background: #ecfdf5; color: #059669;
-            display: flex; align-items: center; justify-content: center; font-size: 28px;
+            width: 58px; height: 58px; border-radius: 50%; background: #ecfdf5; color: #059669;
+            display: flex; align-items: center; justify-content: center; font-size: 30px;
             margin: 0 auto 12px;
         }
         .modal-alert {
             background: #fef3c7; border: 1.5px solid #f59e0b; border-radius: 12px;
-            padding: 10px 12px; margin: 12px 0 14px; text-align: left;
-            font-size: 12px; color: #78350f; line-height: 1.45;
+            padding: 12px 13px; margin: 13px 0 15px; text-align: left;
+            font-size: 13.5px; color: #78350f; line-height: 1.5;
         }
         .modal-action-btn {
             display: flex; align-items: center; justify-content: center; gap: 8px;
-            width: 100%; padding: 13px 14px; border-radius: 12px; font-size: 13px; font-weight: 800;
-            margin-top: 9px; color: #ffffff; box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+            width: 100%; padding: 14px; border-radius: 12px; font-size: 14.5px; font-weight: 800;
+            margin-top: 10px; color: #ffffff; box-shadow: 0 3px 10px rgba(0,0,0,0.12);
         }
         
         .float-call {
-            position: fixed; bottom: 76px; right: 16px; z-index: 40;
-            width: 52px; height: 52px; border-radius: 50%; background: #f59e0b; color: #ffffff;
-            box-shadow: 0 4px 12px rgba(245, 158, 11, 0.4);
+            position: fixed; bottom: 82px; right: 16px; z-index: 40;
+            width: 56px; height: 56px; border-radius: 50%; background: #f59e0b; color: #ffffff;
+            box-shadow: 0 4px 14px rgba(245, 158, 11, 0.45);
             display: flex; flex-direction: column; align-items: center; justify-content: center;
         }
         
         .bottom-nav {
             position: fixed; bottom: 0; left: 50%; transform: translateX(-50%);
             width: 100%; max-width: 480px; background: #ffffff;
-            border-top: 1px solid #e2e8f0; padding: 8px 4px;
+            border-top: 1px solid #cbd5e1; padding: 9px 4px;
             display: flex; justify-content: space-around; align-items: center; z-index: 50;
         }
         .nav-btn {
             display: flex; flex-direction: column; align-items: center;
-            color: #94a3b8; font-size: 10px; font-weight: 600; padding: 4px 6px;
+            color: #64748b; font-size: 11.5px; font-weight: 600; padding: 4px 6px;
         }
         .nav-btn.active { color: #0f766e; font-weight: 800; }
-        .nav-btn svg { width: 20px; height: 20px; margin-bottom: 2px; }
+        .nav-btn svg { width: 22px; height: 22px; margin-bottom: 3px; }
     </style>
 </head>
 <body>
@@ -510,10 +512,10 @@
         <div class="header-actions">
             <button onclick="toggleLanguage()" id="langToggleBtn" class="lang-btn">বাংলা</button>
             <button onclick="shareClinic()" class="icon-btn" aria-label="Share Clinic">
-                <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"></path></svg>
+                <svg width="17" height="17" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"></path></svg>
             </button>
             <a href="tel:8777691532" class="icon-btn" aria-label="Call Clinic">
-                <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                <svg width="17" height="17" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
             </a>
         </div>
     </header>
@@ -579,14 +581,14 @@
         <div class="grid-2">
             <a href="tel:8777691532" class="desk-card desk-blue">
                 <div class="desk-icon" style="color:#1d4ed8;">
-                    <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                    <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
                 </div>
                 <span class="desk-title" data-i18n="desk1">Booking Desk 1</span>
                 <span class="desk-num-blue">8777691532</span>
             </a>
             <a href="tel:8100177365" class="desk-card desk-green">
                 <div class="desk-icon" style="color:#047857;">
-                    <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                    <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
                 </div>
                 <span class="desk-title" data-i18n="desk2">Booking Desk 2</span>
                 <span class="desk-num-green">8100177365</span>
@@ -599,25 +601,25 @@
             <div class="timing-row">
                 <div>
                     <div style="font-weight:700;color:#0f172a;">🩸 Home Blood Collection</div>
-                    <div style="font-size:10px;color:#64748b;">Morning Doorstep Sample Visit</div>
+                    <div style="font-size:11.5px;color:#475569;">Morning Doorstep Sample Visit</div>
                 </div>
-                <div class="timing-badge" style="color:#0f766e;border-color:#99f6e4;background:#f0fdfa;">7:00 AM – 12:00 PM</div>
+                <div class="timing-badge" style="color:#0f766e;border-color:#5eead4;background:#f0fdfa;">7:00 AM – 12:00 PM</div>
             </div>
             <div class="timing-row">
                 <div>
                     <div style="font-weight:700;color:#0f172a;">🏥 Sushila Clinic</div>
-                    <div style="font-size:10px;color:#64748b;">Doctor Chamber & ECG</div>
+                    <div style="font-size:11.5px;color:#475569;">Doctor Chamber & ECG</div>
                 </div>
                 <div class="timing-badge">8:30 AM – 2:00 PM<br>5:30 PM – 10:00 PM</div>
             </div>
             <div class="timing-row">
                 <div>
                     <div style="font-weight:700;color:#0f172a;">💊 Believe Medical Pharmacy</div>
-                    <div style="font-size:10px;color:#64748b;">Allopathic & Ayurvedic Counter</div>
+                    <div style="font-size:11.5px;color:#475569;">Allopathic & Ayurvedic Counter</div>
                 </div>
                 <div class="timing-badge">8:30 AM – 2:00 PM<br>5:30 PM – 10:00 PM</div>
             </div>
-            <div style="margin-top:10px;padding-top:10px;border-top:1px solid #e2e8f0;font-size:11px;color:#334155;">
+            <div style="margin-top:12px;padding-top:11px;border-top:1px solid #cbd5e1;font-size:13px;color:#1e293b;">
                 <strong>📍 Address:</strong> Khurigachi Fularhat Road, Sonarpur, Kolkata – 700150
             </div>
             <a href="https://www.google.com/maps/search/?api=1&query=Sushila+Clinic+Believe+Medical+Pharmacy+Khurigachi+Fularhat+Road+Sonarpur+Kolkata" target="_blank" class="map-btn" data-i18n="mapBtn">
@@ -636,7 +638,7 @@
 
         <div class="carousel">
             <div class="prod-card">
-                <img src="https://raw.githubusercontent.com/mayukhyt8665-png/believe-medical-pharmacy/main/file_00000001f808207a099670211f9b9ed.png" alt="SESA Ayurvedic" class="prod-img">
+                <img src="file_00000001f808207a099670211f9b9ed.png" onerror="if(!this.dataset.t){this.dataset.t=1;this.src='File_00000001f808207a099670211f9b9ed.png';}else{this.onerror=null;this.src='https://raw.githubusercontent.com/mayukhyt8665-png/believe-medical-pharmacy/main/File_00000001f808207a099670211f9b9ed.png';}" alt="SESA Ayurvedic" class="prod-img">
                 <div class="prod-body">
                     <div>
                         <span class="tag-pill">Ayurvedic Care</span>
@@ -684,16 +686,16 @@
         </div>
         <div class="grid-3">
             <div class="lab-box">
-                <div style="font-size:12px;font-weight:900;color:#dc2626;">ASHOK</div>
-                <div style="font-size:9px;font-weight:700;color:#64748b;">LABORATORY</div>
+                <div style="font-size:13.5px;font-weight:900;color:#dc2626;">ASHOK</div>
+                <div style="font-size:10px;font-weight:700;color:#475569;">LABORATORY</div>
             </div>
             <div class="lab-box">
-                <div style="font-size:12px;font-weight:900;color:#0f766e;">Apollo</div>
-                <div style="font-size:9px;font-weight:700;color:#be185d;">DIAGNOSTICS</div>
+                <div style="font-size:13.5px;font-weight:900;color:#0f766e;">Apollo</div>
+                <div style="font-size:10px;font-weight:700;color:#be185d;">DIAGNOSTICS</div>
             </div>
             <div class="lab-box">
-                <div style="font-size:12px;font-weight:900;color:#e11d48;">Health+</div>
-                <div style="font-size:9px;font-weight:700;color:#2563eb;">DIAGNOSTICS</div>
+                <div style="font-size:13.5px;font-weight:900;color:#e11d48;">Health+</div>
+                <div style="font-size:10px;font-weight:700;color:#2563eb;">DIAGNOSTICS</div>
             </div>
         </div>
 
@@ -741,16 +743,16 @@
 
     <!-- BOOK TEST TAB -->
     <main id="tab-book" class="tab-content">
-        <div style="margin-bottom:12px;">
-            <h2 style="font-size:16px;font-weight:800;" data-i18n="bookTitle">Book Lab Test / Home Visit</h2>
-            <p style="font-size:12px;color:#64748b;">Blood Collection Timing: <strong>7:00 AM – 12:00 PM</strong></p>
+        <div style="margin-bottom:13px;">
+            <h2 style="font-size:18px;font-weight:800;" data-i18n="bookTitle">Book Lab Test / Home Visit</h2>
+            <p style="font-size:13.5px;color:#475569;">Blood Collection Timing: <strong>7:00 AM – 12:00 PM</strong></p>
         </div>
 
         <!-- Prescription Photo Shortcut -->
         <div class="rx-banner">
             <div>
-                <div style="font-size:12px;font-weight:700;color:#14532d;" data-i18n="rxTitle">Have a Doctor's Prescription?</div>
-                <div style="font-size:10px;color:#166534;" data-i18n="rxSub">Send photo directly if test names are hard to read</div>
+                <div style="font-size:13.5px;font-weight:700;color:#14532d;" data-i18n="rxTitle">Have a Doctor's Prescription?</div>
+                <div style="font-size:11.5px;color:#166534;" data-i18n="rxSub">Send photo directly if test names are hard to read</div>
             </div>
             <a href="https://wa.me/918777691532?text=Hello%20Sushila%20Clinic,%20I%20am%20sending%20my%20prescription%20photo%20for%20lab%20test%20booking." target="_blank" class="rx-btn">
                 📸 Send Rx
@@ -771,14 +773,14 @@
                     <input type="text" id="formTestSearch" class="search-input" placeholder="Search test name (e.g. Thyroid, CBC, AMH, Dengue)..." oninput="renderFormTests()">
                     <button type="button" id="clearFormSearch" class="clear-search" onclick="clearFormSearchBox()">✕</button>
                 </div>
-                <div id="formSearchHint" style="font-size:10px;color:#0f766e;font-weight:600;margin-bottom:6px;">
+                <div id="formSearchHint" style="font-size:11.5px;color:#0f766e;font-weight:600;margin-bottom:7px;">
                     Showing main popular tests & health profiles (Type above to search all 440+ tests)
                 </div>
 
                 <!-- Dynamic Checklist -->
                 <div class="test-checklist" id="testChecklist"></div>
 
-                <input type="text" id="customTest" class="form-input" style="margin-top:8px;" placeholder="Other test / prescription note (optional)">
+                <input type="text" id="customTest" class="form-input" style="margin-top:9px;" placeholder="Other test / prescription note (optional)">
             </div>
 
             <!-- Patient Name -->
@@ -788,7 +790,7 @@
             </div>
 
             <!-- Age & Gender -->
-            <div class="grid-2" style="margin-bottom:14px;">
+            <div class="grid-2" style="margin-bottom:15px;">
                 <div>
                     <label class="form-label" for="patientAge" data-i18n="lblAge">3. Age (Years) *</label>
                     <input type="number" id="patientAge" class="form-input" placeholder="e.g. 42" min="1" max="120" required>
@@ -811,7 +813,7 @@
             </div>
 
             <!-- Date & Time -->
-            <div class="grid-2" style="margin-bottom:14px;">
+            <div class="grid-2" style="margin-bottom:15px;">
                 <div>
                     <label class="form-label" for="visitDate" data-i18n="lblDate">6. Preferred Date *</label>
                     <input type="date" id="visitDate" class="form-input" required>
@@ -857,9 +859,9 @@
 
     <!-- LAB TESTS DIRECTORY TAB -->
     <main id="tab-tests" class="tab-content">
-        <div style="margin-bottom:10px;">
-            <h2 style="font-size:16px;font-weight:800;">Diagnostic Test Directory</h2>
-            <p style="font-size:12px;color:#64748b;">Home Blood Collection: <strong>7:00 AM – 12:00 PM</strong></p>
+        <div style="margin-bottom:12px;">
+            <h2 style="font-size:18px;font-weight:800;">Diagnostic Test Directory</h2>
+            <p style="font-size:13.5px;color:#475569;">Home Blood Collection: <strong>7:00 AM – 12:00 PM</strong></p>
         </div>
 
         <!-- Fasting & Prep Guide -->
@@ -868,7 +870,7 @@
         </div>
 
         <!-- Search Bar in Lab Tests Tab -->
-        <div class="search-wrap" style="margin-bottom:10px;">
+        <div class="search-wrap" style="margin-bottom:12px;">
             <span class="search-icon">🔍</span>
             <input type="text" id="dirTestSearch" class="search-input" placeholder="Search 440+ tests (e.g. Vitamin D, HbA1c, ANA, Torch)..." oninput="renderDirectoryTests()">
             <button type="button" id="clearDirSearch" class="clear-search" onclick="clearDirSearchBox()">✕</button>
@@ -888,11 +890,11 @@
         <div id="highlightedCards">
             <div class="highlight-card">
                 <span class="badge-top">★ Highlighted</span>
-                <h3 style="font-size:14px;font-weight:800;">Allergy Profile Test</h3>
-                <p style="font-size:12px;color:#475569;margin-top:4px;">Comprehensive screening for food, dust, pollen & respiratory allergies.</p>
-                <div style="margin-top:10px;display:flex;align-items:center;justify-content:space-between;gap:8px;">
-                    <span style="font-size:11px;font-weight:600;color:#92400e;">Apollo / Healthplus / Ashok</span>
-                    <div style="display:flex;gap:6px;">
+                <h3 style="font-size:15.5px;font-weight:800;">Allergy Profile Test</h3>
+                <p style="font-size:13px;color:#334155;margin-top:5px;">Comprehensive screening for food, dust, pollen & respiratory allergies.</p>
+                <div style="margin-top:12px;display:flex;align-items:center;justify-content:space-between;gap:8px;">
+                    <span style="font-size:12px;font-weight:700;color:#92400e;">Apollo / Healthplus / Ashok</span>
+                    <div style="display:flex;gap:7px;">
                         <button onclick="bookSpecificTest('Allergy Profile Test')" class="btn-teal">Book Online</button>
                         <a href="tel:8777691532" class="btn-teal-light">Call</a>
                     </div>
@@ -901,11 +903,11 @@
 
             <div class="highlight-card" style="background:#fffbeb;">
                 <span class="badge-top" style="background:#0d9488;">Most Booked</span>
-                <h3 style="font-size:14px;font-weight:800;">Complete Blood Count (CBC) & ESR</h3>
-                <p style="font-size:12px;color:#475569;margin-top:4px;">Essential blood health checkup for infection, anemia & fever.</p>
-                <div style="margin-top:10px;display:flex;align-items:center;justify-content:space-between;gap:8px;">
-                    <span style="font-size:11px;font-weight:600;color:#475569;">NABL Partner Labs</span>
-                    <div style="display:flex;gap:6px;">
+                <h3 style="font-size:15.5px;font-weight:800;">Complete Blood Count (CBC) & ESR</h3>
+                <p style="font-size:13px;color:#334155;margin-top:5px;">Essential blood health checkup for infection, anemia & fever.</p>
+                <div style="margin-top:12px;display:flex;align-items:center;justify-content:space-between;gap:8px;">
+                    <span style="font-size:12px;font-weight:700;color:#475569;">NABL Partner Labs</span>
+                    <div style="display:flex;gap:7px;">
                         <button onclick="bookSpecificTest('Complete Blood Count (CBC) & ESR')" class="btn-teal">Book Online</button>
                         <a href="tel:8777691532" class="btn-teal-light">Call</a>
                     </div>
@@ -914,11 +916,11 @@
 
             <div class="highlight-card" style="background:#fffbeb;">
                 <span class="badge-top" style="background:#2563eb;">Popular</span>
-                <h3 style="font-size:14px;font-weight:800;">Thyroid Profile (T3, T4, TSH)</h3>
-                <p style="font-size:12px;color:#475569;margin-top:4px;">Complete thyroid hormone evaluation.</p>
-                <div style="margin-top:10px;display:flex;align-items:center;justify-content:space-between;gap:8px;">
-                    <span style="font-size:11px;font-weight:600;color:#475569;">7:00 AM – 12:00 PM</span>
-                    <div style="display:flex;gap:6px;">
+                <h3 style="font-size:15.5px;font-weight:800;">Thyroid Profile (T3, T4, TSH)</h3>
+                <p style="font-size:13px;color:#334155;margin-top:5px;">Complete thyroid hormone evaluation.</p>
+                <div style="margin-top:12px;display:flex;align-items:center;justify-content:space-between;gap:8px;">
+                    <span style="font-size:12px;font-weight:700;color:#475569;">7:00 AM – 12:00 PM</span>
+                    <div style="display:flex;gap:7px;">
                         <button onclick="bookSpecificTest('Thyroid Profile (T3, T4, TSH)')" class="btn-teal">Book Online</button>
                         <a href="tel:8777691532" class="btn-teal-light">Call</a>
                     </div>
@@ -926,7 +928,7 @@
             </div>
         </div>
 
-        <div id="dirSectionLabel" style="font-size:11px;font-weight:700;text-transform:uppercase;color:#64748b;margin:12px 0 10px;">
+        <div id="dirSectionLabel" style="font-size:12px;font-weight:800;text-transform:uppercase;color:#475569;margin:14px 0 10px;">
             Main Routine Tests & Health Packages
         </div>
         <div id="directoryList"></div>
@@ -940,37 +942,37 @@
             <p>Fast, accurate Electrocardiogram available at Sushila Clinic (8:30 AM – 2 PM & 5:30 PM – 10 PM) & via Home Visit.</p>
         </div>
 
-        <div style="background:#ffffff;border:1px solid #e2e8f0;border-radius:16px;padding:16px;box-shadow:0 1px 4px rgba(0,0,0,0.04);">
-            <h3 style="font-size:14px;font-weight:800;margin-bottom:10px;">ECG Service Details</h3>
-            <div style="font-size:12px;color:#334155;line-height:1.85;">
+        <div style="background:#ffffff;border:1px solid #cbd5e1;border-radius:16px;padding:18px;box-shadow:0 1px 4px rgba(0,0,0,0.04);">
+            <h3 style="font-size:16px;font-weight:800;margin-bottom:11px;">ECG Service Details</h3>
+            <div style="font-size:13.5px;color:#1e293b;line-height:1.9;">
                 <div>✅ High-precision printed 12-lead ECG graph report</div>
                 <div>✅ Doorstep home ECG service for senior citizens</div>
                 <div>✅ Conducted by qualified medical technician</div>
                 <div>✅ Immediate review by Dr. Bishnu Pada Mandal</div>
             </div>
-            <button onclick="bookSpecificTest('12-Lead Home ECG')" style="width:100%;background:#0f766e;color:#fff;font-size:12px;font-weight:800;padding:11px;border-radius:12px;margin-top:14px;">📝 Book Home ECG Online</button>
-            <div class="grid-2" style="margin-top:10px;margin-bottom:0;">
-                <a href="tel:8777691532" style="background:#e11d48;color:#fff;font-size:12px;font-weight:700;padding:10px;border-radius:12px;text-align:center;">📞 8777691532</a>
-                <a href="tel:8100177365" style="background:#0f172a;color:#fff;font-size:12px;font-weight:700;padding:10px;border-radius:12px;text-align:center;">📞 8100177365</a>
+            <button onclick="bookSpecificTest('12-Lead Home ECG')" style="width:100%;background:#0f766e;color:#fff;font-size:14px;font-weight:800;padding:13px;border-radius:12px;margin-top:16px;">📝 Book Home ECG Online</button>
+            <div class="grid-2" style="margin-top:11px;margin-bottom:0;">
+                <a href="tel:8777691532" style="background:#e11d48;color:#fff;font-size:13.5px;font-weight:800;padding:12px;border-radius:12px;text-align:center;">📞 8777691532</a>
+                <a href="tel:8100177365" style="background:#0f172a;color:#fff;font-size:13.5px;font-weight:800;padding:12px;border-radius:12px;text-align:center;">📞 8100177365</a>
             </div>
         </div>
     </main>
 
     <!-- PHARMACY TAB -->
     <main id="tab-pharmacy" class="tab-content">
-        <div style="margin-bottom:12px;">
-            <h2 style="font-size:16px;font-weight:800;">Believe Medical Pharmacy</h2>
-            <p style="font-size:12px;color:#0f766e;font-weight:700;">Open: 8:30 AM – 2:00 PM & 5:30 PM – 10:00 PM</p>
+        <div style="margin-bottom:13px;">
+            <h2 style="font-size:18px;font-weight:800;">Believe Medical Pharmacy</h2>
+            <p style="font-size:13.5px;color:#0f766e;font-weight:700;">Open: 8:30 AM – 2:00 PM & 5:30 PM – 10:00 PM</p>
         </div>
 
-        <div style="background:#fffbeb;border:1px solid #fde68a;border-radius:12px;padding:10px 12px;font-size:12px;color:#78350f;margin-bottom:16px;">
+        <div style="background:#fffbeb;border:1px solid #fcd34d;border-radius:12px;padding:12px 13px;font-size:13px;color:#78350f;margin-bottom:16px;line-height:1.5;">
             <strong>Note:</strong> Genuine allopathic, ayurvedic & wellness products are available directly at our pharmacy counter (Khurigachi Fularhat Road, Sonarpur). Call us to check stock before visiting.
         </div>
 
         <div class="gal-card">
-            <img src="https://raw.githubusercontent.com/mayukhyt8665-png/believe-medical-pharmacy/main/file_00000001f808207a099670211f9b9ed.png" alt="SESA Ayurvedic" class="gal-img">
+            <img src="file_00000001f808207a099670211f9b9ed.png" onerror="if(!this.dataset.t){this.dataset.t=1;this.src='File_00000001f808207a099670211f9b9ed.png';}else{this.onerror=null;this.src='https://raw.githubusercontent.com/mayukhyt8665-png/believe-medical-pharmacy/main/File_00000001f808207a099670211f9b9ed.png';}" alt="SESA Ayurvedic" class="gal-img">
             <div class="gal-foot">
-                <div><div style="font-size:14px;font-weight:700;">SESA Ayurvedic Hair Care</div><div style="font-size:12px;color:#64748b;">Medicinal Hair Oil & Shampoo</div></div>
+                <div><div style="font-size:15px;font-weight:700;">SESA Ayurvedic Hair Care</div><div style="font-size:13px;color:#475569;">Medicinal Hair Oil & Shampoo</div></div>
                 <a href="tel:8777691532" class="btn-teal">Call</a>
             </div>
         </div>
@@ -978,7 +980,7 @@
         <div class="gal-card">
             <img src="file_00000000b51082118a9d009c1b3d98c1.png" alt="AROLIVE Tablet" class="gal-img">
             <div class="gal-foot">
-                <div><div style="font-size:14px;font-weight:700;">AROLIVE Ayurvedic Tablet</div><div style="font-size:12px;color:#64748b;">Ayurvedic Liver Care Support</div></div>
+                <div><div style="font-size:15px;font-weight:700;">AROLIVE Ayurvedic Tablet</div><div style="font-size:13px;color:#475569;">Ayurvedic Liver Care Support</div></div>
                 <a href="tel:8777691532" class="btn-teal">Call</a>
             </div>
         </div>
@@ -986,7 +988,7 @@
         <div class="gal-card">
             <img src="IMG_20261114_105300.jpg" alt="Pharmacy Display 1" class="gal-img">
             <div class="gal-foot">
-                <div><div style="font-size:14px;font-weight:700;">Prescription & Skin Care</div><div style="font-size:12px;color:#64748b;">Genuine medicines & personal care</div></div>
+                <div><div style="font-size:15px;font-weight:700;">Prescription & Skin Care</div><div style="font-size:13px;color:#475569;">Genuine medicines & personal care</div></div>
                 <a href="tel:8777691532" class="btn-teal">Call</a>
             </div>
         </div>
@@ -994,7 +996,7 @@
         <div class="gal-card">
             <img src="IMG_20261114_105348.jpg" alt="Pharmacy Display 2" class="gal-img">
             <div class="gal-foot">
-                <div><div style="font-size:14px;font-weight:700;">Daily Essentials & Body Care</div><div style="font-size:12px;color:#64748b;">Moisturizers, lotions & hygiene</div></div>
+                <div><div style="font-size:15px;font-weight:700;">Daily Essentials & Body Care</div><div style="font-size:13px;color:#475569;">Moisturizers, lotions & hygiene</div></div>
                 <a href="tel:8777691532" class="btn-teal">Call</a>
             </div>
         </div>
@@ -1004,7 +1006,7 @@
     <div id="successModal" class="modal-overlay">
         <div class="modal-box">
             <div class="modal-icon">✅</div>
-            <h3 style="font-size:18px;font-weight:800;color:#0f172a;" data-i18n="modTitle">Booking Form Submitted!</h3>
+            <h3 style="font-size:19px;font-weight:800;color:#0f172a;" data-i18n="modTitle">Booking Form Submitted!</h3>
             
             <div class="modal-alert" data-i18n="modAlert">
                 <strong>📞 Don't Forget to Call Us!</strong><br>
@@ -1018,7 +1020,7 @@
                 📞 Call Clinic Desk 2 (8100177365)
             </a>
 
-            <button onclick="closeModal()" style="margin-top:16px;font-size:11px;font-weight:600;color:#94a3b8;padding:6px 14px;">
+            <button onclick="closeModal()" style="margin-top:16px;font-size:12.5px;font-weight:600;color:#64748b;padding:6px 14px;">
                 I have called / Close
             </button>
         </div>
@@ -1026,8 +1028,8 @@
 
     <!-- Floating Call Button -->
     <a href="tel:8777691532" class="float-call" aria-label="Call Now">
-        <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
-        <span style="font-size:8px;font-weight:800;margin-top:2px;">CALL</span>
+        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+        <span style="font-size:9px;font-weight:800;margin-top:2px;">CALL</span>
     </a>
 
     <!-- Bottom Navigation -->
@@ -1158,788 +1160,7 @@
         });
     }
 
-    // Share Clinic Link
     function shareClinic() {
         const shareData = {
             title: 'Sushila Clinic & Believe Medical Pharmacy',
-            text: 'Sushila Clinic & Believe Medical Pharmacy (Dr. Bishnu Pada Mandal) - Khurigachi Fularhat Road, Sonarpur. Home Blood Collection (7 AM - 12 PM) | Clinic & Pharmacy (8:30 AM - 2 PM, 5:30 PM - 10 PM). Call: 8777691532 / 8100177365',
-            url: window.location.href
-        };
-        if (navigator.share) {
-            navigator.share(shareData).catch(() => {});
-        } else {
-            window.open(`https://wa.me/?text=${encodeURIComponent(shareData.text + ' ' + shareData.url)}`, '_blank');
-        }
-    }
-
-    // Live Clinic Open/Closed Status Indicator
-    function updateLiveStatus() {
-        const now = new Date();
-        const mins = now.getHours() * 60 + now.getMinutes();
-        const statusEl = document.getElementById('liveStatusText');
-        const isClinicOpen = (mins >= 510 && mins <= 840) || (mins >= 1050 && mins <= 1320); // 8:30-14:00 or 17:30-22:00
-        const isBloodActive = (mins >= 420 && mins <= 720); // 7:00-12:00
-
-        if (isBloodActive && isClinicOpen) {
-            statusEl.innerHTML = `<span class="pulse-dot"></span> Open Now • Home Blood Collection Active`;
-        } else if (isClinicOpen) {
-            statusEl.innerHTML = `<span class="pulse-dot"></span> Clinic & Pharmacy Open Now • Sonarpur`;
-        } else if (isBloodActive) {
-            statusEl.innerHTML = `<span class="pulse-dot"></span> Home Blood Collection Active (Till 12 PM)`;
-        } else {
-            statusEl.innerHTML = `<span class="pulse-dot" style="background:#f59e0b;"></span> Khurigachi Fularhat Road, Sonarpur`;
-        }
-    }
-
-    // Main Popular Tests & Health Profiles
-    const MAIN_TESTS = [
-        { name: "Allergy Profile Test", dept: "IMMUNOLOGY", cat: "FEVER" },
-        { name: "Complete Blood Count (CBC) & ESR", dept: "HAEMATOLOGY", cat: "FEVER" },
-        { name: "Thyroid Profile (T3, T4, TSH)", dept: "IMMUNOLOGY", cat: "THYROID" },
-        { name: "Blood Sugar (Fasting / PP / RBS)", dept: "BIOCHEMISTRY", cat: "SUGAR" },
-        { name: "Glycosylated Haemoglobin (HbA1c)", dept: "BIOCHEMISTRY", cat: "SUGAR" },
-        { name: "Lipid Profile (Cholesterol, HDL, LDL, TG)", dept: "BIOCHEMISTRY", cat: "SUGAR" },
-        { name: "Liver Function Test (LFT)", dept: "BIOCHEMISTRY", cat: "ORGAN" },
-        { name: "Kidney Function Test (KFT) with Electrolytes", dept: "BIOCHEMISTRY", cat: "ORGAN" },
-        { name: "Vitamin D (25 Hydroxy Cholecalciferol)", dept: "IMMUNOLOGY", cat: "THYROID" },
-        { name: "Vitamin B12", dept: "IMMUNOLOGY", cat: "THYROID" },
-        { name: "Urine for Routine Examination", dept: "CLINICAL PATH", cat: "ORGAN" },
-        { name: "12-Lead Home ECG", dept: "CARDIOLOGY", cat: "ORGAN" },
-        { name: "KD Profile 1.1 (KFT+Electrolytes, LFT+GGT, Urine, CBC+ESR, Lipid, T3 T4 TSH, FBS)", dept: "HEALTH PACKAGE", cat: "PACKAGE" },
-        { name: "KD Profile 1.2 (FBS, HbA1c, KFT+Electrolytes, LFT+GGT, Urine, CBC+ESR, Iron, Lipid, T3 T4 TSH)", dept: "HEALTH PACKAGE", cat: "PACKAGE" },
-        { name: "KD Profile 1.3 (Testosterone, Urine, Vit D3, CBC+ESR, Iron, Lipid, T3 T4 TSH, Vit B12, FBS, HbA1c, KFT, LFT+GGT)", dept: "HEALTH PACKAGE", cat: "PACKAGE" },
-        { name: "KD Nirogyam Profile 2 (FBS, HbA1c, KFT+Electrolytes, LFT+GGT, Vit B12, Vit D3, CBC+ESR, Iron, Lipid, T3 T4 TSH, Urine)", dept: "HEALTH PACKAGE", cat: "PACKAGE" },
-        { name: "KD Fever Profile (CBC+ESR, Urine, Malaria Dual Ag, CRP, Typhoid IgG/IgM, Scrub Typhus IgM, Dengue NS1)", dept: "FEVER PACKAGE", cat: "FEVER" },
-        { name: "KD Diabetic Profile (Urea, Creatinine, Uric Acid, Lipid, FBS, PPBS, HbA1c, Urine ACR, Urine Routine)", dept: "DIABETIC PACKAGE", cat: "SUGAR" }
-    ];
-
-    // Complete 437 Diagnostic Tests Catalog
-    const ALL_DIAGNOSTIC_TESTS = [
-        "17 HYDROXY PROGESTERONE (OHP)",
-        "25 Hydroxy Cholecalciferol (Vitamin D)",
-        "A/G RATIO",
-        "ABSOLUTE EOSINOPHIL COUNT",
-        "ABSOLUTE LYMPHOCYTES COUNT",
-        "ABSOLUTE NEUTROPHIL COUNT",
-        "ACE ANGIOTENSIN CONVERTING ENZYME",
-        "ACETYL CHOLINE RECEPTOR ANTIBODIES SERUM",
-        "ACTH PLASMA",
-        "ADA ADENOSINE DEAMINASE",
-        "AEROBIC PUS CULTURE (MANUAL)",
-        "AEROBIC SWAB CULTURE (MANUAL)",
-        "AEROBIC SWAB CULTURE (AUTOMATED)",
-        "AEROBIC THROAT SWAB CULTURE (AUTOMATED)",
-        "AEROBIC THROAT SWAB CULTURE (MANUAL)",
-        "AEROBIC BLOOD CULTURE (AUTOMATED)",
-        "AEROBIC BLOOD CULTURE (MANUAL)",
-        "AEROBIC BODY FLUID CULTURE (MANUAL)",
-        "AEROBIC BODY FLUID CULTURE (AUTOMATED MIC)",
-        "AEROBIC PUS CULTURE (AUTOMATED)",
-        "AEROBIC SPUTUM CULTURE (AUTOMATED)",
-        "AEROBIC SPUTUM CULTURE (MANUAL)",
-        "AEROBIC STOOL CULTURE (AUTOMATED)",
-        "AEROBIC STOOL CULTURE (MANUAL)",
-        "AEROBIC SYNOVIAL FLUID CULTURE (MANUAL)",
-        "AEROBIC TISSUE CULTURE / IDENTIFICATION / SENSITIVITY (Automated)",
-        "AEROBIC TISSUE CULTURE / IDENTIFICATION / SENSITIVITY (MANUAL)",
-        "AEROBIC URINE CULTURE (MANUAL)",
-        "AFB CULTURE & IDENTIFICATION",
-        "AFB SMEAR",
-        "ALBUMIN",
-        "ALDOLASE",
-        "ALDOSTERONE SERUM",
-        "ALPHA FETO PROTEIN (AFP) SERUM",
-        "AMINO ACIDS (QUALITATIVE - 2 DIMENSIONAL)",
-        "AMYLASE",
-        "ANA ELISA",
-        "ANA IFA (HEP-2)",
-        "ANCA IFA",
-        "ANCA-PR3 (Serin Proteinase 3 Ab.) EIA",
-        "ANDROSTENEDIONE",
-        "ANTI CARDIOLIPIN ANTIBODY IgG",
-        "ANTI CARDIOLIPIN ANTIBODY IgM",
-        "ANTI CCP",
-        "ANTI DNAse B SERUM",
-        "ANTI ds-DNA (ELISA)",
-        "ANTI ds-DNA IFA",
-        "Anti HBs Antibody titer (HBs -Ab)",
-        "ANTI HCV (RAPID)",
-        "Anti Hepatitis A Virus IgG (HAV-IgG Total)",
-        "Anti Hepatitis A Virus IgM (HAV-IgM)",
-        "Anti Hepatitis C Virus (HCV) (CMIA/ECI)",
-        "Anti Hepatitis E virus IgM (HEV IgM) (ELISA)",
-        "Anti Hepatitis E virus Total (HEV-TOTAL) ELISA",
-        "ANTI NUCLEAR ANTIBODY (ANA) PROFILE LIA",
-        "ANTI PHOSPOLIPID Ab. IgG & IgM",
-        "ANTI PHOSPOLIPID ANTIBODY IgG",
-        "ANTI PHOSPOLIPID ANTIBODY IgM",
-        "Anti-RNP",
-        "ANTI THROMBIN III ACTIVITY",
-        "ANTI THYROGLOBULIN ANTIBODY",
-        "ANTI-TPO SERUM",
-        "ANTI-MPO (ANTI MYELOPEROXIDASE ANTIBODIES)",
-        "ANTI-MULLERIAN HORMONE (AMH)",
-        "APOLIPO A1/B",
-        "ASCA-IgA SERUM",
-        "ASCA-IgG SERUM",
-        "ASO (ANTI STREPTOLYSIN O) TITRE",
-        "ASPERGILLUS ANTIBODY IgE SERUM",
-        "ASPERGILLUS ANTIBODY IgG SERUM",
-        "ASPERGILLUS ANTIBODY IgM SERUM",
-        "BCR-ABL PCR QUANTITATIVE",
-        "BENZODIAZEPINE URINE",
-        "BETA 2 GLYCOPROTEIN 1 IgG & IgM",
-        "BETA 2 GLYCOPROTEIN 1 IgG SERUM",
-        "BETA 2 GLYCOPROTEIN 1 IgM SERUM",
-        "BETA 2 MICROGLOBULIN RANDOM URINE",
-        "BETA-2-MICROGLOBULIN SERUM",
-        "BICARBONATE",
-        "BILIRUBIN (INDIRECT)",
-        "BILIRUBIN (TOTAL)",
-        "BILIRUBIN (DIRECT & INDIRECT)",
-        "BILIRUBIN (DIRECT)",
-        "BIOPSY (EXTRA LARGE)",
-        "BIOPSY (LARGE)",
-        "BIOPSY (MEDIUM)",
-        "BIOPSY (MRM)",
-        "BIOPSY (SMALL)",
-        "BIOPSY FOR OPINION (HISTOPATHOLOGY)",
-        "BLEEDING & CLOTTING TIME",
-        "BLOOD GROUP & RH TYPING (BY CAT TECHNOLOGY)",
-        "BLOOD PICTURE (PERIPHERAL SMEAR)",
-        "BLOOD SUGAR / GLUCOSE (FASTING)",
-        "BLOOD SUGAR / GLUCOSE (POST PRANDIAL)",
-        "BLOOD SUGAR / GLUCOSE RANDOM (RBS)",
-        "BODY FLUID FOR LDH",
-        "BODY FLUID CRP",
-        "BODY FLUID FOR ADA",
-        "BODY FLUID FOR ALBUMIN",
-        "BODY FLUID FOR AMYLASE",
-        "BODY FLUID FOR BILIRUBIN (TOTAL)",
-        "BODY FLUID FOR CHLORIDE",
-        "BODY FLUID FOR CHOLESTEROL",
-        "BODY FLUID FOR CREATININE",
-        "BODY FLUID FOR CYTOLOGY",
-        "BODY FLUID FOR LIPASE",
-        "BODY FLUID ROUTINE ANALYSIS",
-        "BODY FLUID UREA",
-        "BODY FLUID URIC ACID",
-        "BRUCELLA-IgG (ELISA)",
-        "BRUCELLA-IgM (ELISA)",
-        "BUN (BLOOD UREA NITROGEN)",
-        "BUN Creat ratio",
-        "C PEPTIDE SERUM (F)",
-        "C. DIFFICILE TOXIN A & B STOOL",
-        "C1 ESTERASE INHIBITOR PROTEIN QUANTITATION",
-        "C3 - COMPLEMENT 3 SERUM",
-        "C4 - COMPLEMENT 4 SERUM",
-        "BETA HCG SERUM",
-        "CA 15.3 BREAST CANCER MARKER",
-        "CA 125 OVARIAN CANCER MARKER SERUM",
-        "CALCITONIN SERUM",
-        "CALCIUM (SERUM)",
-        "CALCIUM IONIZED SERUM",
-        "CALPROTECTIN FECAL",
-        "CARBAMAZEPINE / TEGRETOL (SERUM)",
-        "Carbamazepine assay",
-        "CATECHOLAMINES 24 HR URINE",
-        "CATECHOLAMINES PLASMA",
-        "CD 19",
-        "CD4 COUNT HELPER T CELL MARKER",
-        "CD8 COUNT",
-        "CA 19.9 PANCREATIC CANCER MARKER",
-        "CENTROMERE ANTIBODIES",
-        "CERULOPLASMIN",
-        "CHIKUNGUNYA VIRUS Ab IgM",
-        "CHLORIDE (SERUM)",
-        "CHOLESTEROL HDL",
-        "CHOLESTEROL LDL",
-        "CHOLESTEROL TOTAL",
-        "CHOLESTEROL VLDL",
-        "CHROMOGRANIN A",
-        "CHROMOSOME ANALYSIS - KARYOTYPE",
-        "CITRATE 24 HR URINE",
-        "CMV ANTIBODY (IgG)",
-        "CMV ANTIBODY (IgM)",
-        "CMV PCR QUALITATIVE CSF/FLUID",
-        "CMV PCR QUANTITATIVE",
-        "Complete Blood Count (CBC)",
-        "COMPLETE HAEMOGRAM WITH ESR",
-        "COOMBS TEST (DIRECT)",
-        "COOMBS TEST (INDIRECT)",
-        "CORRECTED CREATININE CLEARANCE",
-        "CPK (MB)",
-        "CPK NAC",
-        "CREATININE CLEARANCE TEST (24 HRS URINE)",
-        "CRYOGLOBULIN SCREENING",
-        "CRYPTOCOCCUS ANTIGEN CSF",
-        "CRYPTOCOCCUS ANTIGEN SERUM",
-        "CSF (OLIGOCLONAL BAND ANALYSIS)",
-        "CSF ANALYSIS (CYTOCENTRIFUGE)",
-        "CSF CHLORIDE",
-        "CSF PROTEIN",
-        "CYCLOSPORIN LEVEL WHOLE BLOOD",
-        "CYSTATIN C",
-        "CYSTICERCOSIS ANTIBODY IgG",
-        "CYTOLOGY CELL BLOCK",
-        "CYTOLOGY SLIDE FOR OPINION",
-        "CEA (Carcino Embryonic Antigen) SERUM",
-        "DC MP",
-        "DENGUE IgG CAPTURE ELISA",
-        "DENGUE IgM CAPTURE ELISA",
-        "DENGUE NS1 & IgM",
-        "DENGUE NS1 ANTIGEN ELISA",
-        "DENGUE NS1 IgG & IgM ELISA",
-        "DHEA SERUM",
-        "DHEA SULPHATE SERUM",
-        "EB VIRUS Ab VCA IgG",
-        "EB VIRUS Ab VCA IgM",
-        "ECHINOCOCCUS ANTIBODY IgG ELISA",
-        "ENDOMYSIAL ANTIBODY IgA IFA",
-        "EPSTEIN-BARR VIRUS ANTIBODY (EBV)-IgG",
-        "EPSTEIN-BARR VIRUS ANTIBODY (EBV)-IgM",
-        "EPTON / PHENYTOIN (SERUM)",
-        "ERYTHROPOIETIN ASSAY",
-        "ESR (ERYTHROCYTE SEDIMENTATION RATE)",
-        "D-DIMER (Quantitative) PLASMA",
-        "FACTOR IX ASSAY FUNCTIONAL",
-        "FACTOR V FUNCTIONAL",
-        "FACTOR V LEIDEN MUTATION ANALYSIS",
-        "FACTOR VII FUNCTIONAL",
-        "FACTOR VIII ASSAY",
-        "FACTOR X FUNCTIONAL",
-        "FACTOR XI FUNCTIONAL",
-        "FACTOR XII FUNCTIONAL",
-        "FDP (FIBRINOGEN DEGRADATION PRODUCT)",
-        "FECAL ELASTASE",
-        "DOUBLE MARKER TEST (9 - 13.5 WEEKS)",
-        "ESTRADIOL E2 SERUM",
-        "FIBRINOGEN ASSAY",
-        "Filaria Antigen Detection",
-        "FNAC REPORT",
-        "FNAC REPORT (GUIDED)",
-        "FOLATE (FOLIC ACID) RBC",
-        "FERRITIN ASSAY (SERUM)",
-        "FOLATE (Folic Acid) SERUM",
-        "FREE ANDROGEN INDEX SERUM",
-        "FREE BETA HCG",
-        "FREE CORTISOL 24 HR URINE",
-        "FREE TESTOSTERONE",
-        "FOLLICLE STIMULATING HORMONE (FSH)",
-        "FRUCTOSAMINE",
-        "FREE THYROID FUNCTION TEST",
-        "FSH LH PROLACTIN",
-        "FT3 (CLIA)",
-        "FT4 (CLIA)",
-        "FUNGAL CULTURE & IDENTIFICATION",
-        "G6PD (QUANTITATIVE)",
-        "GAD-65 (GLUTAMIC ACID DECARBOXYLASE-65) IgG",
-        "GALACTOMANNAN SERUM",
-        "GASTRIN SERUM",
-        "GGT (GAMMA GLUTAMYL TRANSFERASE)",
-        "GLIADIN ANTIBODY IgA",
-        "GLIADIN ANTIBODY IgG",
-        "GLOBULIN",
-        "GLOMERULAR BASEMENT MEMBRANE ANTIBODY (GBM)",
-        "GLYCOSYLATED HAEMOGLOBIN (HbA1C)",
-        "GRAM STAIN",
-        "GROWTH HORMONE",
-        "GTT EXTENDED - F1235",
-        "H. PYLORI (RAPID)",
-        "H. PYLORI-IgA",
-        "H. PYLORI-IgG",
-        "H. PYLORI-IgM",
-        "HAPTOGLOBIN",
-        "HB (Haemoglobin)",
-        "Hb ELECTROPHORESIS",
-        "HB ESR PCV",
-        "HB PCV",
-        "HB PLATELET",
-        "HB TC DC",
-        "HB TC DC ESR",
-        "HBcAb IgG",
-        "HBcAb IgM",
-        "HBeAb",
-        "HBeAg",
-        "HBsAg (CMIA/ECI)",
-        "HBsAg (RAPID)",
-        "HBV-DNA Quantification (viral load)",
-        "HCV-RNA QUALITATIVE",
-        "HCV-RNA QUANTIFICATION",
-        "HCV-Genotyping (1234)",
-        "HE4 with ROMA index Serum",
-        "Herpes Simplex Virus 1 IgG & IgM",
-        "Herpes Simplex Virus 2 IgG & IgM",
-        "HIV 1&2 ANTIBODY WESTERN BLOT",
-        "HIV Ag/Ab Combo (CMIA/ECI)",
-        "HIV RAPID SEROLOGY",
-        "HIV-1 (P-24 antigen)",
-        "HLA - PANEL REACTIVE ANTIBODIES (PRA)",
-        "HLA-B27 (BY RT PCR)",
-        "HOMOCYSTEINE",
-        "hs CRP",
-        "HSV ANTIBODY 1+2 IgG",
-        "HSV ANTIBODY 1+2 IgM",
-        "IMMUNOGLOBULIN IgA SERUM",
-        "IMMUNOGLOBULIN IgG SERUM",
-        "IMMUNOGLOBULIN IgM SERUM",
-        "INDIA INK PREPARATION",
-        "INHIBIN A",
-        "INORGANIC PHOSPHORUS",
-        "FT4 TSH",
-        "INSULIN ASSAY (FASTING)",
-        "IRON PROFILE (Iron, TIBC, % Saturation)",
-        "IRON SERUM",
-        "IRON STUDIES COMPREHENSIVE (Iron, TIBC, % Saturation, Ferritin)",
-        "ISLET CELL ANTIBODY",
-        "Jo-1 ANTIBODY",
-        "KETONE (ACETONE) SERUM",
-        "KIDNEY FUNCTION TEST (With Electrolytes) (Urea, Crt, U.Acid, Cal, Po4, Na+, K+, Cl)",
-        "KIDNEY FUNCTION TEST (Urea, Crt, U.Acid, Cal, Po4)",
-        "KOH PREPARATION",
-        "LACTATE PLASMA",
-        "LDH SERUM",
-        "LEPTOSPIRA Ab IgG",
-        "LEPTOSPIRA Ab IgM",
-        "INSULIN ASSAY (PP)",
-        "LIPASE (SERUM)",
-        "LIPID PROFILE (Calculated) (T.Chl, Hdl, Ldl, Vldl, Tg, Ldl/Hdl, T Hdl Ratio)",
-        "LIPID PROFILE Serum (T.Chl, Hdl, Ldl, Vldl, Tg, Ldl/Hdl, T Hdl Ratio)",
-        "LIPOPROTEIN (a)",
-        "LIVER FUNCTION TEST + GGT (Bil T,D,I, Protein, Alb, Glob, A/G Ratio, SGOT, SGPT, Alp, GGT)",
-        "LIVER FUNCTION TEST (Bil T,D,I, Protein, Alb, Glob, A/G Ratio, SGOT, SGPT, Alp)",
-        "LKM ANTIBODY",
-        "LUPUS ANTICOAGULANT BY DRVVT",
-        "LUPUS ANTICOAGULANT dRVVT",
-        "M.C.H.",
-        "M.C.H.C.",
-        "M.C.V.",
-        "MAGNESIUM",
-        "MALARIA DUAL ANTIGEN BLOOD",
-        "MALARIA PARASITE (MP)",
-        "MANTOUX TEST",
-        "MEASLES Ab IgM",
-        "METANEPHRINES 24 Hr. URINE",
-        "MITOCHONDRIAL ANTIBODY IFA",
-        "MPO ANCA",
-        "MUMPS VIRUS IgG",
-        "MUMPS VIRUS IgM",
-        "MUSK ANTIBODY SERUM",
-        "MYOGLOBIN SERUM",
-        "MYOGLOBIN URINE QUANTITATIVE",
-        "LH (LEUTINIZING HORMONE)",
-        "OSMOLALITY SERUM",
-        "OSMOLALITY URINE",
-        "OSMOTIC FRAGILITY TEST",
-        "OXALATE 24 HR URINE",
-        "PACKED CELL VOLUME (PCV)",
-        "PAP SMEAR (LBC)",
-        "PAP SMEAR / CERVICAL SMEAR",
-        "NT PRO-BNP SERUM",
-        "PARTIAL THROMBOPLASTIN TIME (PTT)",
-        "PHOSPHORUS",
-        "PLASMA AMMONIA",
-        "PLATELET COUNT",
-        "POTASSIUM (SERUM)",
-        "PREGNANCY TEST",
-        "PARA THYROID HORMONE",
-        "PROCALCITONIN SERUM",
-        "PROGESTERONE",
-        "PROTEIN C FUNCTIONAL",
-        "PROTEIN ELECTROPHORESIS & IFE SERUM (FULL)",
-        "PROTEIN ELECTROPHORESIS SERUM",
-        "PROTEIN ELECTROPHORESIS URINE",
-        "PROTEIN S FUNCTIONAL",
-        "PROTEIN TOTAL (SERUM)",
-        "PROTHROMBIN TIME",
-        "PSA (FREE)",
-        "PROLACTIN",
-        "QUADRUPLE TEST (15 - 22.6 WEEKS) SERUM",
-        "QUANTIFERON TB GOLD",
-        "RA FACTOR",
-        "RBC COUNT",
-        "RETICULOCYTE COUNT",
-        "RUBELLA ANTIBODY IgG",
-        "RUBELLA ANTIBODY IgM",
-        "SAAG (Serum Ascites Albumin Gradient)",
-        "Scl-70",
-        "SCRUB TYPHUS Ab. IgM SERUM",
-        "PSA (PROSTATIC SPECIFIC ANTIGEN TEST)",
-        "SERUM CORTISOL (E)",
-        "SERUM CREATININE",
-        "SERUM ELECTROLYTES",
-        "SERUM CORTISOL (M)",
-        "SERUM LITHIUM",
-        "SERUM SODIUM",
-        "SERUM UREA",
-        "SEX HORMONE BINDING GLOBULIN (SHBG) SERUM",
-        "SGOT (AST)",
-        "SGPT (ALT)",
-        "Sm ANTIBODY IgG",
-        "SMEAR FOR FUNGUS",
-        "SMOOTH MUSCLE ANTIBODY (ASMA) IFA",
-        "SS-A/Ro ANTIBODY",
-        "SS-B/La ANTIBODY",
-        "STOOL FOR OVA PARASITE CYST",
-        "STOOL FOR ROUTINE EXAMINATION",
-        "STOOL OCCULT BLOOD",
-        "SERUM IgE",
-        "T3 (TRIIODOTHYRONINE-CLIA)",
-        "T3 T4 TSH (THYROID PROFILE)",
-        "TB PCR TISSUE / BONE MARROW / BLOOD / FLUID",
-        "MTB RIF (GENEXPERT)",
-        "TC DC ESR",
-        "TC DC PC",
-        "T4 (THYROXINE - CLIA)",
-        "THROAT SWAB FOR ALBERTS STAIN (KLB)",
-        "THROMBIN TIME",
-        "THYROGLOBULIN",
-        "TIBC (Total Iron Binding Capacity) SERUM",
-        "TISSUE TRANSGLUTAMINASE Ab IgA",
-        "TORCH 10 IgG & IgM",
-        "TORCH IgG",
-        "TORCH IgG+IgM",
-        "TORCH IgM",
-        "TOTAL WBC COUNT (TLC)",
-        "TOXOPLASMA GONDII ANTIBODY IgG",
-        "TOXOPLASMA GONDII ANTIBODY IgM",
-        "TPHA",
-        "TRIGLYCERIDES",
-        "Triple test (14 - 22.6 WEEKS)",
-        "TESTOSTERONE",
-        "TROP T",
-        "TROPONIN I",
-        "TSH RECEPTOR ANTIBODY SERUM",
-        "TYPHOID IgG/IgM RAPID TEST",
-        "UREA AND CREATININE",
-        "URIC ACID",
-        "URINE BENCE JONES PROTEIN",
-        "URINE BILE SALT + BILE PIGMENTS",
-        "URINE CALCIUM (SPOT)",
-        "URINE CREATININE (SPOT)",
-        "URINE FOR CALCIUM (24 HRS)",
-        "URINE FOR CHYLE",
-        "URINE FOR CREATININE (24 HRS)",
-        "URINE FOR MICROALBUMIN (24hrs)",
-        "URINE FOR MICROALBUMIN (SPOT)",
-        "URINE FOR MICROALBUMIN CREATININE RATIO (SPOT)",
-        "URINE FOR POTASSIUM (SPOT)",
-        "URINE FOR POTASSIUM (24HRS)",
-        "URINE FOR PROTEIN (24 HRS)",
-        "URINE FOR PROTEIN (SPOT)",
-        "URINE FOR ROUTINE EXAMINATION",
-        "URINE FOR SODIUM (24HRS)",
-        "URINE FOR SODIUM (SPOT)",
-        "URINE FOR SUGAR (QUALITATIVE)",
-        "URINE FOR UREA (24 HRS)",
-        "URINE FOR UREA (SPOT)",
-        "URINE FOR URIC ACID (24 HRS)",
-        "URINE FOR URIC ACID (SPOT)",
-        "URINE MICROALBUMIN: CREATININE RATIO (24HRS)",
-        "Urine Microprotein/Creatinine Ratio (Spot)",
-        "URINE SUGAR (POST PRANDIAL) (QUALITATIVE)",
-        "VALPROIC ACID",
-        "VARICELLA ZOSTER IgG",
-        "VARICELLA ZOSTER IgM",
-        "VDRL",
-        "TSH (CLIA)",
-        "VIT B12",
-        "VITAMIN C",
-        "VMA 24 Hr. URINE",
-        "WBC COUNT (DIFFERENTIAL)",
-        "WIDAL TEST",
-        "COVID RT PCR",
-        "ADENO VIRUS",
-        "H1N1"
-    ];
-
-    const selectedTestSet = new Set();
-    let activeCategory = 'ALL';
-
-    document.addEventListener('DOMContentLoaded', () => {
-        updateLiveStatus();
-        const today = new Date().toISOString().split('T')[0];
-        const dateInput = document.getElementById('visitDate');
-        if (dateInput) {
-            dateInput.value = today;
-            dateInput.min = today;
-        }
-        renderFormTests();
-        renderDirectoryTests();
-    });
-
-    function switchTab(tabName) {
-        document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
-        document.getElementById('tab-' + tabName).classList.add('active');
-        
-        document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('active'));
-        document.getElementById('nav-' + tabName).classList.add('active');
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-
-    function toggleTestSelection(testName) {
-        if (selectedTestSet.has(testName)) {
-            selectedTestSet.delete(testName);
-        } else {
-            selectedTestSet.add(testName);
-        }
-        renderSelectedChips();
-        renderFormTests();
-    }
-
-    function renderSelectedChips() {
-        const container = document.getElementById('selectedTags');
-        if (selectedTestSet.size === 0) {
-            container.innerHTML = '';
-            return;
-        }
-        let html = '';
-        selectedTestSet.forEach(name => {
-            const safeName = name.replace(/'/g, "\\'");
-            html += `<div class="sel-chip">${name} <span onclick="toggleTestSelection('${safeName}')">×</span></div>`;
-        });
-        container.innerHTML = html;
-    }
-
-    function renderFormTests() {
-        const query = document.getElementById('formTestSearch').value.trim().toLowerCase();
-        const clearBtn = document.getElementById('clearFormSearch');
-        const hint = document.getElementById('formSearchHint');
-        const listEl = document.getElementById('testChecklist');
-
-        clearBtn.style.display = query ? 'block' : 'none';
-
-        let itemsToShow = [];
-        if (!query) {
-            hint.innerText = "Showing main popular tests & health profiles (Type above to search all 440+ tests)";
-            itemsToShow = MAIN_TESTS.map(t => ({ name: t.name }));
-        } else {
-            const combined = [
-                ...MAIN_TESTS.map(t => ({ name: t.name })),
-                ...ALL_DIAGNOSTIC_TESTS.map(name => ({ name }))
-            ];
-            const seen = new Set();
-            combined.forEach(item => {
-                const key = item.name.toLowerCase();
-                if (!seen.has(key) && key.includes(query)) {
-                    seen.add(key);
-                    itemsToShow.push(item);
-                }
-            });
-            hint.innerText = `Found ${itemsToShow.length} matching test(s) for "${document.getElementById('formTestSearch').value.trim()}"`;
-        }
-
-        if (itemsToShow.length === 0) {
-            listEl.innerHTML = `<div style="font-size:12px;color:#64748b;text-align:center;padding:12px;">No exact match found. You can type the test name in the box below!</div>`;
-            return;
-        }
-
-        listEl.innerHTML = itemsToShow.slice(0, 60).map(item => {
-            const isChecked = selectedTestSet.has(item.name);
-            const safeName = item.name.replace(/'/g, "\\'");
-            return `
-                <label class="chk-item ${isChecked ? 'checked' : ''}">
-                    <input type="checkbox" ${isChecked ? 'checked' : ''} onchange="toggleTestSelection('${safeName}')">
-                    <span>${item.name}</span>
-                </label>
-            `;
-        }).join('');
-    }
-
-    function clearFormSearchBox() {
-        document.getElementById('formTestSearch').value = '';
-        renderFormTests();
-    }
-
-    function filterByCategory(cat, btnEl) {
-        activeCategory = cat;
-        document.querySelectorAll('.cat-chip').forEach(c => c.classList.remove('active'));
-        btnEl.classList.add('active');
-        document.getElementById('dirTestSearch').value = '';
-        renderDirectoryTests();
-    }
-
-    function renderDirectoryTests() {
-        const query = document.getElementById('dirTestSearch').value.trim().toLowerCase();
-        const clearBtn = document.getElementById('clearDirSearch');
-        const highlighted = document.getElementById('highlightedCards');
-        const label = document.getElementById('dirSectionLabel');
-        const listEl = document.getElementById('directoryList');
-
-        clearBtn.style.display = query ? 'block' : 'none';
-        highlighted.style.display = (!query && activeCategory === 'ALL') ? 'block' : 'none';
-
-        let items = [];
-        if (query) {
-            const combined = [
-                ...MAIN_TESTS.map(t => ({ name: t.name, sub: t.dept })),
-                ...ALL_DIAGNOSTIC_TESTS.map(name => ({ name, sub: "Krishna / Apollo / Healthplus / Ashok Lab" }))
-            ];
-            const seen = new Set();
-            combined.forEach(item => {
-                const key = item.name.toLowerCase();
-                if (!seen.has(key) && key.includes(query)) {
-                    seen.add(key);
-                    items.push(item);
-                }
-            });
-            label.innerText = `Search Results (${items.length} tests found)`;
-        } else if (activeCategory !== 'ALL') {
-            items = MAIN_TESTS.filter(t => t.cat === activeCategory).map(t => ({ name: t.name, sub: t.dept }));
-            label.innerText = `Filtered Category (${items.length} tests)`;
-        } else {
-            label.innerText = "Main Routine Tests & Health Packages";
-            items = MAIN_TESTS.slice(3).map(t => ({ name: t.name, sub: t.dept }));
-        }
-
-        if (items.length === 0) {
-            listEl.innerHTML = `<div style="text-align:center;padding:20px;font-size:12px;color:#64748b;">No matching test found. Click "Book Test" below to enter custom test name.</div>`;
-            return;
-        }
-
-        listEl.innerHTML = items.slice(0, 80).map(item => {
-            const safeName = item.name.replace(/'/g, "\\'");
-            return `
-                <div class="test-row">
-                    <div>
-                        <div style="font-size:12px;font-weight:700;color:#0f172a;">${item.name}</div>
-                        <div style="font-size:10px;color:#64748b;margin-top:2px;">${item.sub}</div>
-                    </div>
-                    <button onclick="bookSpecificTest('${safeName}')" class="btn-teal-light">Book</button>
-                </div>
-            `;
-        }).join('');
-    }
-
-    function clearDirSearchBox() {
-        document.getElementById('dirTestSearch').value = '';
-        renderDirectoryTests();
-    }
-
-    function bookSpecificTest(testName) {
-        selectedTestSet.add(testName);
-        renderSelectedChips();
-        renderFormTests();
-        switchTab('book');
-    }
-
-    function getPatientLocation() {
-        const btn = document.getElementById('gpsBtn');
-        const statusDiv = document.getElementById('gpsStatus');
-        const gpsLinkInput = document.getElementById('gpsLink');
-        const gpsCoordsInput = document.getElementById('gpsCoords');
-
-        if (!navigator.geolocation) {
-            statusDiv.className = 'gps-status error';
-            statusDiv.innerHTML = '❌ Your browser does not support GPS location. Please type your full landmark in the address box.';
-            return;
-        }
-
-        btn.innerHTML = '<span>⏳</span> Detecting exact GPS location...';
-        btn.disabled = true;
-
-        navigator.geolocation.getCurrentPosition(
-            (position) => {
-                const lat = position.coords.latitude.toFixed(6);
-                const lng = position.coords.longitude.toFixed(6);
-                const mapsUrl = `https://www.google.com/maps?q=${lat},${lng}`;
-
-                gpsLinkInput.value = mapsUrl;
-                gpsCoordsInput.value = `${lat}, ${lng}`;
-
-                btn.innerHTML = '<span>✅</span> Location Pinned Successfully';
-                btn.style.background = '#ecfdf5';
-                btn.style.color = '#047857';
-                btn.style.borderColor = '#a7f3d0';
-                btn.disabled = false;
-
-                statusDiv.className = 'gps-status success';
-                statusDiv.innerHTML = `📍 <strong>GPS Pinned:</strong> ${lat}, ${lng}<br><a href="${mapsUrl}" target="_blank" style="text-decoration:underline;font-weight:700;">Preview on Google Maps ↗</a>`;
-            },
-            (error) => {
-                btn.innerHTML = '<span>📍</span> Retry Pin Current Location';
-                btn.disabled = false;
-                statusDiv.className = 'gps-status error';
-                statusDiv.innerHTML = '⚠️ Location permission denied or GPS is off. Please turn on phone Location/GPS and try again, or enter full address above.';
-            },
-            { enableHighAccuracy: true, timeout: 12000, maximumAge: 0 }
-        );
-    }
-
-    async function submitBooking(e) {
-        e.preventDefault();
-
-        const selectedTests = Array.from(selectedTestSet);
-        const customTest = document.getElementById('customTest').value.trim();
-        if (customTest) selectedTests.push(customTest);
-
-        if (selectedTests.length === 0) {
-            alert('Please select at least one lab test or type the test name.');
-            return;
-        }
-
-        const pName = document.getElementById('patientName').value.trim();
-        const pAge = document.getElementById('patientAge').value.trim();
-        const pGender = document.getElementById('patientGender').value;
-        const pPhone = document.getElementById('patientPhone').value.trim();
-        const vDate = document.getElementById('visitDate').value;
-        const vTime = document.getElementById('visitTime').value;
-        const pAddress = document.getElementById('patientAddress').value.trim();
-        const gpsUrl = document.getElementById('gpsLink').value;
-
-        const submitBtn = document.getElementById('submitBtn');
-        submitBtn.disabled = true;
-        submitBtn.innerText = '⏳ Sending Booking Details...';
-
-        const payload = {
-            _subject: `New Lab Booking: ${pName} (${selectedTests[0]})`,
-            _template: 'table',
-            _captcha: 'false',
-            Patient_Name: pName,
-            Age: pAge + ' Years',
-            Gender: pGender,
-            Mobile_Number: pPhone,
-            Selected_Tests: selectedTests.join(' | '),
-            Preferred_Date: vDate,
-            Preferred_Time: vTime,
-            Full_Address: pAddress,
-            Google_Maps_Location: gpsUrl,
-            GPS_Coordinates: document.getElementById('gpsCoords').value || 'Not detected'
-        };
-
-        try {
-            await fetch('https://formsubmit.co/ajax/aloesenic@gmail.com', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json'
-                },
-                body: JSON.stringify(payload)
-            });
-        } catch (err) {
-            console.log('Form notification queued');
-        }
-
-        submitBtn.disabled = false;
-        submitBtn.innerText = I18N[currentLang].submitBtn;
-        document.getElementById('successModal').classList.add('show');
-    }
-
-    function closeModal() {
-        document.getElementById('successModal').classList.remove('show');
-        document.getElementById('bookingForm').reset();
-        selectedTestSet.clear();
-        renderSelectedChips();
-        clearFormSearchBox();
-        const today = new Date().toISOString().split('T')[0];
-        document.getElementById('visitDate').value = today;
-        document.getElementById('gpsStatus').className = 'gps-status';
-        document.getElementById('gpsLink').value = 'Not shared by patient';
-        const btn = document.getElementById('gpsBtn');
-        btn.innerHTML = '<span>📍</span> Pin Current Phone Location (GPS)';
-        btn.style = '';
-    }
-</script>
-
-</body>
-</html>
+            text: 'Sushila Clinic & Believe Medical Pharmacy (Dr. Bishnu Pada Mandal) - Khurigachi Fularhat Road, Sonarpur. Home Blood Collection (7 AM - 12 PM) | Clinic & Pharmacy (8:30 AM - 2 PM, 5:30 PM - 10 PM). Call: 8777691532 / 810017
