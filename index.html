@@ -12,16 +12,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+Bengali:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #8c3b2b;
-            --primary-light: #b0513e;
-            --accent: #d97724;
-            --mint: #2f7d5d;
-            --bg-page: #f4efe6;
-            --bg-surface: #fffdf9;
-            --bg-soft: #f9f4ec;
-            --text-main: #231815;
-            --text-muted: #6b5852;
-            --border: #e8ddd0;
+            --primary: #0d9488;
+            --primary-dark: #0f766e;
+            --accent: #f97316;
+            --mint: #10b981;
+            --bg-page: #f0f9f8;
+            --bg-surface: #ffffff;
+            --bg-soft: #f4fbfa;
+            --text-main: #0f172a;
+            --text-muted: #475569;
+            --border: #d1eae6;
         }
         * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
         body {
@@ -41,19 +41,18 @@
             background: var(--bg-surface);
             min-height: 100vh;
             position: relative;
-            box-shadow: 0 0 36px rgba(35, 24, 21, 0.08);
+            box-shadow: 0 0 36px rgba(15, 118, 110, 0.08);
             padding-bottom: 98px;
         }
 
-        /* Animations */
         @keyframes slideUpFade {
             from { opacity: 0; transform: translateY(16px); }
             to { opacity: 1; transform: translateY(0); }
         }
         @keyframes statusPulse {
-            0% { box-shadow: 0 0 0 0 rgba(47, 125, 93, 0.5); }
-            70% { box-shadow: 0 0 0 7px rgba(47, 125, 93, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(47, 125, 93, 0); }
+            0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.5); }
+            70% { box-shadow: 0 0 0 7px rgba(16, 185, 129, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
         }
         .reveal {
             opacity: 0;
@@ -71,12 +70,11 @@
             transform: scale(0.96);
         }
 
-        /* Warm Roundy Clinical Header */
         .clinic-header {
             position: sticky;
             top: 0;
             z-index: 35;
-            background: rgba(255, 253, 249, 0.96);
+            background: rgba(255, 255, 255, 0.96);
             backdrop-filter: blur(12px);
             border-bottom: 1px solid var(--border);
             border-radius: 0 0 24px 24px;
@@ -85,23 +83,23 @@
             align-items: center;
             justify-content: space-between;
             gap: 8px;
-            box-shadow: 0 4px 16px rgba(140, 59, 43, 0.05);
+            box-shadow: 0 4px 16px rgba(13, 148, 136, 0.05);
         }
         .brand-group { display: flex; align-items: center; gap: 10px; }
         .crest-logo {
             width: 42px; height: 42px; border-radius: 16px;
-            background: linear-gradient(145deg, var(--primary), var(--accent));
+            background: linear-gradient(145deg, #0f766e, #14b8a6);
             color: #ffffff;
             display: flex; align-items: center; justify-content: center;
             font-weight: 800; font-size: 19px;
-            box-shadow: 0 4px 12px rgba(140, 59, 43, 0.24);
+            box-shadow: 0 4px 12px rgba(13, 148, 136, 0.24);
             flex-shrink: 0;
         }
-        .clinic-name { font-size: 16.5px; font-weight: 800; color: var(--primary); line-height: 1.15; }
-        .pharm-name { font-size: 12.5px; font-weight: 700; color: var(--accent); }
+        .clinic-name { font-size: 16.5px; font-weight: 800; color: var(--primary-dark); line-height: 1.15; }
+        .pharm-name { font-size: 12.5px; font-weight: 700; color: var(--primary); }
         .live-badge {
             display: inline-flex; align-items: center; gap: 5px;
-            font-size: 10.5px; font-weight: 700; color: var(--mint);
+            font-size: 10.5px; font-weight: 700; color: #059669;
             margin-top: 2px;
         }
         .live-dot {
@@ -112,27 +110,26 @@
         .header-btns { display: flex; align-items: center; gap: 6px; }
         .lang-pill {
             background: var(--bg-soft); border: 1px solid var(--border);
-            color: var(--primary); font-size: 12px; font-weight: 800;
+            color: var(--primary-dark); font-size: 12px; font-weight: 800;
             padding: 7px 12px; border-radius: 999px;
         }
         .hdr-icon {
             width: 38px; height: 38px; border-radius: 50%;
             background: var(--bg-soft); border: 1px solid var(--border);
-            color: var(--primary);
+            color: var(--primary-dark);
             display: flex; align-items: center; justify-content: center;
         }
 
         .tab-view { display: none; padding: 15px; }
         .tab-view.active { display: block; animation: slideUpFade 0.28s ease; }
 
-        /* Warm Super-Roundy Hero Card */
         .hero-clinical {
-            background: linear-gradient(145deg, #7c3022 0%, #b85335 55%, #d97724 100%);
+            background: linear-gradient(135deg, #0f766e 0%, #0d9488 55%, #0284c7 100%);
             border-radius: 28px;
             padding: 22px;
             color: #ffffff;
             margin-bottom: 18px;
-            box-shadow: 0 12px 26px rgba(140, 59, 43, 0.22);
+            box-shadow: 0 12px 26px rgba(13, 148, 136, 0.22);
             position: relative;
             overflow: hidden;
         }
@@ -142,7 +139,7 @@
             top: -40px; right: -40px;
             width: 150px; height: 150px;
             border-radius: 50%;
-            background: rgba(255, 248, 235, 0.1);
+            background: rgba(255, 255, 255, 0.1);
             pointer-events: none;
         }
         .hero-eyebrow {
@@ -153,22 +150,21 @@
             padding: 5px 12px; border-radius: 999px; margin-bottom: 11px;
         }
         .hero-clinical h2 { font-size: 21px; font-weight: 800; line-height: 1.25; }
-        .hero-clinical p { font-size: 13.5px; color: #fff3e6; margin-top: 8px; line-height: 1.5; }
+        .hero-clinical p { font-size: 13.5px; color: #f0fdfa; margin-top: 8px; line-height: 1.5; }
         .hero-actions { display: flex; gap: 10px; margin-top: 16px; flex-wrap: wrap; }
         .btn-coral {
-            background: #fff8ee; color: var(--primary);
+            background: #ffffff; color: var(--primary-dark);
             font-size: 13.5px; font-weight: 800;
             padding: 12px 18px; border-radius: 999px;
-            box-shadow: 0 4px 14px rgba(35, 24, 21, 0.16);
+            box-shadow: 0 4px 14px rgba(15, 23, 42, 0.14);
         }
         .btn-glass {
             background: rgba(255, 255, 255, 0.16); color: #ffffff;
-            border: 1px solid rgba(255, 255, 255, 0.42);
+            border: 1px solid rgba(255, 255, 255, 0.45);
             font-size: 13.5px; font-weight: 700;
             padding: 12px 18px; border-radius: 999px;
         }
 
-        /* Warm Bento Service Hub */
         .bento-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -193,7 +189,6 @@
         .bento-title { font-size: 14px; font-weight: 800; color: var(--text-main); line-height: 1.25; }
         .bento-sub { font-size: 12px; color: var(--text-muted); margin-top: 3px; line-height: 1.35; }
 
-        /* Bubbly Test Search + Prescription Box */
         .search-rx-box {
             background: var(--bg-soft);
             border: 1px solid var(--border);
@@ -223,7 +218,7 @@
             padding: 2px 4px 0;
         }
         .btn-rx-wa {
-            background: var(--mint);
+            background: #10b981;
             color: #ffffff;
             font-size: 12px;
             font-weight: 800;
@@ -232,27 +227,26 @@
             white-space: nowrap;
         }
 
-        /* Warm Chief Physician Card */
         .doctor-panel {
             background: #ffffff;
             border: 1.5px solid var(--border);
             border-radius: 26px;
             padding: 18px;
             margin-bottom: 18px;
-            box-shadow: 0 6px 18px rgba(140, 59, 43, 0.05);
+            box-shadow: 0 6px 18px rgba(13, 148, 136, 0.05);
         }
         .doc-header { display: flex; align-items: center; gap: 13px; }
         .doc-monogram {
             width: 56px; height: 56px; border-radius: 20px;
-            background: #fdf1e8; color: var(--primary);
-            border: 1.5px solid #eccbb5;
+            background: #ccfbf1; color: var(--primary-dark);
+            border: 1.5px solid #99f6e4;
             font-size: 20px; font-weight: 800;
             display: flex; align-items: center; justify-content: center;
             flex-shrink: 0;
         }
         .doc-role {
             font-size: 10.5px; font-weight: 800; text-transform: uppercase;
-            letter-spacing: 0.5px; color: var(--accent);
+            letter-spacing: 0.5px; color: var(--primary);
         }
         .doc-fullname { font-size: 17.5px; font-weight: 800; color: var(--text-main); margin-top: 1px; }
         .doc-degrees { font-size: 12.5px; font-weight: 600; color: var(--text-muted); margin-top: 2px; }
@@ -261,7 +255,7 @@
             margin-top: 13px; padding-top: 12px; border-top: 1px solid var(--border);
         }
         .spec-chip {
-            background: var(--bg-soft); color: var(--primary);
+            background: var(--bg-soft); color: var(--primary-dark);
             font-size: 11.5px; font-weight: 600;
             padding: 5px 11px; border-radius: 999px;
         }
@@ -270,26 +264,24 @@
             margin-top: 14px; gap: 10px;
         }
         .btn-appt {
-            background: var(--primary); color: #ffffff;
+            background: var(--primary-dark); color: #ffffff;
             font-size: 12.5px; font-weight: 800;
             padding: 11px 16px; border-radius: 999px; white-space: nowrap;
         }
 
         .section-row { display: flex; align-items: center; justify-content: space-between; margin-bottom: 11px; padding: 0 2px; }
         .section-heading { font-size: 16px; font-weight: 800; color: var(--text-main); }
-        .section-link { font-size: 13px; font-weight: 800; color: var(--primary); }
+        .section-link { font-size: 13px; font-weight: 800; color: var(--primary-dark); }
 
-        /* Direct Desk Cards */
         .desk-row { display: grid; grid-template-columns: 1fr 1fr; gap: 11px; margin-bottom: 18px; }
         .desk-box {
             border-radius: 22px; padding: 15px; text-align: center;
             border: 1px solid var(--border); background: #ffffff;
-            box-shadow: 0 3px 10px rgba(140, 59, 43, 0.04);
+            box-shadow: 0 3px 10px rgba(13, 148, 136, 0.04);
         }
         .desk-lbl { font-size: 12.5px; font-weight: 700; color: var(--text-muted); }
-        .desk-phone { font-size: 15px; font-weight: 800; color: var(--primary); margin-top: 3px; display: block; }
+        .desk-phone { font-size: 15px; font-weight: 800; color: var(--primary-dark); margin-top: 3px; display: block; }
 
-        /* Schedule & Location Card */
         .schedule-card {
             background: var(--bg-soft);
             border: 1px solid var(--border);
@@ -306,16 +298,15 @@
         .sched-note { font-size: 11.5px; color: var(--text-muted); }
         .sched-time {
             background: #ffffff; border: 1px solid var(--border);
-            color: var(--primary); font-size: 12px; font-weight: 800;
+            color: var(--primary-dark); font-size: 12px; font-weight: 800;
             padding: 6px 11px; border-radius: 14px; text-align: right; white-space: nowrap;
         }
         .btn-maps {
             display: flex; align-items: center; justify-content: center; gap: 6px;
-            width: 100%; background: var(--primary); color: #ffffff;
+            width: 100%; background: var(--primary-dark); color: #ffffff;
             font-size: 13.5px; font-weight: 700; padding: 13px; border-radius: 999px; margin-top: 13px;
         }
 
-        /* Horizontal Shelf */
         .h-scroll {
             display: flex; gap: 12px; overflow-x: auto; padding-bottom: 6px; margin-bottom: 18px;
             scrollbar-width: none;
@@ -329,32 +320,29 @@
         .med-body { padding: 12px; flex: 1; display: flex; flex-direction: column; justify-content: space-between; }
         .med-cat {
             display: inline-block; font-size: 10px; font-weight: 800; text-transform: uppercase;
-            padding: 3px 9px; border-radius: 999px; background: #fdf1e8; color: var(--primary);
+            padding: 3px 9px; border-radius: 999px; background: #ccfbf1; color: var(--primary-dark);
         }
         .med-title { font-size: 13.5px; font-weight: 700; color: var(--text-main); margin-top: 6px; }
         .btn-stock {
             display: block; text-align: center; background: var(--bg-soft);
-            color: var(--primary); border: 1px solid var(--border);
+            color: var(--primary-dark); border: 1px solid var(--border);
             font-size: 12px; font-weight: 800; padding: 8px; border-radius: 999px; margin-top: 9px;
         }
 
-        /* Lab Partners */
         .partner-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 9px; margin-bottom: 18px; }
         .partner-tile {
             background: #ffffff; border: 1px solid var(--border); border-radius: 18px;
             padding: 13px 6px; text-align: center;
         }
 
-        /* Patient Reviews */
         .quote-card {
             min-width: 262px; background: var(--bg-soft); border: 1px solid var(--border);
             border-radius: 22px; padding: 16px; display: flex; flex-direction: column; justify-content: space-between;
         }
-        .stars { color: var(--accent); font-size: 13px; letter-spacing: 1px; margin-bottom: 6px; }
+        .stars { color: #f59e0b; font-size: 13px; letter-spacing: 1px; margin-bottom: 6px; }
         .quote-txt { font-size: 13px; color: var(--text-main); line-height: 1.5; }
-        .quote-by { font-size: 12px; font-weight: 800; color: var(--primary); margin-top: 10px; }
+        .quote-by { font-size: 12px; font-weight: 800; color: var(--primary-dark); margin-top: 10px; }
 
-        /* FAQ Accordion */
         .faq-box {
             background: #ffffff; border: 1px solid var(--border); border-radius: 18px;
             margin-bottom: 9px; overflow: hidden;
@@ -370,7 +358,6 @@
         }
         .faq-box.open .faq-body { display: block; animation: slideUpFade 0.2s ease; }
 
-        /* Category Chips & Directory */
         .chip-bar {
             display: flex; gap: 8px; overflow-x: auto; padding-bottom: 8px; margin-bottom: 14px;
             scrollbar-width: none;
@@ -381,11 +368,11 @@
             background: var(--bg-soft); color: var(--text-muted); border: 1px solid var(--border); white-space: nowrap;
         }
         .filter-chip.active {
-            background: var(--primary); color: #ffffff; border-color: var(--primary);
+            background: var(--primary-dark); color: #ffffff; border-color: var(--primary-dark);
         }
         .featured-test {
-            background: linear-gradient(to right, #fdf8f2, #f9efe4);
-            border: 1px solid #ead5be; border-radius: 22px; padding: 16px;
+            background: linear-gradient(to right, #f0fdfa, #ecfdf5);
+            border: 1px solid #99f6e4; border-radius: 22px; padding: 16px;
             position: relative; margin-bottom: 11px;
         }
         .feat-tag {
@@ -402,11 +389,10 @@
             padding: 8px 15px; border-radius: 999px; white-space: nowrap;
         }
         .btn-soft-sm {
-            background: #fdf1e8; color: var(--primary);
+            background: #ccfbf1; color: var(--primary-dark);
             font-size: 12.5px; font-weight: 800; padding: 8px 14px; border-radius: 999px; white-space: nowrap;
         }
 
-        /* Booking Form */
         .form-panel {
             background: #ffffff; border: 1px solid var(--border);
             border-radius: 26px; padding: 18px;
@@ -416,7 +402,7 @@
             display: block; font-size: 13.5px; font-weight: 700; color: var(--text-main); margin-bottom: 7px;
         }
         .field-ctrl {
-            width: 100%; padding: 12px 15px; border: 1px solid #dfd2c3; border-radius: 16px;
+            width: 100%; padding: 12px 15px; border: 1px solid #cbd5e1; border-radius: 16px;
             font-size: 14.5px; font-family: inherit; color: var(--text-main); background: var(--bg-soft);
             outline: none; transition: border-color 0.2s, background 0.2s;
         }
@@ -434,7 +420,7 @@
         .chips-wrap { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 9px; }
         .picked-chip {
             display: inline-flex; align-items: center; gap: 6px;
-            background: #fdf1e8; color: var(--primary); font-size: 12.5px; font-weight: 700;
+            background: #ccfbf1; color: var(--primary-dark); font-size: 12.5px; font-weight: 700;
             padding: 6px 12px; border-radius: 999px;
         }
         .picked-chip span { cursor: pointer; font-weight: 900; font-size: 15px; }
@@ -448,10 +434,10 @@
             font-size: 13.5px; font-weight: 600; color: var(--text-main); background: #ffffff;
             padding: 10px 13px; border-radius: 14px; border: 1px solid var(--border); cursor: pointer;
         }
-        .chk-row.checked { border-color: var(--primary); background: #fdf4ed; }
+        .chk-row.checked { border-color: var(--primary); background: #f0fdfa; }
         .chk-row input { accent-color: var(--primary); width: 18px; height: 18px; flex-shrink: 0; }
         .btn-pin-gps {
-            width: 100%; background: #fdf4ed; color: var(--primary); border: 1.5px solid #e3bfa9;
+            width: 100%; background: #eff6ff; color: #1d4ed8; border: 1.5px solid #93c5fd;
             font-size: 13.5px; font-weight: 800; padding: 13px; border-radius: 999px;
             display: flex; align-items: center; justify-content: center; gap: 7px;
         }
@@ -459,19 +445,18 @@
             font-size: 12.5px; margin-top: 8px; padding: 10px 13px; border-radius: 14px;
             display: none; line-height: 1.45;
         }
-        .gps-msg.success { display: block; background: #eaf5ef; color: #1d573f; border: 1px solid #a6d4bf; }
-        .gps-msg.error { display: block; background: #fdf0ed; color: #8c2d19; border: 1px solid #f2b8ab; }
+        .gps-msg.success { display: block; background: #ecfdf5; color: #065f46; border: 1px solid #6ee7b7; }
+        .gps-msg.error { display: block; background: #fef2f2; color: #991b1b; border: 1px solid #fca5a5; }
         .reminder-note {
-            background: #fef5e7; border: 1px solid #f2cfa0; border-radius: 16px;
-            padding: 12px 14px; font-size: 12.5px; color: #6e4512; margin-bottom: 13px; line-height: 1.45;
+            background: #fff7ed; border: 1px solid #fed7aa; border-radius: 16px;
+            padding: 12px 14px; font-size: 12.5px; color: #9a3412; margin-bottom: 13px; line-height: 1.45;
         }
         .btn-book-now {
-            width: 100%; background: linear-gradient(135deg, var(--primary), var(--accent)); color: #ffffff;
+            width: 100%; background: linear-gradient(135deg, #0f766e, #0d9488); color: #ffffff;
             font-size: 15px; font-weight: 800; padding: 15px; border-radius: 999px;
-            box-shadow: 0 6px 16px rgba(140, 59, 43, 0.25);
+            box-shadow: 0 6px 16px rgba(13, 148, 136, 0.25);
         }
 
-        /* Pharmacy Gallery */
         .store-card {
             background: #ffffff; border: 1px solid var(--border); border-radius: 24px;
             overflow: hidden; margin-bottom: 16px;
@@ -479,9 +464,8 @@
         .store-img { width: 100%; height: 210px; object-fit: cover; display: block; background: var(--bg-soft); }
         .store-foot { padding: 15px; display: flex; align-items: center; justify-content: space-between; gap: 10px; }
 
-        /* Modal Popup */
         .overlay-bg {
-            position: fixed; inset: 0; background: rgba(35, 24, 21, 0.72);
+            position: fixed; inset: 0; background: rgba(15, 23, 42, 0.72);
             backdrop-filter: blur(4px); z-index: 100;
             display: none; align-items: center; justify-content: center; padding: 16px;
         }
@@ -491,13 +475,13 @@
             padding: 24px; text-align: center; box-shadow: 0 20px 35px rgba(0,0,0,0.25);
         }
         .popup-check {
-            width: 60px; height: 60px; border-radius: 50%; background: #eaf5ef; color: var(--mint);
+            width: 60px; height: 60px; border-radius: 50%; background: #ecfdf5; color: #059669;
             display: flex; align-items: center; justify-content: center; font-size: 30px; margin: 0 auto 12px;
         }
         .popup-warn {
-            background: #fef5e7; border: 1.5px solid #e09f3e; border-radius: 18px;
+            background: #fff7ed; border: 1.5px solid #fb923c; border-radius: 18px;
             padding: 13px 14px; margin: 13px 0 15px; text-align: left;
-            font-size: 13.5px; color: #5c3a0d; line-height: 1.5;
+            font-size: 13.5px; color: #9a3412; line-height: 1.5;
         }
         .popup-call {
             display: flex; align-items: center; justify-content: center; gap: 8px;
@@ -505,21 +489,20 @@
             margin-top: 10px; color: #ffffff;
         }
 
-        /* Floating Call & Warm Roundy Bottom Navigation */
         .fab-call {
             position: fixed; bottom: 86px; right: 16px; z-index: 40;
             width: 58px; height: 58px; border-radius: 50%; background: var(--accent); color: #ffffff;
-            box-shadow: 0 6px 18px rgba(217, 119, 36, 0.45);
+            box-shadow: 0 6px 18px rgba(249, 115, 22, 0.42);
             display: flex; flex-direction: column; align-items: center; justify-content: center;
         }
         .tab-dock {
             position: fixed; bottom: 0; left: 50%; transform: translateX(-50%);
-            width: 100%; max-width: 480px; background: #fffdf9;
+            width: 100%; max-width: 480px; background: #ffffff;
             border-top: 1px solid var(--border);
             border-radius: 24px 24px 0 0;
             padding: 9px 6px;
             display: flex; justify-content: space-around; align-items: center; z-index: 50;
-            box-shadow: 0 -4px 16px rgba(140, 59, 43, 0.05);
+            box-shadow: 0 -4px 16px rgba(13, 148, 136, 0.05);
         }
         .dock-item {
             display: flex; flex-direction: column; align-items: center;
@@ -527,8 +510,8 @@
             padding: 5px 10px; border-radius: 16px; transition: background 0.2s, color 0.2s;
         }
         .dock-item.active {
-            color: var(--primary); font-weight: 800;
-            background: #fdf1e8;
+            color: var(--primary-dark); font-weight: 800;
+            background: #ccfbf1;
         }
         .dock-item svg { width: 22px; height: 22px; margin-bottom: 2px; }
     </style>
@@ -536,7 +519,6 @@
 <body>
 
 <div class="app-shell">
-    <!-- Warm Roundy Clinical Top Header -->
     <header class="clinic-header">
         <div class="brand-group">
             <div class="crest-logo">+</div>
@@ -551,15 +533,13 @@
             <button onclick="shareClinic()" class="hdr-icon pressable" aria-label="Share Clinic">
                 <svg width="17" height="17" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"></path></svg>
             </button>
-            <a href="tel:8777691532" class="hdr-icon pressable" style="background:#fdf1e8;" aria-label="Call Clinic">
+            <a href="tel:8777691532" class="hdr-icon pressable" style="background:#ccfbf1;" aria-label="Call Clinic">
                 <svg width="17" height="17" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
             </a>
         </div>
     </header>
 
-    <!-- HOME TAB -->
     <main id="tab-home" class="tab-view active">
-        <!-- Warm Super-Roundy Clinical Hero Card -->
         <section class="hero-clinical">
             <div class="hero-eyebrow"><span>🩸</span> <span data-i18n="heroPill">Home Blood Collection: 7:00 AM – 12:00 PM</span></div>
             <h2 data-i18n="heroTitle">Trusted Healthcare & Diagnostics at Your Doorstep</h2>
@@ -570,31 +550,30 @@
             </div>
         </section>
 
-        <!-- Warm Bento Service Hub -->
         <section class="bento-grid">
             <div onclick="switchTab('book')" class="bento-card pressable">
-                <div class="bento-ico" style="background:#fdf1e8;color:#8c3b2b;">🩸</div>
+                <div class="bento-ico" style="background:#ccfbf1;color:#0f766e;">🩸</div>
                 <div>
                     <div class="bento-title" data-i18n="b1Title">Home Blood Test</div>
                     <div class="bento-sub" data-i18n="b1Sub">7:00 AM – 12:00 PM Daily</div>
                 </div>
             </div>
             <div onclick="scrollToDoctor()" class="bento-card pressable">
-                <div class="bento-ico" style="background:#fef3e2;color:#d97724;">👨‍⚕️</div>
+                <div class="bento-ico" style="background:#e0f2fe;color:#0369a1;">👨‍⚕️</div>
                 <div>
                     <div class="bento-title" data-i18n="b2Title">Dr. B. P. Mandal</div>
                     <div class="bento-sub" data-i18n="b2Sub">General Physician Chamber</div>
                 </div>
             </div>
             <div onclick="switchTab('ecg')" class="bento-card pressable">
-                <div class="bento-ico" style="background:#eaf5ef;color:#2f7d5d;">💓</div>
+                <div class="bento-ico" style="background:#ffe4e6;color:#be123c;">💓</div>
                 <div>
                     <div class="bento-title" data-i18n="b3Title">12-Lead ECG</div>
                     <div class="bento-sub" data-i18n="b3Sub">Clinic & Senior Home Visit</div>
                 </div>
             </div>
             <div onclick="switchTab('pharmacy')" class="bento-card pressable">
-                <div class="bento-ico" style="background:#faece6;color:#9e3c28;">💊</div>
+                <div class="bento-ico" style="background:#ffedd5;color:#c2410c;">💊</div>
                 <div>
                     <div class="bento-title" data-i18n="b4Title">Medical Pharmacy</div>
                     <div class="bento-sub" data-i18n="b4Sub">8:30 AM–2 PM & 5:30–10 PM</div>
@@ -602,11 +581,10 @@
             </div>
         </section>
 
-        <!-- Bubbly Test Search + Prescription Upload -->
         <section class="search-rx-box reveal">
             <button onclick="openTestSearch()" class="search-trigger pressable">
                 <span id="liveSearchHint">🔍 Search 440+ tests (Thyroid, CBC, Sugar)...</span>
-                <span style="color:var(--primary);font-weight:800;">Search →</span>
+                <span style="color:var(--primary-dark);font-weight:800;">Search →</span>
             </button>
             <div class="rx-strip">
                 <div style="font-size:12px;color:var(--text-muted);">
@@ -618,7 +596,6 @@
             </div>
         </section>
 
-        <!-- Chief Consultant Physician Card -->
         <section id="doctorSection" class="doctor-panel reveal">
             <div class="doc-header">
                 <div class="doc-monogram">Dr</div>
@@ -644,7 +621,6 @@
             </div>
         </section>
 
-        <!-- Direct Booking Desks -->
         <div class="section-row reveal"><h3 class="section-heading" data-i18n="quickCallTitle">Direct Reception Desks</h3></div>
         <div class="desk-row reveal">
             <a href="tel:8777691532" class="desk-box pressable">
@@ -657,7 +633,6 @@
             </a>
         </div>
 
-        <!-- Timings & Location Card -->
         <div class="section-row reveal"><h3 class="section-heading" data-i18n="timingsTitle">Clinic Timings & Location</h3></div>
         <div class="schedule-card reveal">
             <div class="sched-item">
@@ -665,7 +640,7 @@
                     <div class="sched-name">🩸 Home Blood Collection</div>
                     <div class="sched-note">Morning Doorstep Sample Visit</div>
                 </div>
-                <div class="sched-time" style="background:#fdf1e8;">7:00 AM – 12:00 PM</div>
+                <div class="sched-time" style="background:#ccfbf1;">7:00 AM – 12:00 PM</div>
             </div>
             <div class="sched-item">
                 <div>
@@ -689,7 +664,6 @@
             </a>
         </div>
 
-        <!-- Pharmacy Highlights -->
         <div class="section-row reveal">
             <h3 class="section-heading" data-i18n="pharmTitle">Pharmacy Counter Highlights</h3>
             <button onclick="switchTab('pharmacy')" class="section-link">View All →</button>
@@ -737,14 +711,13 @@
             </div>
         </div>
 
-        <!-- NABL Partner Labs -->
         <div class="section-row reveal">
             <h3 class="section-heading" data-i18n="labPartnerTitle">NABL Partner Laboratories</h3>
             <button onclick="switchTab('tests')" class="section-link">440+ Tests →</button>
         </div>
         <div class="partner-grid reveal">
             <div class="partner-tile">
-                <div style="font-size:13.5px;font-weight:900;color:#b91c1c;">ASHOK</div>
+                <div style="font-size:13.5px;font-weight:900;color:#dc2626;">ASHOK</div>
                 <div style="font-size:10px;font-weight:700;color:var(--text-muted);">LABORATORY</div>
             </div>
             <div class="partner-tile">
@@ -753,11 +726,10 @@
             </div>
             <div class="partner-tile">
                 <div style="font-size:13.5px;font-weight:900;color:#e11d48;">Health+</div>
-                <div style="font-size:10px;font-weight:700;color:#1d4ed8;">DIAGNOSTICS</div>
+                <div style="font-size:10px;font-weight:700;color:#2563eb;">DIAGNOSTICS</div>
             </div>
         </div>
 
-        <!-- Patient Feedback -->
         <div class="section-row reveal"><h3 class="section-heading" data-i18n="revTitle">Patient Feedback</h3></div>
         <div class="h-scroll reveal">
             <div class="quote-card">
@@ -783,7 +755,6 @@
             </div>
         </div>
 
-        <!-- FAQs -->
         <div class="section-row reveal"><h3 class="section-heading" data-i18n="faqTitle">Frequently Asked Questions</h3></div>
         <div class="faq-box reveal" onclick="this.classList.toggle('open')">
             <button type="button" class="faq-trigger"><span>1. How will I receive my lab test reports?</span><span>+</span></button>
@@ -799,10 +770,9 @@
         </div>
     </main>
 
-    <!-- BOOK TEST TAB -->
     <main id="tab-book" class="tab-view">
         <div style="margin-bottom:13px;">
-            <h2 style="font-size:18px;font-weight:800;color:var(--primary);" data-i18n="bookTitle">Book Lab Test / Home Visit</h2>
+            <h2 style="font-size:18px;font-weight:800;color:var(--primary-dark);" data-i18n="bookTitle">Book Lab Test / Home Visit</h2>
             <p style="font-size:13.5px;color:var(--text-muted);">Blood Collection Timing: <strong>7:00 AM – 12:00 PM</strong></p>
         </div>
 
@@ -815,7 +785,7 @@
                     <input type="text" id="formTestSearch" class="search-ctrl" placeholder="Search test name (e.g. Thyroid, CBC, AMH, Dengue)..." oninput="renderFormTests()">
                     <button type="button" id="clearFormSearch" class="search-clr" onclick="clearFormSearchBox()">✕</button>
                 </div>
-                <div id="formSearchHint" style="font-size:11.5px;color:var(--primary);font-weight:600;margin-bottom:7px;">
+                <div id="formSearchHint" style="font-size:11.5px;color:var(--primary-dark);font-weight:600;margin-bottom:7px;">
                     Showing main popular tests & health profiles (Type above to search all 440+ tests)
                 </div>
                 <div class="chk-scroll" id="testChecklist"></div>
@@ -890,10 +860,9 @@
         </form>
     </main>
 
-    <!-- LAB TESTS DIRECTORY TAB -->
     <main id="tab-tests" class="tab-view">
         <div style="margin-bottom:12px;">
-            <h2 style="font-size:18px;font-weight:800;color:var(--primary);">Diagnostic Test Directory</h2>
+            <h2 style="font-size:18px;font-weight:800;color:var(--primary-dark);">Diagnostic Test Directory</h2>
             <p style="font-size:13.5px;color:var(--text-muted);">Home Blood Collection: <strong>7:00 AM – 12:00 PM</strong></p>
         </div>
 
@@ -922,7 +891,7 @@
                 <h3 style="font-size:15.5px;font-weight:800;">Allergy Profile Test</h3>
                 <p style="font-size:13px;color:var(--text-muted);margin-top:4px;">Comprehensive screening for food, dust, pollen & respiratory allergies.</p>
                 <div style="margin-top:12px;display:flex;align-items:center;justify-content:space-between;gap:8px;">
-                    <span style="font-size:12px;font-weight:700;color:var(--primary);">Apollo / Healthplus / Ashok</span>
+                    <span style="font-size:12px;font-weight:700;color:var(--primary-dark);">Apollo / Healthplus / Ashok</span>
                     <div style="display:flex;gap:7px;">
                         <button onclick="bookSpecificTest('Allergy Profile Test')" class="btn-primary-sm pressable">Book Online</button>
                         <a href="tel:8777691532" class="btn-soft-sm">Call</a>
@@ -931,11 +900,11 @@
             </div>
 
             <div class="featured-test">
-                <span class="feat-tag" style="background:var(--mint);">Most Booked</span>
+                <span class="feat-tag" style="background:var(--primary);">Most Booked</span>
                 <h3 style="font-size:15.5px;font-weight:800;">Complete Blood Count (CBC) & ESR</h3>
                 <p style="font-size:13px;color:var(--text-muted);margin-top:4px;">Essential blood health checkup for infection, anemia & fever.</p>
                 <div style="margin-top:12px;display:flex;align-items:center;justify-content:space-between;gap:8px;">
-                    <span style="font-size:12px;font-weight:700;color:var(--primary);">NABL Partner Labs</span>
+                    <span style="font-size:12px;font-weight:700;color:var(--primary-dark);">NABL Partner Labs</span>
                     <div style="display:flex;gap:7px;">
                         <button onclick="bookSpecificTest('Complete Blood Count (CBC) & ESR')" class="btn-primary-sm pressable">Book Online</button>
                         <a href="tel:8777691532" class="btn-soft-sm">Call</a>
@@ -944,11 +913,11 @@
             </div>
 
             <div class="featured-test">
-                <span class="feat-tag" style="background:var(--primary);">Popular</span>
+                <span class="feat-tag" style="background:#0284c7;">Popular</span>
                 <h3 style="font-size:15.5px;font-weight:800;">Thyroid Profile (T3, T4, TSH)</h3>
                 <p style="font-size:13px;color:var(--text-muted);margin-top:4px;">Complete thyroid hormone evaluation.</p>
                 <div style="margin-top:12px;display:flex;align-items:center;justify-content:space-between;gap:8px;">
-                    <span style="font-size:12px;font-weight:700;color:var(--primary);">7:00 AM – 12:00 PM</span>
+                    <span style="font-size:12px;font-weight:700;color:var(--primary-dark);">7:00 AM – 12:00 PM</span>
                     <div style="display:flex;gap:7px;">
                         <button onclick="bookSpecificTest('Thyroid Profile (T3, T4, TSH)')" class="btn-primary-sm pressable">Book Online</button>
                         <a href="tel:8777691532" class="btn-soft-sm">Call</a>
@@ -963,16 +932,15 @@
         <div id="directoryList"></div>
     </main>
 
-    <!-- ECG TAB -->
     <main id="tab-ecg" class="tab-view">
-        <div class="hero-clinical" style="background:linear-gradient(145deg,#8c2d25,#c24d38);">
+        <div class="hero-clinical" style="background:linear-gradient(135deg,#be123c,#e11d48);">
             <div class="hero-eyebrow"><span>💓</span> Cardiology Diagnostics</div>
             <h2>12-Lead Digital ECG</h2>
             <p>High-precision Electrocardiogram available at Sushila Clinic (8:30 AM – 2 PM & 5:30 PM – 10 PM) & via Home Visit.</p>
         </div>
 
         <div class="form-panel">
-            <h3 style="font-size:16px;font-weight:800;margin-bottom:11px;color:var(--primary);">ECG Service Highlights</h3>
+            <h3 style="font-size:16px;font-weight:800;margin-bottom:11px;color:var(--primary-dark);">ECG Service Highlights</h3>
             <div style="font-size:13.5px;color:var(--text-main);line-height:1.9;">
                 <div>✅ Instant printed 12-lead ECG graph report</div>
                 <div>✅ Doorstep home ECG service for senior citizens</div>
@@ -987,11 +955,10 @@
         </div>
     </main>
 
-    <!-- PHARMACY TAB -->
     <main id="tab-pharmacy" class="tab-view">
         <div style="margin-bottom:13px;">
-            <h2 style="font-size:18px;font-weight:800;color:var(--primary);">Believe Medical Pharmacy</h2>
-            <p style="font-size:13.5px;color:var(--mint);font-weight:700;">Open: 8:30 AM – 2:00 PM & 5:30 PM – 10:00 PM</p>
+            <h2 style="font-size:18px;font-weight:800;color:var(--primary-dark);">Believe Medical Pharmacy</h2>
+            <p style="font-size:13.5px;color:var(--primary);font-weight:700;">Open: 8:30 AM – 2:00 PM & 5:30 PM – 10:00 PM</p>
         </div>
 
         <div class="reminder-note" style="margin-bottom:16px;">
@@ -1031,7 +998,6 @@
         </div>
     </main>
 
-    <!-- Post-Submit Call Reminder Popup -->
     <div id="successModal" class="overlay-bg">
         <div class="popup-card">
             <div class="popup-check">✅</div>
@@ -1040,10 +1006,10 @@
                 <strong>📞 Don't Forget to Call Us!</strong><br>
                 Your details have been sent to <strong>Sushila Clinic</strong>. Please call any of the numbers below right now so we can confirm your home visit slot:
             </div>
-            <a href="tel:8777691532" class="popup-call pressable" style="background:var(--primary);">
+            <a href="tel:8777691532" class="popup-call pressable" style="background:var(--primary-dark);">
                 📞 Call Clinic Desk 1 (8777691532)
             </a>
-            <a href="tel:8100177365" class="popup-call pressable" style="background:var(--accent);">
+            <a href="tel:8100177365" class="popup-call pressable" style="background:#0284c7;">
                 📞 Call Clinic Desk 2 (8100177365)
             </a>
             <button onclick="closeModal()" style="margin-top:16px;font-size:12.5px;font-weight:600;color:var(--text-muted);padding:6px 14px;">
@@ -1052,13 +1018,11 @@
         </div>
     </div>
 
-    <!-- Floating Call Button -->
     <a href="tel:8777691532" class="fab-call pressable" aria-label="Call Now">
         <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
         <span style="font-size:9px;font-weight:800;margin-top:2px;">CALL</span>
     </a>
 
-    <!-- Warm Roundy Bottom Tab Bar -->
     <nav class="tab-dock">
         <button onclick="switchTab('home')" id="nav-home" class="dock-item active">
             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
@@ -1084,7 +1048,6 @@
 </div>
 
 <script>
-    // Bilingual Dictionary (English & Bengali)
     let currentLang = 'en';
     const I18N = {
         en: {
@@ -1223,7 +1186,7 @@
         } else if (isBloodActive) {
             statusEl.innerHTML = `<span class="live-dot"></span> Home Blood Collection Active (Till 12 PM)`;
         } else {
-            statusEl.innerHTML = `<span class="live-dot" style="background:#d97724;"></span> Khurigachi Fularhat Road, Sonarpur`;
+            statusEl.innerHTML = `<span class="live-dot" style="background:#f97316;"></span> Khurigachi Fularhat Road, Sonarpur`;
         }
     }
 
@@ -1264,7 +1227,6 @@
         if (docEl) docEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
 
-    // Main Popular Tests & Health Profiles
     const MAIN_TESTS = [
         { name: "Allergy Profile Test", dept: "IMMUNOLOGY", cat: "FEVER" },
         { name: "Complete Blood Count (CBC) & ESR", dept: "HAEMATOLOGY", cat: "FEVER" },
@@ -1286,7 +1248,6 @@
         { name: "KD Diabetic Profile (Urea, Creatinine, Uric Acid, Lipid, FBS, PPBS, HbA1c, Urine ACR, Urine Routine)", dept: "DIABETIC PACKAGE", cat: "SUGAR" }
     ];
 
-    // Complete 437 Diagnostic Tests Catalog
     const ALL_DIAGNOSTIC_TESTS = [
         "17 HYDROXY PROGESTERONE (OHP)",
         "25 Hydroxy Cholecalciferol (Vitamin D)",
@@ -1922,9 +1883,9 @@
                 gpsCoordsInput.value = `${lat}, ${lng}`;
 
                 btn.innerHTML = '<span>✅</span> Location Pinned Successfully';
-                btn.style.background = '#eaf5ef';
-                btn.style.color = '#1d573f';
-                btn.style.borderColor = '#a6d4bf';
+                btn.style.background = '#ecfdf5';
+                btn.style.color = '#065f46';
+                btn.style.borderColor = '#6ee7b7';
                 btn.disabled = false;
 
                 statusDiv.className = 'gps-msg success';
