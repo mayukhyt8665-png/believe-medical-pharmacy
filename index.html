@@ -12,16 +12,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+Bengali:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #0f4c5c;
-            --primary-light: #1a6b7c;
-            --accent: #e07a5f;
-            --mint: #2a9d8f;
-            --bg-page: #eef2f0;
-            --bg-surface: #ffffff;
-            --bg-soft: #f5f8f7;
-            --text-main: #142126;
-            --text-muted: #52636a;
-            --border: #dce5e1;
+            --primary: #8c3b2b;
+            --primary-light: #b0513e;
+            --accent: #d97724;
+            --mint: #2f7d5d;
+            --bg-page: #f4efe6;
+            --bg-surface: #fffdf9;
+            --bg-soft: #f9f4ec;
+            --text-main: #231815;
+            --text-muted: #6b5852;
+            --border: #e8ddd0;
         }
         * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
         body {
@@ -41,7 +41,7 @@
             background: var(--bg-surface);
             min-height: 100vh;
             position: relative;
-            box-shadow: 0 0 36px rgba(20, 33, 38, 0.08);
+            box-shadow: 0 0 36px rgba(35, 24, 21, 0.08);
             padding-bottom: 98px;
         }
 
@@ -51,9 +51,9 @@
             to { opacity: 1; transform: translateY(0); }
         }
         @keyframes statusPulse {
-            0% { box-shadow: 0 0 0 0 rgba(42, 157, 143, 0.5); }
-            70% { box-shadow: 0 0 0 7px rgba(42, 157, 143, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(42, 157, 143, 0); }
+            0% { box-shadow: 0 0 0 0 rgba(47, 125, 93, 0.5); }
+            70% { box-shadow: 0 0 0 7px rgba(47, 125, 93, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(47, 125, 93, 0); }
         }
         .reveal {
             opacity: 0;
@@ -71,12 +71,12 @@
             transform: scale(0.96);
         }
 
-        /* Roundy Clinical Top Header */
+        /* Warm Roundy Clinical Header */
         .clinic-header {
             position: sticky;
             top: 0;
             z-index: 35;
-            background: rgba(255, 255, 255, 0.96);
+            background: rgba(255, 253, 249, 0.96);
             backdrop-filter: blur(12px);
             border-bottom: 1px solid var(--border);
             border-radius: 0 0 24px 24px;
@@ -85,23 +85,23 @@
             align-items: center;
             justify-content: space-between;
             gap: 8px;
-            box-shadow: 0 4px 16px rgba(20, 33, 38, 0.03);
+            box-shadow: 0 4px 16px rgba(140, 59, 43, 0.05);
         }
         .brand-group { display: flex; align-items: center; gap: 10px; }
         .crest-logo {
             width: 42px; height: 42px; border-radius: 16px;
-            background: linear-gradient(145deg, var(--primary), var(--primary-light));
+            background: linear-gradient(145deg, var(--primary), var(--accent));
             color: #ffffff;
             display: flex; align-items: center; justify-content: center;
             font-weight: 800; font-size: 19px;
-            box-shadow: 0 4px 12px rgba(15, 76, 92, 0.22);
+            box-shadow: 0 4px 12px rgba(140, 59, 43, 0.24);
             flex-shrink: 0;
         }
         .clinic-name { font-size: 16.5px; font-weight: 800; color: var(--primary); line-height: 1.15; }
-        .pharm-name { font-size: 12.5px; font-weight: 700; color: var(--mint); }
+        .pharm-name { font-size: 12.5px; font-weight: 700; color: var(--accent); }
         .live-badge {
             display: inline-flex; align-items: center; gap: 5px;
-            font-size: 10.5px; font-weight: 700; color: #1b6b61;
+            font-size: 10.5px; font-weight: 700; color: var(--mint);
             margin-top: 2px;
         }
         .live-dot {
@@ -125,14 +125,14 @@
         .tab-view { display: none; padding: 15px; }
         .tab-view.active { display: block; animation: slideUpFade 0.28s ease; }
 
-        /* Super-Roundy Clinical Hero Card */
+        /* Warm Super-Roundy Hero Card */
         .hero-clinical {
-            background: linear-gradient(145deg, #0f4c5c 0%, #17687a 100%);
+            background: linear-gradient(145deg, #7c3022 0%, #b85335 55%, #d97724 100%);
             border-radius: 28px;
             padding: 22px;
             color: #ffffff;
             margin-bottom: 18px;
-            box-shadow: 0 12px 26px rgba(15, 76, 92, 0.18);
+            box-shadow: 0 12px 26px rgba(140, 59, 43, 0.22);
             position: relative;
             overflow: hidden;
         }
@@ -142,33 +142,33 @@
             top: -40px; right: -40px;
             width: 150px; height: 150px;
             border-radius: 50%;
-            background: rgba(255, 255, 255, 0.07);
+            background: rgba(255, 248, 235, 0.1);
             pointer-events: none;
         }
         .hero-eyebrow {
             display: inline-flex; align-items: center; gap: 6px;
-            background: rgba(255, 255, 255, 0.15);
-            border: 1px solid rgba(255, 255, 255, 0.25);
+            background: rgba(255, 255, 255, 0.18);
+            border: 1px solid rgba(255, 255, 255, 0.28);
             font-size: 11px; font-weight: 700;
             padding: 5px 12px; border-radius: 999px; margin-bottom: 11px;
         }
         .hero-clinical h2 { font-size: 21px; font-weight: 800; line-height: 1.25; }
-        .hero-clinical p { font-size: 13.5px; color: #e2f1f4; margin-top: 8px; line-height: 1.5; }
+        .hero-clinical p { font-size: 13.5px; color: #fff3e6; margin-top: 8px; line-height: 1.5; }
         .hero-actions { display: flex; gap: 10px; margin-top: 16px; flex-wrap: wrap; }
         .btn-coral {
-            background: var(--accent); color: #ffffff;
+            background: #fff8ee; color: var(--primary);
             font-size: 13.5px; font-weight: 800;
             padding: 12px 18px; border-radius: 999px;
-            box-shadow: 0 4px 14px rgba(224, 122, 95, 0.35);
+            box-shadow: 0 4px 14px rgba(35, 24, 21, 0.16);
         }
         .btn-glass {
             background: rgba(255, 255, 255, 0.16); color: #ffffff;
-            border: 1px solid rgba(255, 255, 255, 0.38);
+            border: 1px solid rgba(255, 255, 255, 0.42);
             font-size: 13.5px; font-weight: 700;
             padding: 12px 18px; border-radius: 999px;
         }
 
-        /* Roundy Bento Service Hub */
+        /* Warm Bento Service Hub */
         .bento-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -223,7 +223,7 @@
             padding: 2px 4px 0;
         }
         .btn-rx-wa {
-            background: #1f8a70;
+            background: var(--mint);
             color: #ffffff;
             font-size: 12px;
             font-weight: 800;
@@ -232,20 +232,20 @@
             white-space: nowrap;
         }
 
-        /* Roundy Chief Physician Card */
+        /* Warm Chief Physician Card */
         .doctor-panel {
             background: #ffffff;
             border: 1.5px solid var(--border);
             border-radius: 26px;
             padding: 18px;
             margin-bottom: 18px;
-            box-shadow: 0 6px 18px rgba(20, 33, 38, 0.04);
+            box-shadow: 0 6px 18px rgba(140, 59, 43, 0.05);
         }
         .doc-header { display: flex; align-items: center; gap: 13px; }
         .doc-monogram {
             width: 56px; height: 56px; border-radius: 20px;
-            background: #e6f2f4; color: var(--primary);
-            border: 1.5px solid #b8dce2;
+            background: #fdf1e8; color: var(--primary);
+            border: 1.5px solid #eccbb5;
             font-size: 20px; font-weight: 800;
             display: flex; align-items: center; justify-content: center;
             flex-shrink: 0;
@@ -284,7 +284,7 @@
         .desk-box {
             border-radius: 22px; padding: 15px; text-align: center;
             border: 1px solid var(--border); background: #ffffff;
-            box-shadow: 0 3px 10px rgba(20, 33, 38, 0.03);
+            box-shadow: 0 3px 10px rgba(140, 59, 43, 0.04);
         }
         .desk-lbl { font-size: 12.5px; font-weight: 700; color: var(--text-muted); }
         .desk-phone { font-size: 15px; font-weight: 800; color: var(--primary); margin-top: 3px; display: block; }
@@ -329,7 +329,7 @@
         .med-body { padding: 12px; flex: 1; display: flex; flex-direction: column; justify-content: space-between; }
         .med-cat {
             display: inline-block; font-size: 10px; font-weight: 800; text-transform: uppercase;
-            padding: 3px 9px; border-radius: 999px; background: #e6f2f4; color: var(--primary);
+            padding: 3px 9px; border-radius: 999px; background: #fdf1e8; color: var(--primary);
         }
         .med-title { font-size: 13.5px; font-weight: 700; color: var(--text-main); margin-top: 6px; }
         .btn-stock {
@@ -350,7 +350,7 @@
             min-width: 262px; background: var(--bg-soft); border: 1px solid var(--border);
             border-radius: 22px; padding: 16px; display: flex; flex-direction: column; justify-content: space-between;
         }
-        .stars { color: #d97706; font-size: 13px; letter-spacing: 1px; margin-bottom: 6px; }
+        .stars { color: var(--accent); font-size: 13px; letter-spacing: 1px; margin-bottom: 6px; }
         .quote-txt { font-size: 13px; color: var(--text-main); line-height: 1.5; }
         .quote-by { font-size: 12px; font-weight: 800; color: var(--primary); margin-top: 10px; }
 
@@ -384,8 +384,8 @@
             background: var(--primary); color: #ffffff; border-color: var(--primary);
         }
         .featured-test {
-            background: linear-gradient(to right, #f7f9f8, #eef5f4);
-            border: 1px solid #cde0dc; border-radius: 22px; padding: 16px;
+            background: linear-gradient(to right, #fdf8f2, #f9efe4);
+            border: 1px solid #ead5be; border-radius: 22px; padding: 16px;
             position: relative; margin-bottom: 11px;
         }
         .feat-tag {
@@ -402,7 +402,7 @@
             padding: 8px 15px; border-radius: 999px; white-space: nowrap;
         }
         .btn-soft-sm {
-            background: #e6f2f4; color: var(--primary);
+            background: #fdf1e8; color: var(--primary);
             font-size: 12.5px; font-weight: 800; padding: 8px 14px; border-radius: 999px; white-space: nowrap;
         }
 
@@ -416,7 +416,7 @@
             display: block; font-size: 13.5px; font-weight: 700; color: var(--text-main); margin-bottom: 7px;
         }
         .field-ctrl {
-            width: 100%; padding: 12px 15px; border: 1px solid #cbd5d1; border-radius: 16px;
+            width: 100%; padding: 12px 15px; border: 1px solid #dfd2c3; border-radius: 16px;
             font-size: 14.5px; font-family: inherit; color: var(--text-main); background: var(--bg-soft);
             outline: none; transition: border-color 0.2s, background 0.2s;
         }
@@ -434,7 +434,7 @@
         .chips-wrap { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 9px; }
         .picked-chip {
             display: inline-flex; align-items: center; gap: 6px;
-            background: #e6f2f4; color: var(--primary); font-size: 12.5px; font-weight: 700;
+            background: #fdf1e8; color: var(--primary); font-size: 12.5px; font-weight: 700;
             padding: 6px 12px; border-radius: 999px;
         }
         .picked-chip span { cursor: pointer; font-weight: 900; font-size: 15px; }
@@ -448,10 +448,10 @@
             font-size: 13.5px; font-weight: 600; color: var(--text-main); background: #ffffff;
             padding: 10px 13px; border-radius: 14px; border: 1px solid var(--border); cursor: pointer;
         }
-        .chk-row.checked { border-color: var(--primary); background: #eef6f7; }
+        .chk-row.checked { border-color: var(--primary); background: #fdf4ed; }
         .chk-row input { accent-color: var(--primary); width: 18px; height: 18px; flex-shrink: 0; }
         .btn-pin-gps {
-            width: 100%; background: #eef6f7; color: var(--primary); border: 1.5px solid #9cc7cf;
+            width: 100%; background: #fdf4ed; color: var(--primary); border: 1.5px solid #e3bfa9;
             font-size: 13.5px; font-weight: 800; padding: 13px; border-radius: 999px;
             display: flex; align-items: center; justify-content: center; gap: 7px;
         }
@@ -459,16 +459,16 @@
             font-size: 12.5px; margin-top: 8px; padding: 10px 13px; border-radius: 14px;
             display: none; line-height: 1.45;
         }
-        .gps-msg.success { display: block; background: #e8f5f1; color: #135445; border: 1px solid #9ad3c3; }
+        .gps-msg.success { display: block; background: #eaf5ef; color: #1d573f; border: 1px solid #a6d4bf; }
         .gps-msg.error { display: block; background: #fdf0ed; color: #8c2d19; border: 1px solid #f2b8ab; }
         .reminder-note {
-            background: #fdf6ec; border: 1px solid #f2d3a2; border-radius: 16px;
-            padding: 12px 14px; font-size: 12.5px; color: #6e4714; margin-bottom: 13px; line-height: 1.45;
+            background: #fef5e7; border: 1px solid #f2cfa0; border-radius: 16px;
+            padding: 12px 14px; font-size: 12.5px; color: #6e4512; margin-bottom: 13px; line-height: 1.45;
         }
         .btn-book-now {
-            width: 100%; background: linear-gradient(135deg, var(--primary), var(--mint)); color: #ffffff;
+            width: 100%; background: linear-gradient(135deg, var(--primary), var(--accent)); color: #ffffff;
             font-size: 15px; font-weight: 800; padding: 15px; border-radius: 999px;
-            box-shadow: 0 6px 16px rgba(15, 76, 92, 0.22);
+            box-shadow: 0 6px 16px rgba(140, 59, 43, 0.25);
         }
 
         /* Pharmacy Gallery */
@@ -481,7 +481,7 @@
 
         /* Modal Popup */
         .overlay-bg {
-            position: fixed; inset: 0; background: rgba(20, 33, 38, 0.72);
+            position: fixed; inset: 0; background: rgba(35, 24, 21, 0.72);
             backdrop-filter: blur(4px); z-index: 100;
             display: none; align-items: center; justify-content: center; padding: 16px;
         }
@@ -491,11 +491,11 @@
             padding: 24px; text-align: center; box-shadow: 0 20px 35px rgba(0,0,0,0.25);
         }
         .popup-check {
-            width: 60px; height: 60px; border-radius: 50%; background: #e8f5f1; color: var(--mint);
+            width: 60px; height: 60px; border-radius: 50%; background: #eaf5ef; color: var(--mint);
             display: flex; align-items: center; justify-content: center; font-size: 30px; margin: 0 auto 12px;
         }
         .popup-warn {
-            background: #fdf6ec; border: 1.5px solid #e09f3e; border-radius: 18px;
+            background: #fef5e7; border: 1.5px solid #e09f3e; border-radius: 18px;
             padding: 13px 14px; margin: 13px 0 15px; text-align: left;
             font-size: 13.5px; color: #5c3a0d; line-height: 1.5;
         }
@@ -505,21 +505,21 @@
             margin-top: 10px; color: #ffffff;
         }
 
-        /* Floating Call & Roundy Bottom Navigation */
+        /* Floating Call & Warm Roundy Bottom Navigation */
         .fab-call {
             position: fixed; bottom: 86px; right: 16px; z-index: 40;
             width: 58px; height: 58px; border-radius: 50%; background: var(--accent); color: #ffffff;
-            box-shadow: 0 6px 18px rgba(224, 122, 95, 0.45);
+            box-shadow: 0 6px 18px rgba(217, 119, 36, 0.45);
             display: flex; flex-direction: column; align-items: center; justify-content: center;
         }
         .tab-dock {
             position: fixed; bottom: 0; left: 50%; transform: translateX(-50%);
-            width: 100%; max-width: 480px; background: #ffffff;
+            width: 100%; max-width: 480px; background: #fffdf9;
             border-top: 1px solid var(--border);
             border-radius: 24px 24px 0 0;
             padding: 9px 6px;
             display: flex; justify-content: space-around; align-items: center; z-index: 50;
-            box-shadow: 0 -4px 16px rgba(20, 33, 38, 0.04);
+            box-shadow: 0 -4px 16px rgba(140, 59, 43, 0.05);
         }
         .dock-item {
             display: flex; flex-direction: column; align-items: center;
@@ -528,7 +528,7 @@
         }
         .dock-item.active {
             color: var(--primary); font-weight: 800;
-            background: #e6f2f4;
+            background: #fdf1e8;
         }
         .dock-item svg { width: 22px; height: 22px; margin-bottom: 2px; }
     </style>
@@ -536,7 +536,7 @@
 <body>
 
 <div class="app-shell">
-    <!-- Roundy Clinical Top Header -->
+    <!-- Warm Roundy Clinical Top Header -->
     <header class="clinic-header">
         <div class="brand-group">
             <div class="crest-logo">+</div>
@@ -551,7 +551,7 @@
             <button onclick="shareClinic()" class="hdr-icon pressable" aria-label="Share Clinic">
                 <svg width="17" height="17" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"></path></svg>
             </button>
-            <a href="tel:8777691532" class="hdr-icon pressable" style="background:#e6f2f4;" aria-label="Call Clinic">
+            <a href="tel:8777691532" class="hdr-icon pressable" style="background:#fdf1e8;" aria-label="Call Clinic">
                 <svg width="17" height="17" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
             </a>
         </div>
@@ -559,7 +559,7 @@
 
     <!-- HOME TAB -->
     <main id="tab-home" class="tab-view active">
-        <!-- Super-Roundy Clinical Hero Card -->
+        <!-- Warm Super-Roundy Clinical Hero Card -->
         <section class="hero-clinical">
             <div class="hero-eyebrow"><span>🩸</span> <span data-i18n="heroPill">Home Blood Collection: 7:00 AM – 12:00 PM</span></div>
             <h2 data-i18n="heroTitle">Trusted Healthcare & Diagnostics at Your Doorstep</h2>
@@ -570,31 +570,31 @@
             </div>
         </section>
 
-        <!-- Roundy 4-Tile Bento Service Hub -->
+        <!-- Warm Bento Service Hub -->
         <section class="bento-grid">
             <div onclick="switchTab('book')" class="bento-card pressable">
-                <div class="bento-ico" style="background:#e6f2f4;color:#0f4c5c;">🩸</div>
+                <div class="bento-ico" style="background:#fdf1e8;color:#8c3b2b;">🩸</div>
                 <div>
                     <div class="bento-title" data-i18n="b1Title">Home Blood Test</div>
                     <div class="bento-sub" data-i18n="b1Sub">7:00 AM – 12:00 PM Daily</div>
                 </div>
             </div>
             <div onclick="scrollToDoctor()" class="bento-card pressable">
-                <div class="bento-ico" style="background:#fdf0ed;color:#e07a5f;">👨‍⚕️</div>
+                <div class="bento-ico" style="background:#fef3e2;color:#d97724;">👨‍⚕️</div>
                 <div>
                     <div class="bento-title" data-i18n="b2Title">Dr. B. P. Mandal</div>
                     <div class="bento-sub" data-i18n="b2Sub">General Physician Chamber</div>
                 </div>
             </div>
             <div onclick="switchTab('ecg')" class="bento-card pressable">
-                <div class="bento-ico" style="background:#e8f5f1;color:#2a9d8f;">💓</div>
+                <div class="bento-ico" style="background:#eaf5ef;color:#2f7d5d;">💓</div>
                 <div>
                     <div class="bento-title" data-i18n="b3Title">12-Lead ECG</div>
                     <div class="bento-sub" data-i18n="b3Sub">Clinic & Senior Home Visit</div>
                 </div>
             </div>
             <div onclick="switchTab('pharmacy')" class="bento-card pressable">
-                <div class="bento-ico" style="background:#fdf6ec;color:#b45309;">💊</div>
+                <div class="bento-ico" style="background:#faece6;color:#9e3c28;">💊</div>
                 <div>
                     <div class="bento-title" data-i18n="b4Title">Medical Pharmacy</div>
                     <div class="bento-sub" data-i18n="b4Sub">8:30 AM–2 PM & 5:30–10 PM</div>
@@ -665,7 +665,7 @@
                     <div class="sched-name">🩸 Home Blood Collection</div>
                     <div class="sched-note">Morning Doorstep Sample Visit</div>
                 </div>
-                <div class="sched-time" style="background:#e6f2f4;">7:00 AM – 12:00 PM</div>
+                <div class="sched-time" style="background:#fdf1e8;">7:00 AM – 12:00 PM</div>
             </div>
             <div class="sched-item">
                 <div>
@@ -965,7 +965,7 @@
 
     <!-- ECG TAB -->
     <main id="tab-ecg" class="tab-view">
-        <div class="hero-clinical" style="background:linear-gradient(145deg,#7c2d36,#9f3a47);">
+        <div class="hero-clinical" style="background:linear-gradient(145deg,#8c2d25,#c24d38);">
             <div class="hero-eyebrow"><span>💓</span> Cardiology Diagnostics</div>
             <h2>12-Lead Digital ECG</h2>
             <p>High-precision Electrocardiogram available at Sushila Clinic (8:30 AM – 2 PM & 5:30 PM – 10 PM) & via Home Visit.</p>
@@ -981,8 +981,8 @@
             </div>
             <button onclick="bookSpecificTest('12-Lead Home ECG')" class="btn-book-now pressable" style="margin-top:16px;">📝 Book Home ECG Online</button>
             <div class="desk-row" style="margin-top:11px;margin-bottom:0;">
-                <a href="tel:8777691532" class="btn-coral pressable" style="text-align:center;">📞 8777691532</a>
-                <a href="tel:8100177365" class="btn-appt pressable" style="text-align:center;">📞 8100177365</a>
+                <a href="tel:8777691532" class="btn-appt pressable" style="text-align:center;">📞 8777691532</a>
+                <a href="tel:8100177365" class="btn-appt pressable" style="text-align:center;background:var(--accent);">📞 8100177365</a>
             </div>
         </div>
     </main>
@@ -1043,7 +1043,7 @@
             <a href="tel:8777691532" class="popup-call pressable" style="background:var(--primary);">
                 📞 Call Clinic Desk 1 (8777691532)
             </a>
-            <a href="tel:8100177365" class="popup-call pressable" style="background:var(--mint);">
+            <a href="tel:8100177365" class="popup-call pressable" style="background:var(--accent);">
                 📞 Call Clinic Desk 2 (8100177365)
             </a>
             <button onclick="closeModal()" style="margin-top:16px;font-size:12.5px;font-weight:600;color:var(--text-muted);padding:6px 14px;">
@@ -1058,7 +1058,7 @@
         <span style="font-size:9px;font-weight:800;margin-top:2px;">CALL</span>
     </a>
 
-    <!-- Roundy Bottom Tab Bar -->
+    <!-- Warm Roundy Bottom Tab Bar -->
     <nav class="tab-dock">
         <button onclick="switchTab('home')" id="nav-home" class="dock-item active">
             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
@@ -1223,7 +1223,7 @@
         } else if (isBloodActive) {
             statusEl.innerHTML = `<span class="live-dot"></span> Home Blood Collection Active (Till 12 PM)`;
         } else {
-            statusEl.innerHTML = `<span class="live-dot" style="background:#e07a5f;"></span> Khurigachi Fularhat Road, Sonarpur`;
+            statusEl.innerHTML = `<span class="live-dot" style="background:#d97724;"></span> Khurigachi Fularhat Road, Sonarpur`;
         }
     }
 
@@ -1922,9 +1922,9 @@
                 gpsCoordsInput.value = `${lat}, ${lng}`;
 
                 btn.innerHTML = '<span>✅</span> Location Pinned Successfully';
-                btn.style.background = '#e8f5f1';
-                btn.style.color = '#135445';
-                btn.style.borderColor = '#9ad3c3';
+                btn.style.background = '#eaf5ef';
+                btn.style.color = '#1d573f';
+                btn.style.borderColor = '#a6d4bf';
                 btn.disabled = false;
 
                 statusDiv.className = 'gps-msg success';
