@@ -3,16 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Sushila Clinic & Believe Medical Pharmacy | Sonarpur, Kolkata</title>
-    <meta name="description" content="Home Blood Collection (7:00 AM - 12:00 PM), 12-Lead ECG, NABL Partner Lab Tests & Medicines at Sushila Clinic & Believe Medical Pharmacy, Khurigachi Fularhat Road, Sonarpur, Kolkata.">
-    <meta name="keywords" content="Sushila Clinic Sonarpur, Believe Medical Pharmacy, Home Blood Collection Sonarpur, ECG near me Sonarpur, Blood Test Khurigachi, Dr Bishnu Pada Mandal">
-    <meta property="og:title" content="Sushila Clinic & Believe Medical Pharmacy - Sonarpur">
-    <meta property="og:description" content="Home Blood Collection (7 AM - 12 PM) | Clinic & Pharmacy (8:30 AM - 2 PM, 5:30 PM - 10 PM). Call 8777691532 / 8100177365.">
+    <title>Dr. Bishnu Pada Mandal | Sushila Clinic & Believe Medical Pharmacy, Sonarpur</title>
+    <meta name="description" content="Consult Dr. Bishnu Pada Mandal (General Physician) at Sushila Clinic & Believe Medical Pharmacy, Khurigachi Fularhat Road, Sonarpur. Home Blood Collection (7 AM - 12 PM), 12-Lead ECG & 440+ NABL Lab Tests.">
+    <meta name="keywords" content="Dr Bishnu Pada Mandal Sonarpur, Sushila Clinic Sonarpur, Believe Medical Pharmacy, Home Blood Collection Sonarpur, ECG Khurigachi">
+    <meta property="og:title" content="Sushila Clinic & Believe Medical Pharmacy | Dr. Bishnu Pada Mandal">
+    <meta property="og:description" content="Trusted Doctor Consultation, NABL Partner Lab Home Collection (7 AM - 12 PM) & Pharmacy (8:30 AM - 2 PM, 5:30 PM - 10 PM) in Sonarpur.">
     <meta property="og:type" content="website">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Bengali:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
-        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: #f3f4f6; color: #111827; }
+        body {
+            font-family: 'Inter', 'Noto Sans Bengali', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #eef2f6;
+            color: #0f172a;
+        }
         a { text-decoration: none; color: inherit; }
         button { border: none; background: none; font-family: inherit; cursor: pointer; }
         
@@ -22,90 +26,171 @@
             background: #ffffff;
             min-height: 100vh;
             position: relative;
-            box-shadow: 0 0 25px rgba(0,0,0,0.06);
-            padding-bottom: 85px;
+            box-shadow: 0 0 30px rgba(15, 23, 42, 0.08);
+            padding-bottom: 88px;
         }
         
+        /* Top Sticky Medical Header */
         .header {
             position: sticky;
             top: 0;
             z-index: 30;
-            background: rgba(255,255,255,0.95);
-            backdrop-filter: blur(8px);
-            border-bottom: 1px solid #f3f4f6;
-            padding: 12px 16px;
+            background: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #e2e8f0;
+            padding: 11px 14px;
             display: flex;
             align-items: center;
             justify-content: space-between;
+            gap: 8px;
         }
-        .header h1 { font-size: 16px; font-weight: 800; color: #111827; line-height: 1.2; }
-        .header .sub { font-size: 12px; font-weight: 600; color: #0d9488; }
-        .header .loc { font-size: 10px; color: #6b7280; margin-top: 2px; display: flex; align-items: center; gap: 4px; }
-        .call-circle {
-            width: 36px; height: 36px; border-radius: 50%;
-            background: #f0fdfa; color: #0d9488;
+        .brand-wrap { display: flex; align-items: center; gap: 9px; }
+        .med-cross {
+            width: 36px; height: 36px; border-radius: 10px;
+            background: linear-gradient(135deg, #0f766e, #0d9488);
+            color: #ffffff; font-size: 18px; font-weight: 800;
             display: flex; align-items: center; justify-content: center;
-            border: 1px solid #ccfbf1;
+            box-shadow: 0 2px 6px rgba(13, 148, 136, 0.25);
+            flex-shrink: 0;
+        }
+        .header h1 { font-size: 15px; font-weight: 800; color: #0f172a; line-height: 1.15; letter-spacing: -0.2px; }
+        .header .sub { font-size: 11px; font-weight: 700; color: #0d9488; }
+        .live-status {
+            display: inline-flex; align-items: center; gap: 4px;
+            font-size: 9.5px; font-weight: 700; color: #047857;
+            margin-top: 2px;
+        }
+        .pulse-dot {
+            width: 6px; height: 6px; border-radius: 50%; background: #10b981;
+            box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.25);
+        }
+        .header-actions { display: flex; align-items: center; gap: 6px; }
+        .lang-btn {
+            background: #f1f5f9; color: #0f172a; border: 1px solid #cbd5e1;
+            font-size: 11px; font-weight: 800; padding: 6px 9px; border-radius: 9px;
+        }
+        .icon-btn {
+            width: 34px; height: 34px; border-radius: 9px;
+            background: #f0fdfa; color: #0f766e; border: 1px solid #ccfbf1;
+            display: flex; align-items: center; justify-content: center;
         }
         
-        .tab-content { display: none; padding: 16px; }
+        .tab-content { display: none; padding: 15px; }
         .tab-content.active { display: block; animation: fadeIn 0.2s ease; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
-        
-        .hero {
+
+        /* Executive Doctor Profile Card */
+        .doc-card {
+            background: linear-gradient(145deg, #0f172a, #1e293b);
             border-radius: 18px;
-            background: linear-gradient(135deg, #0d9488, #10b981);
-            padding: 20px;
+            padding: 16px;
             color: #ffffff;
-            box-shadow: 0 4px 12px rgba(13, 148, 136, 0.2);
+            margin-bottom: 16px;
+            box-shadow: 0 8px 20px rgba(15, 23, 42, 0.14);
             position: relative;
             overflow: hidden;
+        }
+        .doc-top { display: flex; align-items: center; gap: 12px; }
+        .doc-avatar {
+            width: 52px; height: 52px; border-radius: 14px;
+            background: linear-gradient(135deg, #14b8a6, #0d9488);
+            color: #ffffff; font-size: 22px; font-weight: 800;
+            display: flex; align-items: center; justify-content: center;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            flex-shrink: 0;
+        }
+        .doc-badge {
+            display: inline-block; background: rgba(20, 184, 166, 0.22);
+            color: #5eead4; border: 1px solid rgba(94, 234, 212, 0.3);
+            font-size: 9px; font-weight: 700; text-transform: uppercase;
+            letter-spacing: 0.5px; padding: 2px 7px; border-radius: 5px; margin-bottom: 4px;
+        }
+        .doc-name { font-size: 16px; font-weight: 800; color: #ffffff; line-height: 1.2; }
+        .doc-qual { font-size: 11px; font-weight: 600; color: #cbd5e1; margin-top: 2px; }
+        .doc-tags {
+            display: flex; flex-wrap: wrap; gap: 5px; margin-top: 12px;
+            padding-top: 10px; border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .doc-tag {
+            background: rgba(255, 255, 255, 0.08); color: #e2e8f0;
+            font-size: 10px; font-weight: 500; padding: 3px 8px; border-radius: 6px;
+        }
+        .doc-foot {
+            display: flex; align-items: center; justify-content: space-between;
+            margin-top: 12px; gap: 8px;
+        }
+        .doc-time { font-size: 10.5px; color: #94a3b8; line-height: 1.35; }
+        .doc-time strong { color: #f8fafc; }
+        .btn-doc-call {
+            background: #14b8a6; color: #042f2e; font-size: 11px; font-weight: 800;
+            padding: 8px 12px; border-radius: 10px; white-space: nowrap;
+        }
+
+        /* Trust Badges Strip */
+        .trust-strip {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px;
+            margin-bottom: 16px;
+        }
+        .trust-item {
+            background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px;
+            padding: 9px 6px; text-align: center;
+        }
+        .trust-item .t-ico { font-size: 16px; margin-bottom: 3px; }
+        .trust-item .t-txt { font-size: 10px; font-weight: 700; color: #1e293b; line-height: 1.25; }
+        
+        /* Hero Banner */
+        .hero {
+            border-radius: 18px;
+            background: linear-gradient(135deg, #0f766e, #0d9488);
+            padding: 18px;
+            color: #ffffff;
+            box-shadow: 0 4px 14px rgba(13, 148, 136, 0.22);
             margin-bottom: 18px;
         }
         .badge-glass {
-            display: inline-block; background: rgba(255,255,255,0.2);
-            font-size: 10px; font-weight: 700; letter-spacing: 0.5px;
-            text-transform: uppercase; padding: 4px 10px; border-radius: 6px; margin-bottom: 10px;
+            display: inline-block; background: rgba(255,255,255,0.18);
+            font-size: 10px; font-weight: 700; letter-spacing: 0.4px;
+            text-transform: uppercase; padding: 3px 9px; border-radius: 6px; margin-bottom: 8px;
         }
-        .hero h2 { font-size: 20px; font-weight: 800; line-height: 1.25; }
+        .hero h2 { font-size: 19px; font-weight: 800; line-height: 1.25; }
         .time-pill {
             display: inline-flex; align-items: center; gap: 6px;
-            background: #ffffff; color: #115e59; font-size: 12px; font-weight: 700;
-            padding: 5px 12px; border-radius: 20px; margin-top: 10px;
+            background: #ffffff; color: #115e59; font-size: 11.5px; font-weight: 800;
+            padding: 4px 11px; border-radius: 20px; margin-top: 8px;
         }
-        .hero p { font-size: 12px; color: #f0fdfa; margin-top: 10px; line-height: 1.5; max-width: 280px; }
-        .hero-btns { display: flex; gap: 8px; margin-top: 14px; flex-wrap: wrap; }
+        .hero p { font-size: 12px; color: #f0fdfa; margin-top: 8px; line-height: 1.45; }
+        .hero-btns { display: flex; gap: 8px; margin-top: 13px; flex-wrap: wrap; }
         .btn-white {
             display: inline-block; background: #ffffff; color: #0f766e;
-            font-size: 12px; font-weight: 700; padding: 8px 14px; border-radius: 12px;
+            font-size: 12px; font-weight: 800; padding: 9px 14px; border-radius: 11px;
             box-shadow: 0 2px 6px rgba(0,0,0,0.1);
         }
         .btn-outline-white {
-            display: inline-block; background: rgba(255,255,255,0.18); color: #ffffff;
-            border: 1px solid rgba(255,255,255,0.4);
-            font-size: 12px; font-weight: 700; padding: 8px 14px; border-radius: 12px;
+            display: inline-block; background: rgba(255,255,255,0.15); color: #ffffff;
+            border: 1px solid rgba(255,255,255,0.45);
+            font-size: 12px; font-weight: 700; padding: 9px 14px; border-radius: 11px;
         }
         
         .sec-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; }
-        .sec-title { font-size: 14px; font-weight: 700; color: #1f2937; }
-        .sec-sub { font-size: 11px; color: #6b7280; }
-        .link-teal { font-size: 12px; font-weight: 600; color: #0d9488; }
+        .sec-title { font-size: 14px; font-weight: 800; color: #0f172a; }
+        .sec-sub { font-size: 11px; color: #64748b; }
+        .link-teal { font-size: 12px; font-weight: 700; color: #0d9488; }
         
-        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 18px; }
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 18px; }
         .desk-card {
-            border-radius: 16px; padding: 14px; text-align: center;
+            border-radius: 14px; padding: 13px; text-align: center;
             display: flex; flex-direction: column; align-items: center;
         }
-        .desk-blue { background: #eff6ff; border: 1px solid #dbeafe; }
-        .desk-green { background: #ecfdf5; border: 1px solid #d1fae5; }
+        .desk-blue { background: #eff6ff; border: 1px solid #bfdbfe; }
+        .desk-green { background: #ecfdf5; border: 1px solid #a7f3d0; }
         .desk-icon {
-            width: 38px; height: 38px; border-radius: 50%; background: #ffffff;
+            width: 36px; height: 36px; border-radius: 50%; background: #ffffff;
             display: flex; align-items: center; justify-content: center;
-            margin-bottom: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+            margin-bottom: 7px; box-shadow: 0 1px 3px rgba(0,0,0,0.06);
         }
-        .desk-title { font-size: 12px; font-weight: 700; color: #1f2937; }
-        .desk-num-blue { font-size: 12px; font-weight: 600; color: #2563eb; margin-top: 2px; }
-        .desk-num-green { font-size: 12px; font-weight: 600; color: #059669; margin-top: 2px; }
+        .desk-title { font-size: 12px; font-weight: 700; color: #1e293b; }
+        .desk-num-blue { font-size: 12.5px; font-weight: 800; color: #1d4ed8; margin-top: 2px; }
+        .desk-num-green { font-size: 12.5px; font-weight: 800; color: #047857; margin-top: 2px; }
 
         /* Timings & Clinic Info Card */
         .info-card {
@@ -113,14 +198,14 @@
             border: 1px solid #e2e8f0;
             border-radius: 16px;
             padding: 14px;
-            margin-bottom: 20px;
+            margin-bottom: 18px;
         }
         .timing-row {
             display: flex;
             align-items: center;
             justify-content: space-between;
             padding: 8px 0;
-            border-bottom: 1px dashed #e2e8f0;
+            border-bottom: 1px dashed #cbd5e1;
             font-size: 12px;
         }
         .timing-row:last-child { border-bottom: none; padding-bottom: 0; }
@@ -128,11 +213,12 @@
             background: #ffffff;
             border: 1px solid #cbd5e1;
             color: #0f172a;
-            font-size: 11px;
+            font-size: 10.5px;
             font-weight: 700;
             padding: 4px 8px;
             border-radius: 8px;
             text-align: right;
+            line-height: 1.35;
         }
         .map-btn {
             display: flex;
@@ -140,7 +226,7 @@
             justify-content: center;
             gap: 6px;
             width: 100%;
-            background: #1e293b;
+            background: #0f172a;
             color: #ffffff;
             font-size: 12px;
             font-weight: 700;
@@ -150,53 +236,90 @@
         }
         
         .carousel {
-            display: flex; gap: 12px; overflow-x: auto; padding-bottom: 6px; margin-bottom: 20px;
+            display: flex; gap: 12px; overflow-x: auto; padding-bottom: 6px; margin-bottom: 18px;
             scrollbar-width: none;
         }
         .carousel::-webkit-scrollbar { display: none; }
         .prod-card {
-            min-width: 175px; background: #ffffff; border: 1px solid #f3f4f6;
-            border-radius: 16px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+            min-width: 170px; background: #ffffff; border: 1px solid #e2e8f0;
+            border-radius: 14px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,0.04);
             display: flex; flex-direction: column;
         }
-        .prod-img { width: 100%; height: 112px; object-fit: cover; background: #f9fafb; display: block; }
+        .prod-img { width: 100%; height: 110px; object-fit: cover; background: #f8fafc; display: block; }
         .prod-body { padding: 10px; flex: 1; display: flex; flex-direction: column; justify-content: space-between; }
         .tag-pill {
             display: inline-block; font-size: 9px; font-weight: 700; text-transform: uppercase;
             padding: 2px 6px; border-radius: 4px; background: #ecfdf5; color: #047857;
         }
-        .prod-title { font-size: 12px; font-weight: 700; color: #1f2937; margin-top: 5px; }
+        .prod-title { font-size: 12px; font-weight: 700; color: #0f172a; margin-top: 5px; }
         .btn-dark {
-            display: block; text-align: center; background: #111827; color: #ffffff;
+            display: block; text-align: center; background: #0f172a; color: #ffffff;
             font-size: 11px; font-weight: 600; padding: 7px; border-radius: 8px; margin-top: 8px;
         }
         
-        .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 20px; }
+        .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 18px; }
         .lab-box {
-            background: #ffffff; border: 1px solid #f3f4f6; border-radius: 12px;
+            background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px;
             padding: 10px 6px; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.03);
         }
+
+        /* Patient Reviews */
+        .rev-card {
+            min-width: 245px; background: #f8fafc; border: 1px solid #e2e8f0;
+            border-radius: 14px; padding: 13px; display: flex; flex-direction: column;
+            justify-content: space-between;
+        }
+        .rev-stars { color: #f59e0b; font-size: 12px; letter-spacing: 1px; margin-bottom: 5px; }
+        .rev-text { font-size: 11.5px; color: #334155; line-height: 1.45; font-style: italic; }
+        .rev-author { font-size: 11px; font-weight: 700; color: #0f172a; margin-top: 8px; }
+
+        /* FAQ Accordion */
+        .faq-item {
+            background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px;
+            margin-bottom: 8px; overflow: hidden;
+        }
+        .faq-q {
+            width: 100%; text-align: left; padding: 11px 13px;
+            font-size: 12px; font-weight: 700; color: #0f172a;
+            display: flex; align-items: center; justify-content: space-between; gap: 8px;
+        }
+        .faq-a {
+            display: none; padding: 0 13px 11px; font-size: 11.5px; color: #475569; line-height: 1.5;
+            border-top: 1px solid #f1f5f9; padding-top: 8px;
+        }
+        .faq-item.open .faq-a { display: block; }
         
-        .srv-amber { background: #fffbeb; border: 1px solid #fef3c7; border-radius: 16px; padding: 14px; cursor: pointer; }
-        .srv-rose { background: #fff1f2; border: 1px solid #ffe4e6; border-radius: 16px; padding: 14px; cursor: pointer; }
-        
+        /* Category Filter Chips */
+        .cat-scroll {
+            display: flex; gap: 7px; overflow-x: auto; padding-bottom: 8px; margin-bottom: 12px;
+            scrollbar-width: none;
+        }
+        .cat-scroll::-webkit-scrollbar { display: none; }
+        .cat-chip {
+            padding: 6px 12px; border-radius: 20px; font-size: 11px; font-weight: 700;
+            background: #f1f5f9; color: #475569; border: 1px solid #e2e8f0; white-space: nowrap;
+        }
+        .cat-chip.active {
+            background: #0f766e; color: #ffffff; border-color: #0f766e;
+        }
+
         .highlight-card {
             background: linear-gradient(to right, #fffbeb, #fff7ed);
-            border: 1px solid #fde68a; border-radius: 16px; padding: 16px;
-            position: relative; margin-bottom: 12px;
+            border: 1px solid #fde68a; border-radius: 14px; padding: 14px;
+            position: relative; margin-bottom: 10px;
         }
         .badge-top {
             position: absolute; top: 12px; right: 12px; background: #f59e0b; color: #ffffff;
             font-size: 9px; font-weight: 700; text-transform: uppercase; padding: 3px 8px; border-radius: 12px;
         }
         .test-row {
-            background: #ffffff; border: 1px solid #f3f4f6; border-radius: 12px;
+            background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px;
             padding: 11px 13px; display: flex; align-items: center; justify-content: space-between;
-            margin-bottom: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.03); gap: 10px;
+            margin-bottom: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.02); gap: 10px;
         }
         .btn-teal {
             background: #0d9488; color: #ffffff; font-size: 12px; font-weight: 700;
-            padding: 7px 14px; border-radius: 10px; display: inline-block; white-space: nowrap;
+            padding: 7px 13px; border-radius: 10px; display: inline-block; white-space: nowrap;
         }
         .btn-teal-light {
             background: #f0fdfa; color: #0f766e; border: 1px solid #99f6e4;
@@ -204,11 +327,11 @@
         }
         
         .gal-card {
-            background: #ffffff; border: 1px solid #f3f4f6; border-radius: 16px;
-            overflow: hidden; margin-bottom: 16px; box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+            background: #ffffff; border: 1px solid #e2e8f0; border-radius: 16px;
+            overflow: hidden; margin-bottom: 14px; box-shadow: 0 1px 4px rgba(0,0,0,0.04);
         }
-        .gal-img { width: 100%; height: 200px; object-fit: cover; display: block; background: #f9fafb; }
-        .gal-foot { padding: 14px; display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+        .gal-img { width: 100%; height: 200px; object-fit: cover; display: block; background: #f8fafc; }
+        .gal-foot { padding: 13px; display: flex; align-items: center; justify-content: space-between; gap: 10px; }
 
         /* Prescription Upload Banner */
         .rx-banner {
@@ -237,18 +360,18 @@
             background: #f8fafc;
             border: 1px solid #e2e8f0;
             border-radius: 12px;
-            padding: 11px 13px;
+            padding: 10px 12px;
             font-size: 11px;
             color: #334155;
-            line-height: 1.5;
-            margin-bottom: 14px;
+            line-height: 1.45;
+            margin-bottom: 12px;
         }
 
         /* Search Bar & Test Selector */
         .search-wrap { position: relative; margin-bottom: 8px; }
         .search-input {
             width: 100%; padding: 10px 36px 10px 34px; border: 1.5px solid #0d9488; border-radius: 12px;
-            font-size: 13px; font-family: inherit; color: #111827; background: #ffffff; outline: none;
+            font-size: 13px; font-family: inherit; color: #0f172a; background: #ffffff; outline: none;
         }
         .search-icon {
             position: absolute; left: 11px; top: 50%; transform: translateY(-50%);
@@ -256,7 +379,7 @@
         }
         .clear-search {
             position: absolute; right: 10px; top: 50%; transform: translateY(-50%);
-            font-size: 14px; color: #9ca3af; font-weight: 700; padding: 2px 6px; display: none;
+            font-size: 14px; color: #94a3b8; font-weight: 700; padding: 2px 6px; display: none;
         }
         .selected-tags {
             display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px;
@@ -271,18 +394,18 @@
         /* Booking Form Styles */
         .form-card {
             background: #ffffff;
-            border: 1px solid #e5e7eb;
+            border: 1px solid #e2e8f0;
             border-radius: 18px;
             padding: 16px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.03);
         }
         .form-group { margin-bottom: 14px; }
         .form-label {
-            display: block; font-size: 12px; font-weight: 700; color: #374151; margin-bottom: 6px;
+            display: block; font-size: 12px; font-weight: 700; color: #1e293b; margin-bottom: 6px;
         }
         .form-input, .form-select, .form-textarea {
-            width: 100%; padding: 10px 12px; border: 1px solid #d1d5db; border-radius: 10px;
-            font-size: 13px; font-family: inherit; color: #111827; background: #f9fafb;
+            width: 100%; padding: 10px 12px; border: 1px solid #cbd5e1; border-radius: 10px;
+            font-size: 13px; font-family: inherit; color: #0f172a; background: #f8fafc;
             outline: none; transition: border-color 0.2s, background 0.2s;
         }
         .form-input:focus, .form-select:focus, .form-textarea:focus {
@@ -290,13 +413,13 @@
         }
         .test-checklist {
             display: flex; flex-direction: column; gap: 6px;
-            background: #f9fafb; padding: 10px; border-radius: 12px; border: 1px solid #e5e7eb;
+            background: #f8fafc; padding: 10px; border-radius: 12px; border: 1px solid #e2e8f0;
             max-height: 230px; overflow-y: auto;
         }
         .chk-item {
             display: flex; align-items: center; gap: 8px;
-            font-size: 12px; font-weight: 600; color: #1f2937; background: #ffffff;
-            padding: 8px 10px; border-radius: 8px; border: 1px solid #e5e7eb; cursor: pointer;
+            font-size: 12px; font-weight: 600; color: #1e293b; background: #ffffff;
+            padding: 8px 10px; border-radius: 8px; border: 1px solid #e2e8f0; cursor: pointer;
         }
         .chk-item.checked { border-color: #0d9488; background: #f0fdfa; }
         .chk-item input { accent-color: #0d9488; width: 16px; height: 16px; flex-shrink: 0; }
@@ -317,7 +440,7 @@
             line-height: 1.4;
         }
         .btn-submit {
-            width: 100%; background: linear-gradient(135deg, #0d9488, #059669); color: #ffffff;
+            width: 100%; background: linear-gradient(135deg, #0f766e, #059669); color: #ffffff;
             font-size: 14px; font-weight: 800; padding: 13px; border-radius: 12px;
             box-shadow: 0 4px 12px rgba(13, 148, 136, 0.25);
         }
@@ -325,7 +448,7 @@
 
         /* Modal Popup */
         .modal-overlay {
-            position: fixed; inset: 0; background: rgba(17, 24, 39, 0.72);
+            position: fixed; inset: 0; background: rgba(15, 23, 42, 0.72);
             backdrop-filter: blur(4px); z-index: 100;
             display: none; align-items: center; justify-content: center; padding: 16px;
         }
@@ -360,92 +483,144 @@
         .bottom-nav {
             position: fixed; bottom: 0; left: 50%; transform: translateX(-50%);
             width: 100%; max-width: 480px; background: #ffffff;
-            border-top: 1px solid #e5e7eb; padding: 8px 4px;
+            border-top: 1px solid #e2e8f0; padding: 8px 4px;
             display: flex; justify-content: space-around; align-items: center; z-index: 50;
         }
         .nav-btn {
             display: flex; flex-direction: column; align-items: center;
-            color: #9ca3af; font-size: 10px; font-weight: 500; padding: 4px 6px;
+            color: #94a3b8; font-size: 10px; font-weight: 600; padding: 4px 6px;
         }
-        .nav-btn.active { color: #0d9488; font-weight: 700; }
+        .nav-btn.active { color: #0f766e; font-weight: 800; }
         .nav-btn svg { width: 20px; height: 20px; margin-bottom: 2px; }
     </style>
 </head>
 <body>
 
 <div class="app-container">
-    <!-- Top Header -->
+    <!-- Top Medical Header -->
     <header class="header">
-        <div>
-            <h1>Sushila Clinic &</h1>
-            <div class="sub">Believe Medical Pharmacy</div>
-            <div class="loc"><span>📍</span> Khurigachi Fularhat Road, Sonarpur</div>
+        <div class="brand-wrap">
+            <div class="med-cross">+</div>
+            <div>
+                <h1>Sushila Clinic &</h1>
+                <div class="sub">Believe Medical Pharmacy</div>
+                <div id="liveStatusText" class="live-status"><span class="pulse-dot"></span> Sonarpur, Kolkata</div>
+            </div>
         </div>
-        <a href="tel:8777691532" class="call-circle" aria-label="Call Clinic">
-            <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
-        </a>
+        <div class="header-actions">
+            <button onclick="toggleLanguage()" id="langToggleBtn" class="lang-btn">বাংলা</button>
+            <button onclick="shareClinic()" class="icon-btn" aria-label="Share Clinic">
+                <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"></path></svg>
+            </button>
+            <a href="tel:8777691532" class="icon-btn" aria-label="Call Clinic">
+                <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+            </a>
+        </div>
     </header>
 
     <!-- HOME TAB -->
     <main id="tab-home" class="tab-content active">
+        <!-- Executive Doctor Profile Card -->
+        <div class="doc-card">
+            <div class="doc-top">
+                <div class="doc-avatar">Dr</div>
+                <div>
+                    <span class="doc-badge" data-i18n="docBadge">Chief Consultant Physician</span>
+                    <div class="doc-name">Dr. Bishnu Pada Mandal</div>
+                    <div class="doc-qual">D.Pharm, DUMS, WBSCUM.D • General Physician</div>
+                </div>
+            </div>
+            <div class="doc-tags">
+                <span class="doc-tag">Fever & Infection</span>
+                <span class="doc-tag">Diabetes & Thyroid</span>
+                <span class="doc-tag">BP & Heart Care</span>
+                <span class="doc-tag">Gastric & Liver</span>
+                <span class="doc-tag">General Checkup</span>
+            </div>
+            <div class="doc-foot">
+                <div class="doc-time">
+                    <span data-i18n="chamberLbl">Chamber Hours:</span><br>
+                    <strong>8:30 AM – 2:00 PM & 5:30 PM – 10:00 PM</strong>
+                </div>
+                <a href="tel:8777691532" class="btn-doc-call" data-i18n="docCallBtn">📞 Appointment</a>
+            </div>
+        </div>
+
+        <!-- Clinical Trust Badges -->
+        <div class="trust-strip">
+            <div class="trust-item">
+                <div class="t-ico">🔬</div>
+                <div class="t-txt" data-i18n="trust1">NABL Accredited Partner Labs</div>
+            </div>
+            <div class="trust-item">
+                <div class="t-ico">💉</div>
+                <div class="t-txt" data-i18n="trust2">Trained & Painless Collection</div>
+            </div>
+            <div class="trust-item">
+                <div class="t-ico">💊</div>
+                <div class="t-txt" data-i18n="trust3">100% Genuine Medicines</div>
+            </div>
+        </div>
+
+        <!-- Home Blood Collection Hero -->
         <div class="hero">
-            <span class="badge-glass">Home Blood Collection</span>
-            <h2>Doorstep Sample<br>Collection</h2>
+            <span class="badge-glass" data-i18n="heroBadge">Doorstep Diagnostic Service</span>
+            <h2 data-i18n="heroTitle">Home Blood Collection</h2>
             <div class="time-pill"><span>🩸</span> 7:00 AM – 12:00 PM</div>
-            <p>440+ diagnostic tests from trusted NABL partner labs. Pin your phone GPS & book online or call directly.</p>
+            <p data-i18n="heroDesc">440+ diagnostic tests from trusted NABL partner labs. Pin your phone GPS & book online or call directly.</p>
             <div class="hero-btns">
-                <button onclick="switchTab('book')" class="btn-white">📝 Book Home Visit</button>
-                <a href="tel:8777691532" class="btn-outline-white">📞 Call Now</a>
+                <button onclick="switchTab('book')" class="btn-white" data-i18n="heroBookBtn">📝 Book Home Visit</button>
+                <a href="tel:8777691532" class="btn-outline-white" data-i18n="heroCallBtn">📞 Call Desk</a>
             </div>
         </div>
 
         <!-- Quick Call Booking -->
-        <div class="sec-head"><h3 class="sec-title">Quick Call Booking</h3></div>
+        <div class="sec-head"><h3 class="sec-title" data-i18n="quickCallTitle">Quick Call Booking Desks</h3></div>
         <div class="grid-2">
             <a href="tel:8777691532" class="desk-card desk-blue">
-                <div class="desk-icon" style="color:#2563eb;">
+                <div class="desk-icon" style="color:#1d4ed8;">
                     <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
                 </div>
-                <span class="desk-title">Call Desk 1</span>
+                <span class="desk-title" data-i18n="desk1">Booking Desk 1</span>
                 <span class="desk-num-blue">8777691532</span>
             </a>
             <a href="tel:8100177365" class="desk-card desk-green">
-                <div class="desk-icon" style="color:#059669;">
+                <div class="desk-icon" style="color:#047857;">
                     <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
                 </div>
-                <span class="desk-title">Call Desk 2</span>
+                <span class="desk-title" data-i18n="desk2">Booking Desk 2</span>
                 <span class="desk-num-green">8100177365</span>
             </a>
         </div>
 
-        <!-- Clinic, Pharmacy & Blood Timings Card -->
-        <div class="sec-head"><h3 class="sec-title">Service Timings & Location</h3></div>
+        <!-- Service Timings & Location Card -->
+        <div class="sec-head"><h3 class="sec-title" data-i18n="timingsTitle">Service Timings & Location</h3></div>
         <div class="info-card">
             <div class="timing-row">
                 <div>
                     <div style="font-weight:700;color:#0f172a;">🩸 Home Blood Collection</div>
                     <div style="font-size:10px;color:#64748b;">Morning Doorstep Sample Visit</div>
                 </div>
-                <div class="timing-badge" style="color:#0d9488;border-color:#99f6e4;background:#f0fdfa;">7:00 AM – 12:00 PM</div>
+                <div class="timing-badge" style="color:#0f766e;border-color:#99f6e4;background:#f0fdfa;">7:00 AM – 12:00 PM</div>
             </div>
             <div class="timing-row">
                 <div>
                     <div style="font-weight:700;color:#0f172a;">🏥 Sushila Clinic</div>
-                    <div style="font-size:10px;color:#64748b;">Dr. Bishnu Pada Mandal & Consultation</div>
+                    <div style="font-size:10px;color:#64748b;">Doctor Chamber & ECG</div>
                 </div>
                 <div class="timing-badge">8:30 AM – 2:00 PM<br>5:30 PM – 10:00 PM</div>
             </div>
             <div class="timing-row">
                 <div>
                     <div style="font-weight:700;color:#0f172a;">💊 Believe Medical Pharmacy</div>
-                    <div style="font-size:10px;color:#64748b;">Medicines & Health Essentials</div>
+                    <div style="font-size:10px;color:#64748b;">Allopathic & Ayurvedic Counter</div>
                 </div>
                 <div class="timing-badge">8:30 AM – 2:00 PM<br>5:30 PM – 10:00 PM</div>
             </div>
-            <div style="margin-top:10px;padding-top:10px;border-top:1px solid #e2e8f0;font-size:11px;color:#475569;">
+            <div style="margin-top:10px;padding-top:10px;border-top:1px solid #e2e8f0;font-size:11px;color:#334155;">
                 <strong>📍 Address:</strong> Khurigachi Fularhat Road, Sonarpur, Kolkata – 700150
             </div>
-            <a href="https://www.google.com/maps/search/?api=1&query=Sushila+Clinic+Believe+Medical+Pharmacy+Khurigachi+Fularhat+Road+Sonarpur+Kolkata" target="_blank" class="map-btn">
+            <a href="https://www.google.com/maps/search/?api=1&query=Sushila+Clinic+Believe+Medical+Pharmacy+Khurigachi+Fularhat+Road+Sonarpur+Kolkata" target="_blank" class="map-btn" data-i18n="mapBtn">
                 🗺️ Open Clinic Location in Google Maps ↗
             </a>
         </div>
@@ -453,7 +628,7 @@
         <!-- Pharmacy Showcase -->
         <div class="sec-head">
             <div>
-                <h3 class="sec-title">Pharmacy & Wellness</h3>
+                <h3 class="sec-title" data-i18n="pharmTitle">Pharmacy & Wellness</h3>
                 <p class="sec-sub">Open: 8:30 AM – 2:00 PM & 5:30 PM – 10:00 PM</p>
             </div>
             <button onclick="switchTab('pharmacy')" class="link-teal">View Store →</button>
@@ -504,13 +679,13 @@
 
         <!-- Trusted Lab Partners -->
         <div class="sec-head">
-            <h3 class="sec-title">Trusted Lab Partners</h3>
+            <h3 class="sec-title" data-i18n="labPartnerTitle">Trusted Lab Partners</h3>
             <button onclick="switchTab('tests')" class="link-teal">440+ Tests →</button>
         </div>
         <div class="grid-3">
             <div class="lab-box">
                 <div style="font-size:12px;font-weight:900;color:#dc2626;">ASHOK</div>
-                <div style="font-size:9px;font-weight:700;color:#6b7280;">LABORATORY</div>
+                <div style="font-size:9px;font-weight:700;color:#64748b;">LABORATORY</div>
             </div>
             <div class="lab-box">
                 <div style="font-size:12px;font-weight:900;color:#0f766e;">Apollo</div>
@@ -522,33 +697,60 @@
             </div>
         </div>
 
-        <!-- Services Quick Grid -->
-        <div class="grid-2" style="margin-bottom:0;">
-            <div onclick="switchTab('book')" class="srv-amber">
-                <div style="font-size:20px;">🩸</div>
-                <div style="font-size:12px;font-weight:700;margin-top:6px;">Book Home Blood Test</div>
-                <div style="font-size:10px;color:#4b5563;margin-top:2px;">7:00 AM – 12:00 PM Daily</div>
+        <!-- Patient Feedback -->
+        <div class="sec-head"><h3 class="sec-title" data-i18n="revTitle">Patient Feedback</h3></div>
+        <div class="carousel">
+            <div class="rev-card">
+                <div>
+                    <div class="rev-stars">★★★★★</div>
+                    <div class="rev-text">"Very polite doctor and clean clinic. Morning 7:30 AM blood collection at home was completely painless and timely."</div>
+                </div>
+                <div class="rev-author">— Subrata Roy, Sonarpur</div>
             </div>
-            <div onclick="switchTab('ecg')" class="srv-rose">
-                <div style="font-size:20px;">💓</div>
-                <div style="font-size:12px;font-weight:700;margin-top:6px;">ECG Checkup</div>
-                <div style="font-size:10px;color:#4b5563;margin-top:2px;">Clinic & Home ECG Service</div>
+            <div class="rev-card">
+                <div>
+                    <div class="rev-stars">★★★★★</div>
+                    <div class="rev-text">"Dr. Bishnu Pada Mandal listens carefully to every problem. All prescribed medicines are easily available at Believe Medical Pharmacy."</div>
+                </div>
+                <div class="rev-author">— Mousumi Das, Khurigachi</div>
             </div>
+            <div class="rev-card">
+                <div>
+                    <div class="rev-stars">★★★★★</div>
+                    <div class="rev-text">"Booked Thyroid & Lipid profile online with GPS pin. Technician reached our doorstep right on time."</div>
+                </div>
+                <div class="rev-author">— Debashis Mondal, Baruipur</div>
+            </div>
+        </div>
+
+        <!-- Medical FAQs -->
+        <div class="sec-head"><h3 class="sec-title" data-i18n="faqTitle">Frequently Asked Questions</h3></div>
+        <div class="faq-item" onclick="this.classList.toggle('open')">
+            <button type="button" class="faq-q"><span>1. How will I receive my lab test reports?</span><span>+</span></button>
+            <div class="faq-a">Reports are shared digitally on your WhatsApp number, and printed hard copies can also be collected directly from Sushila Clinic.</div>
+        </div>
+        <div class="faq-item" onclick="this.classList.toggle('open')">
+            <button type="button" class="faq-q"><span>2. Which tests require overnight fasting?</span><span>+</span></button>
+            <div class="faq-a">Fasting Blood Sugar (FBS), Lipid Profile, and certain Iron/Insulin tests require 10–12 hours of fasting. You may drink plain water during fasting.</div>
+        </div>
+        <div class="faq-item" onclick="this.classList.toggle('open')">
+            <button type="button" class="faq-q"><span>3. Is home ECG available for senior citizens?</span><span>+</span></button>
+            <div class="faq-a">Yes, 12-Lead Digital ECG is available both at Sushila Clinic and via home visit in Sonarpur & surrounding areas. Call 8777691532 to schedule.</div>
         </div>
     </main>
 
     <!-- BOOK TEST TAB -->
     <main id="tab-book" class="tab-content">
         <div style="margin-bottom:12px;">
-            <h2 style="font-size:16px;font-weight:800;">Book Lab Test / Home Visit</h2>
-            <p style="font-size:12px;color:#6b7280;">Blood Collection Timing: <strong>7:00 AM – 12:00 PM</strong></p>
+            <h2 style="font-size:16px;font-weight:800;" data-i18n="bookTitle">Book Lab Test / Home Visit</h2>
+            <p style="font-size:12px;color:#64748b;">Blood Collection Timing: <strong>7:00 AM – 12:00 PM</strong></p>
         </div>
 
         <!-- Prescription Photo Shortcut -->
         <div class="rx-banner">
             <div>
-                <div style="font-size:12px;font-weight:700;color:#14532d;">Have a Doctor's Prescription?</div>
-                <div style="font-size:10px;color:#166534;">Send photo directly if test names are hard to read</div>
+                <div style="font-size:12px;font-weight:700;color:#14532d;" data-i18n="rxTitle">Have a Doctor's Prescription?</div>
+                <div style="font-size:10px;color:#166534;" data-i18n="rxSub">Send photo directly if test names are hard to read</div>
             </div>
             <a href="https://wa.me/918777691532?text=Hello%20Sushila%20Clinic,%20I%20am%20sending%20my%20prescription%20photo%20for%20lab%20test%20booking." target="_blank" class="rx-btn">
                 📸 Send Rx
@@ -558,7 +760,7 @@
         <form id="bookingForm" class="form-card" onsubmit="submitBooking(event)">
             <!-- Test Selection with Search -->
             <div class="form-group">
-                <label class="form-label">1. Select Lab Tests (Search 440+ Tests or Tick Main Tests) *</label>
+                <label class="form-label" data-i18n="lblTests">1. Select Lab Tests (Search 440+ Tests or Tick Main Tests) *</label>
                 
                 <!-- Selected Tests Chips -->
                 <div id="selectedTags" class="selected-tags"></div>
@@ -569,7 +771,7 @@
                     <input type="text" id="formTestSearch" class="search-input" placeholder="Search test name (e.g. Thyroid, CBC, AMH, Dengue)..." oninput="renderFormTests()">
                     <button type="button" id="clearFormSearch" class="clear-search" onclick="clearFormSearchBox()">✕</button>
                 </div>
-                <div id="formSearchHint" style="font-size:10px;color:#0d9488;font-weight:600;margin-bottom:6px;">
+                <div id="formSearchHint" style="font-size:10px;color:#0f766e;font-weight:600;margin-bottom:6px;">
                     Showing main popular tests & health profiles (Type above to search all 440+ tests)
                 </div>
 
@@ -581,18 +783,18 @@
 
             <!-- Patient Name -->
             <div class="form-group">
-                <label class="form-label" for="patientName">2. Patient Full Name *</label>
+                <label class="form-label" for="patientName" data-i18n="lblName">2. Patient Full Name *</label>
                 <input type="text" id="patientName" class="form-input" placeholder="Enter patient name" required>
             </div>
 
             <!-- Age & Gender -->
             <div class="grid-2" style="margin-bottom:14px;">
                 <div>
-                    <label class="form-label" for="patientAge">3. Age (Years) *</label>
+                    <label class="form-label" for="patientAge" data-i18n="lblAge">3. Age (Years) *</label>
                     <input type="number" id="patientAge" class="form-input" placeholder="e.g. 42" min="1" max="120" required>
                 </div>
                 <div>
-                    <label class="form-label" for="patientGender">4. Gender *</label>
+                    <label class="form-label" for="patientGender" data-i18n="lblGender">4. Gender *</label>
                     <select id="patientGender" class="form-select" required>
                         <option value="">Select</option>
                         <option value="Male">Male</option>
@@ -604,18 +806,18 @@
 
             <!-- Phone Number -->
             <div class="form-group">
-                <label class="form-label" for="patientPhone">5. Contact Mobile Number *</label>
+                <label class="form-label" for="patientPhone" data-i18n="lblPhone">5. Contact Mobile Number *</label>
                 <input type="tel" id="patientPhone" class="form-input" placeholder="10-digit mobile number" pattern="[0-9]{10}" maxlength="10" required>
             </div>
 
             <!-- Date & Time -->
             <div class="grid-2" style="margin-bottom:14px;">
                 <div>
-                    <label class="form-label" for="visitDate">6. Preferred Date *</label>
+                    <label class="form-label" for="visitDate" data-i18n="lblDate">6. Preferred Date *</label>
                     <input type="date" id="visitDate" class="form-input" required>
                 </div>
                 <div>
-                    <label class="form-label" for="visitTime">7. Preferred Time *</label>
+                    <label class="form-label" for="visitTime" data-i18n="lblTime">7. Preferred Time *</label>
                     <select id="visitTime" class="form-select" required>
                         <option value="7:00 AM - 8:00 AM">7:00 AM - 8:00 AM</option>
                         <option value="8:00 AM - 9:00 AM">8:00 AM - 9:00 AM</option>
@@ -630,13 +832,13 @@
 
             <!-- Address -->
             <div class="form-group">
-                <label class="form-label" for="patientAddress">8. Full Address & Landmark *</label>
+                <label class="form-label" for="patientAddress" data-i18n="lblAddr">8. Full Address & Landmark *</label>
                 <textarea id="patientAddress" class="form-textarea" rows="2" placeholder="House/Flat No, Para/Road, Nearest Landmark (Sonarpur area)" required></textarea>
             </div>
 
             <!-- Current GPS Location Pinpoint -->
             <div class="form-group">
-                <label class="form-label">9. Current Location Pinpoint (For Home Visit)</label>
+                <label class="form-label" data-i18n="lblGps">9. Current Location Pinpoint (For Home Visit)</label>
                 <button type="button" id="gpsBtn" class="btn-gps" onclick="getPatientLocation()">
                     <span>📍</span> Pin Current Phone Location (GPS)
                 </button>
@@ -645,19 +847,19 @@
                 <div id="gpsStatus" class="gps-status"></div>
             </div>
 
-            <div class="call-hint-box">
+            <div class="call-hint-box" data-i18n="callHint">
                 <strong>📞 Important:</strong> After submitting this form, please <strong>call our clinic desk</strong> (8777691532 / 8100177365) to confirm your home visit slot immediately.
             </div>
 
-            <button type="submit" id="submitBtn" class="btn-submit">✅ Submit Booking Request</button>
+            <button type="submit" id="submitBtn" class="btn-submit" data-i18n="submitBtn">✅ Submit Booking Request</button>
         </form>
     </main>
 
     <!-- LAB TESTS DIRECTORY TAB -->
     <main id="tab-tests" class="tab-content">
-        <div style="margin-bottom:12px;">
+        <div style="margin-bottom:10px;">
             <h2 style="font-size:16px;font-weight:800;">Diagnostic Test Directory</h2>
-            <p style="font-size:12px;color:#6b7280;">Home Blood Collection: <strong>7:00 AM – 12:00 PM</strong></p>
+            <p style="font-size:12px;color:#64748b;">Home Blood Collection: <strong>7:00 AM – 12:00 PM</strong></p>
         </div>
 
         <!-- Fasting & Prep Guide -->
@@ -666,19 +868,29 @@
         </div>
 
         <!-- Search Bar in Lab Tests Tab -->
-        <div class="search-wrap" style="margin-bottom:14px;">
+        <div class="search-wrap" style="margin-bottom:10px;">
             <span class="search-icon">🔍</span>
             <input type="text" id="dirTestSearch" class="search-input" placeholder="Search 440+ tests (e.g. Vitamin D, HbA1c, ANA, Torch)..." oninput="renderDirectoryTests()">
             <button type="button" id="clearDirSearch" class="clear-search" onclick="clearDirSearchBox()">✕</button>
         </div>
 
-        <!-- Default Highlighted Cards (hidden when searching) -->
+        <!-- Category Filter Chips -->
+        <div class="cat-scroll" id="catChips">
+            <button type="button" class="cat-chip active" onclick="filterByCategory('ALL', this)">All Main</button>
+            <button type="button" class="cat-chip" onclick="filterByCategory('PACKAGE', this)">Health Packages</button>
+            <button type="button" class="cat-chip" onclick="filterByCategory('SUGAR', this)">Diabetes & Lipid</button>
+            <button type="button" class="cat-chip" onclick="filterByCategory('THYROID', this)">Thyroid & Hormone</button>
+            <button type="button" class="cat-chip" onclick="filterByCategory('FEVER', this)">Fever & Infection</button>
+            <button type="button" class="cat-chip" onclick="filterByCategory('ORGAN', this)">Liver & Kidney</button>
+        </div>
+
+        <!-- Default Highlighted Cards (hidden when searching/filtering) -->
         <div id="highlightedCards">
             <div class="highlight-card">
                 <span class="badge-top">★ Highlighted</span>
                 <h3 style="font-size:14px;font-weight:800;">Allergy Profile Test</h3>
-                <p style="font-size:12px;color:#4b5563;margin-top:4px;">Comprehensive screening for food, dust, pollen & respiratory allergies.</p>
-                <div style="margin-top:12px;display:flex;align-items:center;justify-content:space-between;gap:8px;">
+                <p style="font-size:12px;color:#475569;margin-top:4px;">Comprehensive screening for food, dust, pollen & respiratory allergies.</p>
+                <div style="margin-top:10px;display:flex;align-items:center;justify-content:space-between;gap:8px;">
                     <span style="font-size:11px;font-weight:600;color:#92400e;">Apollo / Healthplus / Ashok</span>
                     <div style="display:flex;gap:6px;">
                         <button onclick="bookSpecificTest('Allergy Profile Test')" class="btn-teal">Book Online</button>
@@ -690,9 +902,9 @@
             <div class="highlight-card" style="background:#fffbeb;">
                 <span class="badge-top" style="background:#0d9488;">Most Booked</span>
                 <h3 style="font-size:14px;font-weight:800;">Complete Blood Count (CBC) & ESR</h3>
-                <p style="font-size:12px;color:#4b5563;margin-top:4px;">Essential blood health checkup for infection, anemia & fever.</p>
-                <div style="margin-top:12px;display:flex;align-items:center;justify-content:space-between;gap:8px;">
-                    <span style="font-size:11px;font-weight:600;color:#4b5563;">NABL Partner Labs</span>
+                <p style="font-size:12px;color:#475569;margin-top:4px;">Essential blood health checkup for infection, anemia & fever.</p>
+                <div style="margin-top:10px;display:flex;align-items:center;justify-content:space-between;gap:8px;">
+                    <span style="font-size:11px;font-weight:600;color:#475569;">NABL Partner Labs</span>
                     <div style="display:flex;gap:6px;">
                         <button onclick="bookSpecificTest('Complete Blood Count (CBC) & ESR')" class="btn-teal">Book Online</button>
                         <a href="tel:8777691532" class="btn-teal-light">Call</a>
@@ -703,9 +915,9 @@
             <div class="highlight-card" style="background:#fffbeb;">
                 <span class="badge-top" style="background:#2563eb;">Popular</span>
                 <h3 style="font-size:14px;font-weight:800;">Thyroid Profile (T3, T4, TSH)</h3>
-                <p style="font-size:12px;color:#4b5563;margin-top:4px;">Complete thyroid hormone evaluation.</p>
-                <div style="margin-top:12px;display:flex;align-items:center;justify-content:space-between;gap:8px;">
-                    <span style="font-size:11px;font-weight:600;color:#4b5563;">7:00 AM – 12:00 PM</span>
+                <p style="font-size:12px;color:#475569;margin-top:4px;">Complete thyroid hormone evaluation.</p>
+                <div style="margin-top:10px;display:flex;align-items:center;justify-content:space-between;gap:8px;">
+                    <span style="font-size:11px;font-weight:600;color:#475569;">7:00 AM – 12:00 PM</span>
                     <div style="display:flex;gap:6px;">
                         <button onclick="bookSpecificTest('Thyroid Profile (T3, T4, TSH)')" class="btn-teal">Book Online</button>
                         <a href="tel:8777691532" class="btn-teal-light">Call</a>
@@ -714,7 +926,7 @@
             </div>
         </div>
 
-        <div id="dirSectionLabel" style="font-size:11px;font-weight:700;text-transform:uppercase;color:#9ca3af;margin:14px 0 10px;">
+        <div id="dirSectionLabel" style="font-size:11px;font-weight:700;text-transform:uppercase;color:#64748b;margin:12px 0 10px;">
             Main Routine Tests & Health Packages
         </div>
         <div id="directoryList"></div>
@@ -722,23 +934,24 @@
 
     <!-- ECG TAB -->
     <main id="tab-ecg" class="tab-content">
-        <div class="hero" style="background:linear-gradient(135deg,#e11d48,#db2777);">
-            <span class="badge-glass">Heart Care</span>
+        <div class="hero" style="background:linear-gradient(135deg,#be123c,#e11d48);">
+            <span class="badge-glass">Cardiology Care</span>
             <h2>12-Lead Digital ECG</h2>
             <p>Fast, accurate Electrocardiogram available at Sushila Clinic (8:30 AM – 2 PM & 5:30 PM – 10 PM) & via Home Visit.</p>
         </div>
 
-        <div style="background:#ffffff;border:1px solid #f3f4f6;border-radius:16px;padding:16px;box-shadow:0 1px 4px rgba(0,0,0,0.04);">
-            <h3 style="font-size:14px;font-weight:700;margin-bottom:10px;">ECG Service Details</h3>
-            <div style="font-size:12px;color:#4b5563;line-height:1.8;">
-                <div>✅ Printed ECG graph report</div>
-                <div>✅ Home visit available for senior citizens</div>
-                <div>✅ Conducted by trained medical technician</div>
+        <div style="background:#ffffff;border:1px solid #e2e8f0;border-radius:16px;padding:16px;box-shadow:0 1px 4px rgba(0,0,0,0.04);">
+            <h3 style="font-size:14px;font-weight:800;margin-bottom:10px;">ECG Service Details</h3>
+            <div style="font-size:12px;color:#334155;line-height:1.85;">
+                <div>✅ High-precision printed 12-lead ECG graph report</div>
+                <div>✅ Doorstep home ECG service for senior citizens</div>
+                <div>✅ Conducted by qualified medical technician</div>
+                <div>✅ Immediate review by Dr. Bishnu Pada Mandal</div>
             </div>
-            <button onclick="bookSpecificTest('12-Lead Home ECG')" style="width:100%;background:#0d9488;color:#fff;font-size:12px;font-weight:700;padding:11px;border-radius:12px;margin-top:14px;">📝 Book Home ECG Online</button>
+            <button onclick="bookSpecificTest('12-Lead Home ECG')" style="width:100%;background:#0f766e;color:#fff;font-size:12px;font-weight:800;padding:11px;border-radius:12px;margin-top:14px;">📝 Book Home ECG Online</button>
             <div class="grid-2" style="margin-top:10px;margin-bottom:0;">
                 <a href="tel:8777691532" style="background:#e11d48;color:#fff;font-size:12px;font-weight:700;padding:10px;border-radius:12px;text-align:center;">📞 8777691532</a>
-                <a href="tel:8100177365" style="background:#111827;color:#fff;font-size:12px;font-weight:700;padding:10px;border-radius:12px;text-align:center;">📞 8100177365</a>
+                <a href="tel:8100177365" style="background:#0f172a;color:#fff;font-size:12px;font-weight:700;padding:10px;border-radius:12px;text-align:center;">📞 8100177365</a>
             </div>
         </div>
     </main>
@@ -747,17 +960,17 @@
     <main id="tab-pharmacy" class="tab-content">
         <div style="margin-bottom:12px;">
             <h2 style="font-size:16px;font-weight:800;">Believe Medical Pharmacy</h2>
-            <p style="font-size:12px;color:#0d9488;font-weight:600;">Open: 8:30 AM – 2:00 PM & 5:30 PM – 10:00 PM</p>
+            <p style="font-size:12px;color:#0f766e;font-weight:700;">Open: 8:30 AM – 2:00 PM & 5:30 PM – 10:00 PM</p>
         </div>
 
         <div style="background:#fffbeb;border:1px solid #fde68a;border-radius:12px;padding:10px 12px;font-size:12px;color:#78350f;margin-bottom:16px;">
-            <strong>Note:</strong> Medicines & wellness products are available directly at our pharmacy counter (Khurigachi Fularhat Road, Sonarpur). Call us to check stock before visiting.
+            <strong>Note:</strong> Genuine allopathic, ayurvedic & wellness products are available directly at our pharmacy counter (Khurigachi Fularhat Road, Sonarpur). Call us to check stock before visiting.
         </div>
 
         <div class="gal-card">
             <img src="https://raw.githubusercontent.com/mayukhyt8665-png/believe-medical-pharmacy/main/file_00000001f808207a099670211f9b9ed.png" alt="SESA Ayurvedic" class="gal-img">
             <div class="gal-foot">
-                <div><div style="font-size:14px;font-weight:700;">SESA Ayurvedic Hair Care</div><div style="font-size:12px;color:#6b7280;">Medicinal Hair Oil & Shampoo</div></div>
+                <div><div style="font-size:14px;font-weight:700;">SESA Ayurvedic Hair Care</div><div style="font-size:12px;color:#64748b;">Medicinal Hair Oil & Shampoo</div></div>
                 <a href="tel:8777691532" class="btn-teal">Call</a>
             </div>
         </div>
@@ -765,7 +978,7 @@
         <div class="gal-card">
             <img src="file_00000000b51082118a9d009c1b3d98c1.png" alt="AROLIVE Tablet" class="gal-img">
             <div class="gal-foot">
-                <div><div style="font-size:14px;font-weight:700;">AROLIVE Ayurvedic Tablet</div><div style="font-size:12px;color:#6b7280;">Ayurvedic Liver Care Support</div></div>
+                <div><div style="font-size:14px;font-weight:700;">AROLIVE Ayurvedic Tablet</div><div style="font-size:12px;color:#64748b;">Ayurvedic Liver Care Support</div></div>
                 <a href="tel:8777691532" class="btn-teal">Call</a>
             </div>
         </div>
@@ -773,7 +986,7 @@
         <div class="gal-card">
             <img src="IMG_20261114_105300.jpg" alt="Pharmacy Display 1" class="gal-img">
             <div class="gal-foot">
-                <div><div style="font-size:14px;font-weight:700;">Prescription & Skin Care</div><div style="font-size:12px;color:#6b7280;">Genuine medicines & personal care</div></div>
+                <div><div style="font-size:14px;font-weight:700;">Prescription & Skin Care</div><div style="font-size:12px;color:#64748b;">Genuine medicines & personal care</div></div>
                 <a href="tel:8777691532" class="btn-teal">Call</a>
             </div>
         </div>
@@ -781,7 +994,7 @@
         <div class="gal-card">
             <img src="IMG_20261114_105348.jpg" alt="Pharmacy Display 2" class="gal-img">
             <div class="gal-foot">
-                <div><div style="font-size:14px;font-weight:700;">Daily Essentials & Body Care</div><div style="font-size:12px;color:#6b7280;">Moisturizers, lotions & hygiene</div></div>
+                <div><div style="font-size:14px;font-weight:700;">Daily Essentials & Body Care</div><div style="font-size:12px;color:#64748b;">Moisturizers, lotions & hygiene</div></div>
                 <a href="tel:8777691532" class="btn-teal">Call</a>
             </div>
         </div>
@@ -791,21 +1004,21 @@
     <div id="successModal" class="modal-overlay">
         <div class="modal-box">
             <div class="modal-icon">✅</div>
-            <h3 style="font-size:18px;font-weight:800;color:#111827;">Booking Form Submitted!</h3>
+            <h3 style="font-size:18px;font-weight:800;color:#0f172a;" data-i18n="modTitle">Booking Form Submitted!</h3>
             
-            <div class="modal-alert">
+            <div class="modal-alert" data-i18n="modAlert">
                 <strong>📞 Don't Forget to Call Us!</strong><br>
                 Your details have been sent to <strong>Sushila Clinic</strong>. Please call any of the numbers below right now so we can confirm your home visit slot:
             </div>
 
-            <a href="tel:8777691532" class="modal-action-btn" style="background:#0d9488;">
+            <a href="tel:8777691532" class="modal-action-btn" style="background:#0f766e;">
                 📞 Call Clinic Desk 1 (8777691532)
             </a>
             <a href="tel:8100177365" class="modal-action-btn" style="background:#2563eb;">
                 📞 Call Clinic Desk 2 (8100177365)
             </a>
 
-            <button onclick="closeModal()" style="margin-top:16px;font-size:11px;font-weight:600;color:#9ca3af;padding:6px 14px;">
+            <button onclick="closeModal()" style="margin-top:16px;font-size:11px;font-weight:600;color:#94a3b8;padding:6px 14px;">
                 I have called / Close
             </button>
         </div>
@@ -821,51 +1034,186 @@
     <nav class="bottom-nav">
         <button onclick="switchTab('home')" id="nav-home" class="nav-btn active">
             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
-            Home
+            <span data-i18n="navHome">Home</span>
         </button>
         <button onclick="switchTab('book')" id="nav-book" class="nav-btn">
             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path></svg>
-            Book Test
+            <span data-i18n="navBook">Book Test</span>
         </button>
         <button onclick="switchTab('tests')" id="nav-tests" class="nav-btn">
             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
-            Lab Tests
+            <span data-i18n="navTests">Lab Tests</span>
         </button>
         <button onclick="switchTab('ecg')" id="nav-ecg" class="nav-btn">
             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
-            ECG
+            <span data-i18n="navEcg">ECG</span>
         </button>
         <button onclick="switchTab('pharmacy')" id="nav-pharmacy" class="nav-btn">
             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
-            Pharmacy
+            <span data-i18n="navPharm">Pharmacy</span>
         </button>
     </nav>
 </div>
 
 <script>
-    // Main Popular Tests & Health Profiles (Shown by default without searching)
+    // Bilingual Dictionary (English & Bengali)
+    let currentLang = 'en';
+    const I18N = {
+        en: {
+            docBadge: "Chief Consultant Physician",
+            chamberLbl: "Chamber Hours:",
+            docCallBtn: "📞 Appointment",
+            trust1: "NABL Accredited Partner Labs",
+            trust2: "Trained & Painless Collection",
+            trust3: "100% Genuine Medicines",
+            heroBadge: "Doorstep Diagnostic Service",
+            heroTitle: "Home Blood Collection",
+            heroDesc: "440+ diagnostic tests from trusted NABL partner labs. Pin your phone GPS & book online or call directly.",
+            heroBookBtn: "📝 Book Home Visit",
+            heroCallBtn: "📞 Call Desk",
+            quickCallTitle: "Quick Call Booking Desks",
+            desk1: "Booking Desk 1",
+            desk2: "Booking Desk 2",
+            timingsTitle: "Service Timings & Location",
+            mapBtn: "🗺️ Open Clinic Location in Google Maps ↗",
+            pharmTitle: "Pharmacy & Wellness",
+            labPartnerTitle: "Trusted Lab Partners",
+            revTitle: "Patient Feedback",
+            faqTitle: "Frequently Asked Questions",
+            bookTitle: "Book Lab Test / Home Visit",
+            rxTitle: "Have a Doctor's Prescription?",
+            rxSub: "Send photo directly if test names are hard to read",
+            lblTests: "1. Select Lab Tests (Search 440+ Tests or Tick Main Tests) *",
+            lblName: "2. Patient Full Name *",
+            lblAge: "3. Age (Years) *",
+            lblGender: "4. Gender *",
+            lblPhone: "5. Contact Mobile Number *",
+            lblDate: "6. Preferred Date *",
+            lblTime: "7. Preferred Time *",
+            lblAddr: "8. Full Address & Landmark *",
+            lblGps: "9. Current Location Pinpoint (For Home Visit)",
+            callHint: "<strong>📞 Important:</strong> After submitting this form, please <strong>call our clinic desk</strong> (8777691532 / 8100177365) to confirm your home visit slot immediately.",
+            submitBtn: "✅ Submit Booking Request",
+            modTitle: "Booking Form Submitted!",
+            modAlert: "<strong>📞 Don't Forget to Call Us!</strong><br>Your details have been sent to <strong>Sushila Clinic</strong>. Please call any of the numbers below right now so we can confirm your home visit slot:",
+            navHome: "Home",
+            navBook: "Book Test",
+            navTests: "Lab Tests",
+            navEcg: "ECG",
+            navPharm: "Pharmacy"
+        },
+        bn: {
+            docBadge: "প্রধান চিকিৎসক (General Physician)",
+            chamberLbl: "চেম্বারের সময়:",
+            docCallBtn: "📞 অ্যাপয়েন্টমেন্ট",
+            trust1: "NABL অনুমোদিত পার্টনার ল্যাব",
+            trust2: "দক্ষ টেকনিশিয়ান দ্বারা রক্ত সংগ্রহ",
+            trust3: "১০০% আসল ওষুধের ভরসা",
+            heroBadge: "হোম ব্লাড কালেকশন পরিষেবা",
+            heroTitle: "বাড়ি থেকে রক্ত পরীক্ষা",
+            heroDesc: "৪৪০+ ডায়াগনস্টিক টেস্ট এখন আপনার বাড়িতেই। ফোনের GPS লোকেশন পিন করে অনলাইনে বুক করুন বা সরাসরি কল করুন।",
+            heroBookBtn: "📝 হোম ভিজিট বুক করুন",
+            heroCallBtn: "📞 কল করুন",
+            quickCallTitle: "সরাসরি কল বুকিং ডেস্ক",
+            desk1: "বুকিং ডেস্ক ১",
+            desk2: "বুকিং ডেস্ক ২",
+            timingsTitle: "পরিষেবার সময়সূচী ও ঠিকানা",
+            mapBtn: "🗺️ Google Maps-এ ক্লিনিকের লোকেশন দেখুন ↗",
+            pharmTitle: "ফার্মেসি ও হেলথ কেয়ার",
+            labPartnerTitle: "আমাদের অনুমোদিত ল্যাব পার্টনার",
+            revTitle: "রোগীদের মতামত",
+            faqTitle: "সাধারণ জিজ্ঞাস্য (FAQ)",
+            bookTitle: "ল্যাব টেস্ট / হোম ভিজিট বুকিং",
+            rxTitle: "ডাক্তারের প্রেসক্রিপশন আছে?",
+            rxSub: "টেস্টের নাম বুঝতে অসুবিধা হলে প্রেসক্রিপশনের ছবি পাঠান",
+            lblTests: "১. টেস্ট নির্বাচন করুন (সার্চ করুন বা নিচের তালিকা থেকে টিক দিন) *",
+            lblName: "২. রোগীর সম্পূর্ণ নাম *",
+            lblAge: "৩. বয়স (বছর) *",
+            lblGender: "৪. লিঙ্গ (Gender) *",
+            lblPhone: "৫. মোবাইল নম্বর *",
+            lblDate: "৬. তারিখ নির্বাচন করুন *",
+            lblTime: "৭. পছন্দের সময় *",
+            lblAddr: "৮. সম্পূর্ণ ঠিকানা ও ল্যান্ডমার্ক *",
+            lblGps: "৯. বর্তমান লোকেশন পিন করুন (হোম ভিজিটের জন্য)",
+            callHint: "<strong>📞 জরুরি বিজ্ঞপ্তি:</strong> ফর্মটি সাবমিট করার পর স্লট কনফার্ম করার জন্য অনুগ্রহ করে এখনই আমাদের নম্বরে (8777691532 / 8100177365) <strong>কল করুন</strong>।",
+            submitBtn: "✅ বুকিং রিকোয়েস্ট পাঠান",
+            modTitle: "বুকিং ফর্ম জমা হয়েছে!",
+            modAlert: "<strong>📞 কল করতে ভুলবেন না!</strong><br>আপনার তথ্য <strong>সুশীলা ক্লিনিকে</strong> পাঠানো হয়েছে। হোম ভিজিটের সময় কনফার্ম করতে এখনই নিচের নম্বরে কল করুন:",
+            navHome: "হোম",
+            navBook: "বুক টেস্ট",
+            navTests: "ল্যাব টেস্ট",
+            navEcg: "ইসিজি",
+            navPharm: "ফার্মেসি"
+        }
+    };
+
+    function toggleLanguage() {
+        currentLang = currentLang === 'en' ? 'bn' : 'en';
+        document.getElementById('langToggleBtn').innerText = currentLang === 'en' ? 'বাংলা' : 'EN';
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+            const key = el.getAttribute('data-i18n');
+            if (I18N[currentLang][key]) {
+                el.innerHTML = I18N[currentLang][key];
+            }
+        });
+    }
+
+    // Share Clinic Link
+    function shareClinic() {
+        const shareData = {
+            title: 'Sushila Clinic & Believe Medical Pharmacy',
+            text: 'Sushila Clinic & Believe Medical Pharmacy (Dr. Bishnu Pada Mandal) - Khurigachi Fularhat Road, Sonarpur. Home Blood Collection (7 AM - 12 PM) | Clinic & Pharmacy (8:30 AM - 2 PM, 5:30 PM - 10 PM). Call: 8777691532 / 8100177365',
+            url: window.location.href
+        };
+        if (navigator.share) {
+            navigator.share(shareData).catch(() => {});
+        } else {
+            window.open(`https://wa.me/?text=${encodeURIComponent(shareData.text + ' ' + shareData.url)}`, '_blank');
+        }
+    }
+
+    // Live Clinic Open/Closed Status Indicator
+    function updateLiveStatus() {
+        const now = new Date();
+        const mins = now.getHours() * 60 + now.getMinutes();
+        const statusEl = document.getElementById('liveStatusText');
+        const isClinicOpen = (mins >= 510 && mins <= 840) || (mins >= 1050 && mins <= 1320); // 8:30-14:00 or 17:30-22:00
+        const isBloodActive = (mins >= 420 && mins <= 720); // 7:00-12:00
+
+        if (isBloodActive && isClinicOpen) {
+            statusEl.innerHTML = `<span class="pulse-dot"></span> Open Now • Home Blood Collection Active`;
+        } else if (isClinicOpen) {
+            statusEl.innerHTML = `<span class="pulse-dot"></span> Clinic & Pharmacy Open Now • Sonarpur`;
+        } else if (isBloodActive) {
+            statusEl.innerHTML = `<span class="pulse-dot"></span> Home Blood Collection Active (Till 12 PM)`;
+        } else {
+            statusEl.innerHTML = `<span class="pulse-dot" style="background:#f59e0b;"></span> Khurigachi Fularhat Road, Sonarpur`;
+        }
+    }
+
+    // Main Popular Tests & Health Profiles
     const MAIN_TESTS = [
-        { name: "Allergy Profile Test", dept: "IMMUNOLOGY" },
-        { name: "Complete Blood Count (CBC) & ESR", dept: "HAEMATOLOGY" },
-        { name: "Thyroid Profile (T3, T4, TSH)", dept: "IMMUNOLOGY" },
-        { name: "Blood Sugar (Fasting / PP / RBS)", dept: "BIOCHEMISTRY" },
-        { name: "Glycosylated Haemoglobin (HbA1c)", dept: "BIOCHEMISTRY" },
-        { name: "Lipid Profile (Cholesterol, HDL, LDL, TG)", dept: "BIOCHEMISTRY" },
-        { name: "Liver Function Test (LFT)", dept: "BIOCHEMISTRY" },
-        { name: "Kidney Function Test (KFT) with Electrolytes", dept: "BIOCHEMISTRY" },
-        { name: "Vitamin D (25 Hydroxy Cholecalciferol)", dept: "IMMUNOLOGY" },
-        { name: "Vitamin B12", dept: "IMMUNOLOGY" },
-        { name: "Urine for Routine Examination", dept: "CLINICAL PATH" },
-        { name: "12-Lead Home ECG", dept: "CARDIOLOGY" },
-        { name: "KD Profile 1.1 (KFT+Electrolytes, LFT+GGT, Urine, CBC+ESR, Lipid, T3 T4 TSH, FBS)", dept: "HEALTH PACKAGE" },
-        { name: "KD Profile 1.2 (FBS, HbA1c, KFT+Electrolytes, LFT+GGT, Urine, CBC+ESR, Iron, Lipid, T3 T4 TSH)", dept: "HEALTH PACKAGE" },
-        { name: "KD Profile 1.3 (Testosterone, Urine, Vit D3, CBC+ESR, Iron, Lipid, T3 T4 TSH, Vit B12, FBS, HbA1c, KFT, LFT+GGT)", dept: "HEALTH PACKAGE" },
-        { name: "KD Nirogyam Profile 2 (FBS, HbA1c, KFT+Electrolytes, LFT+GGT, Vit B12, Vit D3, CBC+ESR, Iron, Lipid, T3 T4 TSH, Urine)", dept: "HEALTH PACKAGE" },
-        { name: "KD Fever Profile (CBC+ESR, Urine, Malaria Dual Ag, CRP, Typhoid IgG/IgM, Scrub Typhus IgM, Dengue NS1)", dept: "FEVER PACKAGE" },
-        { name: "KD Diabetic Profile (Urea, Creatinine, Uric Acid, Lipid, FBS, PPBS, HbA1c, Urine ACR, Urine Routine)", dept: "DIABETIC PACKAGE" }
+        { name: "Allergy Profile Test", dept: "IMMUNOLOGY", cat: "FEVER" },
+        { name: "Complete Blood Count (CBC) & ESR", dept: "HAEMATOLOGY", cat: "FEVER" },
+        { name: "Thyroid Profile (T3, T4, TSH)", dept: "IMMUNOLOGY", cat: "THYROID" },
+        { name: "Blood Sugar (Fasting / PP / RBS)", dept: "BIOCHEMISTRY", cat: "SUGAR" },
+        { name: "Glycosylated Haemoglobin (HbA1c)", dept: "BIOCHEMISTRY", cat: "SUGAR" },
+        { name: "Lipid Profile (Cholesterol, HDL, LDL, TG)", dept: "BIOCHEMISTRY", cat: "SUGAR" },
+        { name: "Liver Function Test (LFT)", dept: "BIOCHEMISTRY", cat: "ORGAN" },
+        { name: "Kidney Function Test (KFT) with Electrolytes", dept: "BIOCHEMISTRY", cat: "ORGAN" },
+        { name: "Vitamin D (25 Hydroxy Cholecalciferol)", dept: "IMMUNOLOGY", cat: "THYROID" },
+        { name: "Vitamin B12", dept: "IMMUNOLOGY", cat: "THYROID" },
+        { name: "Urine for Routine Examination", dept: "CLINICAL PATH", cat: "ORGAN" },
+        { name: "12-Lead Home ECG", dept: "CARDIOLOGY", cat: "ORGAN" },
+        { name: "KD Profile 1.1 (KFT+Electrolytes, LFT+GGT, Urine, CBC+ESR, Lipid, T3 T4 TSH, FBS)", dept: "HEALTH PACKAGE", cat: "PACKAGE" },
+        { name: "KD Profile 1.2 (FBS, HbA1c, KFT+Electrolytes, LFT+GGT, Urine, CBC+ESR, Iron, Lipid, T3 T4 TSH)", dept: "HEALTH PACKAGE", cat: "PACKAGE" },
+        { name: "KD Profile 1.3 (Testosterone, Urine, Vit D3, CBC+ESR, Iron, Lipid, T3 T4 TSH, Vit B12, FBS, HbA1c, KFT, LFT+GGT)", dept: "HEALTH PACKAGE", cat: "PACKAGE" },
+        { name: "KD Nirogyam Profile 2 (FBS, HbA1c, KFT+Electrolytes, LFT+GGT, Vit B12, Vit D3, CBC+ESR, Iron, Lipid, T3 T4 TSH, Urine)", dept: "HEALTH PACKAGE", cat: "PACKAGE" },
+        { name: "KD Fever Profile (CBC+ESR, Urine, Malaria Dual Ag, CRP, Typhoid IgG/IgM, Scrub Typhus IgM, Dengue NS1)", dept: "FEVER PACKAGE", cat: "FEVER" },
+        { name: "KD Diabetic Profile (Urea, Creatinine, Uric Acid, Lipid, FBS, PPBS, HbA1c, Urine ACR, Urine Routine)", dept: "DIABETIC PACKAGE", cat: "SUGAR" }
     ];
 
-    // Complete 437 Diagnostic Tests Catalog (Sl. No. 1 to 437)
+    // Complete 437 Diagnostic Tests Catalog
     const ALL_DIAGNOSTIC_TESTS = [
         "17 HYDROXY PROGESTERONE (OHP)",
         "25 Hydroxy Cholecalciferol (Vitamin D)",
@@ -1305,10 +1653,11 @@
         "H1N1"
     ];
 
-    // Store selected tests in a Set so selections persist during search
     const selectedTestSet = new Set();
+    let activeCategory = 'ALL';
 
     document.addEventListener('DOMContentLoaded', () => {
+        updateLiveStatus();
         const today = new Date().toISOString().split('T')[0];
         const dateInput = document.getElementById('visitDate');
         if (dateInput) {
@@ -1328,7 +1677,6 @@
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
-    // Toggle Test Selection
     function toggleTestSelection(testName) {
         if (selectedTestSet.has(testName)) {
             selectedTestSet.delete(testName);
@@ -1353,7 +1701,6 @@
         container.innerHTML = html;
     }
 
-    // Render Form Test List (Shows Main Tests by default, filters all 440+ tests on search)
     function renderFormTests() {
         const query = document.getElementById('formTestSearch').value.trim().toLowerCase();
         const clearBtn = document.getElementById('clearFormSearch');
@@ -1383,7 +1730,7 @@
         }
 
         if (itemsToShow.length === 0) {
-            listEl.innerHTML = `<div style="font-size:12px;color:#6b7280;text-align:center;padding:12px;">No exact match found. You can type the test name in the box below!</div>`;
+            listEl.innerHTML = `<div style="font-size:12px;color:#64748b;text-align:center;padding:12px;">No exact match found. You can type the test name in the box below!</div>`;
             return;
         }
 
@@ -1404,7 +1751,14 @@
         renderFormTests();
     }
 
-    // Render Lab Tests Directory Tab
+    function filterByCategory(cat, btnEl) {
+        activeCategory = cat;
+        document.querySelectorAll('.cat-chip').forEach(c => c.classList.remove('active'));
+        btnEl.classList.add('active');
+        document.getElementById('dirTestSearch').value = '';
+        renderDirectoryTests();
+    }
+
     function renderDirectoryTests() {
         const query = document.getElementById('dirTestSearch').value.trim().toLowerCase();
         const clearBtn = document.getElementById('clearDirSearch');
@@ -1413,13 +1767,10 @@
         const listEl = document.getElementById('directoryList');
 
         clearBtn.style.display = query ? 'block' : 'none';
-        highlighted.style.display = query ? 'none' : 'block';
+        highlighted.style.display = (!query && activeCategory === 'ALL') ? 'block' : 'none';
 
         let items = [];
-        if (!query) {
-            label.innerText = "Main Routine Tests & Health Packages";
-            items = MAIN_TESTS.slice(3).map(t => ({ name: t.name, sub: t.dept }));
-        } else {
+        if (query) {
             const combined = [
                 ...MAIN_TESTS.map(t => ({ name: t.name, sub: t.dept })),
                 ...ALL_DIAGNOSTIC_TESTS.map(name => ({ name, sub: "Krishna / Apollo / Healthplus / Ashok Lab" }))
@@ -1433,10 +1784,16 @@
                 }
             });
             label.innerText = `Search Results (${items.length} tests found)`;
+        } else if (activeCategory !== 'ALL') {
+            items = MAIN_TESTS.filter(t => t.cat === activeCategory).map(t => ({ name: t.name, sub: t.dept }));
+            label.innerText = `Filtered Category (${items.length} tests)`;
+        } else {
+            label.innerText = "Main Routine Tests & Health Packages";
+            items = MAIN_TESTS.slice(3).map(t => ({ name: t.name, sub: t.dept }));
         }
 
         if (items.length === 0) {
-            listEl.innerHTML = `<div style="text-align:center;padding:20px;font-size:12px;color:#6b7280;">No matching test found. Click "Book Test" below to enter custom test name.</div>`;
+            listEl.innerHTML = `<div style="text-align:center;padding:20px;font-size:12px;color:#64748b;">No matching test found. Click "Book Test" below to enter custom test name.</div>`;
             return;
         }
 
@@ -1445,8 +1802,8 @@
             return `
                 <div class="test-row">
                     <div>
-                        <div style="font-size:12px;font-weight:700;color:#111827;">${item.name}</div>
-                        <div style="font-size:10px;color:#6b7280;margin-top:2px;">${item.sub}</div>
+                        <div style="font-size:12px;font-weight:700;color:#0f172a;">${item.name}</div>
+                        <div style="font-size:10px;color:#64748b;margin-top:2px;">${item.sub}</div>
                     </div>
                     <button onclick="bookSpecificTest('${safeName}')" class="btn-teal-light">Book</button>
                 </div>
@@ -1466,7 +1823,6 @@
         switchTab('book');
     }
 
-    // Detect Patient Phone GPS Location
     function getPatientLocation() {
         const btn = document.getElementById('gpsBtn');
         const statusDiv = document.getElementById('gpsStatus');
@@ -1510,7 +1866,6 @@
         );
     }
 
-    // Submit Form via FormSubmit AJAX to aloesenic@gmail.com
     async function submitBooking(e) {
         e.preventDefault();
 
@@ -1566,7 +1921,7 @@
         }
 
         submitBtn.disabled = false;
-        submitBtn.innerText = '✅ Submit Booking Request';
+        submitBtn.innerText = I18N[currentLang].submitBtn;
         document.getElementById('successModal').classList.add('show');
     }
 
