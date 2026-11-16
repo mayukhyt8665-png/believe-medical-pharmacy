@@ -213,17 +213,12 @@
             max-height: 230px; overflow-y: auto;
         }
         .chk-item {
-            display: flex; align-items: center; justify-content: space-between; gap: 8px;
+            display: flex; align-items: center; gap: 8px;
             font-size: 12px; font-weight: 600; color: #1f2937; background: #ffffff;
             padding: 8px 10px; border-radius: 8px; border: 1px solid #e5e7eb; cursor: pointer;
         }
         .chk-item.checked { border-color: #0d9488; background: #f0fdfa; }
-        .chk-left { display: flex; align-items: center; gap: 8px; }
         .chk-item input { accent-color: #0d9488; width: 16px; height: 16px; flex-shrink: 0; }
-        .tat-badge {
-            font-size: 9px; font-weight: 700; color: #6b7280; background: #f3f4f6;
-            padding: 2px 6px; border-radius: 4px; white-space: nowrap;
-        }
         .btn-gps {
             width: 100%; background: #eff6ff; color: #1d4ed8; border: 1px solid #bfdbfe;
             font-size: 12px; font-weight: 700; padding: 10px 12px; border-radius: 10px;
@@ -235,33 +230,43 @@
         }
         .gps-status.success { display: block; background: #ecfdf5; color: #065f46; border: 1px solid #a7f3d0; }
         .gps-status.error { display: block; background: #fef2f2; color: #991b1b; border: 1px solid #fecaca; }
+        .call-hint-box {
+            background: #fffbeb; border: 1px solid #fde68a; border-radius: 10px;
+            padding: 9px 11px; font-size: 11px; color: #92400e; margin-bottom: 10px;
+            line-height: 1.4;
+        }
         .btn-submit {
             width: 100%; background: linear-gradient(135deg, #0d9488, #059669); color: #ffffff;
             font-size: 14px; font-weight: 800; padding: 13px; border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(13, 148, 136, 0.25); margin-top: 6px;
+            box-shadow: 0 4px 12px rgba(13, 148, 136, 0.25);
         }
         .btn-submit:disabled { opacity: 0.65; cursor: not-allowed; }
 
         /* Modal Popup */
         .modal-overlay {
-            position: fixed; inset: 0; background: rgba(17, 24, 39, 0.65);
+            position: fixed; inset: 0; background: rgba(17, 24, 39, 0.72);
             backdrop-filter: blur(4px); z-index: 100;
             display: none; align-items: center; justify-content: center; padding: 16px;
         }
         .modal-overlay.show { display: flex; animation: fadeIn 0.2s ease; }
         .modal-box {
             background: #ffffff; border-radius: 22px; max-width: 380px; width: 100%;
-            padding: 22px; text-align: center; box-shadow: 0 20px 35px rgba(0,0,0,0.2);
+            padding: 22px; text-align: center; box-shadow: 0 20px 35px rgba(0,0,0,0.25);
         }
         .modal-icon {
             width: 56px; height: 56px; border-radius: 50%; background: #ecfdf5; color: #059669;
             display: flex; align-items: center; justify-content: center; font-size: 28px;
             margin: 0 auto 12px;
         }
-        .modal-call-btn {
+        .modal-alert {
+            background: #fef3c7; border: 1.5px solid #f59e0b; border-radius: 12px;
+            padding: 10px 12px; margin: 12px 0 14px; text-align: left;
+            font-size: 12px; color: #78350f; line-height: 1.45;
+        }
+        .modal-action-btn {
             display: flex; align-items: center; justify-content: center; gap: 8px;
-            width: 100%; padding: 12px; border-radius: 12px; font-size: 13px; font-weight: 800;
-            margin-top: 10px; color: #ffffff;
+            width: 100%; padding: 13px 14px; border-radius: 12px; font-size: 13px; font-weight: 800;
+            margin-top: 9px; color: #ffffff; box-shadow: 0 3px 10px rgba(0,0,0,0.12);
         }
         
         .float-call {
@@ -322,12 +327,12 @@
                 <span class="desk-title">Call Desk 1</span>
                 <span class="desk-num-blue">8777691532</span>
             </a>
-            <a href="tel:9051809036" class="desk-card desk-green">
+            <a href="tel:8100177365" class="desk-card desk-green">
                 <div class="desk-icon" style="color:#059669;">
                     <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
                 </div>
                 <span class="desk-title">Call Desk 2</span>
-                <span class="desk-num-green">9051809036</span>
+                <span class="desk-num-green">8100177365</span>
             </a>
         </div>
 
@@ -514,6 +519,10 @@
                 <div id="gpsStatus" class="gps-status"></div>
             </div>
 
+            <div class="call-hint-box">
+                <strong>📞 Important:</strong> After submitting this form, please <strong>call our clinic desk</strong> (8777691532 / 8100177365) to confirm your home visit slot immediately.
+            </div>
+
             <button type="submit" id="submitBtn" class="btn-submit">✅ Submit Booking Request</button>
         </form>
     </main>
@@ -552,7 +561,7 @@
                 <h3 style="font-size:14px;font-weight:800;">Complete Blood Count (CBC) & ESR</h3>
                 <p style="font-size:12px;color:#4b5563;margin-top:4px;">Essential blood health checkup for infection, anemia & fever.</p>
                 <div style="margin-top:12px;display:flex;align-items:center;justify-content:space-between;gap:8px;">
-                    <span style="font-size:11px;font-weight:600;color:#4b5563;">Same Day Report</span>
+                    <span style="font-size:11px;font-weight:600;color:#4b5563;">NABL Partner Labs</span>
                     <div style="display:flex;gap:6px;">
                         <button onclick="bookSpecificTest('Complete Blood Count (CBC) & ESR')" class="btn-teal">Book Online</button>
                         <a href="tel:8777691532" class="btn-teal-light">Call</a>
@@ -591,14 +600,14 @@
         <div style="background:#ffffff;border:1px solid #f3f4f6;border-radius:16px;padding:16px;box-shadow:0 1px 4px rgba(0,0,0,0.04);">
             <h3 style="font-size:14px;font-weight:700;margin-bottom:10px;">ECG Service Details</h3>
             <div style="font-size:12px;color:#4b5563;line-height:1.8;">
-                <div>✅ Instant printed ECG graph report</div>
+                <div>✅ Printed ECG graph report</div>
                 <div>✅ Home visit available for senior citizens</div>
                 <div>✅ Conducted by trained medical technician</div>
             </div>
             <button onclick="bookSpecificTest('12-Lead Home ECG')" style="width:100%;background:#0d9488;color:#fff;font-size:12px;font-weight:700;padding:11px;border-radius:12px;margin-top:14px;">📝 Book Home ECG Online</button>
             <div class="grid-2" style="margin-top:10px;margin-bottom:0;">
                 <a href="tel:8777691532" style="background:#e11d48;color:#fff;font-size:12px;font-weight:700;padding:10px;border-radius:12px;text-align:center;">📞 8777691532</a>
-                <a href="tel:9051809036" style="background:#111827;color:#fff;font-size:12px;font-weight:700;padding:10px;border-radius:12px;text-align:center;">📞 9051809036</a>
+                <a href="tel:8100177365" style="background:#111827;color:#fff;font-size:12px;font-weight:700;padding:10px;border-radius:12px;text-align:center;">📞 8100177365</a>
             </div>
         </div>
     </main>
@@ -647,22 +656,26 @@
         </div>
     </main>
 
-    <!-- Post-Submit Call Confirmation Popup Modal -->
+    <!-- Post-Submit Call Reminder Popup Modal -->
     <div id="successModal" class="modal-overlay">
         <div class="modal-box">
             <div class="modal-icon">✅</div>
-            <h3 style="font-size:17px;font-weight:800;color:#111827;">Booking Request Sent!</h3>
-            <p style="font-size:12px;color:#4b5563;margin-top:6px;line-height:1.5;">
-                Your test details & location have been sent to <strong>Sushila Clinic</strong>. Please call our desk now for instant slot confirmation:
-            </p>
-            <a href="tel:8777691532" class="modal-call-btn" style="background:#0d9488;">
+            <h3 style="font-size:18px;font-weight:800;color:#111827;">Booking Form Submitted!</h3>
+            
+            <div class="modal-alert">
+                <strong>📞 Don't Forget to Call Us!</strong><br>
+                Your details have been sent to <strong>Sushila Clinic</strong>. Please call any of the numbers below right now so we can confirm your home visit slot:
+            </div>
+
+            <a href="tel:8777691532" class="modal-action-btn" style="background:#0d9488;">
                 📞 Call Clinic Desk 1 (8777691532)
             </a>
-            <a href="tel:9051809036" class="modal-call-btn" style="background:#2563eb;">
-                📞 Call Clinic Desk 2 (9051809036)
+            <a href="tel:8100177365" class="modal-action-btn" style="background:#2563eb;">
+                📞 Call Clinic Desk 2 (8100177365)
             </a>
-            <button onclick="closeModal()" style="margin-top:14px;font-size:12px;font-weight:700;color:#6b7280;padding:6px 14px;">
-                Close Window
+
+            <button onclick="closeModal()" style="margin-top:16px;font-size:11px;font-weight:600;color:#9ca3af;padding:6px 14px;">
+                I have called / Close
             </button>
         </div>
     </div>
@@ -701,24 +714,24 @@
 <script>
     // Main Popular Tests & Health Profiles (Shown by default without searching)
     const MAIN_TESTS = [
-        { name: "Allergy Profile Test", dept: "IMMUNOLOGY", tat: "SAME DAY" },
-        { name: "Complete Blood Count (CBC) & ESR", dept: "HAEMATOLOGY", tat: "SAME DAY" },
-        { name: "Thyroid Profile (T3, T4, TSH)", dept: "IMMUNOLOGY", tat: "SAME DAY" },
-        { name: "Blood Sugar (Fasting / PP / RBS)", dept: "BIOCHEMISTRY", tat: "SAME DAY" },
-        { name: "Glycosylated Haemoglobin (HbA1c)", dept: "BIOCHEMISTRY", tat: "SAME DAY" },
-        { name: "Lipid Profile (Cholesterol, HDL, LDL, TG)", dept: "BIOCHEMISTRY", tat: "SAME DAY" },
-        { name: "Liver Function Test (LFT)", dept: "BIOCHEMISTRY", tat: "SAME DAY" },
-        { name: "Kidney Function Test (KFT) with Electrolytes", dept: "BIOCHEMISTRY", tat: "SAME DAY" },
-        { name: "Vitamin D (25 Hydroxy Cholecalciferol)", dept: "IMMUNOLOGY", tat: "SAME DAY" },
-        { name: "Vitamin B12", dept: "IMMUNOLOGY", tat: "SAME DAY" },
-        { name: "Urine for Routine Examination", dept: "CLINICAL PATH", tat: "SAME DAY" },
-        { name: "12-Lead Home ECG", dept: "CARDIOLOGY", tat: "INSTANT" },
-        { name: "KD Profile 1.1 (KFT+Electrolytes, LFT+GGT, Urine, CBC+ESR, Lipid, T3 T4 TSH, FBS)", dept: "HEALTH PACKAGE", tat: "SAME DAY" },
-        { name: "KD Profile 1.2 (FBS, HbA1c, KFT+Electrolytes, LFT+GGT, Urine, CBC+ESR, Iron, Lipid, T3 T4 TSH)", dept: "HEALTH PACKAGE", tat: "SAME DAY" },
-        { name: "KD Profile 1.3 (Testosterone, Urine, Vit D3, CBC+ESR, Iron, Lipid, T3 T4 TSH, Vit B12, FBS, HbA1c, KFT, LFT+GGT)", dept: "HEALTH PACKAGE", tat: "SAME DAY" },
-        { name: "KD Nirogyam Profile 2 (FBS, HbA1c, KFT+Electrolytes, LFT+GGT, Vit B12, Vit D3, CBC+ESR, Iron, Lipid, T3 T4 TSH, Urine)", dept: "HEALTH PACKAGE", tat: "SAME DAY" },
-        { name: "KD Fever Profile (CBC+ESR, Urine, Malaria Dual Ag, CRP, Typhoid IgG/IgM, Scrub Typhus IgM, Dengue NS1)", dept: "FEVER PACKAGE", tat: "SAME DAY" },
-        { name: "KD Diabetic Profile (Urea, Creatinine, Uric Acid, Lipid, FBS, PPBS, HbA1c, Urine ACR, Urine Routine)", dept: "DIABETIC PACKAGE", tat: "SAME DAY" }
+        { name: "Allergy Profile Test", dept: "IMMUNOLOGY" },
+        { name: "Complete Blood Count (CBC) & ESR", dept: "HAEMATOLOGY" },
+        { name: "Thyroid Profile (T3, T4, TSH)", dept: "IMMUNOLOGY" },
+        { name: "Blood Sugar (Fasting / PP / RBS)", dept: "BIOCHEMISTRY" },
+        { name: "Glycosylated Haemoglobin (HbA1c)", dept: "BIOCHEMISTRY" },
+        { name: "Lipid Profile (Cholesterol, HDL, LDL, TG)", dept: "BIOCHEMISTRY" },
+        { name: "Liver Function Test (LFT)", dept: "BIOCHEMISTRY" },
+        { name: "Kidney Function Test (KFT) with Electrolytes", dept: "BIOCHEMISTRY" },
+        { name: "Vitamin D (25 Hydroxy Cholecalciferol)", dept: "IMMUNOLOGY" },
+        { name: "Vitamin B12", dept: "IMMUNOLOGY" },
+        { name: "Urine for Routine Examination", dept: "CLINICAL PATH" },
+        { name: "12-Lead Home ECG", dept: "CARDIOLOGY" },
+        { name: "KD Profile 1.1 (KFT+Electrolytes, LFT+GGT, Urine, CBC+ESR, Lipid, T3 T4 TSH, FBS)", dept: "HEALTH PACKAGE" },
+        { name: "KD Profile 1.2 (FBS, HbA1c, KFT+Electrolytes, LFT+GGT, Urine, CBC+ESR, Iron, Lipid, T3 T4 TSH)", dept: "HEALTH PACKAGE" },
+        { name: "KD Profile 1.3 (Testosterone, Urine, Vit D3, CBC+ESR, Iron, Lipid, T3 T4 TSH, Vit B12, FBS, HbA1c, KFT, LFT+GGT)", dept: "HEALTH PACKAGE" },
+        { name: "KD Nirogyam Profile 2 (FBS, HbA1c, KFT+Electrolytes, LFT+GGT, Vit B12, Vit D3, CBC+ESR, Iron, Lipid, T3 T4 TSH, Urine)", dept: "HEALTH PACKAGE" },
+        { name: "KD Fever Profile (CBC+ESR, Urine, Malaria Dual Ag, CRP, Typhoid IgG/IgM, Scrub Typhus IgM, Dengue NS1)", dept: "FEVER PACKAGE" },
+        { name: "KD Diabetic Profile (Urea, Creatinine, Uric Acid, Lipid, FBS, PPBS, HbA1c, Urine ACR, Urine Routine)", dept: "DIABETIC PACKAGE" }
     ];
 
     // Complete 437 Diagnostic Tests Catalog (Sl. No. 1 to 437)
@@ -1221,11 +1234,11 @@
         let itemsToShow = [];
         if (!query) {
             hint.innerText = "Showing main popular tests & health profiles (Type above to search all 440+ tests)";
-            itemsToShow = MAIN_TESTS.map(t => ({ name: t.name, tag: t.tat }));
+            itemsToShow = MAIN_TESTS.map(t => ({ name: t.name }));
         } else {
             const combined = [
-                ...MAIN_TESTS.map(t => ({ name: t.name, tag: t.dept })),
-                ...ALL_DIAGNOSTIC_TESTS.map(name => ({ name, tag: "LAB TEST" }))
+                ...MAIN_TESTS.map(t => ({ name: t.name })),
+                ...ALL_DIAGNOSTIC_TESTS.map(name => ({ name }))
             ];
             const seen = new Set();
             combined.forEach(item => {
@@ -1248,11 +1261,8 @@
             const safeName = item.name.replace(/'/g, "\\'");
             return `
                 <label class="chk-item ${isChecked ? 'checked' : ''}">
-                    <div class="chk-left">
-                        <input type="checkbox" ${isChecked ? 'checked' : ''} onchange="toggleTestSelection('${safeName}')">
-                        <span>${item.name}</span>
-                    </div>
-                    <span class="tat-badge">${item.tag}</span>
+                    <input type="checkbox" ${isChecked ? 'checked' : ''} onchange="toggleTestSelection('${safeName}')">
+                    <span>${item.name}</span>
                 </label>
             `;
         }).join('');
@@ -1277,10 +1287,10 @@
         let items = [];
         if (!query) {
             label.innerText = "Main Routine Tests & Health Packages";
-            items = MAIN_TESTS.slice(3).map(t => ({ name: t.name, sub: `${t.dept} • Report: ${t.tat}` }));
+            items = MAIN_TESTS.slice(3).map(t => ({ name: t.name, sub: t.dept }));
         } else {
             const combined = [
-                ...MAIN_TESTS.map(t => ({ name: t.name, sub: `${t.dept} • ${t.tat}` })),
+                ...MAIN_TESTS.map(t => ({ name: t.name, sub: t.dept })),
                 ...ALL_DIAGNOSTIC_TESTS.map(name => ({ name, sub: "Krishna / Apollo / Healthplus / Ashok Lab" }))
             ];
             const seen = new Set();
@@ -1382,23 +1392,32 @@
             return;
         }
 
+        const pName = document.getElementById('patientName').value.trim();
+        const pAge = document.getElementById('patientAge').value.trim();
+        const pGender = document.getElementById('patientGender').value;
+        const pPhone = document.getElementById('patientPhone').value.trim();
+        const vDate = document.getElementById('visitDate').value;
+        const vTime = document.getElementById('visitTime').value;
+        const pAddress = document.getElementById('patientAddress').value.trim();
+        const gpsUrl = document.getElementById('gpsLink').value;
+
         const submitBtn = document.getElementById('submitBtn');
         submitBtn.disabled = true;
         submitBtn.innerText = '⏳ Sending Booking Details...';
 
         const payload = {
-            _subject: `New Lab Booking: ${document.getElementById('patientName').value} (${selectedTests[0]})`,
+            _subject: `New Lab Booking: ${pName} (${selectedTests[0]})`,
             _template: 'table',
             _captcha: 'false',
-            Patient_Name: document.getElementById('patientName').value,
-            Age: document.getElementById('patientAge').value + ' Years',
-            Gender: document.getElementById('patientGender').value,
-            Mobile_Number: document.getElementById('patientPhone').value,
+            Patient_Name: pName,
+            Age: pAge + ' Years',
+            Gender: pGender,
+            Mobile_Number: pPhone,
             Selected_Tests: selectedTests.join(' | '),
-            Preferred_Date: document.getElementById('visitDate').value,
-            Preferred_Time: document.getElementById('visitTime').value,
-            Full_Address: document.getElementById('patientAddress').value,
-            Google_Maps_Location: document.getElementById('gpsLink').value,
+            Preferred_Date: vDate,
+            Preferred_Time: vTime,
+            Full_Address: pAddress,
+            Google_Maps_Location: gpsUrl,
             GPS_Coordinates: document.getElementById('gpsCoords').value || 'Not detected'
         };
 
