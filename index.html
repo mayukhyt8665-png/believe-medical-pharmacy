@@ -144,16 +144,16 @@
         }
         .test-row {
             background: #ffffff; border: 1px solid #f3f4f6; border-radius: 12px;
-            padding: 12px 14px; display: flex; align-items: center; justify-content: space-between;
-            margin-bottom: 10px; box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+            padding: 11px 13px; display: flex; align-items: center; justify-content: space-between;
+            margin-bottom: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.03); gap: 10px;
         }
         .btn-teal {
             background: #0d9488; color: #ffffff; font-size: 12px; font-weight: 700;
-            padding: 7px 14px; border-radius: 10px; display: inline-block;
+            padding: 7px 14px; border-radius: 10px; display: inline-block; white-space: nowrap;
         }
         .btn-teal-light {
             background: #f0fdfa; color: #0f766e; border: 1px solid #99f6e4;
-            font-size: 12px; font-weight: 700; padding: 6px 12px; border-radius: 8px;
+            font-size: 11px; font-weight: 700; padding: 6px 11px; border-radius: 8px; white-space: nowrap;
         }
         
         .gal-card {
@@ -162,6 +162,30 @@
         }
         .gal-img { width: 100%; height: 200px; object-fit: cover; display: block; background: #f9fafb; }
         .gal-foot { padding: 14px; display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+
+        /* Search Bar & Test Selector */
+        .search-wrap { position: relative; margin-bottom: 8px; }
+        .search-input {
+            width: 100%; padding: 10px 36px 10px 34px; border: 1.5px solid #0d9488; border-radius: 12px;
+            font-size: 13px; font-family: inherit; color: #111827; background: #ffffff; outline: none;
+        }
+        .search-icon {
+            position: absolute; left: 11px; top: 50%; transform: translateY(-50%);
+            font-size: 14px; color: #0d9488; pointer-events: none;
+        }
+        .clear-search {
+            position: absolute; right: 10px; top: 50%; transform: translateY(-50%);
+            font-size: 14px; color: #9ca3af; font-weight: 700; padding: 2px 6px; display: none;
+        }
+        .selected-tags {
+            display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px;
+        }
+        .sel-chip {
+            display: inline-flex; align-items: center; gap: 5px;
+            background: #ccfbf1; color: #115e59; font-size: 11px; font-weight: 700;
+            padding: 4px 9px; border-radius: 16px;
+        }
+        .sel-chip span { cursor: pointer; font-weight: 900; font-size: 13px; color: #0f766e; }
 
         /* Booking Form Styles */
         .form-card {
@@ -184,23 +208,27 @@
             border-color: #0d9488; background: #ffffff;
         }
         .test-checklist {
-            display: grid; grid-template-columns: 1fr 1fr; gap: 8px;
+            display: flex; flex-direction: column; gap: 6px;
             background: #f9fafb; padding: 10px; border-radius: 12px; border: 1px solid #e5e7eb;
-            max-height: 210px; overflow-y: auto;
+            max-height: 230px; overflow-y: auto;
         }
         .chk-item {
-            display: flex; align-items: flex-start; gap: 6px; font-size: 11px; font-weight: 600;
-            color: #1f2937; background: #ffffff; padding: 7px 8px; border-radius: 8px;
-            border: 1px solid #e5e7eb; cursor: pointer;
+            display: flex; align-items: center; justify-content: space-between; gap: 8px;
+            font-size: 12px; font-weight: 600; color: #1f2937; background: #ffffff;
+            padding: 8px 10px; border-radius: 8px; border: 1px solid #e5e7eb; cursor: pointer;
         }
-        .chk-item input { accent-color: #0d9488; margin-top: 2px; }
+        .chk-item.checked { border-color: #0d9488; background: #f0fdfa; }
+        .chk-left { display: flex; align-items: center; gap: 8px; }
+        .chk-item input { accent-color: #0d9488; width: 16px; height: 16px; flex-shrink: 0; }
+        .tat-badge {
+            font-size: 9px; font-weight: 700; color: #6b7280; background: #f3f4f6;
+            padding: 2px 6px; border-radius: 4px; white-space: nowrap;
+        }
         .btn-gps {
             width: 100%; background: #eff6ff; color: #1d4ed8; border: 1px solid #bfdbfe;
             font-size: 12px; font-weight: 700; padding: 10px 12px; border-radius: 10px;
             display: flex; align-items: center; justify-content: center; gap: 6px;
-            transition: background 0.2s;
         }
-        .btn-gps:active { background: #dbeafe; }
         .gps-status {
             font-size: 11px; margin-top: 6px; padding: 8px 10px; border-radius: 8px;
             display: none; line-height: 1.4;
@@ -278,7 +306,7 @@
             <span class="badge-glass">Home Service</span>
             <h2>Home Blood<br>Collection</h2>
             <div class="time-pill"><span>🕒</span> 7:00 AM - 12:00 PM</div>
-            <p>Accurate testing from our trusted NABL partner labs. Book online with GPS location or call directly.</p>
+            <p>440+ diagnostic tests from trusted NABL partner labs. Book online with GPS location or call directly.</p>
             <div class="hero-btns">
                 <button onclick="switchTab('book')" class="btn-white">📝 Book Home Visit</button>
                 <a href="tel:8777691532" class="btn-outline-white">📞 Call Now</a>
@@ -358,7 +386,7 @@
         <!-- Trusted Lab Partners -->
         <div class="sec-head">
             <h3 class="sec-title">Trusted Lab Partners</h3>
-            <button onclick="switchTab('tests')" class="link-teal">All Tests →</button>
+            <button onclick="switchTab('tests')" class="link-teal">440+ Tests →</button>
         </div>
         <div class="grid-3">
             <div class="lab-box">
@@ -380,7 +408,7 @@
             <div onclick="switchTab('book')" class="srv-amber">
                 <div style="font-size:20px;">🩸</div>
                 <div style="font-size:12px;font-weight:700;margin-top:6px;">Book Home Blood Test</div>
-                <div style="font-size:10px;color:#4b5563;margin-top:2px;">Pin GPS Location & Book</div>
+                <div style="font-size:10px;color:#4b5563;margin-top:2px;">Search 440+ Tests & Pin GPS</div>
             </div>
             <div onclick="switchTab('ecg')" class="srv-rose">
                 <div style="font-size:20px;">💓</div>
@@ -390,32 +418,35 @@
         </div>
     </main>
 
-    <!-- BOOK TEST TAB (NEW) -->
+    <!-- BOOK TEST TAB -->
     <main id="tab-book" class="tab-content">
         <div style="margin-bottom:14px;">
             <h2 style="font-size:16px;font-weight:800;">Book Lab Test / Home Visit</h2>
-            <p style="font-size:12px;color:#6b7280;">Fill patient details & share GPS location for fast sample collection.</p>
+            <p style="font-size:12px;color:#6b7280;">Select from popular tests below or search any test by name.</p>
         </div>
 
         <form id="bookingForm" class="form-card" onsubmit="submitBooking(event)">
-            <!-- Test Selection Checklist -->
+            <!-- Test Selection with Search -->
             <div class="form-group">
-                <label class="form-label">1. Select Lab Tests (Multiple allowed) *</label>
-                <div class="test-checklist" id="testChecklist">
-                    <label class="chk-item"><input type="checkbox" value="Allergy Profile Test"> Allergy Profile</label>
-                    <label class="chk-item"><input type="checkbox" value="Complete Blood Count (CBC) & ESR"> CBC & ESR</label>
-                    <label class="chk-item"><input type="checkbox" value="Thyroid Profile (T3, T4, TSH)"> Thyroid Profile</label>
-                    <label class="chk-item"><input type="checkbox" value="Blood Sugar (Fasting / PP)"> Blood Sugar (F/PP)</label>
-                    <label class="chk-item"><input type="checkbox" value="HbA1c (3-Month Sugar)"> HbA1c</label>
-                    <label class="chk-item"><input type="checkbox" value="Lipid Profile"> Lipid Profile</label>
-                    <label class="chk-item"><input type="checkbox" value="Liver Function Test (LFT)"> Liver Function (LFT)</label>
-                    <label class="chk-item"><input type="checkbox" value="Kidney Function Test (KFT)"> Kidney Function (KFT)</label>
-                    <label class="chk-item"><input type="checkbox" value="Vitamin D & Vitamin B12"> Vitamin D & B12</label>
-                    <label class="chk-item"><input type="checkbox" value="Urine Routine & Culture"> Urine R/E & C/S</label>
-                    <label class="chk-item"><input type="checkbox" value="Dengue / Malaria / Typhoid"> Fever Panel</label>
-                    <label class="chk-item"><input type="checkbox" value="12-Lead Home ECG"> 12-Lead ECG</label>
+                <label class="form-label">1. Select Lab Tests (Search 440+ Tests or Tick Main Tests) *</label>
+                
+                <!-- Selected Tests Chips -->
+                <div id="selectedTags" class="selected-tags"></div>
+
+                <!-- Search Input -->
+                <div class="search-wrap">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" id="formTestSearch" class="search-input" placeholder="Search test name (e.g. Thyroid, CBC, AMH, Dengue)..." oninput="renderFormTests()">
+                    <button type="button" id="clearFormSearch" class="clear-search" onclick="clearFormSearchBox()">✕</button>
                 </div>
-                <input type="text" id="customTest" class="form-input" style="margin-top:8px;" placeholder="Other test name (optional, e.g. CRP, Electrolytes)">
+                <div id="formSearchHint" style="font-size:10px;color:#0d9488;font-weight:600;margin-bottom:6px;">
+                    Showing main popular tests & health profiles (Type above to search all 440+ tests)
+                </div>
+
+                <!-- Dynamic Checklist -->
+                <div class="test-checklist" id="testChecklist"></div>
+
+                <input type="text" id="customTest" class="form-input" style="margin-top:8px;" placeholder="Other test / prescription note (optional)">
             </div>
 
             <!-- Patient Name -->
@@ -487,78 +518,66 @@
         </form>
     </main>
 
-    <!-- LAB TESTS TAB -->
+    <!-- LAB TESTS DIRECTORY TAB -->
     <main id="tab-tests" class="tab-content">
-        <div style="margin-bottom:14px;">
-            <h2 style="font-size:16px;font-weight:800;">Diagnostic Lab Tests</h2>
+        <div style="margin-bottom:12px;">
+            <h2 style="font-size:16px;font-weight:800;">Diagnostic Test Directory</h2>
             <p style="font-size:12px;color:#6b7280;">Home collection: 7:00 AM - 12:00 PM (Mon–Sat)</p>
         </div>
 
-        <div class="highlight-card">
-            <span class="badge-top">★ Highlighted</span>
-            <h3 style="font-size:14px;font-weight:800;">Allergy Profile Test</h3>
-            <p style="font-size:12px;color:#4b5563;margin-top:4px;">Comprehensive screening for food, dust, pollen & respiratory allergies.</p>
-            <div style="margin-top:12px;display:flex;align-items:center;justify-content:space-between;gap:8px;">
-                <span style="font-size:11px;font-weight:600;color:#92400e;">Apollo / Healthplus / Ashok</span>
-                <div style="display:flex;gap:6px;">
-                    <button onclick="bookSpecificTest('Allergy Profile Test')" class="btn-teal">Book Online</button>
-                    <a href="tel:8777691532" class="btn-teal-light">Call</a>
+        <!-- Search Bar in Lab Tests Tab -->
+        <div class="search-wrap" style="margin-bottom:14px;">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="dirTestSearch" class="search-input" placeholder="Search 440+ tests (e.g. Vitamin D, HbA1c, ANA, Torch)..." oninput="renderDirectoryTests()">
+            <button type="button" id="clearDirSearch" class="clear-search" onclick="clearDirSearchBox()">✕</button>
+        </div>
+
+        <!-- Default Highlighted Cards (hidden when searching) -->
+        <div id="highlightedCards">
+            <div class="highlight-card">
+                <span class="badge-top">★ Highlighted</span>
+                <h3 style="font-size:14px;font-weight:800;">Allergy Profile Test</h3>
+                <p style="font-size:12px;color:#4b5563;margin-top:4px;">Comprehensive screening for food, dust, pollen & respiratory allergies.</p>
+                <div style="margin-top:12px;display:flex;align-items:center;justify-content:space-between;gap:8px;">
+                    <span style="font-size:11px;font-weight:600;color:#92400e;">Apollo / Healthplus / Ashok</span>
+                    <div style="display:flex;gap:6px;">
+                        <button onclick="bookSpecificTest('Allergy Profile Test')" class="btn-teal">Book Online</button>
+                        <a href="tel:8777691532" class="btn-teal-light">Call</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="highlight-card" style="background:#fffbeb;">
+                <span class="badge-top" style="background:#0d9488;">Most Booked</span>
+                <h3 style="font-size:14px;font-weight:800;">Complete Blood Count (CBC) & ESR</h3>
+                <p style="font-size:12px;color:#4b5563;margin-top:4px;">Essential blood health checkup for infection, anemia & fever.</p>
+                <div style="margin-top:12px;display:flex;align-items:center;justify-content:space-between;gap:8px;">
+                    <span style="font-size:11px;font-weight:600;color:#4b5563;">Same Day Report</span>
+                    <div style="display:flex;gap:6px;">
+                        <button onclick="bookSpecificTest('Complete Blood Count (CBC) & ESR')" class="btn-teal">Book Online</button>
+                        <a href="tel:8777691532" class="btn-teal-light">Call</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="highlight-card" style="background:#fffbeb;">
+                <span class="badge-top" style="background:#2563eb;">Popular</span>
+                <h3 style="font-size:14px;font-weight:800;">Thyroid Profile (T3, T4, TSH)</h3>
+                <p style="font-size:12px;color:#4b5563;margin-top:4px;">Complete thyroid hormone evaluation.</p>
+                <div style="margin-top:12px;display:flex;align-items:center;justify-content:space-between;gap:8px;">
+                    <span style="font-size:11px;font-weight:600;color:#4b5563;">Morning Collection</span>
+                    <div style="display:flex;gap:6px;">
+                        <button onclick="bookSpecificTest('Thyroid Profile (T3, T4, TSH)')" class="btn-teal">Book Online</button>
+                        <a href="tel:8777691532" class="btn-teal-light">Call</a>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div class="highlight-card" style="background:#fffbeb;">
-            <span class="badge-top" style="background:#0d9488;">Most Booked</span>
-            <h3 style="font-size:14px;font-weight:800;">Complete Blood Count (CBC) & ESR</h3>
-            <p style="font-size:12px;color:#4b5563;margin-top:4px;">Essential blood health checkup for infection, anemia & fever.</p>
-            <div style="margin-top:12px;display:flex;align-items:center;justify-content:space-between;gap:8px;">
-                <span style="font-size:11px;font-weight:600;color:#4b5563;">Same Day Report</span>
-                <div style="display:flex;gap:6px;">
-                    <button onclick="bookSpecificTest('Complete Blood Count (CBC) & ESR')" class="btn-teal">Book Online</button>
-                    <a href="tel:8777691532" class="btn-teal-light">Call</a>
-                </div>
-            </div>
+        <div id="dirSectionLabel" style="font-size:11px;font-weight:700;text-transform:uppercase;color:#9ca3af;margin:14px 0 10px;">
+            Main Routine Tests & Health Packages
         </div>
-
-        <div class="highlight-card" style="background:#fffbeb;">
-            <span class="badge-top" style="background:#2563eb;">Popular</span>
-            <h3 style="font-size:14px;font-weight:800;">Thyroid Profile (T3, T4, TSH)</h3>
-            <p style="font-size:12px;color:#4b5563;margin-top:4px;">Complete thyroid hormone evaluation.</p>
-            <div style="margin-top:12px;display:flex;align-items:center;justify-content:space-between;gap:8px;">
-                <span style="font-size:11px;font-weight:600;color:#4b5563;">Morning Collection</span>
-                <div style="display:flex;gap:6px;">
-                    <button onclick="bookSpecificTest('Thyroid Profile (T3, T4, TSH)')" class="btn-teal">Book Online</button>
-                    <a href="tel:8777691532" class="btn-teal-light">Call</a>
-                </div>
-            </div>
-        </div>
-
-        <div style="font-size:11px;font-weight:700;text-transform:uppercase;color:#9ca3af;margin:16px 0 10px;">All Routine Tests</div>
-
-        <div class="test-row">
-            <div><div style="font-size:12px;font-weight:700;">Blood Sugar (Fasting / PP / HbA1c)</div><div style="font-size:11px;color:#6b7280;">Diabetes screening</div></div>
-            <button onclick="bookSpecificTest('Blood Sugar (Fasting / PP)')" class="btn-teal-light">Book</button>
-        </div>
-        <div class="test-row">
-            <div><div style="font-size:12px;font-weight:700;">Lipid Profile</div><div style="font-size:11px;color:#6b7280;">Cholesterol & heart panel</div></div>
-            <button onclick="bookSpecificTest('Lipid Profile')" class="btn-teal-light">Book</button>
-        </div>
-        <div class="test-row">
-            <div><div style="font-size:12px;font-weight:700;">Liver Function Test (LFT)</div><div style="font-size:11px;color:#6b7280;">Bilirubin, SGOT, SGPT</div></div>
-            <button onclick="bookSpecificTest('Liver Function Test (LFT)')" class="btn-teal-light">Book</button>
-        </div>
-        <div class="test-row">
-            <div><div style="font-size:12px;font-weight:700;">Kidney Function Test (KFT)</div><div style="font-size:11px;color:#6b7280;">Urea & Creatinine</div></div>
-            <button onclick="bookSpecificTest('Kidney Function Test (KFT)')" class="btn-teal-light">Book</button>
-        </div>
-        <div class="test-row">
-            <div><div style="font-size:12px;font-weight:700;">Vitamin D & Vitamin B12</div><div style="font-size:11px;color:#6b7280;">Bone & nerve profile</div></div>
-            <button onclick="bookSpecificTest('Vitamin D & Vitamin B12')" class="btn-teal-light">Book</button>
-        </div>
-        <div class="test-row">
-            <div><div style="font-size:12px;font-weight:700;">Urine Routine & Culture</div><div style="font-size:11px;color:#6b7280;">UTI & renal check</div></div>
-            <button onclick="bookSpecificTest('Urine Routine & Culture')" class="btn-teal-light">Book</button>
-        </div>
+        <div id="directoryList"></div>
     </main>
 
     <!-- ECG TAB -->
@@ -680,7 +699,471 @@
 </div>
 
 <script>
-    // Set default date to today
+    // Main Popular Tests & Health Profiles (Shown by default without searching)
+    const MAIN_TESTS = [
+        { name: "Allergy Profile Test", dept: "IMMUNOLOGY", tat: "SAME DAY" },
+        { name: "Complete Blood Count (CBC) & ESR", dept: "HAEMATOLOGY", tat: "SAME DAY" },
+        { name: "Thyroid Profile (T3, T4, TSH)", dept: "IMMUNOLOGY", tat: "SAME DAY" },
+        { name: "Blood Sugar (Fasting / PP / RBS)", dept: "BIOCHEMISTRY", tat: "SAME DAY" },
+        { name: "Glycosylated Haemoglobin (HbA1c)", dept: "BIOCHEMISTRY", tat: "SAME DAY" },
+        { name: "Lipid Profile (Cholesterol, HDL, LDL, TG)", dept: "BIOCHEMISTRY", tat: "SAME DAY" },
+        { name: "Liver Function Test (LFT)", dept: "BIOCHEMISTRY", tat: "SAME DAY" },
+        { name: "Kidney Function Test (KFT) with Electrolytes", dept: "BIOCHEMISTRY", tat: "SAME DAY" },
+        { name: "Vitamin D (25 Hydroxy Cholecalciferol)", dept: "IMMUNOLOGY", tat: "SAME DAY" },
+        { name: "Vitamin B12", dept: "IMMUNOLOGY", tat: "SAME DAY" },
+        { name: "Urine for Routine Examination", dept: "CLINICAL PATH", tat: "SAME DAY" },
+        { name: "12-Lead Home ECG", dept: "CARDIOLOGY", tat: "INSTANT" },
+        { name: "KD Profile 1.1 (KFT+Electrolytes, LFT+GGT, Urine, CBC+ESR, Lipid, T3 T4 TSH, FBS)", dept: "HEALTH PACKAGE", tat: "SAME DAY" },
+        { name: "KD Profile 1.2 (FBS, HbA1c, KFT+Electrolytes, LFT+GGT, Urine, CBC+ESR, Iron, Lipid, T3 T4 TSH)", dept: "HEALTH PACKAGE", tat: "SAME DAY" },
+        { name: "KD Profile 1.3 (Testosterone, Urine, Vit D3, CBC+ESR, Iron, Lipid, T3 T4 TSH, Vit B12, FBS, HbA1c, KFT, LFT+GGT)", dept: "HEALTH PACKAGE", tat: "SAME DAY" },
+        { name: "KD Nirogyam Profile 2 (FBS, HbA1c, KFT+Electrolytes, LFT+GGT, Vit B12, Vit D3, CBC+ESR, Iron, Lipid, T3 T4 TSH, Urine)", dept: "HEALTH PACKAGE", tat: "SAME DAY" },
+        { name: "KD Fever Profile (CBC+ESR, Urine, Malaria Dual Ag, CRP, Typhoid IgG/IgM, Scrub Typhus IgM, Dengue NS1)", dept: "FEVER PACKAGE", tat: "SAME DAY" },
+        { name: "KD Diabetic Profile (Urea, Creatinine, Uric Acid, Lipid, FBS, PPBS, HbA1c, Urine ACR, Urine Routine)", dept: "DIABETIC PACKAGE", tat: "SAME DAY" }
+    ];
+
+    // Complete 437 Diagnostic Tests Catalog (Sl. No. 1 to 437)
+    const ALL_DIAGNOSTIC_TESTS = [
+        "17 HYDROXY PROGESTERONE (OHP)",
+        "25 Hydroxy Cholecalciferol (Vitamin D)",
+        "A/G RATIO",
+        "ABSOLUTE EOSINOPHIL COUNT",
+        "ABSOLUTE LYMPHOCYTES COUNT",
+        "ABSOLUTE NEUTROPHIL COUNT",
+        "ACE ANGIOTENSIN CONVERTING ENZYME",
+        "ACETYL CHOLINE RECEPTOR ANTIBODIES SERUM",
+        "ACTH PLASMA",
+        "ADA ADENOSINE DEAMINASE",
+        "AEROBIC PUS CULTURE (MANUAL)",
+        "AEROBIC SWAB CULTURE (MANUAL)",
+        "AEROBIC SWAB CULTURE (AUTOMATED)",
+        "AEROBIC THROAT SWAB CULTURE (AUTOMATED)",
+        "AEROBIC THROAT SWAB CULTURE (MANUAL)",
+        "AEROBIC BLOOD CULTURE (AUTOMATED)",
+        "AEROBIC BLOOD CULTURE (MANUAL)",
+        "AEROBIC BODY FLUID CULTURE (MANUAL)",
+        "AEROBIC BODY FLUID CULTURE (AUTOMATED MIC)",
+        "AEROBIC PUS CULTURE (AUTOMATED)",
+        "AEROBIC SPUTUM CULTURE (AUTOMATED)",
+        "AEROBIC SPUTUM CULTURE (MANUAL)",
+        "AEROBIC STOOL CULTURE (AUTOMATED)",
+        "AEROBIC STOOL CULTURE (MANUAL)",
+        "AEROBIC SYNOVIAL FLUID CULTURE (MANUAL)",
+        "AEROBIC TISSUE CULTURE / IDENTIFICATION / SENSITIVITY (Automated)",
+        "AEROBIC TISSUE CULTURE / IDENTIFICATION / SENSITIVITY (MANUAL)",
+        "AEROBIC URINE CULTURE (MANUAL)",
+        "AFB CULTURE & IDENTIFICATION",
+        "AFB SMEAR",
+        "ALBUMIN",
+        "ALDOLASE",
+        "ALDOSTERONE SERUM",
+        "ALPHA FETO PROTEIN (AFP) SERUM",
+        "AMINO ACIDS (QUALITATIVE - 2 DIMENSIONAL)",
+        "AMYLASE",
+        "ANA ELISA",
+        "ANA IFA (HEP-2)",
+        "ANCA IFA",
+        "ANCA-PR3 (Serin Proteinase 3 Ab.) EIA",
+        "ANDROSTENEDIONE",
+        "ANTI CARDIOLIPIN ANTIBODY IgG",
+        "ANTI CARDIOLIPIN ANTIBODY IgM",
+        "ANTI CCP",
+        "ANTI DNAse B SERUM",
+        "ANTI ds-DNA (ELISA)",
+        "ANTI ds-DNA IFA",
+        "Anti HBs Antibody titer (HBs -Ab)",
+        "ANTI HCV (RAPID)",
+        "Anti Hepatitis A Virus IgG (HAV-IgG Total)",
+        "Anti Hepatitis A Virus IgM (HAV-IgM)",
+        "Anti Hepatitis C Virus (HCV) (CMIA/ECI)",
+        "Anti Hepatitis E virus IgM (HEV IgM) (ELISA)",
+        "Anti Hepatitis E virus Total (HEV-TOTAL) ELISA",
+        "ANTI NUCLEAR ANTIBODY (ANA) PROFILE LIA",
+        "ANTI PHOSPOLIPID Ab. IgG & IgM",
+        "ANTI PHOSPOLIPID ANTIBODY IgG",
+        "ANTI PHOSPOLIPID ANTIBODY IgM",
+        "Anti-RNP",
+        "ANTI THROMBIN III ACTIVITY",
+        "ANTI THYROGLOBULIN ANTIBODY",
+        "ANTI-TPO SERUM",
+        "ANTI-MPO (ANTI MYELOPEROXIDASE ANTIBODIES)",
+        "ANTI-MULLERIAN HORMONE (AMH)",
+        "APOLIPO A1/B",
+        "ASCA-IgA SERUM",
+        "ASCA-IgG SERUM",
+        "ASO (ANTI STREPTOLYSIN O) TITRE",
+        "ASPERGILLUS ANTIBODY IgE SERUM",
+        "ASPERGILLUS ANTIBODY IgG SERUM",
+        "ASPERGILLUS ANTIBODY IgM SERUM",
+        "BCR-ABL PCR QUANTITATIVE",
+        "BENZODIAZEPINE URINE",
+        "BETA 2 GLYCOPROTEIN 1 IgG & IgM",
+        "BETA 2 GLYCOPROTEIN 1 IgG SERUM",
+        "BETA 2 GLYCOPROTEIN 1 IgM SERUM",
+        "BETA 2 MICROGLOBULIN RANDOM URINE",
+        "BETA-2-MICROGLOBULIN SERUM",
+        "BICARBONATE",
+        "BILIRUBIN (INDIRECT)",
+        "BILIRUBIN (TOTAL)",
+        "BILIRUBIN (DIRECT & INDIRECT)",
+        "BILIRUBIN (DIRECT)",
+        "BIOPSY (EXTRA LARGE)",
+        "BIOPSY (LARGE)",
+        "BIOPSY (MEDIUM)",
+        "BIOPSY (MRM)",
+        "BIOPSY (SMALL)",
+        "BIOPSY FOR OPINION (HISTOPATHOLOGY)",
+        "BLEEDING & CLOTTING TIME",
+        "BLOOD GROUP & RH TYPING (BY CAT TECHNOLOGY)",
+        "BLOOD PICTURE (PERIPHERAL SMEAR)",
+        "BLOOD SUGAR / GLUCOSE (FASTING)",
+        "BLOOD SUGAR / GLUCOSE (POST PRANDIAL)",
+        "BLOOD SUGAR / GLUCOSE RANDOM (RBS)",
+        "BODY FLUID FOR LDH",
+        "BODY FLUID CRP",
+        "BODY FLUID FOR ADA",
+        "BODY FLUID FOR ALBUMIN",
+        "BODY FLUID FOR AMYLASE",
+        "BODY FLUID FOR BILIRUBIN (TOTAL)",
+        "BODY FLUID FOR CHLORIDE",
+        "BODY FLUID FOR CHOLESTEROL",
+        "BODY FLUID FOR CREATININE",
+        "BODY FLUID FOR CYTOLOGY",
+        "BODY FLUID FOR LIPASE",
+        "BODY FLUID ROUTINE ANALYSIS",
+        "BODY FLUID UREA",
+        "BODY FLUID URIC ACID",
+        "BRUCELLA-IgG (ELISA)",
+        "BRUCELLA-IgM (ELISA)",
+        "BUN (BLOOD UREA NITROGEN)",
+        "BUN Creat ratio",
+        "C PEPTIDE SERUM (F)",
+        "C. DIFFICILE TOXIN A & B STOOL",
+        "C1 ESTERASE INHIBITOR PROTEIN QUANTITATION",
+        "C3 - COMPLEMENT 3 SERUM",
+        "C4 - COMPLEMENT 4 SERUM",
+        "BETA HCG SERUM",
+        "CA 15.3 BREAST CANCER MARKER",
+        "CA 125 OVARIAN CANCER MARKER SERUM",
+        "CALCITONIN SERUM",
+        "CALCIUM (SERUM)",
+        "CALCIUM IONIZED SERUM",
+        "CALPROTECTIN FECAL",
+        "CARBAMAZEPINE / TEGRETOL (SERUM)",
+        "Carbamazepine assay",
+        "CATECHOLAMINES 24 HR URINE",
+        "CATECHOLAMINES PLASMA",
+        "CD 19",
+        "CD4 COUNT HELPER T CELL MARKER",
+        "CD8 COUNT",
+        "CA 19.9 PANCREATIC CANCER MARKER",
+        "CENTROMERE ANTIBODIES",
+        "CERULOPLASMIN",
+        "CHIKUNGUNYA VIRUS Ab IgM",
+        "CHLORIDE (SERUM)",
+        "CHOLESTEROL HDL",
+        "CHOLESTEROL LDL",
+        "CHOLESTEROL TOTAL",
+        "CHOLESTEROL VLDL",
+        "CHROMOGRANIN A",
+        "CHROMOSOME ANALYSIS - KARYOTYPE",
+        "CITRATE 24 HR URINE",
+        "CMV ANTIBODY (IgG)",
+        "CMV ANTIBODY (IgM)",
+        "CMV PCR QUALITATIVE CSF/FLUID",
+        "CMV PCR QUANTITATIVE",
+        "Complete Blood Count (CBC)",
+        "COMPLETE HAEMOGRAM WITH ESR",
+        "COOMBS TEST (DIRECT)",
+        "COOMBS TEST (INDIRECT)",
+        "CORRECTED CREATININE CLEARANCE",
+        "CPK (MB)",
+        "CPK NAC",
+        "CREATININE CLEARANCE TEST (24 HRS URINE)",
+        "CRYOGLOBULIN SCREENING",
+        "CRYPTOCOCCUS ANTIGEN CSF",
+        "CRYPTOCOCCUS ANTIGEN SERUM",
+        "CSF (OLIGOCLONAL BAND ANALYSIS)",
+        "CSF ANALYSIS (CYTOCENTRIFUGE)",
+        "CSF CHLORIDE",
+        "CSF PROTEIN",
+        "CYCLOSPORIN LEVEL WHOLE BLOOD",
+        "CYSTATIN C",
+        "CYSTICERCOSIS ANTIBODY IgG",
+        "CYTOLOGY CELL BLOCK",
+        "CYTOLOGY SLIDE FOR OPINION",
+        "CEA (Carcino Embryonic Antigen) SERUM",
+        "DC MP",
+        "DENGUE IgG CAPTURE ELISA",
+        "DENGUE IgM CAPTURE ELISA",
+        "DENGUE NS1 & IgM",
+        "DENGUE NS1 ANTIGEN ELISA",
+        "DENGUE NS1 IgG & IgM ELISA",
+        "DHEA SERUM",
+        "DHEA SULPHATE SERUM",
+        "EB VIRUS Ab VCA IgG",
+        "EB VIRUS Ab VCA IgM",
+        "ECHINOCOCCUS ANTIBODY IgG ELISA",
+        "ENDOMYSIAL ANTIBODY IgA IFA",
+        "EPSTEIN-BARR VIRUS ANTIBODY (EBV)-IgG",
+        "EPSTEIN-BARR VIRUS ANTIBODY (EBV)-IgM",
+        "EPTON / PHENYTOIN (SERUM)",
+        "ERYTHROPOIETIN ASSAY",
+        "ESR (ERYTHROCYTE SEDIMENTATION RATE)",
+        "D-DIMER (Quantitative) PLASMA",
+        "FACTOR IX ASSAY FUNCTIONAL",
+        "FACTOR V FUNCTIONAL",
+        "FACTOR V LEIDEN MUTATION ANALYSIS",
+        "FACTOR VII FUNCTIONAL",
+        "FACTOR VIII ASSAY",
+        "FACTOR X FUNCTIONAL",
+        "FACTOR XI FUNCTIONAL",
+        "FACTOR XII FUNCTIONAL",
+        "FDP (FIBRINOGEN DEGRADATION PRODUCT)",
+        "FECAL ELASTASE",
+        "DOUBLE MARKER TEST (9 - 13.5 WEEKS)",
+        "ESTRADIOL E2 SERUM",
+        "FIBRINOGEN ASSAY",
+        "Filaria Antigen Detection",
+        "FNAC REPORT",
+        "FNAC REPORT (GUIDED)",
+        "FOLATE (FOLIC ACID) RBC",
+        "FERRITIN ASSAY (SERUM)",
+        "FOLATE (Folic Acid) SERUM",
+        "FREE ANDROGEN INDEX SERUM",
+        "FREE BETA HCG",
+        "FREE CORTISOL 24 HR URINE",
+        "FREE TESTOSTERONE",
+        "FOLLICLE STIMULATING HORMONE (FSH)",
+        "FRUCTOSAMINE",
+        "FREE THYROID FUNCTION TEST",
+        "FSH LH PROLACTIN",
+        "FT3 (CLIA)",
+        "FT4 (CLIA)",
+        "FUNGAL CULTURE & IDENTIFICATION",
+        "G6PD (QUANTITATIVE)",
+        "GAD-65 (GLUTAMIC ACID DECARBOXYLASE-65) IgG",
+        "GALACTOMANNAN SERUM",
+        "GASTRIN SERUM",
+        "GGT (GAMMA GLUTAMYL TRANSFERASE)",
+        "GLIADIN ANTIBODY IgA",
+        "GLIADIN ANTIBODY IgG",
+        "GLOBULIN",
+        "GLOMERULAR BASEMENT MEMBRANE ANTIBODY (GBM)",
+        "GLYCOSYLATED HAEMOGLOBIN (HbA1C)",
+        "GRAM STAIN",
+        "GROWTH HORMONE",
+        "GTT EXTENDED - F1235",
+        "H. PYLORI (RAPID)",
+        "H. PYLORI-IgA",
+        "H. PYLORI-IgG",
+        "H. PYLORI-IgM",
+        "HAPTOGLOBIN",
+        "HB (Haemoglobin)",
+        "Hb ELECTROPHORESIS",
+        "HB ESR PCV",
+        "HB PCV",
+        "HB PLATELET",
+        "HB TC DC",
+        "HB TC DC ESR",
+        "HBcAb IgG",
+        "HBcAb IgM",
+        "HBeAb",
+        "HBeAg",
+        "HBsAg (CMIA/ECI)",
+        "HBsAg (RAPID)",
+        "HBV-DNA Quantification (viral load)",
+        "HCV-RNA QUALITATIVE",
+        "HCV-RNA QUANTIFICATION",
+        "HCV-Genotyping (1234)",
+        "HE4 with ROMA index Serum",
+        "Herpes Simplex Virus 1 IgG & IgM",
+        "Herpes Simplex Virus 2 IgG & IgM",
+        "HIV 1&2 ANTIBODY WESTERN BLOT",
+        "HIV Ag/Ab Combo (CMIA/ECI)",
+        "HIV RAPID SEROLOGY",
+        "HIV-1 (P-24 antigen)",
+        "HLA - PANEL REACTIVE ANTIBODIES (PRA)",
+        "HLA-B27 (BY RT PCR)",
+        "HOMOCYSTEINE",
+        "hs CRP",
+        "HSV ANTIBODY 1+2 IgG",
+        "HSV ANTIBODY 1+2 IgM",
+        "IMMUNOGLOBULIN IgA SERUM",
+        "IMMUNOGLOBULIN IgG SERUM",
+        "IMMUNOGLOBULIN IgM SERUM",
+        "INDIA INK PREPARATION",
+        "INHIBIN A",
+        "INORGANIC PHOSPHORUS",
+        "FT4 TSH",
+        "INSULIN ASSAY (FASTING)",
+        "IRON PROFILE (Iron, TIBC, % Saturation)",
+        "IRON SERUM",
+        "IRON STUDIES COMPREHENSIVE (Iron, TIBC, % Saturation, Ferritin)",
+        "ISLET CELL ANTIBODY",
+        "Jo-1 ANTIBODY",
+        "KETONE (ACETONE) SERUM",
+        "KIDNEY FUNCTION TEST (With Electrolytes) (Urea, Crt, U.Acid, Cal, Po4, Na+, K+, Cl)",
+        "KIDNEY FUNCTION TEST (Urea, Crt, U.Acid, Cal, Po4)",
+        "KOH PREPARATION",
+        "LACTATE PLASMA",
+        "LDH SERUM",
+        "LEPTOSPIRA Ab IgG",
+        "LEPTOSPIRA Ab IgM",
+        "INSULIN ASSAY (PP)",
+        "LIPASE (SERUM)",
+        "LIPID PROFILE (Calculated) (T.Chl, Hdl, Ldl, Vldl, Tg, Ldl/Hdl, T Hdl Ratio)",
+        "LIPID PROFILE Serum (T.Chl, Hdl, Ldl, Vldl, Tg, Ldl/Hdl, T Hdl Ratio)",
+        "LIPOPROTEIN (a)",
+        "LIVER FUNCTION TEST + GGT (Bil T,D,I, Protein, Alb, Glob, A/G Ratio, SGOT, SGPT, Alp, GGT)",
+        "LIVER FUNCTION TEST (Bil T,D,I, Protein, Alb, Glob, A/G Ratio, SGOT, SGPT, Alp)",
+        "LKM ANTIBODY",
+        "LUPUS ANTICOAGULANT BY DRVVT",
+        "LUPUS ANTICOAGULANT dRVVT",
+        "M.C.H.",
+        "M.C.H.C.",
+        "M.C.V.",
+        "MAGNESIUM",
+        "MALARIA DUAL ANTIGEN BLOOD",
+        "MALARIA PARASITE (MP)",
+        "MANTOUX TEST",
+        "MEASLES Ab IgM",
+        "METANEPHRINES 24 Hr. URINE",
+        "MITOCHONDRIAL ANTIBODY IFA",
+        "MPO ANCA",
+        "MUMPS VIRUS IgG",
+        "MUMPS VIRUS IgM",
+        "MUSK ANTIBODY SERUM",
+        "MYOGLOBIN SERUM",
+        "MYOGLOBIN URINE QUANTITATIVE",
+        "LH (LEUTINIZING HORMONE)",
+        "OSMOLALITY SERUM",
+        "OSMOLALITY URINE",
+        "OSMOTIC FRAGILITY TEST",
+        "OXALATE 24 HR URINE",
+        "PACKED CELL VOLUME (PCV)",
+        "PAP SMEAR (LBC)",
+        "PAP SMEAR / CERVICAL SMEAR",
+        "NT PRO-BNP SERUM",
+        "PARTIAL THROMBOPLASTIN TIME (PTT)",
+        "PHOSPHORUS",
+        "PLASMA AMMONIA",
+        "PLATELET COUNT",
+        "POTASSIUM (SERUM)",
+        "PREGNANCY TEST",
+        "PARA THYROID HORMONE",
+        "PROCALCITONIN SERUM",
+        "PROGESTERONE",
+        "PROTEIN C FUNCTIONAL",
+        "PROTEIN ELECTROPHORESIS & IFE SERUM (FULL)",
+        "PROTEIN ELECTROPHORESIS SERUM",
+        "PROTEIN ELECTROPHORESIS URINE",
+        "PROTEIN S FUNCTIONAL",
+        "PROTEIN TOTAL (SERUM)",
+        "PROTHROMBIN TIME",
+        "PSA (FREE)",
+        "PROLACTIN",
+        "QUADRUPLE TEST (15 - 22.6 WEEKS) SERUM",
+        "QUANTIFERON TB GOLD",
+        "RA FACTOR",
+        "RBC COUNT",
+        "RETICULOCYTE COUNT",
+        "RUBELLA ANTIBODY IgG",
+        "RUBELLA ANTIBODY IgM",
+        "SAAG (Serum Ascites Albumin Gradient)",
+        "Scl-70",
+        "SCRUB TYPHUS Ab. IgM SERUM",
+        "PSA (PROSTATIC SPECIFIC ANTIGEN TEST)",
+        "SERUM CORTISOL (E)",
+        "SERUM CREATININE",
+        "SERUM ELECTROLYTES",
+        "SERUM CORTISOL (M)",
+        "SERUM LITHIUM",
+        "SERUM SODIUM",
+        "SERUM UREA",
+        "SEX HORMONE BINDING GLOBULIN (SHBG) SERUM",
+        "SGOT (AST)",
+        "SGPT (ALT)",
+        "Sm ANTIBODY IgG",
+        "SMEAR FOR FUNGUS",
+        "SMOOTH MUSCLE ANTIBODY (ASMA) IFA",
+        "SS-A/Ro ANTIBODY",
+        "SS-B/La ANTIBODY",
+        "STOOL FOR OVA PARASITE CYST",
+        "STOOL FOR ROUTINE EXAMINATION",
+        "STOOL OCCULT BLOOD",
+        "SERUM IgE",
+        "T3 (TRIIODOTHYRONINE-CLIA)",
+        "T3 T4 TSH (THYROID PROFILE)",
+        "TB PCR TISSUE / BONE MARROW / BLOOD / FLUID",
+        "MTB RIF (GENEXPERT)",
+        "TC DC ESR",
+        "TC DC PC",
+        "T4 (THYROXINE - CLIA)",
+        "THROAT SWAB FOR ALBERTS STAIN (KLB)",
+        "THROMBIN TIME",
+        "THYROGLOBULIN",
+        "TIBC (Total Iron Binding Capacity) SERUM",
+        "TISSUE TRANSGLUTAMINASE Ab IgA",
+        "TORCH 10 IgG & IgM",
+        "TORCH IgG",
+        "TORCH IgG+IgM",
+        "TORCH IgM",
+        "TOTAL WBC COUNT (TLC)",
+        "TOXOPLASMA GONDII ANTIBODY IgG",
+        "TOXOPLASMA GONDII ANTIBODY IgM",
+        "TPHA",
+        "TRIGLYCERIDES",
+        "Triple test (14 - 22.6 WEEKS)",
+        "TESTOSTERONE",
+        "TROP T",
+        "TROPONIN I",
+        "TSH RECEPTOR ANTIBODY SERUM",
+        "TYPHOID IgG/IgM RAPID TEST",
+        "UREA AND CREATININE",
+        "URIC ACID",
+        "URINE BENCE JONES PROTEIN",
+        "URINE BILE SALT + BILE PIGMENTS",
+        "URINE CALCIUM (SPOT)",
+        "URINE CREATININE (SPOT)",
+        "URINE FOR CALCIUM (24 HRS)",
+        "URINE FOR CHYLE",
+        "URINE FOR CREATININE (24 HRS)",
+        "URINE FOR MICROALBUMIN (24hrs)",
+        "URINE FOR MICROALBUMIN (SPOT)",
+        "URINE FOR MICROALBUMIN CREATININE RATIO (SPOT)",
+        "URINE FOR POTASSIUM (SPOT)",
+        "URINE FOR POTASSIUM (24HRS)",
+        "URINE FOR PROTEIN (24 HRS)",
+        "URINE FOR PROTEIN (SPOT)",
+        "URINE FOR ROUTINE EXAMINATION",
+        "URINE FOR SODIUM (24HRS)",
+        "URINE FOR SODIUM (SPOT)",
+        "URINE FOR SUGAR (QUALITATIVE)",
+        "URINE FOR UREA (24 HRS)",
+        "URINE FOR UREA (SPOT)",
+        "URINE FOR URIC ACID (24 HRS)",
+        "URINE FOR URIC ACID (SPOT)",
+        "URINE MICROALBUMIN: CREATININE RATIO (24HRS)",
+        "Urine Microprotein/Creatinine Ratio (Spot)",
+        "URINE SUGAR (POST PRANDIAL) (QUALITATIVE)",
+        "VALPROIC ACID",
+        "VARICELLA ZOSTER IgG",
+        "VARICELLA ZOSTER IgM",
+        "VDRL",
+        "TSH (CLIA)",
+        "VIT B12",
+        "VITAMIN C",
+        "VMA 24 Hr. URINE",
+        "WBC COUNT (DIFFERENTIAL)",
+        "WIDAL TEST",
+        "COVID RT PCR",
+        "ADENO VIRUS",
+        "H1N1"
+    ];
+
+    // Store selected tests in a Set so selections persist during search
+    const selectedTestSet = new Set();
+
     document.addEventListener('DOMContentLoaded', () => {
         const today = new Date().toISOString().split('T')[0];
         const dateInput = document.getElementById('visitDate');
@@ -688,6 +1171,8 @@
             dateInput.value = today;
             dateInput.min = today;
         }
+        renderFormTests();
+        renderDirectoryTests();
     });
 
     function switchTab(tabName) {
@@ -699,12 +1184,145 @@
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
-    function bookSpecificTest(testName) {
-        switchTab('book');
-        const checkboxes = document.querySelectorAll('#testChecklist input[type="checkbox"]');
-        checkboxes.forEach(cb => {
-            if (cb.value === testName) cb.checked = true;
+    // Toggle Test Selection
+    function toggleTestSelection(testName) {
+        if (selectedTestSet.has(testName)) {
+            selectedTestSet.delete(testName);
+        } else {
+            selectedTestSet.add(testName);
+        }
+        renderSelectedChips();
+        renderFormTests();
+    }
+
+    function renderSelectedChips() {
+        const container = document.getElementById('selectedTags');
+        if (selectedTestSet.size === 0) {
+            container.innerHTML = '';
+            return;
+        }
+        let html = '';
+        selectedTestSet.forEach(name => {
+            const safeName = name.replace(/'/g, "\\'");
+            html += `<div class="sel-chip">${name} <span onclick="toggleTestSelection('${safeName}')">×</span></div>`;
         });
+        container.innerHTML = html;
+    }
+
+    // Render Form Test List (Shows Main Tests by default, filters all 440+ tests on search)
+    function renderFormTests() {
+        const query = document.getElementById('formTestSearch').value.trim().toLowerCase();
+        const clearBtn = document.getElementById('clearFormSearch');
+        const hint = document.getElementById('formSearchHint');
+        const listEl = document.getElementById('testChecklist');
+
+        clearBtn.style.display = query ? 'block' : 'none';
+
+        let itemsToShow = [];
+        if (!query) {
+            hint.innerText = "Showing main popular tests & health profiles (Type above to search all 440+ tests)";
+            itemsToShow = MAIN_TESTS.map(t => ({ name: t.name, tag: t.tat }));
+        } else {
+            const combined = [
+                ...MAIN_TESTS.map(t => ({ name: t.name, tag: t.dept })),
+                ...ALL_DIAGNOSTIC_TESTS.map(name => ({ name, tag: "LAB TEST" }))
+            ];
+            const seen = new Set();
+            combined.forEach(item => {
+                const key = item.name.toLowerCase();
+                if (!seen.has(key) && key.includes(query)) {
+                    seen.add(key);
+                    itemsToShow.push(item);
+                }
+            });
+            hint.innerText = `Found ${itemsToShow.length} matching test(s) for "${document.getElementById('formTestSearch').value.trim()}"`;
+        }
+
+        if (itemsToShow.length === 0) {
+            listEl.innerHTML = `<div style="font-size:12px;color:#6b7280;text-align:center;padding:12px;">No exact match found. You can type the test name in the box below!</div>`;
+            return;
+        }
+
+        listEl.innerHTML = itemsToShow.slice(0, 60).map(item => {
+            const isChecked = selectedTestSet.has(item.name);
+            const safeName = item.name.replace(/'/g, "\\'");
+            return `
+                <label class="chk-item ${isChecked ? 'checked' : ''}">
+                    <div class="chk-left">
+                        <input type="checkbox" ${isChecked ? 'checked' : ''} onchange="toggleTestSelection('${safeName}')">
+                        <span>${item.name}</span>
+                    </div>
+                    <span class="tat-badge">${item.tag}</span>
+                </label>
+            `;
+        }).join('');
+    }
+
+    function clearFormSearchBox() {
+        document.getElementById('formTestSearch').value = '';
+        renderFormTests();
+    }
+
+    // Render Lab Tests Directory Tab
+    function renderDirectoryTests() {
+        const query = document.getElementById('dirTestSearch').value.trim().toLowerCase();
+        const clearBtn = document.getElementById('clearDirSearch');
+        const highlighted = document.getElementById('highlightedCards');
+        const label = document.getElementById('dirSectionLabel');
+        const listEl = document.getElementById('directoryList');
+
+        clearBtn.style.display = query ? 'block' : 'none';
+        highlighted.style.display = query ? 'none' : 'block';
+
+        let items = [];
+        if (!query) {
+            label.innerText = "Main Routine Tests & Health Packages";
+            items = MAIN_TESTS.slice(3).map(t => ({ name: t.name, sub: `${t.dept} • Report: ${t.tat}` }));
+        } else {
+            const combined = [
+                ...MAIN_TESTS.map(t => ({ name: t.name, sub: `${t.dept} • ${t.tat}` })),
+                ...ALL_DIAGNOSTIC_TESTS.map(name => ({ name, sub: "Krishna / Apollo / Healthplus / Ashok Lab" }))
+            ];
+            const seen = new Set();
+            combined.forEach(item => {
+                const key = item.name.toLowerCase();
+                if (!seen.has(key) && key.includes(query)) {
+                    seen.add(key);
+                    items.push(item);
+                }
+            });
+            label.innerText = `Search Results (${items.length} tests found)`;
+        }
+
+        if (items.length === 0) {
+            listEl.innerHTML = `<div style="text-align:center;padding:20px;font-size:12px;color:#6b7280;">No matching test found. Click "Book Test" below to enter custom test name.</div>`;
+            return;
+        }
+
+        listEl.innerHTML = items.slice(0, 80).map(item => {
+            const safeName = item.name.replace(/'/g, "\\'");
+            return `
+                <div class="test-row">
+                    <div>
+                        <div style="font-size:12px;font-weight:700;color:#111827;">${item.name}</div>
+                        <div style="font-size:10px;color:#6b7280;margin-top:2px;">${item.sub}</div>
+                    </div>
+                    <button onclick="bookSpecificTest('${safeName}')" class="btn-teal-light">Book</button>
+                </div>
+            `;
+        }).join('');
+    }
+
+    function clearDirSearchBox() {
+        document.getElementById('dirTestSearch').value = '';
+        renderDirectoryTests();
+    }
+
+    function bookSpecificTest(testName) {
+        selectedTestSet.add(testName);
+        renderSelectedChips();
+        renderFormTests();
+        switchTab('book');
     }
 
     // Detect Patient Phone GPS Location
@@ -751,14 +1369,11 @@
         );
     }
 
-    // Submit Form via FormSubmit AJAX to Email
+    // Submit Form via FormSubmit AJAX to aloesenic@gmail.com
     async function submitBooking(e) {
         e.preventDefault();
 
-        const selectedTests = [];
-        document.querySelectorAll('#testChecklist input[type="checkbox"]:checked').forEach(cb => {
-            selectedTests.push(cb.value);
-        });
+        const selectedTests = Array.from(selectedTestSet);
         const customTest = document.getElementById('customTest').value.trim();
         if (customTest) selectedTests.push(customTest);
 
@@ -779,7 +1394,7 @@
             Age: document.getElementById('patientAge').value + ' Years',
             Gender: document.getElementById('patientGender').value,
             Mobile_Number: document.getElementById('patientPhone').value,
-            Selected_Tests: selectedTests.join(', '),
+            Selected_Tests: selectedTests.join(' | '),
             Preferred_Date: document.getElementById('visitDate').value,
             Preferred_Time: document.getElementById('visitTime').value,
             Full_Address: document.getElementById('patientAddress').value,
@@ -788,7 +1403,7 @@
         };
 
         try {
-            await fetch('https://formsubmit.co/ajax/mandalmayukh72@gmail.com', {
+            await fetch('https://formsubmit.co/ajax/aloesenic@gmail.com', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -808,6 +1423,9 @@
     function closeModal() {
         document.getElementById('successModal').classList.remove('show');
         document.getElementById('bookingForm').reset();
+        selectedTestSet.clear();
+        renderSelectedChips();
+        clearFormSearchBox();
         const today = new Date().toISOString().split('T')[0];
         document.getElementById('visitDate').value = today;
         document.getElementById('gpsStatus').className = 'gps-status';
