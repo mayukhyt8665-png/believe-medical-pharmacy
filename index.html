@@ -120,6 +120,45 @@
             display: flex; align-items: center; justify-content: center;
         }
 
+        /* Doctor Availability Notice Strip */
+        .notice-strip {
+            background: #ecfdf5;
+            border: 1px solid #a7f3d0;
+            color: #065f46;
+            font-size: 12px;
+            font-weight: 700;
+            padding: 9px 14px;
+            border-radius: 999px;
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 7px;
+        }
+
+        /* Saved Recent Booking Receipt Card */
+        .receipt-card {
+            display: none;
+            background: linear-gradient(135deg, #eff6ff, #f0fdfa);
+            border: 1.5px solid #93c5fd;
+            border-radius: 24px;
+            padding: 15px 16px;
+            margin-bottom: 16px;
+            position: relative;
+        }
+        .receipt-card.show { display: block; animation: slideUpFade 0.3s ease; }
+        .receipt-head {
+            display: flex; align-items: center; justify-content: space-between;
+            margin-bottom: 6px;
+        }
+        .receipt-badge {
+            background: #1d4ed8; color: #ffffff;
+            font-size: 10px; font-weight: 800; text-transform: uppercase;
+            padding: 3px 9px; border-radius: 999px;
+        }
+        .receipt-actions {
+            display: flex; gap: 8px; margin-top: 10px;
+        }
+
         .tab-view { display: none; padding: 15px; }
         .tab-view.active { display: block; animation: slideUpFade 0.28s ease; }
 
@@ -226,6 +265,50 @@
             border-radius: 999px;
             white-space: nowrap;
         }
+
+        /* BMI & Health Package Recommender */
+        .bmi-card {
+            background: #ffffff;
+            border: 1.5px solid var(--border);
+            border-radius: 26px;
+            padding: 17px;
+            margin-bottom: 18px;
+        }
+        .bmi-inputs {
+            display: grid;
+            grid-template-columns: 1fr 1fr auto;
+            gap: 8px;
+            margin-top: 10px;
+            align-items: center;
+        }
+        .bmi-inp {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid #cbd5e1;
+            border-radius: 14px;
+            font-size: 13.5px;
+            background: var(--bg-soft);
+            outline: none;
+        }
+        .bmi-btn {
+            background: var(--primary-dark);
+            color: #ffffff;
+            font-size: 13px;
+            font-weight: 800;
+            padding: 10px 15px;
+            border-radius: 999px;
+            white-space: nowrap;
+        }
+        .bmi-result {
+            display: none;
+            margin-top: 12px;
+            padding: 12px 14px;
+            border-radius: 18px;
+            background: var(--bg-soft);
+            border: 1px solid var(--border);
+            font-size: 13px;
+        }
+        .bmi-result.show { display: block; animation: slideUpFade 0.25s ease; }
 
         .doctor-panel {
             background: #ffffff;
@@ -358,6 +441,28 @@
         }
         .faq-box.open .faq-body { display: block; animation: slideUpFade 0.2s ease; }
 
+        /* Save App Banner */
+        .pwa-banner {
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+            color: #ffffff;
+            border-radius: 24px;
+            padding: 16px;
+            margin-top: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+        }
+        .pwa-btn {
+            background: #14b8a6;
+            color: #042f2e;
+            font-size: 12px;
+            font-weight: 800;
+            padding: 9px 14px;
+            border-radius: 999px;
+            white-space: nowrap;
+        }
+
         .chip-bar {
             display: flex; gap: 8px; overflow-x: auto; padding-bottom: 8px; margin-bottom: 14px;
             scrollbar-width: none;
@@ -457,6 +562,38 @@
             box-shadow: 0 6px 16px rgba(13, 148, 136, 0.25);
         }
 
+        /* Medicine Stock Inquiry Box */
+        .med-inquiry-box {
+            background: var(--bg-soft);
+            border: 1.5px solid var(--border);
+            border-radius: 24px;
+            padding: 16px;
+            margin-bottom: 16px;
+        }
+        .med-inq-row {
+            display: flex;
+            gap: 8px;
+            margin-top: 9px;
+        }
+        .med-inq-inp {
+            flex: 1;
+            padding: 11px 15px;
+            border: 1px solid #cbd5e1;
+            border-radius: 999px;
+            font-size: 13.5px;
+            background: #ffffff;
+            outline: none;
+        }
+        .med-inq-btn {
+            background: #10b981;
+            color: #ffffff;
+            font-size: 12.5px;
+            font-weight: 800;
+            padding: 11px 15px;
+            border-radius: 999px;
+            white-space: nowrap;
+        }
+
         .store-card {
             background: #ffffff; border: 1px solid var(--border); border-radius: 24px;
             overflow: hidden; margin-bottom: 16px;
@@ -540,6 +677,25 @@
     </header>
 
     <main id="tab-home" class="tab-view active">
+        <!-- Feature 1: Doctor Availability Notice Strip -->
+        <div class="notice-strip">
+            <span>✅</span>
+            <span data-i18n="noticeText">Dr. B. P. Mandal Chamber Open: 8:30 AM–2 PM & 5:30–10 PM</span>
+        </div>
+
+        <!-- Feature 2: Auto-Saved Recent Booking Receipt Card -->
+        <div id="recentBookingCard" class="receipt-card">
+            <div class="receipt-head">
+                <span class="receipt-badge">📋 Your Recent Booking</span>
+                <button onclick="clearRecentBooking()" style="font-size:11px;color:#64748b;font-weight:700;">✕ Dismiss</button>
+            </div>
+            <div id="recentBookingBody" style="font-size:12.5px;color:#0f172a;line-height:1.45;"></div>
+            <div class="receipt-actions">
+                <a href="tel:8777691532" class="btn-primary-sm pressable" style="font-size:12px;">📞 Call to Confirm Slot</a>
+                <button onclick="switchTab('book')" class="btn-soft-sm pressable" style="font-size:12px;">+ New Booking</button>
+            </div>
+        </div>
+
         <section class="hero-clinical">
             <div class="hero-eyebrow"><span>🩸</span> <span data-i18n="heroPill">Home Blood Collection: 7:00 AM – 12:00 PM</span></div>
             <h2 data-i18n="heroTitle">Trusted Healthcare & Diagnostics at Your Doorstep</h2>
@@ -594,6 +750,20 @@
                     📸 Send Rx
                 </a>
             </div>
+        </section>
+
+        <!-- Feature 3: Interactive BMI & Health Checkup Recommender -->
+        <section class="bmi-card reveal">
+            <div style="display:flex;align-items:center;justify-content:space-between;">
+                <h3 style="font-size:15px;font-weight:800;color:var(--primary-dark);" data-i18n="bmiTitle">⚖️ Quick BMI & Health Check</h3>
+                <span style="font-size:11px;color:var(--text-muted);font-weight:600;">Free Tool</span>
+            </div>
+            <div class="bmi-inputs">
+                <input type="number" id="bmiHeight" class="bmi-inp" placeholder="Height (cm)">
+                <input type="number" id="bmiWeight" class="bmi-inp" placeholder="Weight (kg)">
+                <button type="button" onclick="calculateBMI()" class="bmi-btn pressable">Check</button>
+            </div>
+            <div id="bmiResult" class="bmi-result"></div>
         </section>
 
         <section id="doctorSection" class="doctor-panel reveal">
@@ -767,6 +937,15 @@
         <div class="faq-box reveal" onclick="this.classList.toggle('open')">
             <button type="button" class="faq-trigger"><span>3. Is home ECG available for senior citizens?</span><span>+</span></button>
             <div class="faq-body">Yes, 12-Lead Digital ECG is available both at Sushila Clinic and via home visit in Sonarpur & surrounding areas. Call 8777691532 to schedule.</div>
+        </div>
+
+        <!-- Feature 4: Save Clinic App Banner -->
+        <div class="pwa-banner reveal">
+            <div>
+                <div style="font-size:13.5px;font-weight:800;">📲 Save Clinic App on Phone</div>
+                <div style="font-size:11.5px;color:#cbd5e1;margin-top:2px;">Tap browser menu (⋮) → "Add to Home Screen" for 1-tap access</div>
+            </div>
+            <button type="button" onclick="showInstallTip()" class="pwa-btn pressable">How?</button>
         </div>
     </main>
 
@@ -961,6 +1140,16 @@
             <p style="font-size:13.5px;color:var(--primary);font-weight:700;">Open: 8:30 AM – 2:00 PM & 5:30 PM – 10:00 PM</p>
         </div>
 
+        <!-- Feature 5: Medicine Availability Quick Checker -->
+        <div class="med-inquiry-box">
+            <div style="font-size:14px;font-weight:800;color:var(--primary-dark);">💊 Check Medicine Availability</div>
+            <div style="font-size:12px;color:var(--text-muted);margin-top:2px;">Type medicine name to ask our pharmacy counter on WhatsApp</div>
+            <div class="med-inq-row">
+                <input type="text" id="medQueryInput" class="med-inq-inp" placeholder="e.g. Telma 40, Pan D, Dolo 650...">
+                <button type="button" onclick="askMedicineStock()" class="med-inq-btn pressable">Ask Stock</button>
+            </div>
+        </div>
+
         <div class="reminder-note" style="margin-bottom:16px;">
             <strong>Counter Availability:</strong> Genuine allopathic, ayurvedic & wellness products are available directly at our pharmacy counter (Khurigachi Fularhat Road, Sonarpur). Call us to confirm stock.
         </div>
@@ -1051,6 +1240,7 @@
     let currentLang = 'en';
     const I18N = {
         en: {
+            noticeText: "Dr. B. P. Mandal Chamber Open: 8:30 AM–2 PM & 5:30–10 PM",
             heroPill: "Home Blood Collection: 7:00 AM – 12:00 PM",
             heroTitle: "Trusted Healthcare & Diagnostics at Your Doorstep",
             heroDesc: "NABL partner lab sample collection from home with GPS pinpointing, 12-lead ECG & genuine pharmacy care in Sonarpur.",
@@ -1066,6 +1256,7 @@
             b4Sub: "8:30 AM–2 PM & 5:30–10 PM",
             rxPrompt: "Have a prescription?",
             rxPromptSub: "Send photo on WhatsApp",
+            bmiTitle: "⚖️ Quick BMI & Health Check",
             docBadge: "Chief Consultant Physician",
             chamberLbl: "Chamber Timings:",
             docCallBtn: "📞 Appointment",
@@ -1099,6 +1290,7 @@
             navPharm: "Pharmacy"
         },
         bn: {
+            noticeText: "ডাঃ বি. পি. মণ্ডল চেম্বার খোলা: সকাল ৮:৩০–২টা ও ৫:৩০–১০টা",
             heroPill: "হোম ব্লাড কালেকশন: সকাল ৭:০০ – দুপুর ১২:০০",
             heroTitle: "আপনার বাড়ির দোরগোড়ায় বিশ্বস্ত স্বাস্থ্য ও ল্যাব পরিষেবা",
             heroDesc: "ফোনের GPS লোকেশন পিন করে বাড়ি থেকেই NABL ল্যাব টেস্ট, ১২-লিড ইসিজি এবং আসল ওষুধের পরিষেবা নিন।",
@@ -1114,6 +1306,7 @@
             b4Sub: "সকাল ৮:৩০–২টা ও ৫:৩০–১০টা",
             rxPrompt: "প্রেসক্রিপশন আছে?",
             rxPromptSub: "WhatsApp-এ ছবি পাঠান",
+            bmiTitle: "⚖️ BMI ও হেলথ চেকআপ ক্যালকুলেটর",
             docBadge: "প্রধান চিকিৎসক (General Physician)",
             chamberLbl: "চেম্বারের সময়:",
             docCallBtn: "📞 অ্যাপয়েন্টমেন্ট",
@@ -1188,6 +1381,85 @@
         } else {
             statusEl.innerHTML = `<span class="live-dot" style="background:#f97316;"></span> Khurigachi Fularhat Road, Sonarpur`;
         }
+    }
+
+    // Recent Booking LocalStorage Manager
+    function loadRecentBooking() {
+        try {
+            const saved = localStorage.getItem('sushila_last_booking');
+            if (!saved) return;
+            const data = JSON.parse(saved);
+            const card = document.getElementById('recentBookingCard');
+            const body = document.getElementById('recentBookingBody');
+            body.innerHTML = `<strong>${data.name}</strong> • ${data.date} (${data.time})<br><span style="color:#475569;">Tests: ${data.tests}</span>`;
+            card.classList.add('show');
+        } catch (e) {}
+    }
+
+    function clearRecentBooking() {
+        localStorage.removeItem('sushila_last_booking');
+        document.getElementById('recentBookingCard').classList.remove('show');
+    }
+
+    // BMI & Health Package Recommender
+    function calculateBMI() {
+        const h = parseFloat(document.getElementById('bmiHeight').value);
+        const w = parseFloat(document.getElementById('bmiWeight').value);
+        const resDiv = document.getElementById('bmiResult');
+
+        if (!h || !w || h < 50 || w < 10) {
+            alert('Please enter valid Height (in cm) and Weight (in kg).');
+            return;
+        }
+        const hm = h / 100;
+        const bmi = (w / (hm * hm)).toFixed(1);
+        let status = '';
+        let color = '#059669';
+        let pkgName = 'Complete Blood Count (CBC) & ESR';
+
+        if (bmi < 18.5) {
+            status = 'Underweight';
+            color = '#d97706';
+            pkgName = 'Complete Blood Count (CBC) & ESR';
+        } else if (bmi < 25) {
+            status = 'Healthy Weight';
+            color = '#059669';
+            pkgName = 'Thyroid Profile (T3, T4, TSH)';
+        } else if (bmi < 30) {
+            status = 'Overweight';
+            color = '#ea580c';
+            pkgName = 'Lipid Profile (Cholesterol, HDL, LDL, TG)';
+        } else {
+            status = 'High BMI (Obesity Range)';
+            color = '#dc2626';
+            pkgName = 'KD Nirogyam Profile 2 (FBS, HbA1c, KFT+Electrolytes, LFT+GGT, Vit B12, Vit D3, CBC+ESR, Iron, Lipid, T3 T4 TSH, Urine)';
+        }
+
+        const safePkg = pkgName.replace(/'/g, "\\'");
+        resDiv.innerHTML = `
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px;">
+                <span>Your BMI: <strong style="font-size:15px;">${bmi}</strong></span>
+                <span style="font-weight:800;color:${color};">${status}</span>
+            </div>
+            <div style="font-size:12px;color:#475569;margin-bottom:8px;">Recommended Checkup: <strong>${pkgName}</strong></div>
+            <button type="button" onclick="bookSpecificTest('${safePkg}')" class="btn-primary-sm pressable" style="width:100%;text-align:center;">Book Recommended Test →</button>
+        `;
+        resDiv.classList.add('show');
+    }
+
+    // Medicine Availability WhatsApp Inquiry
+    function askMedicineStock() {
+        const med = document.getElementById('medQueryInput').value.trim();
+        if (!med) {
+            alert('Please type a medicine name first.');
+            return;
+        }
+        const msg = `Hello Believe Medical Pharmacy, please let me know if this medicine is in stock: *${med}*`;
+        window.open(`https://wa.me/918777691532?text=${encodeURIComponent(msg)}`, '_blank');
+    }
+
+    function showInstallTip() {
+        alert('To save Sushila Clinic as an App:\n\n1. Tap the 3-dot menu (⋮) at the top-right of Chrome (or Share icon on iPhone).\n2. Tap "Add to Home screen" or "Install app".\n3. Access clinic booking & numbers anytime in 1 tap!');
     }
 
     const HINTS = [
@@ -1692,6 +1964,7 @@
 
     document.addEventListener('DOMContentLoaded', () => {
         updateLiveStatus();
+        loadRecentBooking();
         initScrollReveal();
         const today = new Date().toISOString().split('T')[0];
         const dateInput = document.getElementById('visitDate');
@@ -1921,6 +2194,17 @@
         const vTime = document.getElementById('visitTime').value;
         const pAddress = document.getElementById('patientAddress').value.trim();
         const gpsUrl = document.getElementById('gpsLink').value;
+
+        // Save receipt in browser
+        try {
+            localStorage.setItem('sushila_last_booking', JSON.stringify({
+                name: pName,
+                date: vDate,
+                time: vTime,
+                tests: selectedTests.join(', ')
+            }));
+            loadRecentBooking();
+        } catch (err) {}
 
         const submitBtn = document.getElementById('submitBtn');
         submitBtn.disabled = true;
