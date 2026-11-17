@@ -26,8 +26,8 @@
             font-family: 'Inter', 'Noto Sans Bengali', -apple-system, BlinkMacSystemFont, sans-serif;
             background: #e2e8f0;
             color: var(--navy);
-            font-size: 14px;
-            line-height: 1.5;
+            font-size: 15.5px;
+            line-height: 1.55;
             overflow-x: hidden;
         }
         a { text-decoration: none; color: inherit; }
@@ -40,7 +40,7 @@
             min-height: 100vh;
             position: relative;
             box-shadow: 0 0 30px rgba(15, 23, 42, 0.1);
-            padding-bottom: 88px;
+            padding-bottom: 92px;
         }
 
         @keyframes fadeIn {
@@ -50,14 +50,14 @@
         .tap { transition: transform 0.15s ease; }
         .tap:active { transform: scale(0.96); }
 
-        /* 1. Sleek Top Navigation Header */
+        /* 1. Sleek Top Navigation Header with Prominent Bengali Toggle */
         .top-bar {
             position: sticky;
             top: 0;
             z-index: 40;
             background: #ffffff;
             border-bottom: 1px solid var(--line);
-            padding: 10px 16px;
+            padding: 11px 15px;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -65,32 +65,36 @@
         }
         .brand-box { display: flex; align-items: center; gap: 10px; }
         .logo-mark {
-            width: 38px; height: 38px; border-radius: 10px;
+            width: 40px; height: 40px; border-radius: 11px;
             background: var(--teal); color: #ffffff;
-            font-weight: 800; font-size: 20px;
+            font-weight: 800; font-size: 21px;
             display: flex; align-items: center; justify-content: center;
             flex-shrink: 0;
         }
-        .brand-h1 { font-size: 15.5px; font-weight: 800; color: var(--navy); line-height: 1.15; }
-        .brand-sub { font-size: 12px; font-weight: 700; color: var(--teal-bright); }
-        .hdr-tools { display: flex; align-items: center; gap: 6px; }
+        .brand-h1 { font-size: 16.5px; font-weight: 800; color: var(--navy); line-height: 1.15; }
+        .brand-sub { font-size: 12.5px; font-weight: 700; color: var(--teal-bright); }
+        .hdr-tools { display: flex; align-items: center; gap: 7px; }
         .btn-lang {
-            background: var(--bg); border: 1px solid var(--line);
-            color: var(--navy); font-size: 12px; font-weight: 800;
-            padding: 6px 11px; border-radius: 8px;
+            background: var(--teal-soft);
+            border: 1.5px solid var(--teal);
+            color: var(--teal);
+            font-size: 13px;
+            font-weight: 800;
+            padding: 7px 13px;
+            border-radius: 999px;
         }
         .btn-ico {
-            width: 34px; height: 34px; border-radius: 8px;
+            width: 38px; height: 38px; border-radius: 50%;
             background: var(--bg); border: 1px solid var(--line);
             color: var(--navy); display: flex; align-items: center; justify-content: center;
         }
 
-        /* Live Status Strip */
+        /* Live Status Ribbon */
         .status-ribbon {
             background: var(--navy);
             color: #f8fafc;
-            padding: 8px 16px;
-            font-size: 11.5px;
+            padding: 9px 16px;
+            font-size: 12.5px;
             font-weight: 600;
             display: flex;
             align-items: center;
@@ -98,45 +102,45 @@
             gap: 8px;
         }
         .status-dot {
-            display: inline-block; width: 7px; height: 7px; border-radius: 50%;
-            background: #10b981; margin-right: 5px;
+            display: inline-block; width: 8px; height: 8px; border-radius: 50%;
+            background: #10b981; margin-right: 6px;
         }
 
         .page-view { display: none; }
         .page-view.active { display: block; animation: fadeIn 0.22s ease; }
 
-        /* 2. Focused Top Hero Banner (Full-Bleed Gradient) */
+        /* 2. Focused Top Hero Banner */
         .hero-band {
             background: linear-gradient(135deg, #0f766e 0%, #115e59 100%);
             color: #ffffff;
-            padding: 20px 16px 22px;
+            padding: 22px 16px 24px;
         }
         .hero-tag {
             display: inline-block;
-            background: rgba(255, 255, 255, 0.16);
-            font-size: 11px; font-weight: 700;
-            padding: 4px 10px; border-radius: 6px; margin-bottom: 8px;
+            background: rgba(255, 255, 255, 0.18);
+            font-size: 12px; font-weight: 700;
+            padding: 5px 11px; border-radius: 7px; margin-bottom: 9px;
         }
-        .hero-band h2 { font-size: 20px; font-weight: 800; line-height: 1.25; }
-        .hero-band p { font-size: 13px; color: #ccfbf1; margin-top: 6px; }
-        .hero-cta-row { display: flex; gap: 9px; margin-top: 14px; }
+        .hero-band h2 { font-size: 21.5px; font-weight: 800; line-height: 1.28; }
+        .hero-band p { font-size: 14px; color: #ccfbf1; margin-top: 7px; }
+        .hero-cta-row { display: flex; gap: 10px; margin-top: 16px; }
         .btn-hero-main {
             flex: 1; background: #ffffff; color: var(--teal);
-            font-size: 13.5px; font-weight: 800; padding: 11px 14px;
-            border-radius: 10px; text-align: center;
+            font-size: 14.5px; font-weight: 800; padding: 12px 14px;
+            border-radius: 11px; text-align: center;
         }
         .btn-hero-sec {
-            background: rgba(255, 255, 255, 0.14); color: #ffffff;
-            border: 1px solid rgba(255, 255, 255, 0.35);
-            font-size: 13.5px; font-weight: 700; padding: 11px 16px;
-            border-radius: 10px; text-align: center;
+            background: rgba(255, 255, 255, 0.16); color: #ffffff;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            font-size: 14.5px; font-weight: 700; padding: 12px 18px;
+            border-radius: 11px; text-align: center;
         }
 
-        /* 3. Clean 4-Column Quick Service Bar (No Heavy Boxes!) */
+        /* 3. Clean 4-Column Quick Service Bar */
         .quick-bar {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            padding: 16px 12px;
+            padding: 18px 10px;
             background: #ffffff;
             border-bottom: 8px solid var(--bg);
             gap: 6px;
@@ -145,32 +149,32 @@
             display: flex; flex-direction: column; align-items: center; text-align: center;
         }
         .q-circle {
-            width: 48px; height: 48px; border-radius: 16px;
+            width: 52px; height: 52px; border-radius: 17px;
             display: flex; align-items: center; justify-content: center;
-            font-size: 22px; margin-bottom: 6px;
+            font-size: 24px; margin-bottom: 6px;
         }
-        .q-lbl { font-size: 11.5px; font-weight: 700; color: var(--navy); line-height: 1.2; }
-        .q-sub { font-size: 10px; color: var(--slate); margin-top: 2px; }
+        .q-lbl { font-size: 12.5px; font-weight: 700; color: var(--navy); line-height: 1.2; }
+        .q-sub { font-size: 11px; color: var(--slate); margin-top: 2px; }
 
-        /* Organised Content Sections Separated by Clean Dividers */
+        /* Organised Content Sections */
         .sec-block {
-            padding: 18px 16px;
+            padding: 20px 16px;
             border-bottom: 8px solid var(--bg);
         }
         .sec-block:last-child { border-bottom: none; }
         .sec-hdr {
             display: flex; align-items: center; justify-content: space-between;
-            margin-bottom: 12px;
+            margin-bottom: 13px;
         }
-        .sec-h { font-size: 15.5px; font-weight: 800; color: var(--navy); }
-        .sec-more { font-size: 12.5px; font-weight: 700; color: var(--teal); }
+        .sec-h { font-size: 17px; font-weight: 800; color: var(--navy); }
+        .sec-more { font-size: 13.5px; font-weight: 700; color: var(--teal); }
 
         /* Recent Booking Strip */
         .saved-strip {
             display: none;
             background: #eff6ff;
             border-bottom: 1px solid #bfdbfe;
-            padding: 12px 16px;
+            padding: 14px 16px;
         }
         .saved-strip.show { display: block; }
 
@@ -179,255 +183,270 @@
             width: 100%;
             background: var(--bg);
             border: 1.5px solid var(--teal);
-            border-radius: 10px;
-            padding: 11px 14px;
+            border-radius: 12px;
+            padding: 13px 15px;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            font-size: 13.5px;
+            font-size: 14.5px;
             color: var(--slate);
             font-weight: 500;
         }
         .rx-row {
             display: flex; align-items: center; justify-content: space-between;
-            margin-top: 11px; padding-top: 11px; border-top: 1px dashed var(--line);
+            margin-top: 13px; padding-top: 13px; border-top: 1px dashed var(--line);
             gap: 10px;
         }
         .btn-wa-sm {
             background: #16a34a; color: #ffffff;
-            font-size: 12px; font-weight: 700; padding: 7px 12px;
-            border-radius: 8px; white-space: nowrap;
+            font-size: 13px; font-weight: 700; padding: 9px 14px;
+            border-radius: 9px; white-space: nowrap;
         }
 
-        /* Editorial Doctor Profile (Clean Left-Accent Layout, Not a Card Box) */
+        /* Editorial Doctor Profile */
         .doc-row {
-            display: flex; align-items: flex-start; gap: 13px;
+            display: flex; align-items: flex-start; gap: 14px;
         }
         .doc-initials {
-            width: 52px; height: 52px; border-radius: 12px;
+            width: 56px; height: 56px; border-radius: 14px;
             background: var(--teal-soft); color: var(--teal);
-            border: 1px solid #99f6e4;
-            font-size: 19px; font-weight: 800;
+            border: 1.5px solid #99f6e4;
+            font-size: 21px; font-weight: 800;
             display: flex; align-items: center; justify-content: center;
             flex-shrink: 0;
         }
-        .doc-title { font-size: 17px; font-weight: 800; color: var(--navy); }
-        .doc-deg { font-size: 12.5px; font-weight: 600; color: var(--slate); margin-top: 1px; }
+        .doc-title { font-size: 18px; font-weight: 800; color: var(--navy); }
+        .doc-deg { font-size: 13.5px; font-weight: 600; color: var(--slate); margin-top: 2px; }
         .doc-tags {
-            display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px;
+            display: flex; flex-wrap: wrap; gap: 7px; margin-top: 11px;
         }
         .tag-mini {
             background: var(--bg); color: var(--navy);
-            font-size: 11px; font-weight: 600; padding: 3px 9px; border-radius: 6px;
+            font-size: 12px; font-weight: 600; padding: 4px 10px; border-radius: 7px;
         }
         .desk-bar {
-            display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 14px;
+            display: grid; grid-template-columns: 1fr 1fr; gap: 9px; margin-top: 15px;
         }
         .btn-call-desk {
-            background: var(--teal-soft); border: 1px solid #99f6e4;
-            color: var(--teal); font-size: 13px; font-weight: 800;
-            padding: 10px 8px; border-radius: 10px; text-align: center;
+            background: var(--teal-soft); border: 1.5px solid #99f6e4;
+            color: var(--teal); font-size: 14px; font-weight: 800;
+            padding: 12px 8px; border-radius: 11px; text-align: center;
         }
 
-        /* Clean Timetable List (Structured Rows) */
+        /* Clean Timetable List */
         .time-table {
             border: 1px solid var(--line);
-            border-radius: 12px;
+            border-radius: 13px;
             overflow: hidden;
         }
         .tt-row {
             display: flex; align-items: center; justify-content: space-between;
-            padding: 11px 13px; border-bottom: 1px solid var(--line);
+            padding: 13px 14px; border-bottom: 1px solid var(--line);
             background: #ffffff; gap: 8px;
         }
         .tt-row:last-child { border-bottom: none; }
-        .tt-name { font-size: 13px; font-weight: 700; color: var(--navy); }
-        .tt-sub { font-size: 11px; color: var(--slate); }
+        .tt-name { font-size: 14.5px; font-weight: 700; color: var(--navy); }
+        .tt-sub { font-size: 12px; color: var(--slate); }
         .tt-val {
-            font-size: 11.5px; font-weight: 800; color: var(--teal);
+            font-size: 12.5px; font-weight: 800; color: var(--teal);
             text-align: right; white-space: nowrap;
         }
         .addr-strip {
-            margin-top: 10px; font-size: 12.5px; color: var(--slate);
-            display: flex; align-items: center; justify-content: space-between; gap: 8px;
+            margin-top: 12px; font-size: 13.5px; color: var(--slate);
+            display: flex; align-items: center; justify-content: space-between; gap: 10px;
         }
         .btn-map-link {
             background: var(--navy); color: #ffffff;
-            font-size: 12px; font-weight: 700; padding: 8px 12px;
-            border-radius: 8px; white-space: nowrap;
+            font-size: 13px; font-weight: 700; padding: 9px 14px;
+            border-radius: 9px; white-space: nowrap;
         }
 
-        /* Pharmacy Horizontal Strip (Fixed Images + Clean Visuals) */
+        /* Pharmacy Horizontal Strip */
         .h-shelf {
-            display: flex; gap: 10px; overflow-x: auto; padding-bottom: 4px;
+            display: flex; gap: 11px; overflow-x: auto; padding-bottom: 4px;
             scrollbar-width: none;
         }
         .h-shelf::-webkit-scrollbar { display: none; }
         .shelf-item {
-            min-width: 156px; border: 1px solid var(--line);
-            border-radius: 12px; overflow: hidden; background: #ffffff;
+            min-width: 165px; border: 1px solid var(--line);
+            border-radius: 13px; overflow: hidden; background: #ffffff;
             display: flex; flex-direction: column;
         }
         .shelf-thumb {
-            width: 100%; height: 104px; object-fit: cover;
+            width: 100%; height: 110px; object-fit: cover;
             background: var(--teal-soft); display: block;
         }
         .shelf-visual {
-            width: 100%; height: 104px;
+            width: 100%; height: 110px;
             background: linear-gradient(135deg, #ecfdf5, #d1fae5);
             display: flex; flex-direction: column; align-items: center; justify-content: center;
-            color: #065f46; font-weight: 800; font-size: 12px;
+            color: #065f46; font-weight: 800; font-size: 12.5px;
         }
-        .shelf-info { padding: 9px; flex: 1; display: flex; flex-direction: column; justify-content: space-between; }
-        .shelf-name { font-size: 12.5px; font-weight: 700; color: var(--navy); line-height: 1.3; }
+        .shelf-info { padding: 10px; flex: 1; display: flex; flex-direction: column; justify-content: space-between; }
+        .shelf-name { font-size: 13.5px; font-weight: 700; color: var(--navy); line-height: 1.3; }
         .shelf-cta {
-            display: block; text-align: center; margin-top: 8px;
+            display: block; text-align: center; margin-top: 9px;
             background: var(--bg); color: var(--teal); border: 1px solid var(--line);
-            font-size: 11.5px; font-weight: 800; padding: 6px; border-radius: 7px;
+            font-size: 12.5px; font-weight: 800; padding: 7px; border-radius: 8px;
         }
 
         /* Compact BMI Tool */
         .bmi-strip {
-            display: flex; gap: 7px; align-items: center;
+            display: flex; gap: 8px; align-items: center;
         }
         .bmi-field {
-            width: 100%; padding: 9px 11px; border: 1px solid var(--line);
-            border-radius: 8px; font-size: 13px; background: var(--bg); outline: none;
+            width: 100%; padding: 11px 12px; border: 1px solid var(--line);
+            border-radius: 10px; font-size: 14.5px; background: var(--bg); outline: none;
         }
         .btn-bmi-go {
             background: var(--teal); color: #ffffff;
-            font-size: 12.5px; font-weight: 700; padding: 9px 14px;
-            border-radius: 8px; white-space: nowrap;
+            font-size: 14px; font-weight: 700; padding: 11px 16px;
+            border-radius: 10px; white-space: nowrap;
         }
         .bmi-out {
-            display: none; margin-top: 10px; padding: 10px 12px;
+            display: none; margin-top: 11px; padding: 12px 13px;
             background: var(--teal-soft); border: 1px solid #99f6e4;
-            border-radius: 10px; font-size: 12.5px;
+            border-radius: 11px; font-size: 13.5px;
         }
         .bmi-out.show { display: block; }
 
         /* Lab Partners Row */
-        .lab-strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+        .lab-strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 9px; }
         .lab-cell {
-            border: 1px solid var(--line); border-radius: 10px;
-            padding: 10px 4px; text-align: center; background: var(--bg);
+            border: 1px solid var(--line); border-radius: 11px;
+            padding: 12px 4px; text-align: center; background: var(--bg);
         }
 
         /* Compact FAQ List */
         .faq-row {
             border-bottom: 1px solid var(--line);
-            padding: 11px 0;
+            padding: 13px 0;
         }
         .faq-row:last-child { border-bottom: none; }
         .faq-btn {
-            width: 100%; text-align: left; font-size: 13px; font-weight: 700;
+            width: 100%; text-align: left; font-size: 14.5px; font-weight: 700;
             color: var(--navy); display: flex; justify-content: space-between; gap: 8px;
         }
         .faq-ans {
-            display: none; margin-top: 6px; font-size: 12.5px; color: var(--slate); line-height: 1.5;
+            display: none; margin-top: 7px; font-size: 13.5px; color: var(--slate); line-height: 1.55;
         }
         .faq-row.open .faq-ans { display: block; }
 
-        /* Sub-pages padding */
-        .inner-pad { padding: 16px; }
+        /* Sub-pages Spacious Layout */
+        .inner-pad { padding: 18px 16px; }
+        .page-title { font-size: 20px; font-weight: 800; color: var(--navy); }
+        .page-sub { font-size: 14px; color: var(--slate); margin-top: 2px; }
+
+        /* Rx Banner inside Book Tab */
+        .rx-banner-clean {
+            background: #ecfdf5;
+            border: 1px solid #a7f3d0;
+            border-radius: 12px;
+            padding: 13px 14px;
+            margin: 14px 0 18px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+        }
 
         /* Category Chips & Directory */
         .chip-row {
-            display: flex; gap: 7px; overflow-x: auto; padding-bottom: 8px; margin-bottom: 12px;
+            display: flex; gap: 8px; overflow-x: auto; padding-bottom: 9px; margin-bottom: 14px;
             scrollbar-width: none;
         }
         .chip-row::-webkit-scrollbar { display: none; }
         .c-chip {
-            padding: 7px 13px; border-radius: 8px; font-size: 12px; font-weight: 700;
+            padding: 8px 14px; border-radius: 9px; font-size: 13px; font-weight: 700;
             background: var(--bg); color: var(--slate); border: 1px solid var(--line); white-space: nowrap;
         }
         .c-chip.active { background: var(--teal); color: #ffffff; border-color: var(--teal); }
         .feat-box {
             background: var(--teal-soft); border: 1px solid #99f6e4;
-            border-radius: 12px; padding: 14px; margin-bottom: 10px; position: relative;
+            border-radius: 13px; padding: 15px; margin-bottom: 11px; position: relative;
         }
         .feat-pill {
-            position: absolute; top: 12px; right: 12px;
-            background: var(--teal); color: #ffffff; font-size: 10px; font-weight: 800;
-            padding: 2px 8px; border-radius: 5px;
+            position: absolute; top: 13px; right: 13px;
+            background: var(--teal); color: #ffffff; font-size: 11px; font-weight: 800;
+            padding: 3px 9px; border-radius: 6px;
         }
         .test-line {
-            border: 1px solid var(--line); border-radius: 10px;
-            padding: 11px 13px; display: flex; align-items: center; justify-content: space-between;
-            margin-bottom: 8px; gap: 10px;
+            border: 1px solid var(--line); border-radius: 11px;
+            padding: 13px 14px; display: flex; align-items: center; justify-content: space-between;
+            margin-bottom: 9px; gap: 10px;
         }
         .btn-book-sm {
             background: var(--teal); color: #ffffff;
-            font-size: 12px; font-weight: 700; padding: 7px 13px; border-radius: 8px; white-space: nowrap;
+            font-size: 13px; font-weight: 700; padding: 8px 14px; border-radius: 9px; white-space: nowrap;
         }
         .btn-call-sm {
-            background: #ffffff; color: var(--teal); border: 1px solid var(--teal);
-            font-size: 12px; font-weight: 700; padding: 6px 11px; border-radius: 8px; white-space: nowrap;
+            background: #ffffff; color: var(--teal); border: 1.5px solid var(--teal);
+            font-size: 13px; font-weight: 700; padding: 7px 12px; border-radius: 9px; white-space: nowrap;
         }
 
-        /* Booking Form */
-        .f-group { margin-bottom: 14px; }
-        .f-lbl { display: block; font-size: 13px; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+        /* Spacious Booking Form */
+        .f-group { margin-bottom: 18px; }
+        .f-lbl { display: block; font-size: 14.5px; font-weight: 700; color: var(--navy); margin-bottom: 7px; }
         .f-inp {
-            width: 100%; padding: 11px 13px; border: 1px solid #cbd5e1; border-radius: 10px;
-            font-size: 14px; font-family: inherit; color: var(--navy); background: var(--bg); outline: none;
+            width: 100%; padding: 13px 14px; border: 1.5px solid #cbd5e1; border-radius: 11px;
+            font-size: 15px; font-family: inherit; color: var(--navy); background: var(--bg); outline: none;
         }
         .f-inp:focus { border-color: var(--teal); background: #ffffff; }
-        .search-wrap { position: relative; margin-bottom: 8px; }
+        .search-wrap { position: relative; margin-bottom: 9px; }
         .search-inp {
-            width: 100%; padding: 11px 36px 11px 34px; border: 1.5px solid var(--teal);
-            border-radius: 10px; font-size: 14px; font-family: inherit; background: #ffffff; outline: none;
+            width: 100%; padding: 12px 38px 12px 38px; border: 1.5px solid var(--teal);
+            border-radius: 11px; font-size: 15px; font-family: inherit; background: #ffffff; outline: none;
         }
-        .s-ico { position: absolute; left: 11px; top: 50%; transform: translateY(-50%); font-size: 14px; }
+        .s-ico { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); font-size: 16px; }
         .s-clr {
-            position: absolute; right: 10px; top: 50%; transform: translateY(-50%);
-            font-size: 14px; color: var(--slate); font-weight: 700; padding: 3px 6px; display: none;
+            position: absolute; right: 11px; top: 50%; transform: translateY(-50%);
+            font-size: 15px; color: var(--slate); font-weight: 700; padding: 4px 7px; display: none;
         }
-        .sel-wrap { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px; }
+        .sel-wrap { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 9px; }
         .sel-tag {
-            display: inline-flex; align-items: center; gap: 5px;
-            background: #ccfbf1; color: var(--teal); font-size: 12px; font-weight: 700;
-            padding: 4px 10px; border-radius: 6px;
+            display: inline-flex; align-items: center; gap: 6px;
+            background: #ccfbf1; color: var(--teal); font-size: 13px; font-weight: 700;
+            padding: 5px 11px; border-radius: 7px;
         }
-        .sel-tag span { cursor: pointer; font-weight: 900; font-size: 14px; }
+        .sel-tag span { cursor: pointer; font-weight: 900; font-size: 15px; }
         .chk-list {
-            display: flex; flex-direction: column; gap: 6px;
-            background: var(--bg); padding: 9px; border-radius: 10px; border: 1px solid var(--line);
-            max-height: 230px; overflow-y: auto;
+            display: flex; flex-direction: column; gap: 8px;
+            background: var(--bg); padding: 10px; border-radius: 12px; border: 1px solid var(--line);
+            max-height: 260px; overflow-y: auto;
         }
         .chk-line {
-            display: flex; align-items: center; gap: 9px;
-            font-size: 13px; font-weight: 600; color: var(--navy); background: #ffffff;
-            padding: 9px 11px; border-radius: 8px; border: 1px solid var(--line); cursor: pointer;
+            display: flex; align-items: center; gap: 11px;
+            font-size: 14.5px; font-weight: 600; color: var(--navy); background: #ffffff;
+            padding: 11px 13px; border-radius: 9px; border: 1px solid var(--line); cursor: pointer;
         }
         .chk-line.checked { border-color: var(--teal); background: var(--teal-soft); }
-        .chk-line input { accent-color: var(--teal); width: 17px; height: 17px; flex-shrink: 0; }
+        .chk-line input { accent-color: var(--teal); width: 19px; height: 19px; flex-shrink: 0; }
         .btn-gps {
             width: 100%; background: #eff6ff; color: #1d4ed8; border: 1.5px solid #93c5fd;
-            font-size: 13px; font-weight: 800; padding: 11px; border-radius: 10px;
-            display: flex; align-items: center; justify-content: center; gap: 6px;
+            font-size: 14px; font-weight: 800; padding: 13px; border-radius: 11px;
+            display: flex; align-items: center; justify-content: center; gap: 7px;
         }
         .gps-out {
-            font-size: 12px; margin-top: 7px; padding: 9px 11px; border-radius: 8px;
-            display: none; line-height: 1.4;
+            font-size: 13px; margin-top: 8px; padding: 10px 12px; border-radius: 9px;
+            display: none; line-height: 1.45;
         }
         .gps-out.success { display: block; background: #ecfdf5; color: #065f46; border: 1px solid #6ee7b7; }
         .gps-out.error { display: block; background: #fef2f2; color: #991b1b; border: 1px solid #fca5a5; }
         .warn-note {
-            background: #fffbeb; border: 1px solid #fcd34d; border-radius: 10px;
-            padding: 10px 12px; font-size: 12px; color: #78350f; margin-bottom: 12px;
+            background: #fffbeb; border: 1px solid #fcd34d; border-radius: 11px;
+            padding: 12px 13px; font-size: 13px; color: #78350f; margin-bottom: 14px;
         }
         .btn-submit {
             width: 100%; background: var(--teal); color: #ffffff;
-            font-size: 14.5px; font-weight: 800; padding: 14px; border-radius: 10px;
+            font-size: 15.5px; font-weight: 800; padding: 15px; border-radius: 11px;
         }
 
         /* Pharmacy Full Tab */
         .gal-box {
-            border: 1px solid var(--line); border-radius: 12px; overflow: hidden; margin-bottom: 14px;
+            border: 1px solid var(--line); border-radius: 13px; overflow: hidden; margin-bottom: 15px;
         }
-        .gal-pic { width: 100%; height: 195px; object-fit: cover; display: block; background: var(--bg); }
-        .gal-bar { padding: 12px; display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+        .gal-pic { width: 100%; height: 200px; object-fit: cover; display: block; background: var(--bg); }
+        .gal-bar { padding: 13px; display: flex; align-items: center; justify-content: space-between; gap: 10px; }
 
         /* Modal */
         .modal-bg {
@@ -437,43 +456,43 @@
         }
         .modal-bg.show { display: flex; animation: fadeIn 0.2s ease; }
         .modal-card {
-            background: #ffffff; border-radius: 18px; max-width: 380px; width: 100%;
-            padding: 22px; text-align: center; box-shadow: 0 20px 35px rgba(0,0,0,0.25);
+            background: #ffffff; border-radius: 20px; max-width: 390px; width: 100%;
+            padding: 24px; text-align: center; box-shadow: 0 20px 35px rgba(0,0,0,0.25);
         }
         .modal-call {
             display: flex; align-items: center; justify-content: center; gap: 8px;
-            width: 100%; padding: 13px; border-radius: 10px; font-size: 14px; font-weight: 800;
-            margin-top: 9px; color: #ffffff;
+            width: 100%; padding: 14px; border-radius: 11px; font-size: 14.5px; font-weight: 800;
+            margin-top: 10px; color: #ffffff;
         }
 
         /* Non-Obtrusive Floating Call Pill & Bottom Tab Bar */
         .fab-mini {
-            position: fixed; bottom: 72px; right: 12px; z-index: 40;
+            position: fixed; bottom: 76px; right: 12px; z-index: 40;
             background: var(--coral); color: #ffffff;
-            padding: 9px 14px; border-radius: 999px;
+            padding: 10px 15px; border-radius: 999px;
             box-shadow: 0 4px 14px rgba(225, 29, 72, 0.35);
-            display: flex; align-items: center; gap: 5px;
-            font-size: 12px; font-weight: 800;
+            display: flex; align-items: center; gap: 6px;
+            font-size: 13px; font-weight: 800;
         }
         .bottom-bar {
             position: fixed; bottom: 0; left: 50%; transform: translateX(-50%);
             width: 100%; max-width: 480px; background: #ffffff;
-            border-top: 1px solid var(--line); padding: 7px 4px;
+            border-top: 1px solid var(--line); padding: 8px 4px;
             display: flex; justify-content: space-around; align-items: center; z-index: 50;
         }
         .b-tab {
             display: flex; flex-direction: column; align-items: center;
-            color: var(--slate); font-size: 11px; font-weight: 600;
-            padding: 4px 8px; border-radius: 8px;
+            color: var(--slate); font-size: 12px; font-weight: 600;
+            padding: 5px 8px; border-radius: 9px;
         }
         .b-tab.active { color: var(--teal); font-weight: 800; background: var(--teal-soft); }
-        .b-tab svg { width: 20px; height: 20px; margin-bottom: 2px; }
+        .b-tab svg { width: 21px; height: 21px; margin-bottom: 2px; }
     </style>
 </head>
 <body>
 
 <div class="app-wrap">
-    <!-- 1. Clean Top Header -->
+    <!-- 1. Clean Top Header with Visible Bengali Button -->
     <header class="top-bar">
         <div class="brand-box">
             <div class="logo-mark">+</div>
@@ -484,11 +503,8 @@
         </div>
         <div class="hdr-tools">
             <button onclick="toggleLanguage()" id="langToggleBtn" class="btn-lang tap">বাংলা</button>
-            <button onclick="shareClinic()" class="btn-ico tap" aria-label="Share Clinic">
-                <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"></path></svg>
-            </button>
             <a href="tel:8777691532" class="btn-ico tap" style="background:var(--teal-soft);color:var(--teal);" aria-label="Call Clinic">
-                <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                <svg width="17" height="17" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
             </a>
         </div>
     </header>
@@ -504,11 +520,11 @@
         <!-- Auto-Saved Recent Booking Strip -->
         <div id="recentBookingCard" class="saved-strip">
             <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
-                <span style="font-size:11px;font-weight:800;color:#1d4ed8;">📋 YOUR RECENT BOOKING</span>
-                <button onclick="clearRecentBooking()" style="font-size:11px;color:var(--slate);font-weight:700;">✕ Close</button>
+                <span style="font-size:11.5px;font-weight:800;color:#1d4ed8;">📋 YOUR RECENT BOOKING</span>
+                <button onclick="clearRecentBooking()" style="font-size:12px;color:var(--slate);font-weight:700;">✕ Close</button>
             </div>
-            <div id="recentBookingBody" style="font-size:12.5px;color:var(--navy);"></div>
-            <div style="display:flex;gap:8px;margin-top:8px;">
+            <div id="recentBookingBody" style="font-size:13.5px;color:var(--navy);"></div>
+            <div style="display:flex;gap:8px;margin-top:9px;">
                 <a href="tel:8777691532" class="btn-book-sm tap" style="background:#1d4ed8;">📞 Call to Confirm</a>
                 <button onclick="switchTab('book')" class="btn-call-sm tap" style="border-color:#1d4ed8;color:#1d4ed8;">+ Book Again</button>
             </div>
@@ -525,7 +541,7 @@
             </div>
         </section>
 
-        <!-- 3. Clean 4-Column Quick Service Bar (No Box-Clutter) -->
+        <!-- 3. Clean 4-Column Quick Service Bar -->
         <section class="quick-bar">
             <div onclick="switchTab('book')" class="q-item tap">
                 <div class="q-circle" style="background:#ccfbf1;">🩸</div>
@@ -552,15 +568,15 @@
         <!-- SECTION A: Diagnostic Lab Search & Prescription -->
         <section class="sec-block">
             <div class="sec-hdr">
-                <h3 class="sec-h">Diagnostic Lab Tests (440+)</h3>
-                <button onclick="switchTab('tests')" class="sec-more">All Tests ›</button>
+                <h3 class="sec-h" data-i18n="diagTitle">Diagnostic Lab Tests (440+)</h3>
+                <button onclick="switchTab('tests')" class="sec-more" data-i18n="allTestsBtn">All Tests ›</button>
             </div>
             <button onclick="openTestSearch()" class="search-pill tap">
-                <span id="liveSearchHint">🔍 Search Thyroid, CBC, Sugar, Vitamin D...</span>
+                <span id="liveSearchHint" data-i18n="searchHint">🔍 Search Thyroid, CBC, Sugar, Vitamin D...</span>
                 <span style="color:var(--teal);font-weight:800;">Search</span>
             </button>
             <div class="rx-row">
-                <div style="font-size:12px;color:var(--slate);">
+                <div style="font-size:13px;color:var(--slate);">
                     <strong style="color:var(--navy);" data-i18n="rxPrompt">Have a prescription?</strong> <span data-i18n="rxPromptSub">Send photo on WhatsApp</span>
                 </div>
                 <a href="https://wa.me/918777691532?text=Hello%20Sushila%20Clinic,%20I%20am%20sending%20my%20prescription%20photo%20for%20lab%20tests%20/%20medicines." target="_blank" class="btn-wa-sm tap">
@@ -569,11 +585,11 @@
             </div>
         </section>
 
-        <!-- SECTION B: Chief Consultant Physician (Editorial Layout) -->
+        <!-- SECTION B: Chief Consultant Physician -->
         <section id="doctorSection" class="sec-block">
             <div class="sec-hdr">
                 <h3 class="sec-h" data-i18n="docBadge">Chief Consultant Physician</h3>
-                <span style="font-size:11px;font-weight:700;color:#059669;">● Available Today</span>
+                <span style="font-size:12px;font-weight:700;color:#059669;">● Available Today</span>
             </div>
             <div class="doc-row">
                 <div class="doc-initials">Dr</div>
@@ -630,7 +646,7 @@
             </div>
         </section>
 
-        <!-- SECTION D: Pharmacy Counter Highlights (Broken Image Fixed) -->
+        <!-- SECTION D: Pharmacy Counter Highlights -->
         <section class="sec-block">
             <div class="sec-hdr">
                 <h3 class="sec-h" data-i18n="pharmTitle">Pharmacy Counter</h3>
@@ -639,7 +655,7 @@
             <div class="h-shelf">
                 <div class="shelf-item">
                     <div class="shelf-visual">
-                        <span style="font-size:28px;margin-bottom:4px;">🌿</span>
+                        <span style="font-size:30px;margin-bottom:4px;">🌿</span>
                         <span>AYURVEDIC CARE</span>
                     </div>
                     <div class="shelf-info">
@@ -675,7 +691,7 @@
         <section class="sec-block">
             <div class="sec-hdr">
                 <h3 class="sec-h" data-i18n="bmiTitle">⚖️ Quick BMI & Health Check</h3>
-                <span style="font-size:11px;color:var(--slate);">Free Tool</span>
+                <span style="font-size:12px;color:var(--slate);">Free Tool</span>
             </div>
             <div class="bmi-strip">
                 <input type="number" id="bmiHeight" class="bmi-field" placeholder="Height (cm)">
@@ -691,18 +707,18 @@
                 <h3 class="sec-h" data-i18n="labPartnerTitle">NABL Partner Labs</h3>
                 <button onclick="switchTab('tests')" class="sec-more">440+ Tests ›</button>
             </div>
-            <div class="lab-strip" style="margin-bottom:18px;">
+            <div class="lab-strip" style="margin-bottom:20px;">
                 <div class="lab-cell">
-                    <div style="font-size:13px;font-weight:900;color:#dc2626;">ASHOK</div>
-                    <div style="font-size:9.5px;font-weight:700;color:var(--slate);">LABORATORY</div>
+                    <div style="font-size:14px;font-weight:900;color:#dc2626;">ASHOK</div>
+                    <div style="font-size:10px;font-weight:700;color:var(--slate);">LABORATORY</div>
                 </div>
                 <div class="lab-cell">
-                    <div style="font-size:13px;font-weight:900;color:#0f766e;">Apollo</div>
-                    <div style="font-size:9.5px;font-weight:700;color:#be185d;">DIAGNOSTICS</div>
+                    <div style="font-size:14px;font-weight:900;color:#0f766e;">Apollo</div>
+                    <div style="font-size:10px;font-weight:700;color:#be185d;">DIAGNOSTICS</div>
                 </div>
                 <div class="lab-cell">
-                    <div style="font-size:13px;font-weight:900;color:#e11d48;">Health+</div>
-                    <div style="font-size:9.5px;font-weight:700;color:#2563eb;">DIAGNOSTICS</div>
+                    <div style="font-size:14px;font-weight:900;color:#e11d48;">Health+</div>
+                    <div style="font-size:10px;font-weight:700;color:#2563eb;">DIAGNOSTICS</div>
                 </div>
             </div>
 
@@ -724,9 +740,19 @@
 
     <!-- BOOK TEST PAGE -->
     <main id="tab-book" class="page-view inner-pad">
-        <div style="margin-bottom:14px;">
-            <h2 style="font-size:18px;font-weight:800;color:var(--navy);" data-i18n="bookTitle">Book Lab Test / Home Visit</h2>
-            <p style="font-size:13px;color:var(--slate);">Blood Collection Timing: <strong>7:00 AM – 12:00 PM</strong></p>
+        <div>
+            <h2 class="page-title" data-i18n="bookTitle">Book Lab Test / Home Visit</h2>
+            <p class="page-sub" data-i18n="bookSub">Blood Collection Timing: <strong>7:00 AM – 12:00 PM</strong></p>
+        </div>
+
+        <div class="rx-banner-clean">
+            <div>
+                <div style="font-size:14px;font-weight:700;color:#065f46;" data-i18n="rxTitle">Have a Doctor's Prescription?</div>
+                <div style="font-size:12.5px;color:#047857;" data-i18n="rxSub">Send photo directly if test names are hard to read</div>
+            </div>
+            <a href="https://wa.me/918777691532?text=Hello%20Sushila%20Clinic,%20I%20am%20sending%20my%20prescription%20photo%20for%20lab%20test%20booking." target="_blank" class="btn-wa-sm tap">
+                📸 Send Rx
+            </a>
         </div>
 
         <form id="bookingForm" onsubmit="submitBooking(event)">
@@ -738,11 +764,11 @@
                     <input type="text" id="formTestSearch" class="search-inp" placeholder="Search test name (e.g. Thyroid, CBC, AMH, Dengue)..." oninput="renderFormTests()">
                     <button type="button" id="clearFormSearch" class="s-clr" onclick="clearFormSearchBox()">✕</button>
                 </div>
-                <div id="formSearchHint" style="font-size:11.5px;color:var(--teal);font-weight:600;margin-bottom:6px;">
+                <div id="formSearchHint" style="font-size:12.5px;color:var(--teal);font-weight:600;margin-bottom:8px;">
                     Showing main popular tests & health profiles (Type above to search all 440+ tests)
                 </div>
                 <div class="chk-list" id="testChecklist"></div>
-                <input type="text" id="customTest" class="f-inp" style="margin-top:8px;" placeholder="Other test / prescription note (optional)">
+                <input type="text" id="customTest" class="f-inp" style="margin-top:10px;" placeholder="Other test / prescription note (optional)">
             </div>
 
             <div class="f-group">
@@ -750,7 +776,7 @@
                 <input type="text" id="patientName" class="f-inp" placeholder="Enter patient name" required>
             </div>
 
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px;">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:11px;margin-bottom:18px;">
                 <div>
                     <label class="f-lbl" for="patientAge" data-i18n="lblAge">3. Age (Years) *</label>
                     <input type="number" id="patientAge" class="f-inp" placeholder="e.g. 42" min="1" max="120" required>
@@ -771,7 +797,7 @@
                 <input type="tel" id="patientPhone" class="f-inp" placeholder="10-digit mobile number" pattern="[0-9]{10}" maxlength="10" required>
             </div>
 
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px;">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:11px;margin-bottom:18px;">
                 <div>
                     <label class="f-lbl" for="visitDate" data-i18n="lblDate">6. Preferred Date *</label>
                     <input type="date" id="visitDate" class="f-inp" required>
@@ -815,12 +841,12 @@
 
     <!-- LAB TESTS DIRECTORY PAGE -->
     <main id="tab-tests" class="page-view inner-pad">
-        <div style="margin-bottom:12px;">
-            <h2 style="font-size:18px;font-weight:800;color:var(--navy);">Diagnostic Test Directory</h2>
-            <p style="font-size:13px;color:var(--slate);">Home Blood Collection: <strong>7:00 AM – 12:00 PM</strong></p>
+        <div style="margin-bottom:13px;">
+            <h2 class="page-title" data-i18n="dirTitle">Diagnostic Test Directory</h2>
+            <p class="page-sub" data-i18n="bookSub">Blood Collection Timing: <strong>7:00 AM – 12:00 PM</strong></p>
         </div>
 
-        <div class="search-wrap" style="margin-bottom:10px;">
+        <div class="search-wrap" style="margin-bottom:11px;">
             <span class="s-ico">🔍</span>
             <input type="text" id="dirTestSearch" class="search-inp" placeholder="Search 440+ tests (e.g. Vitamin D, HbA1c, ANA, Torch)..." oninput="renderDirectoryTests()">
             <button type="button" id="clearDirSearch" class="s-clr" onclick="clearDirSearchBox()">✕</button>
@@ -838,11 +864,11 @@
         <div id="highlightedCards">
             <div class="feat-box">
                 <span class="feat-pill">★ Highlighted</span>
-                <h3 style="font-size:15px;font-weight:800;">Allergy Profile Test</h3>
-                <p style="font-size:12.5px;color:var(--slate);margin-top:3px;">Comprehensive screening for food, dust, pollen & respiratory allergies.</p>
-                <div style="margin-top:10px;display:flex;align-items:center;justify-content:space-between;gap:8px;">
-                    <span style="font-size:11.5px;font-weight:700;color:var(--teal);">Apollo / Healthplus / Ashok</span>
-                    <div style="display:flex;gap:6px;">
+                <h3 style="font-size:16px;font-weight:800;">Allergy Profile Test</h3>
+                <p style="font-size:13.5px;color:var(--slate);margin-top:4px;">Comprehensive screening for food, dust, pollen & respiratory allergies.</p>
+                <div style="margin-top:11px;display:flex;align-items:center;justify-content:space-between;gap:8px;">
+                    <span style="font-size:12px;font-weight:700;color:var(--teal);">Apollo / Healthplus / Ashok</span>
+                    <div style="display:flex;gap:7px;">
                         <button onclick="bookSpecificTest('Allergy Profile Test')" class="btn-book-sm tap">Book</button>
                         <a href="tel:8777691532" class="btn-call-sm">Call</a>
                     </div>
@@ -851,11 +877,11 @@
 
             <div class="feat-box">
                 <span class="feat-pill" style="background:#0284c7;">Most Booked</span>
-                <h3 style="font-size:15px;font-weight:800;">Complete Blood Count (CBC) & ESR</h3>
-                <p style="font-size:12.5px;color:var(--slate);margin-top:3px;">Essential blood health checkup for infection, anemia & fever.</p>
-                <div style="margin-top:10px;display:flex;align-items:center;justify-content:space-between;gap:8px;">
-                    <span style="font-size:11.5px;font-weight:700;color:var(--teal);">NABL Partner Labs</span>
-                    <div style="display:flex;gap:6px;">
+                <h3 style="font-size:16px;font-weight:800;">Complete Blood Count (CBC) & ESR</h3>
+                <p style="font-size:13.5px;color:var(--slate);margin-top:4px;">Essential blood health checkup for infection, anemia & fever.</p>
+                <div style="margin-top:11px;display:flex;align-items:center;justify-content:space-between;gap:8px;">
+                    <span style="font-size:12px;font-weight:700;color:var(--teal);">NABL Partner Labs</span>
+                    <div style="display:flex;gap:7px;">
                         <button onclick="bookSpecificTest('Complete Blood Count (CBC) & ESR')" class="btn-book-sm tap">Book</button>
                         <a href="tel:8777691532" class="btn-call-sm">Call</a>
                     </div>
@@ -864,11 +890,11 @@
 
             <div class="feat-box">
                 <span class="feat-pill" style="background:#059669;">Popular</span>
-                <h3 style="font-size:15px;font-weight:800;">Thyroid Profile (T3, T4, TSH)</h3>
-                <p style="font-size:12.5px;color:var(--slate);margin-top:3px;">Complete thyroid hormone evaluation.</p>
-                <div style="margin-top:10px;display:flex;align-items:center;justify-content:space-between;gap:8px;">
-                    <span style="font-size:11.5px;font-weight:700;color:var(--teal);">7:00 AM – 12:00 PM</span>
-                    <div style="display:flex;gap:6px;">
+                <h3 style="font-size:16px;font-weight:800;">Thyroid Profile (T3, T4, TSH)</h3>
+                <p style="font-size:13.5px;color:var(--slate);margin-top:4px;">Complete thyroid hormone evaluation.</p>
+                <div style="margin-top:11px;display:flex;align-items:center;justify-content:space-between;gap:8px;">
+                    <span style="font-size:12px;font-weight:700;color:var(--teal);">7:00 AM – 12:00 PM</span>
+                    <div style="display:flex;gap:7px;">
                         <button onclick="bookSpecificTest('Thyroid Profile (T3, T4, TSH)')" class="btn-book-sm tap">Book</button>
                         <a href="tel:8777691532" class="btn-call-sm">Call</a>
                     </div>
@@ -876,7 +902,7 @@
             </div>
         </div>
 
-        <div id="dirSectionLabel" style="font-size:11.5px;font-weight:800;text-transform:uppercase;color:var(--slate);margin:12px 0 8px;">
+        <div id="dirSectionLabel" style="font-size:12.5px;font-weight:800;text-transform:uppercase;color:var(--slate);margin:14px 0 9px;">
             Main Routine Tests & Health Packages
         </div>
         <div id="directoryList"></div>
@@ -884,19 +910,19 @@
 
     <!-- ECG PAGE -->
     <main id="tab-ecg" class="page-view inner-pad">
-        <div style="background:linear-gradient(135deg,#be123c,#e11d48);color:#fff;padding:20px;border-radius:14px;margin-bottom:16px;">
+        <div style="background:linear-gradient(135deg,#be123c,#e11d48);color:#fff;padding:22px;border-radius:16px;margin-bottom:18px;">
             <span class="hero-tag">💓 Cardiology Diagnostics</span>
-            <h2 style="font-size:20px;font-weight:800;">12-Lead Digital ECG</h2>
-            <p style="font-size:13px;color:#ffe4e6;margin-top:6px;">Available at Sushila Clinic (8:30 AM – 2 PM & 5:30 PM – 10 PM) & via Home Visit.</p>
+            <h2 style="font-size:21px;font-weight:800;" data-i18n="ecgTitle">12-Lead Digital ECG</h2>
+            <p style="font-size:14px;color:#ffe4e6;margin-top:6px;" data-i18n="ecgDesc">Available at Sushila Clinic (8:30 AM – 2 PM & 5:30 PM – 10 PM) & via Home Visit.</p>
         </div>
 
-        <div style="font-size:13.5px;color:var(--navy);line-height:2;margin-bottom:16px;">
+        <div style="font-size:14.5px;color:var(--navy);line-height:2.1;margin-bottom:18px;">
             <div>✅ Instant printed 12-lead ECG graph report</div>
             <div>✅ Doorstep home ECG service for senior citizens</div>
             <div>✅ Conducted by trained medical technician</div>
             <div>✅ Clinical review by Dr. Bishnu Pada Mandal</div>
         </div>
-        <button onclick="bookSpecificTest('12-Lead Home ECG')" class="btn-submit tap">📝 Book Home ECG Online</button>
+        <button onclick="bookSpecificTest('12-Lead Home ECG')" class="btn-submit tap" data-i18n="ecgBookBtn">📝 Book Home ECG Online</button>
         <div class="desk-bar">
             <a href="tel:8777691532" class="btn-call-desk tap">📞 8777691532</a>
             <a href="tel:8100177365" class="btn-call-desk tap">📞 8100177365</a>
@@ -905,28 +931,27 @@
 
     <!-- PHARMACY PAGE -->
     <main id="tab-pharmacy" class="page-view inner-pad">
-        <div style="margin-bottom:12px;">
-            <h2 style="font-size:18px;font-weight:800;color:var(--navy);">Believe Medical Pharmacy</h2>
-            <p style="font-size:13px;color:var(--teal);font-weight:700;">Open: 8:30 AM – 2:00 PM & 5:30 PM – 10:00 PM</p>
+        <div style="margin-bottom:13px;">
+            <h2 class="page-title" data-i18n="pharmPageTitle">Believe Medical Pharmacy</h2>
+            <p style="font-size:14px;color:var(--teal);font-weight:700;">Open: 8:30 AM – 2:00 PM & 5:30 PM – 10:00 PM</p>
         </div>
 
-        <!-- Medicine Availability Quick Checker -->
-        <div style="background:var(--teal-soft);border:1px solid #99f6e4;border-radius:12px;padding:13px;margin-bottom:14px;">
-            <div style="font-size:13.5px;font-weight:800;color:var(--navy);">💊 Check Medicine Availability</div>
-            <div style="font-size:11.5px;color:var(--slate);margin-top:2px;">Type medicine name to ask our pharmacy counter on WhatsApp</div>
-            <div style="display:flex;gap:7px;margin-top:8px;">
+        <div style="background:var(--teal-soft);border:1px solid #99f6e4;border-radius:13px;padding:14px;margin-bottom:15px;">
+            <div style="font-size:14.5px;font-weight:800;color:var(--navy);" data-i18n="medCheckTitle">💊 Check Medicine Availability</div>
+            <div style="font-size:12.5px;color:var(--slate);margin-top:2px;" data-i18n="medCheckSub">Type medicine name to ask our pharmacy counter on WhatsApp</div>
+            <div style="display:flex;gap:8px;margin-top:9px;">
                 <input type="text" id="medQueryInput" class="bmi-field" style="background:#fff;" placeholder="e.g. Telma 40, Pan D, Dolo 650...">
-                <button type="button" onclick="askMedicineStock()" class="btn-wa-sm tap" style="padding:9px 14px;">Ask Stock</button>
+                <button type="button" onclick="askMedicineStock()" class="btn-wa-sm tap" style="padding:10px 15px;">Ask Stock</button>
             </div>
         </div>
 
         <div class="gal-box">
-            <div class="shelf-visual" style="height:150px;">
-                <span style="font-size:38px;margin-bottom:6px;">🌿</span>
-                <span style="font-size:14px;">SESA AYURVEDIC RANGE</span>
+            <div class="shelf-visual" style="height:155px;">
+                <span style="font-size:40px;margin-bottom:6px;">🌿</span>
+                <span style="font-size:14.5px;">SESA AYURVEDIC RANGE</span>
             </div>
             <div class="gal-bar">
-                <div><div style="font-size:14.5px;font-weight:700;">SESA Ayurvedic Hair Care</div><div style="font-size:12.5px;color:var(--slate);">Medicinal Hair Oil & Shampoo</div></div>
+                <div><div style="font-size:15.5px;font-weight:700;">SESA Ayurvedic Hair Care</div><div style="font-size:13px;color:var(--slate);">Medicinal Hair Oil & Shampoo</div></div>
                 <a href="tel:8777691532" class="btn-book-sm tap">Call</a>
             </div>
         </div>
@@ -934,7 +959,7 @@
         <div class="gal-box">
             <img src="file_00000000b51082118a9d009c1b3d98c1.png" onerror="this.style.display='none'" alt="AROLIVE Tablet" class="gal-pic">
             <div class="gal-bar">
-                <div><div style="font-size:14.5px;font-weight:700;">AROLIVE Ayurvedic Tablet</div><div style="font-size:12.5px;color:var(--slate);">Ayurvedic Liver Care Support</div></div>
+                <div><div style="font-size:15.5px;font-weight:700;">AROLIVE Ayurvedic Tablet</div><div style="font-size:13px;color:var(--slate);">Ayurvedic Liver Care Support</div></div>
                 <a href="tel:8777691532" class="btn-book-sm tap">Call</a>
             </div>
         </div>
@@ -942,7 +967,7 @@
         <div class="gal-box">
             <img src="IMG_20261114_105300.jpg" onerror="this.style.display='none'" alt="Pharmacy Display 1" class="gal-pic">
             <div class="gal-bar">
-                <div><div style="font-size:14.5px;font-weight:700;">Prescription & Skin Care</div><div style="font-size:12.5px;color:var(--slate);">Genuine medicines & personal care</div></div>
+                <div><div style="font-size:15.5px;font-weight:700;">Prescription & Skin Care</div><div style="font-size:13px;color:var(--slate);">Genuine medicines & personal care</div></div>
                 <a href="tel:8777691532" class="btn-book-sm tap">Call</a>
             </div>
         </div>
@@ -950,7 +975,7 @@
         <div class="gal-box">
             <img src="IMG_20261114_105348.jpg" onerror="this.style.display='none'" alt="Pharmacy Display 2" class="gal-pic">
             <div class="gal-bar">
-                <div><div style="font-size:14.5px;font-weight:700;">Daily Essentials & Body Care</div><div style="font-size:12.5px;color:var(--slate);">Moisturizers, lotions & hygiene</div></div>
+                <div><div style="font-size:15.5px;font-weight:700;">Daily Essentials & Body Care</div><div style="font-size:13px;color:var(--slate);">Moisturizers, lotions & hygiene</div></div>
                 <a href="tel:8777691532" class="btn-book-sm tap">Call</a>
             </div>
         </div>
@@ -959,15 +984,15 @@
     <!-- Success Popup Modal -->
     <div id="successModal" class="modal-bg">
         <div class="modal-card">
-            <div style="font-size:38px;margin-bottom:8px;">✅</div>
-            <h3 style="font-size:18px;font-weight:800;color:var(--navy);" data-i18n="modTitle">Booking Form Submitted!</h3>
-            <div class="warn-note" style="margin:12px 0;text-align:left;" data-i18n="modAlert">
+            <div style="font-size:40px;margin-bottom:8px;">✅</div>
+            <h3 style="font-size:19px;font-weight:800;color:var(--navy);" data-i18n="modTitle">Booking Form Submitted!</h3>
+            <div class="warn-note" style="margin:13px 0;text-align:left;" data-i18n="modAlert">
                 <strong>📞 Don't Forget to Call Us!</strong><br>
                 Your details have been sent to <strong>Sushila Clinic</strong>. Please call any number below right now to confirm your slot:
             </div>
             <a href="tel:8777691532" class="modal-call tap" style="background:var(--teal);">📞 Call Desk 1 (8777691532)</a>
             <a href="tel:8100177365" class="modal-call tap" style="background:#0284c7;">📞 Call Desk 2 (8100177365)</a>
-            <button onclick="closeModal()" style="margin-top:14px;font-size:12.5px;font-weight:600;color:var(--slate);padding:6px 14px;">Close</button>
+            <button onclick="closeModal()" style="margin-top:15px;font-size:13.5px;font-weight:600;color:var(--slate);padding:6px 14px;">Close</button>
         </div>
     </div>
 
@@ -1014,6 +1039,9 @@
             b2Title: "Dr. Mandal",
             b3Title: "12-Lead ECG",
             b4Title: "Pharmacy",
+            diagTitle: "Diagnostic Lab Tests (440+)",
+            allTestsBtn: "All Tests ›",
+            searchHint: "🔍 Search Thyroid, CBC, Sugar, Vitamin D...",
             rxPrompt: "Have a prescription?",
             rxPromptSub: "Send photo on WhatsApp",
             bmiTitle: "⚖️ Quick BMI & Health Check",
@@ -1023,6 +1051,16 @@
             labPartnerTitle: "NABL Partner Labs",
             faqTitle: "Patient FAQs",
             bookTitle: "Book Lab Test / Home Visit",
+            bookSub: "Blood Collection Timing: <strong>7:00 AM – 12:00 PM</strong>",
+            rxTitle: "Have a Doctor's Prescription?",
+            rxSub: "Send photo directly if test names are hard to read",
+            dirTitle: "Diagnostic Test Directory",
+            ecgTitle: "12-Lead Digital ECG",
+            ecgDesc: "Available at Sushila Clinic (8:30 AM – 2 PM & 5:30 PM – 10 PM) & via Home Visit.",
+            ecgBookBtn: "📝 Book Home ECG Online",
+            pharmPageTitle: "Believe Medical Pharmacy",
+            medCheckTitle: "💊 Check Medicine Availability",
+            medCheckSub: "Type medicine name to ask our pharmacy counter on WhatsApp",
             lblTests: "1. Select Lab Tests (Search 440+ Tests or Tick Main Tests) *",
             lblName: "2. Patient Full Name *",
             lblAge: "3. Age (Years) *",
@@ -1052,6 +1090,9 @@
             b2Title: "ডাঃ মণ্ডল",
             b3Title: "ইসিজি",
             b4Title: "ফার্মেসি",
+            diagTitle: "ডায়াগনস্টিক ল্যাব টেস্ট (৪৪০+)",
+            allTestsBtn: "সব টেস্ট ›",
+            searchHint: "🔍 থাইরয়েড, সিবিসি, সুগার, ভিটামিন ডি খুঁজুন...",
             rxPrompt: "প্রেসক্রিপশন আছে?",
             rxPromptSub: "WhatsApp-এ ছবি পাঠান",
             bmiTitle: "⚖️ BMI ও হেলথ চেকআপ ক্যালকুলেটর",
@@ -1061,6 +1102,16 @@
             labPartnerTitle: "NABL পার্টনার ল্যাব",
             faqTitle: "সাধারণ জিজ্ঞাস্য (FAQ)",
             bookTitle: "ল্যাব টেস্ট / হোম ভিজিট বুকিং",
+            bookSub: "রক্ত সংগ্রহের সময়: <strong>সকাল ৭:০০ – দুপুর ১২:০০</strong>",
+            rxTitle: "ডাক্তারের প্রেসক্রিপশন আছে?",
+            rxSub: "টেস্টের নাম বুঝতে অসুবিধা হলে সরাসরি ছবি পাঠান",
+            dirTitle: "ডায়াগনস্টিক টেস্ট তালিকা",
+            ecgTitle: "১২-লিড ডিজিটাল ইসিজি (ECG)",
+            ecgDesc: "সুশীলা ক্লিনিকে (সকাল ৮:৩০–২টা ও ৫:৩০–১০টা) এবং হোম ভিজিটে উপলব্ধ।",
+            ecgBookBtn: "📝 অনলাইনে হোম ইসিজি বুক করুন",
+            pharmPageTitle: "বিলিভ মেডিকেল ফার্মেসি",
+            medCheckTitle: "💊 ওষুধের স্টক যাচাই করুন",
+            medCheckSub: "WhatsApp-এ জিজ্ঞাসা করতে ওষুধের নাম লিখুন",
             lblTests: "১. টেস্ট নির্বাচন করুন (সার্চ করুন বা নিচের তালিকা থেকে টিক দিন) *",
             lblName: "২. রোগীর সম্পূর্ণ নাম *",
             lblAge: "৩. বয়স (বছর) *",
@@ -1089,19 +1140,6 @@
             const key = el.getAttribute('data-i18n');
             if (I18N[currentLang][key]) el.innerHTML = I18N[currentLang][key];
         });
-    }
-
-    function shareClinic() {
-        const shareData = {
-            title: 'Sushila Clinic & Believe Medical Pharmacy',
-            text: 'Sushila Clinic & Believe Medical Pharmacy (Dr. Bishnu Pada Mandal) - Khurigachi Fularhat Road, Sonarpur. Home Blood Collection (7 AM - 12 PM) | Clinic & Pharmacy (8:30 AM - 2 PM, 5:30 PM - 10 PM). Call: 8777691532 / 8100177365',
-            url: window.location.href
-        };
-        if (navigator.share) {
-            navigator.share(shareData).catch(() => {});
-        } else {
-            window.open(`https://wa.me/?text=${encodeURIComponent(shareData.text + ' ' + shareData.url)}`, '_blank');
-        }
     }
 
     function updateLiveStatus() {
@@ -1172,7 +1210,7 @@
                 <span>BMI: <strong>${bmi}</strong></span>
                 <span style="font-weight:800;color:${color};">${status}</span>
             </div>
-            <div style="font-size:11.5px;color:var(--slate);margin-bottom:8px;">Suggested: <strong>${pkgName}</strong></div>
+            <div style="font-size:12.5px;color:var(--slate);margin-bottom:8px;">Suggested: <strong>${pkgName}</strong></div>
             <button type="button" onclick="bookSpecificTest('${safePkg}')" class="btn-book-sm tap" style="width:100%;">Book Suggested Test →</button>
         `;
         resDiv.classList.add('show');
@@ -1736,7 +1774,7 @@
         }
 
         if (itemsToShow.length === 0) {
-            listEl.innerHTML = `<div style="font-size:13px;color:var(--slate);text-align:center;padding:12px;">No exact match found. You can type the test name in the box below!</div>`;
+            listEl.innerHTML = `<div style="font-size:14px;color:var(--slate);text-align:center;padding:12px;">No exact match found. You can type the test name in the box below!</div>`;
             return;
         }
 
@@ -1799,7 +1837,7 @@
         }
 
         if (items.length === 0) {
-            listEl.innerHTML = `<div style="text-align:center;padding:20px;font-size:13px;color:var(--slate);">No matching test found. Click "Book Test" below to enter custom test name.</div>`;
+            listEl.innerHTML = `<div style="text-align:center;padding:20px;font-size:14px;color:var(--slate);">No matching test found. Click "Book Test" below to enter custom test name.</div>`;
             return;
         }
 
@@ -1808,8 +1846,8 @@
             return `
                 <div class="test-line">
                     <div>
-                        <div style="font-size:13px;font-weight:700;color:var(--navy);">${item.name}</div>
-                        <div style="font-size:11px;color:var(--slate);margin-top:2px;">${item.sub}</div>
+                        <div style="font-size:14.5px;font-weight:700;color:var(--navy);">${item.name}</div>
+                        <div style="font-size:12px;color:var(--slate);margin-top:2px;">${item.sub}</div>
                     </div>
                     <button onclick="bookSpecificTest('${safeName}')" class="btn-call-sm tap">Book</button>
                 </div>
